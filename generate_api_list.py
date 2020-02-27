@@ -1,7 +1,7 @@
 #! /bin/env python3
 
 from argparse import ArgumentParser
-from subprocess import check_call
+from subprocess import check_call, check_output
 from pathlib import Path
 
 import logging
@@ -11,26 +11,31 @@ API_LIST_BUILD_TARGET = 'generate_high_entropy_list'
 API_LIST_FILE = 'high_entropy_list.csv'
 API_LIST_TARGET_FILE = 'chromium_api_list.csv'
 
+COMMIT_POSITION_HEADER = 'Cr-Commit-Position: '
+
 
 def Main():
     parser = ArgumentParser()
     parser.add_argument('--build_path', '-C', type=Path, required=True)
     parser.add_argument('--build',
                         '-B',
-                        type=bool,
-                        help='Whether the API list should be rebuilt',
-                        default=False)
+                        action='store_true',
+                        help='Whether the API list should be rebuilt')
     parser.add_argument('--target_path', '-t', type=Path, default=Path.cwd())
+    parser.add_argument('--verbose', '-v', action='store_true')
     parser.add_argument(
-        '--commmit',
-        type=bool,
-        default=False,
+        '--commit',
+        action='store_true',
         help='Git commit after a successful extraction of the API list')
 
     args = parser.parse_args()
 
+    if args.verbose:
+        logging.basicConfig(level=logging.DEBUG)
+
     if not args.build_path.exists():
-        logging.critical('Build directory does not exist')
+        logging.critical('Build directory does not exist. Checked {}'.format(
+            args.build_path))
         sys.exit(1)
 
     if not args.target_path.exists():
@@ -59,6 +64,35 @@ def Main():
         contents = [unordered_content[0]] + sorted(unordered_content[1:])
         with target_file.open('w') as w:
             w.writelines(contents)
+
+    if args.commit:
+        commit_position = check_output(['git', 'rev-parse', 'HEAD'],
+                                       cwd=args.build_path)
+        commit_message = check_output(['git', 'cat-file', '-p', 'HEAD'],
+                                      cwd=args.build_path).splitlines()
+        for l in commit_message:
+            ls = l.decode()
+            if ls.startswith(COMMIT_POSITION_HEADER):
+                commit_position = ls[len(COMMIT_POSITION_HEADER):].trim()
+                break
+
+        git_status = check_output(['git', 'status', '--porcelain=v1'],
+                                  cwd=args.target_path).splitlines()
+        if len(git_status) == 0:
+            logging.info('No change to API list')
+        elif len(git_status) != 1:
+            logging.error(
+                'There is more than one changed file in the repository. ' +
+                'Can\'t commit changes.')
+        elif git_status[0] != 'M\t{}'.format(API_LIST_TARGET_FILE):
+            logging.error('Unexpected changes found in the repository')
+        else:
+            check_call([
+                'git', 'commit', '-m',
+                '\'API list update from {}\''.format(commit_position), '--',
+                API_LIST_TARGET_FILE
+            ],
+                       cwd=args.target_path.parent())
 
 
 if __name__ == "__main__":
