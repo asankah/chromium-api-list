@@ -73,26 +73,29 @@ def Main():
         for l in commit_message:
             ls = l.decode()
             if ls.startswith(COMMIT_POSITION_HEADER):
-                commit_position = ls[len(COMMIT_POSITION_HEADER):].trim()
+                commit_position = ls[len(COMMIT_POSITION_HEADER):].strip()
                 break
 
-        git_status = check_output(['git', 'status', '--porcelain=v1'],
-                                  cwd=args.target_path).splitlines()
+        git_status = str(check_output(['git', 'status', '--porcelain=v1'],
+                                      cwd=args.target_path),
+                         encoding='utf-8').splitlines()
         if len(git_status) == 0:
             logging.info('No change to API list')
         elif len(git_status) != 1:
             logging.error(
                 'There is more than one changed file in the repository. ' +
                 'Can\'t commit changes.')
-        elif git_status[0] != 'M\t{}'.format(API_LIST_TARGET_FILE):
-            logging.error('Unexpected changes found in the repository')
+        elif git_status[0].split() != ['M', API_LIST_TARGET_FILE]:
+            logging.error(
+                'Unexpected changes found in the repository: "{}"'.format(
+                    git_status[0]))
         else:
             check_call([
                 'git', 'commit', '-m',
                 '\'API list update from {}\''.format(commit_position), '--',
                 API_LIST_TARGET_FILE
             ],
-                       cwd=args.target_path.parent())
+                       cwd=args.target_path)
 
 
 if __name__ == "__main__":
