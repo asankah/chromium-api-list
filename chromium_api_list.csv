@@ -699,11 +699,13 @@ CallbackFunctionTest,testNullableCallback,operation,String,DOMString,,False,Fals
 CallbackFunctionTest,testReceiverObjectCallback,operation,Void,void,,False,False
 CallbackFunctionTest,testSequenceCallback,operation,StringSequence,sequence<DOMString>,,False,False
 CanMakePaymentEvent,,interface,,,,False,False
+CanMakePaymentEvent,currency,attribute,String,DOMString,,False,False
 CanMakePaymentEvent,isTrusted,attribute,Boolean,boolean,,False,False
 CanMakePaymentEvent,methodData,attribute,PaymentMethodDataArray,FrozenArray<PaymentMethodData>,,False,False
 CanMakePaymentEvent,modifiers,attribute,PaymentDetailsModifierArray,FrozenArray<PaymentDetailsModifier>,,False,False
 CanMakePaymentEvent,paymentRequestOrigin,attribute,USVString,USVString,,False,False
 CanMakePaymentEvent,respondWith,operation,Void,void,,False,False
+CanMakePaymentEvent,respondWithMinimalUI,operation,Void,void,,False,False
 CanMakePaymentEvent,topOrigin,attribute,USVString,USVString,,False,False
 CanvasCaptureMediaStreamTrack,,interface,,,,False,False
 CanvasCaptureMediaStreamTrack,canvas,attribute,HTMLCanvasElement,HTMLCanvasElement,,False,False
@@ -932,7 +934,7 @@ CredentialsContainer,store,operation,CredentialPromise,Promise<Credential>,Crede
 Crypto,,interface,,,,False,False
 Crypto,getRandomValues,operation,ArrayBufferView,ArrayBufferView,CryptoGetRandomValues,False,False
 Crypto,subtle,attribute,SubtleCrypto,SubtleCrypto,,True,False
-CryptoKey,,interface,,,,False,False
+CryptoKey,,interface,,,,True,False
 CryptoKey,algorithm,attribute,Object,object,,False,False
 CryptoKey,extractable,attribute,Boolean,boolean,,False,False
 CryptoKey,type,attribute,String,DOMString,,False,False
@@ -1591,6 +1593,7 @@ Element,ariaColSpan,attribute,String,DOMString,,False,False
 Element,ariaControlsElements,attribute,ElementArray,FrozenArray<Element>,,False,False
 Element,ariaCurrent,attribute,String,DOMString,,False,False
 Element,ariaDescribedByElements,attribute,ElementArray,FrozenArray<Element>,,False,False
+Element,ariaDescription,attribute,String,DOMString,,False,False
 Element,ariaDetailsElements,attribute,ElementArray,FrozenArray<Element>,,False,False
 Element,ariaDisabled,attribute,String,DOMString,,False,False
 Element,ariaErrorMessageElement,attribute,Element,Element,,False,False
@@ -1656,6 +1659,7 @@ Element,getDestinationInsertionPoints,operation,NodeList,NodeList,,False,False
 Element,getElementsByClassName,operation,HTMLCollection,HTMLCollection,,False,False
 Element,getElementsByTagName,operation,HTMLCollection,HTMLCollection,,False,False
 Element,getElementsByTagNameNS,operation,HTMLCollection,HTMLCollection,,False,False
+Element,getInnerHTML,operation,StringOrTrustedHTML,(DOMString or TrustedHTML),,False,False
 Element,hasAttribute,operation,Boolean,boolean,,False,False
 Element,hasAttributeNS,operation,Boolean,boolean,,False,False
 Element,hasAttributes,operation,Boolean,boolean,,False,False
@@ -1692,11 +1696,9 @@ Element,remove,operation,Void,void,,False,False
 Element,removeAttribute,operation,Void,void,,False,False
 Element,removeAttributeNS,operation,Void,void,,False,False
 Element,removeAttributeNode,operation,Attr,Attr,,False,False
-Element,renderSubtree,attribute,String,DOMString,,False,False
 Element,replaceWith,operation,Void,void,,False,False
 Element,requestFullscreen,operation,VoidPromise,Promise<void>,,False,False
 Element,requestPointerLock,operation,Void,void,ElementRequestPointerLock,False,False
-Element,resetSubtreeRendered,operation,Void,void,,False,False
 Element,role,attribute,String,DOMString,,False,False
 Element,scroll,operation,Void,void,,False,False
 Element,scroll,operation,Void,void,,False,False
@@ -1719,7 +1721,6 @@ Element,shadowRoot,attribute,ShadowRoot,ShadowRoot,,False,False
 Element,slot,attribute,String,DOMString,,False,False
 Element,tagName,attribute,String,DOMString,,False,False
 Element,toggleAttribute,operation,Boolean,boolean,,False,False
-Element,updateRendering,operation,AnyPromise,Promise<any>,,False,False
 Element,webkitMatchesSelector,operation,Boolean,boolean,ElementPrefixedMatchesSelector,False,False
 Element,webkitRequestFullScreen,operation,Void,void,PrefixedElementRequestFullScreen,False,False
 Element,webkitRequestFullscreen,operation,Void,void,PrefixedElementRequestFullscreen,False,False
@@ -1735,6 +1736,7 @@ ElementInternals,ariaColSpan,attribute,String,DOMString,,False,False
 ElementInternals,ariaControlsElements,attribute,ElementArray,FrozenArray<Element>,,False,False
 ElementInternals,ariaCurrent,attribute,String,DOMString,,False,False
 ElementInternals,ariaDescribedByElements,attribute,ElementArray,FrozenArray<Element>,,False,False
+ElementInternals,ariaDescription,attribute,String,DOMString,,False,False
 ElementInternals,ariaDetailsElements,attribute,ElementArray,FrozenArray<Element>,,False,False
 ElementInternals,ariaDisabled,attribute,String,DOMString,,False,False
 ElementInternals,ariaErrorMessageElement,attribute,Element,Element,,False,False
@@ -2753,6 +2755,7 @@ HTMLInputElement,multiple,attribute,Boolean,boolean,,False,False
 HTMLInputElement,name,attribute,String,DOMString,,False,False
 HTMLInputElement,pattern,attribute,String,DOMString,,False,False
 HTMLInputElement,placeholder,attribute,String,DOMString,,False,False
+HTMLInputElement,rawValue,attribute,String,DOMString,,False,False
 HTMLInputElement,readOnly,attribute,Boolean,boolean,,False,False
 HTMLInputElement,reportValidity,operation,Boolean,boolean,,False,False
 HTMLInputElement,required,attribute,Boolean,boolean,,False,False
@@ -3400,7 +3403,6 @@ InternalRuntimeFlags,animationWorkletEnabled,attribute,Boolean,boolean,,False,Fa
 InternalRuntimeFlags,aomAriaPropertiesEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,aomAriaRelationshipPropertiesEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,aspectRatioFromWidthAndHeightEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,asyncClipboardEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,audioOutputDevicesEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,audioVideoTracksEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,audioWorkletRealtimeThreadEnabled,attribute,Boolean,boolean,,False,False
@@ -3414,10 +3416,11 @@ InternalRuntimeFlags,backForwardCacheEnabled,attribute,Boolean,boolean,,False,Fa
 InternalRuntimeFlags,backgroundFetchEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,backgroundVideoTrackOptimizationEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,badgingEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,barcodeDetectorEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,bidiCaretAffinityEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,blinkRuntimeCallStatsEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,blobReadMethodsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,blockCredentialedSubresourcesEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,blockFlowHandlesWebkitLineClampEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,blockHTMLParserOnStyleSheetsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,blockingDownloadsInSandboxEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,blockingFocusWithoutUserActivationEnabled,attribute,Boolean,boolean,,False,False
@@ -3481,6 +3484,7 @@ InternalRuntimeFlags,cssPseudoWhereEnabled,attribute,Boolean,boolean,,False,Fals
 InternalRuntimeFlags,cssReducedFontLoadingInvalidationsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssRenderSubtreeEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssSnapSizeEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,cssSupportsSelectorEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssVariables2AtPropertyEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssVariables2Enabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssVariables2ImageValuesEnabled,attribute,Boolean,boolean,,False,False
@@ -3491,21 +3495,19 @@ InternalRuntimeFlags,customElementDefaultStyleEnabled,attribute,Boolean,boolean,
 InternalRuntimeFlags,customElementsV0Enabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,customStatePseudoClassEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,databaseEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,declarativeShadowDOMEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,decodeJpeg420ImagesToYUVEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,decodeLossyWebPImagesToYUVEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,desktopCaptureDisableLocalEchoControlEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,disableHardwareNoiseSuppressionEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,disallowDocumentAccessEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,discardInputToMovingIframesEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,displayCutoutAPIEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,displayLockingEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,documentCookieEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,documentDomainEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,documentPolicyEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,documentWriteEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,editContextEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,editingNGEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,embeddedVTTStylesheetsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,encryptedMediaEncryptionSchemeQueryEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,encryptedMediaHdcpPolicyCheckEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,encryptedMediaPersistentUsageRecordSessionEnabled,attribute,Boolean,boolean,,False,False
@@ -3520,6 +3522,7 @@ InternalRuntimeFlags,experimentalJSProfilerEnabled,attribute,Boolean,boolean,,Fa
 InternalRuntimeFlags,experimentalProductivityFeaturesEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,extendedTextMetricsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,extraWebGLVideoTextureMetadataEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,faceDetectorEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,fallbackCursorModeEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,featurePolicyForClientHintsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,featurePolicyForSandboxEnabled,attribute,Boolean,boolean,,False,False
@@ -3554,6 +3557,7 @@ InternalRuntimeFlags,imageOrientationEnabled,attribute,Boolean,boolean,,False,Fa
 InternalRuntimeFlags,implicitRootScrollerEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,importMapsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,inertAttributeEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,inputElementRawValueEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,inputMultipleFieldsUIEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,installedAppEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,intersectionObserverDocumentScrollingElementRootEnabled,attribute,Boolean,boolean,,False,False
@@ -3609,7 +3613,6 @@ InternalRuntimeFlags,mediaSourceStableEnabled,attribute,Boolean,boolean,,False,F
 InternalRuntimeFlags,metaColorSchemeEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,middleClickAutoscrollEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,mobileLayoutThemeEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,moduleDedicatedWorkerEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,moduleServiceWorkerEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,moduleSharedWorkerEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,mojoJSEnabled,attribute,Boolean,boolean,,False,False
@@ -3652,11 +3655,13 @@ InternalRuntimeFlags,passwordRevealEnabled,attribute,Boolean,boolean,,False,Fals
 InternalRuntimeFlags,paymentAppEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,paymentHandlerChangePaymentMethodEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,paymentHandlerHandlesShippingAndContactEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,paymentHandlerMinimalUIEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,paymentMethodChangeEventEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,paymentRequestEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,paymentRequestMerchantValidationEventEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,paymentRetryEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,perMethodCanMakePaymentQuotaEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,percentBasedScrollingEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,performanceManagerInstrumentationEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,periodicBackgroundSyncEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,permissionDelegationEnabled,attribute,Boolean,boolean,,False,False
@@ -3689,6 +3694,7 @@ InternalRuntimeFlags,rtcAudioJitterBufferMaxPacketsEnabled,attribute,Boolean,boo
 InternalRuntimeFlags,rtcAudioJitterBufferRtxHandlingEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,rtcDtlsTransportEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,rtcIceTransportExtensionEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,rtcInsertableStreamsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,rtcQuicTransportEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,rtcSctpTransportEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,rtcStatsRelativePacketArrivalDelayEnabled,attribute,Boolean,boolean,,False,False
@@ -3713,7 +3719,6 @@ InternalRuntimeFlags,serviceWorkerFetchEventWorkerTimingEnabled,attribute,Boolea
 InternalRuntimeFlags,setRootScrollerEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,shadowDOMV0Enabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,shadowPiercingDescendantCombinatorEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,shapeDetectionEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,sharedArrayBufferEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,sharedWorkerEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,signatureBasedIntegrityEnabled,attribute,Boolean,boolean,,False,False
@@ -3722,11 +3727,12 @@ InternalRuntimeFlags,signedExchangeSubresourcePrefetchEnabled,attribute,Boolean,
 InternalRuntimeFlags,skipAdEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,skipTouchEventFilterEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,smsReceiverEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,squashAfterPaintEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,stableBlinkFeaturesEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,storageAccessAPIEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,storageQuotaDetailsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,strictMimeTypesForWorkersEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,surfaceEmbeddingFeaturesEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,textDetectorEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,textFragmentIdentifiersEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,timeZoneChangeEventEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,timerThrottlingForBackgroundTabsEnabled,attribute,Boolean,boolean,,False,False
@@ -3748,14 +3754,12 @@ InternalRuntimeFlags,userActivationSameOriginVisibilityEnabled,attribute,Boolean
 InternalRuntimeFlags,userAgentClientHintEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,v8IdleTasksEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,videoAutoFullscreenEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,videoFullscreenDetectionEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,videoFullscreenOrientationLockEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,videoPlaybackQualityEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,videoRequestAnimationFrameEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,videoRotateToFullscreenEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,visibilityCollapseColumnEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,wakeLockEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,wasmCodeCacheEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,webAnimationsAPIEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,webAnimationsSVGEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,webAssemblyThreadsEnabled,attribute,Boolean,boolean,,False,False
@@ -3764,6 +3768,7 @@ InternalRuntimeFlags,webAuthenticationFeaturePolicyEnabled,attribute,Boolean,boo
 InternalRuntimeFlags,webBluetoothEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,webBluetoothScanningEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,webCodecsEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,webCryptoCurve25519Enabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,webHIDEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,webNFCEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,webSchedulerEnabled,attribute,Boolean,boolean,,False,False
@@ -4888,7 +4893,7 @@ Navigator,webdriver,attribute,Boolean,boolean,,False,False
 Navigator,webkitGetUserMedia,operation,Void,void,GetUserMediaPrefixed,True,False
 Navigator,webkitPersistentStorage,attribute,DeprecatedStorageQuota,DeprecatedStorageQuota,PrefixedStorageQuota,False,False
 Navigator,webkitTemporaryStorage,attribute,DeprecatedStorageQuota,DeprecatedStorageQuota,PrefixedStorageQuota,False,False
-Navigator,xr,attribute,XR,XR,NavigatorXR,True,False
+Navigator,xr,attribute,XRSystem,XRSystem,NavigatorXR,True,False
 NetworkInformation,,interface,,,,False,False
 NetworkInformation,downlink,attribute,UnrestrictedDouble,unrestricted double,NetInfoDownlink,False,False
 NetworkInformation,downlinkMax,attribute,UnrestrictedDouble,unrestricted double,NetInfoDownlinkMax,False,False
@@ -5612,7 +5617,7 @@ PushSubscriptionOptions,userVisibleOnly,attribute,Boolean,boolean,,False,False
 QuicTransport,,interface,,,,False,False
 QuicTransport,close,operation,Void,void,,False,False
 QuicTransport,closed,attribute,WebTransportCloseInfoPromise,Promise<WebTransportCloseInfo>,,False,False
-QuicTransport,createSendStream,operation,AnyPromise,Promise<any>,,False,False
+QuicTransport,createSendStream,operation,SendStreamPromise,Promise<SendStream>,,False,False
 QuicTransport,ready,attribute,VoidPromise,Promise<void>,,False,False
 QuicTransport,receiveDatagrams,operation,ReadableStream,ReadableStream,,False,False
 QuicTransport,sendDatagrams,operation,WritableStream,WritableStream,,False,False
@@ -5660,6 +5665,17 @@ RTCDtlsTransport,iceTransport,attribute,RTCIceTransport,RTCIceTransport,,False,F
 RTCDtlsTransport,onerror,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
 RTCDtlsTransport,onstatechange,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
 RTCDtlsTransport,state,attribute,RTCDtlsTransportState,RTCDtlsTransportState,,False,False
+RTCEncodedAudioFrame,,interface,,,,False,False
+RTCEncodedAudioFrame,,operation,String,DOMString,,False,False
+RTCEncodedAudioFrame,additionalData,attribute,ArrayBuffer,ArrayBuffer,,False,False
+RTCEncodedAudioFrame,data,attribute,ArrayBuffer,ArrayBuffer,,False,False
+RTCEncodedAudioFrame,timestamp,attribute,UnsignedLongLong,unsigned long long,,False,False
+RTCEncodedVideoFrame,,interface,,,,False,False
+RTCEncodedVideoFrame,,operation,String,DOMString,,False,False
+RTCEncodedVideoFrame,additionalData,attribute,ArrayBuffer,ArrayBuffer,,False,False
+RTCEncodedVideoFrame,data,attribute,ArrayBuffer,ArrayBuffer,,False,False
+RTCEncodedVideoFrame,timestamp,attribute,UnsignedLongLong,unsigned long long,,False,False
+RTCEncodedVideoFrame,type,attribute,RTCCodedVideoFrameType,RTCCodedVideoFrameType,,False,False
 RTCError,,interface,,,,False,False
 RTCError,errorDetail,attribute,RTCErrorDetailType,RTCErrorDetailType,,False,False
 RTCError,httpRequestStatusCode,attribute,Long,long,,False,False
@@ -5804,6 +5820,8 @@ RTCQuicTransport,state,attribute,RTCQuicTransportState,RTCQuicTransportState,RTC
 RTCQuicTransport,stop,operation,Void,void,RTCQuicTransport_Stop,False,False
 RTCQuicTransport,transport,attribute,RTCIceTransport,RTCIceTransport,RTCQuicTransport_Transport,False,False
 RTCRtpReceiver,,interface,,,,False,False
+RTCRtpReceiver,createEncodedAudioStreams,operation,RTCInsertableStreams,RTCInsertableStreams,,False,False
+RTCRtpReceiver,createEncodedVideoStreams,operation,RTCInsertableStreams,RTCInsertableStreams,,False,False
 RTCRtpReceiver,getCapabilities,operation,RTCRtpCapabilities,RTCRtpCapabilities,,False,False
 RTCRtpReceiver,getContributingSources,operation,RTCRtpContributingSourceSequence,sequence<RTCRtpContributingSource>,,False,False
 RTCRtpReceiver,getParameters,operation,RTCRtpReceiveParameters,RTCRtpReceiveParameters,,False,False
@@ -5814,6 +5832,8 @@ RTCRtpReceiver,rtcpTransport,attribute,RTCDtlsTransport,RTCDtlsTransport,,False,
 RTCRtpReceiver,track,attribute,MediaStreamTrack,MediaStreamTrack,,False,False
 RTCRtpReceiver,transport,attribute,RTCDtlsTransport,RTCDtlsTransport,,False,False
 RTCRtpSender,,interface,,,,False,False
+RTCRtpSender,createEncodedAudioStreams,operation,RTCInsertableStreams,RTCInsertableStreams,,False,False
+RTCRtpSender,createEncodedVideoStreams,operation,RTCInsertableStreams,RTCInsertableStreams,,False,False
 RTCRtpSender,dtmf,attribute,RTCDTMFSender,RTCDTMFSender,RTCRtpSender_Dtmf,False,False
 RTCRtpSender,getCapabilities,operation,RTCRtpCapabilities,RTCRtpCapabilities,,False,False
 RTCRtpSender,getParameters,operation,RTCRtpSendParameters,RTCRtpSendParameters,,False,False
@@ -6919,6 +6939,10 @@ Selection,selectAllChildren,operation,Void,void,SelectionSelectAllChildren,False
 Selection,setBaseAndExtent,operation,Void,void,SelectionSetBaseAndExtent,False,False
 Selection,setPosition,operation,Void,void,SelectionSetPosition,False,False
 Selection,type,attribute,String,DOMString,SelectionType,False,False
+SendStream,,interface,,,,False,False
+SendStream,abortWriting,operation,Void,void,,False,False
+SendStream,writable,attribute,WritableStream,WritableStream,,False,False
+SendStream,writingAborted,attribute,StreamAbortInfoPromise,Promise<StreamAbortInfo>,,False,False
 Sensor,,interface,,,,True,False
 Sensor,activated,attribute,Boolean,boolean,GenericSensorActivated,False,False
 Sensor,hasReading,attribute,Boolean,boolean,,False,False
@@ -7217,7 +7241,7 @@ StyleSheetList,length,attribute,UnsignedLong,unsigned long,,False,False
 SubmitEvent,,interface,,,,False,False
 SubmitEvent,isTrusted,attribute,Boolean,boolean,,False,False
 SubmitEvent,submitter,attribute,HTMLElement,HTMLElement,,False,False
-SubtleCrypto,,interface,,,,False,False
+SubtleCrypto,,interface,,,,True,False
 SubtleCrypto,decrypt,operation,AnyPromise,Promise<any>,SubtleCryptoDecrypt,False,False
 SubtleCrypto,deriveBits,operation,ArrayBufferPromise,Promise<ArrayBuffer>,SubtleCryptoDeriveBits,False,False
 SubtleCrypto,deriveKey,operation,AnyPromise,Promise<any>,SubtleCryptoDeriveKey,False,False
@@ -7622,7 +7646,7 @@ ValidityState,typeMismatch,attribute,Boolean,boolean,,False,False
 ValidityState,valid,attribute,Boolean,boolean,,False,False
 ValidityState,valueMissing,attribute,Boolean,boolean,,False,False
 VideoDecoder,,interface,,,,False,False
-VideoDecoder,initialize,operation,VoidPromise,Promise<void>,,False,False
+VideoDecoder,configure,operation,VoidPromise,Promise<void>,,False,False
 VideoDecoder,readable,attribute,ReadableStream,ReadableStream,,False,False
 VideoDecoder,writable,attribute,WritableStream,WritableStream,,False,False
 VideoFrame,,interface,,,,False,False
@@ -10652,11 +10676,6 @@ XPathResult,singleNodeValue,attribute,Node,Node,,False,False
 XPathResult,snapshotItem,operation,Node,Node,,False,False
 XPathResult,snapshotLength,attribute,UnsignedLong,unsigned long,,False,False
 XPathResult,stringValue,attribute,String,DOMString,,False,False
-XR,,interface,,,,True,False
-XR,isSessionSupported,operation,BooleanPromise,Promise<boolean>,XRIsSessionSupported,False,False
-XR,ondevicechange,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
-XR,requestSession,operation,XRSessionPromise,Promise<XRSession>,XRRequestSession,False,False
-XR,supportsSession,operation,VoidPromise,Promise<void>,,False,False
 XRAnchor,,interface,,,,True,False
 XRAnchor,anchorSpace,attribute,XRSpace,XRSpace,,False,False
 XRAnchor,detach,operation,Void,void,,False,False
@@ -10678,6 +10697,7 @@ XRFrame,session,attribute,XRSession,XRSession,,False,False
 XRFrame,trackedAnchors,attribute,XRAnchorSet,XRAnchorSet,,False,False
 XRFrame,worldInformation,attribute,XRWorldInformation,XRWorldInformation,,False,False
 XRHitTestResult,,interface,,,,True,False
+XRHitTestResult,createAnchor,operation,XRAnchorPromise,Promise<XRAnchor>,,False,False
 XRHitTestResult,getPose,operation,XRPose,XRPose,,False,False
 XRHitTestSource,,interface,,,,True,False
 XRHitTestSource,cancel,operation,Void,void,,False,False
@@ -10755,11 +10775,14 @@ XRSession,oninputsourceschange,attribute,EventHandlerNonNull,EventHandlerNonNull
 XRSession,onselect,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
 XRSession,onselectend,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
 XRSession,onselectstart,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
+XRSession,onsqueeze,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
+XRSession,onsqueezeend,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
+XRSession,onsqueezestart,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
 XRSession,onvisibilitychange,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
 XRSession,renderState,attribute,XRRenderState,XRRenderState,,False,False
 XRSession,requestAnimationFrame,operation,Long,long,,False,False
-XRSession,requestHitTestSource,operation,XRHitTestSourcePromise,Promise<XRHitTestSource>,,False,False
-XRSession,requestHitTestSourceForTransientInput,operation,XRTransientInputHitTestSourcePromise,Promise<XRTransientInputHitTestSource>,,False,False
+XRSession,requestHitTestSource,operation,XRHitTestSourcePromise,Promise<XRHitTestSource>,XRSessionRequestHitTestSource,False,False
+XRSession,requestHitTestSourceForTransientInput,operation,XRTransientInputHitTestSourcePromise,Promise<XRTransientInputHitTestSource>,XRSessionRequestHitTestSourceForTransientInput,False,False
 XRSession,requestReferenceSpace,operation,XRReferenceSpacePromise,Promise<XRReferenceSpace>,,False,False
 XRSession,updateRenderState,operation,Void,void,,False,False
 XRSession,updateWorldTrackingState,operation,Void,void,,False,False
@@ -10772,6 +10795,11 @@ XRSpace,,interface,,,,True,False
 XRSphericalHarmonics,,interface,,,,True,False
 XRSphericalHarmonics,coefficients,attribute,Float32Array,Float32Array,,False,False
 XRSphericalHarmonics,orientation,attribute,DOMPointReadOnly,DOMPointReadOnly,,False,False
+XRSystem,,interface,,,,True,False
+XRSystem,isSessionSupported,operation,BooleanPromise,Promise<boolean>,XRIsSessionSupported,False,False
+XRSystem,ondevicechange,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
+XRSystem,requestSession,operation,XRSessionPromise,Promise<XRSession>,XRRequestSession,False,False
+XRSystem,supportsSession,operation,VoidPromise,Promise<void>,,False,False
 XRTransientInputHitTestResult,,interface,,,,True,False
 XRTransientInputHitTestResult,inputSource,attribute,XRInputSource,XRInputSource,,False,False
 XRTransientInputHitTestResult,results,attribute,XRHitTestResultArray,FrozenArray<XRHitTestResult>,,False,False
