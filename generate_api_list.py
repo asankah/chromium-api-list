@@ -66,15 +66,13 @@ def Main():
             w.writelines(contents)
 
     if args.commit:
-        commit_position = check_output(['git', 'rev-parse', 'HEAD'],
-                                       cwd=args.build_path)
-        commit_message = check_output(['git', 'cat-file', '-p', 'HEAD'],
-                                      cwd=args.build_path).splitlines()
-        for l in commit_message:
-            ls = l.decode()
-            if ls.startswith(COMMIT_POSITION_HEADER):
-                commit_position = ls[len(COMMIT_POSITION_HEADER):].strip()
-                break
+        commit_hash = str(
+            check_output(['git', 'rev-parse', 'HEAD'],
+                         cwd=args.build_path), encoding='utf-8').strip()
+        commit_position = str(check_output(
+            ['git', 'footers', '--position', 'HEAD'],
+            cwd=args.build_path.parent.parent),
+                              encoding='utf-8').strip()
 
         git_status = str(check_output(['git', 'status', '--porcelain=v1'],
                                       cwd=args.target_path),
@@ -90,9 +88,15 @@ def Main():
                 'Unexpected changes found in the repository: "{}"'.format(
                     git_status[0]))
         else:
+            commit_message = '''Blink API list update from {commit_position!s}
+
+Source Chromium revision is https://crrev.com/{commit_hash!s}
+
+See https://github.com/asankah/chromium-api-list for details on how the
+list was generated.
+'''.format(commit_position=commit_position, commit_hash=commit_hash)
             check_call([
-                'git', 'commit', '-m',
-                '\'API list update from {}\''.format(commit_position), '--',
+                'git', 'commit', '-m', commit_message, '--',
                 API_LIST_TARGET_FILE
             ],
                        cwd=args.target_path)

@@ -19,3 +19,7 @@ or whatever your output directory is.
 
 [CrCode]: https://www.chromium.org/developers/how-tos/get-the-code
 
+If `--commit` is specified, then the updated list of APIs is committed to the
+repository. The commit message, where possible, will identify the commit hash in
+the Chromium respository or the `Cr-Commit-Position`.
+
