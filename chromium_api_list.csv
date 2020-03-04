@@ -134,6 +134,7 @@ AnimationPlaybackEvent,isTrusted,attribute,Boolean,boolean,,False,False
 AnimationPlaybackEvent,timelineTime,attribute,Double,double,,False,False
 AnimationTimeline,,interface,,,,False,False
 AnimationTimeline,currentTime,attribute,Double,double,,False,False
+AnimationTimeline,phase,attribute,TimelinePhase,TimelinePhase,,False,False
 AnimationWorkletGlobalScope,,interface,,,,False,False
 AnimationWorkletGlobalScope,registerAnimator,operation,Void,void,AnimationWorkletRegisterAnimator,False,False
 ApplicationCache,,interface,,,,True,False
@@ -1242,7 +1243,6 @@ DictionaryTest,getDictionaryMemberProperties,operation,Object,object,,False,Fals
 DictionaryTest,set,operation,Void,void,,False,False
 DictionaryTest,setDerived,operation,Void,void,,False,False
 DictionaryTest,setDerivedDerived,operation,Void,void,,False,False
-DictionaryTest,stringFromIterable,operation,String,DOMString,,False,False
 DirectoryEntry,,interface,,,,False,False
 DirectoryEntry,createReader,operation,DirectoryReader,DirectoryReader,,False,False
 DirectoryEntry,getDirectory,operation,Void,void,,False,False
@@ -3482,8 +3482,10 @@ InternalRuntimeFlags,cssPictureInPictureEnabled,attribute,Boolean,boolean,,False
 InternalRuntimeFlags,cssPseudoIsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssPseudoWhereEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssReducedFontLoadingInvalidationsEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,cssRenderSubtreeEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssSnapSizeEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,cssSubtreeVisibilityActivationEventEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,cssSubtreeVisibilityEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,cssSubtreeVisibilityHiddenMatchableEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssSupportsSelectorEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssVariables2AtPropertyEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssVariables2Enabled,attribute,Boolean,boolean,,False,False
@@ -3529,8 +3531,6 @@ InternalRuntimeFlags,featurePolicyForSandboxEnabled,attribute,Boolean,boolean,,F
 InternalRuntimeFlags,featurePolicyJavaScriptInterfaceEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,featurePolicyReportingEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,featurePolicyVibrateFeatureEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,fetchMetadataDestinationEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,fetchMetadataEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,fileHandlingEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,fileSystemEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,flatTreeStyleRecalcEnabled,attribute,Boolean,boolean,,False,False
@@ -3584,7 +3584,6 @@ InternalRuntimeFlags,lazyImageLoadingMetadataFetchEnabled,attribute,Boolean,bool
 InternalRuntimeFlags,lazyImageVisibleLoadTimeMetricsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,lazyInitializeMediaControlsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,legacyWindowsDWriteFontFallbackEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,linkSystemColorsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,manualSlottingEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,mathmlCoreEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,measureMemoryEnabled,attribute,Boolean,boolean,,False,False
@@ -3624,7 +3623,6 @@ InternalRuntimeFlags,navigatorLanguageInInsecureContextEnabled,attribute,Boolean
 InternalRuntimeFlags,netInfoDownlinkMaxEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,neverSlowModeEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,newRemotePlaybackPipelineEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,newSystemColorsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,noIdleEncodingForWebTestsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,notificationConstructorEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,notificationContentImageEnabled,attribute,Boolean,boolean,,False,False
@@ -3703,6 +3701,7 @@ InternalRuntimeFlags,rtcUnifiedPlanByDefaultEnabled,attribute,Boolean,boolean,,F
 InternalRuntimeFlags,rtcUnifiedPlanEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,sameSiteByDefaultCookiesEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,screenEnumerationEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,screenWakeLockEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,scriptStreamingOnPreloadEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,scriptedSpeechRecognitionEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,scriptedSpeechSynthesisEnabled,attribute,Boolean,boolean,,False,False
@@ -3732,6 +3731,7 @@ InternalRuntimeFlags,stableBlinkFeaturesEnabled,attribute,Boolean,boolean,,False
 InternalRuntimeFlags,storageAccessAPIEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,strictMimeTypesForWorkersEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,surfaceEmbeddingFeaturesEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,systemWakeLockEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,textDetectorEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,textFragmentIdentifiersEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,timeZoneChangeEventEnabled,attribute,Boolean,boolean,,False,False
@@ -4355,7 +4355,6 @@ Location,reload,operation,Void,void,,False,False
 Location,replace,operation,Void,void,,False,False
 Location,search,attribute,USVString,USVString,,False,False
 Location,toString,operation,String,DOMString,,False,False
-Location,valueOf,operation,Any,any,,False,False
 Lock,,interface,,,,True,False
 Lock,mode,attribute,LockMode,LockMode,,False,False
 Lock,name,attribute,String,DOMString,,False,False
@@ -5731,6 +5730,7 @@ RTCPeerConnection,addIceCandidate,operation,VoidPromise,Promise<void>,RTCPeerCon
 RTCPeerConnection,addStream,operation,Void,void,RTCPeerConnection_AddStream,False,False
 RTCPeerConnection,addTrack,operation,RTCRtpSender,RTCRtpSender,RTCPeerConnection_AddTrack,False,False
 RTCPeerConnection,addTransceiver,operation,RTCRtpTransceiver,RTCRtpTransceiver,RTCPeerConnection_AddTransceiver,False,False
+RTCPeerConnection,canTrickleIceCandidates,attribute,Boolean,boolean,,False,False
 RTCPeerConnection,close,operation,Void,void,,False,False
 RTCPeerConnection,connectionState,attribute,RTCPeerConnectionState,RTCPeerConnectionState,,False,False
 RTCPeerConnection,createAnswer,operation,RTCSessionDescriptionPromise,Promise<RTCSessionDescription>,,False,False
@@ -10251,8 +10251,6 @@ Window,,operation,Object,object,,False,False
 Window,,operation,Window,Window,,False,False
 Window,PERSISTENT,constant,UnsignedShort,unsigned short,,False,False
 Window,TEMPORARY,constant,UnsignedShort,unsigned short,,False,False
-Window,WebKitCSSMatrix,attribute,DOMMatrix,DOMMatrix,,False,False
-Window,WebKitMutationObserver,attribute,MutationObserver,MutationObserver,PrefixedMutationObserverConstructor,False,False
 Window,alert,operation,Void,void,Window_Alert,False,False
 Window,alert,operation,Void,void,Window_Alert,False,False
 Window,applicationCache,attribute,ApplicationCache,ApplicationCache,,True,False
@@ -10478,18 +10476,10 @@ Window,top,attribute,Window,Window,,False,False
 Window,trustedTypes,attribute,TrustedTypePolicyFactory,TrustedTypePolicyFactory,,False,False
 Window,visualViewport,attribute,VisualViewport,VisualViewport,,False,False
 Window,webkitCancelAnimationFrame,operation,Void,void,,False,False
-Window,webkitMediaStream,attribute,MediaStream,MediaStream,Window_WebkitMediaStream,False,False
-Window,webkitRTCPeerConnection,attribute,RTCPeerConnection,RTCPeerConnection,Window_WebkitRTCPeerConnection,False,False
 Window,webkitRequestAnimationFrame,operation,Long,long,,False,False
 Window,webkitRequestFileSystem,operation,Void,void,RequestFileSystem,False,False
 Window,webkitResolveLocalFileSystemURL,operation,Void,void,,False,False
-Window,webkitSpeechGrammar,attribute,SpeechGrammar,SpeechGrammar,Window_WebkitSpeechGrammar,False,False
-Window,webkitSpeechGrammarList,attribute,SpeechGrammarList,SpeechGrammarList,Window_WebkitSpeechGrammarList,False,False
-Window,webkitSpeechRecognition,attribute,SpeechRecognition,SpeechRecognition,Window_WebkitSpeechRecognition,False,False
-Window,webkitSpeechRecognitionError,attribute,SpeechRecognitionErrorEvent,SpeechRecognitionErrorEvent,Window_WebkitSpeechRecognitionError,False,False
-Window,webkitSpeechRecognitionEvent,attribute,SpeechRecognitionEvent,SpeechRecognitionEvent,Window_WebkitSpeechRecognitionEvent,False,False
 Window,webkitStorageInfo,attribute,DeprecatedStorageInfo,DeprecatedStorageInfo,,False,False
-Window,webkitURL,attribute,URL,URL,,False,False
 Window,window,attribute,Window,Window,,False,False
 WindowClient,,interface,,,,False,False
 WindowClient,focus,operation,WindowClientPromise,Promise<WindowClient>,,False,False
