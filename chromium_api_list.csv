@@ -3632,6 +3632,7 @@ InternalRuntimeFlags,offMainThreadCSSPaintEnabled,attribute,Boolean,boolean,,Fal
 InternalRuntimeFlags,offscreenCanvasCommitEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,onDeviceChangeEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,orientationEventEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,originPolicyEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,originTrialsSampleAPIDependentEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,originTrialsSampleAPIDeprecationEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,originTrialsSampleAPIEnabled,attribute,Boolean,boolean,,False,False
@@ -3753,6 +3754,7 @@ InternalRuntimeFlags,userActivationPostMessageTransferEnabled,attribute,Boolean,
 InternalRuntimeFlags,userActivationSameOriginVisibilityEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,userAgentClientHintEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,v8IdleTasksEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,v8OptimizeWorkersForPerformanceEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,videoAutoFullscreenEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,videoFullscreenOrientationLockEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,videoPlaybackQualityEnabled,attribute,Boolean,boolean,,False,False
@@ -4846,7 +4848,6 @@ Navigator,geolocation,attribute,Geolocation,Geolocation,,False,False
 Navigator,getBattery,operation,BatteryManagerPromise,Promise<BatteryManager>,BatteryStatusGetBattery,False,False
 Navigator,getGamepads,operation,GamepadList,GamepadList,GetGamepads,False,False
 Navigator,getInstalledRelatedApps,operation,RelatedApplicationSequencePromise,Promise<sequence<RelatedApplication>>,Navigator_GetInstalledRelatedApps,True,False
-Navigator,getUserAgent,operation,UserAgentPromise,Promise<UserAgent>,,True,False
 Navigator,getUserMedia,operation,Void,void,GetUserMediaLegacy,True,False
 Navigator,gpu,attribute,GPU,GPU,,False,False
 Navigator,hardwareConcurrency,attribute,UnsignedLongLong,unsigned long long,NavigatorHardwareConcurrency,False,True
@@ -4883,6 +4884,7 @@ Navigator,unregisterProtocolHandler,operation,Void,void,,True,False
 Navigator,usb,attribute,USB,USB,,False,False
 Navigator,userActivation,attribute,UserActivation,UserActivation,,False,False
 Navigator,userAgent,attribute,String,DOMString,NavigatorUserAgent,False,True
+Navigator,userAgentData,attribute,NavigatorUAData,NavigatorUAData,,True,False
 Navigator,vendor,attribute,String,DOMString,NavigatorVendor,False,True
 Navigator,vendorSub,attribute,String,DOMString,NavigatorVendorSub,False,True
 Navigator,vibrate,operation,Boolean,boolean,,False,False
@@ -4893,6 +4895,10 @@ Navigator,webkitGetUserMedia,operation,Void,void,GetUserMediaPrefixed,True,False
 Navigator,webkitPersistentStorage,attribute,DeprecatedStorageQuota,DeprecatedStorageQuota,PrefixedStorageQuota,False,False
 Navigator,webkitTemporaryStorage,attribute,DeprecatedStorageQuota,DeprecatedStorageQuota,PrefixedStorageQuota,False,False
 Navigator,xr,attribute,XRSystem,XRSystem,NavigatorXR,True,False
+NavigatorUAData,,interface,,,,False,False
+NavigatorUAData,getHighEntropyValues,operation,UADataValuesPromise,Promise<UADataValues>,,False,False
+NavigatorUAData,mobile,attribute,Boolean,boolean,,False,False
+NavigatorUAData,uaList,attribute,NavigatorUABrandVersionArray,FrozenArray<NavigatorUABrandVersion>,,False,False
 NetworkInformation,,interface,,,,False,False
 NetworkInformation,downlink,attribute,UnrestrictedDouble,unrestricted double,NetInfoDownlink,False,False
 NetworkInformation,downlinkMax,attribute,UnrestrictedDouble,unrestricted double,NetInfoDownlinkMax,False,False
@@ -7448,7 +7454,6 @@ TrustedTypePolicyFactory,defaultPolicy,attribute,TrustedTypePolicy,TrustedTypePo
 TrustedTypePolicyFactory,emptyHTML,attribute,TrustedHTML,TrustedHTML,,False,False
 TrustedTypePolicyFactory,emptyScript,attribute,TrustedScript,TrustedScript,,False,False
 TrustedTypePolicyFactory,getAttributeType,operation,String,DOMString,,False,False
-TrustedTypePolicyFactory,getPolicyNames,operation,StringSequence,sequence<DOMString>,,False,False
 TrustedTypePolicyFactory,getPropertyType,operation,String,DOMString,,False,False
 TrustedTypePolicyFactory,getTypeMapping,operation,Object,object,,False,False
 TrustedTypePolicyFactory,isHTML,operation,Boolean,boolean,,False,False
@@ -10426,6 +10431,7 @@ Window,openDatabase,operation,Database,Database,OpenWebDatabase,False,False
 Window,opener,attribute,Window,Window,,False,False
 Window,orientation,attribute,Long,long,WindowOrientation,False,True
 Window,origin,attribute,String,DOMString,,False,False
+Window,originPolicyIds,attribute,StringArray,FrozenArray<DOMString>,,False,False
 Window,outerHeight,attribute,Long,long,WindowOuterHeight,False,True
 Window,outerWidth,attribute,Long,long,WindowOuterWidth,False,True
 Window,pageXOffset,attribute,Double,double,WindowPageXOffset,False,True
@@ -10669,7 +10675,6 @@ XPathResult,stringValue,attribute,String,DOMString,,False,False
 XRAnchor,,interface,,,,True,False
 XRAnchor,anchorSpace,attribute,XRSpace,XRSpace,,False,False
 XRAnchor,detach,operation,Void,void,,False,False
-XRAnchor,lastChangedTime,attribute,Double,double,,False,False
 XRAnchorSet,,interface,,,,True,False
 XRBoundedReferenceSpace,,interface,,,,True,False
 XRBoundedReferenceSpace,boundsGeometry,attribute,DOMPointReadOnlyArray,FrozenArray<DOMPointReadOnly>,,False,False
