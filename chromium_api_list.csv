@@ -1183,7 +1183,6 @@ DedicatedWorkerGlobalScope,onmessageerror,attribute,EventHandlerNonNull,EventHan
 DedicatedWorkerGlobalScope,postMessage,operation,Void,void,,False,False
 DedicatedWorkerGlobalScope,postMessage,operation,Void,void,,False,False
 DedicatedWorkerGlobalScope,requestAnimationFrame,operation,Long,long,,False,False
-DedicatedWorkerGlobalScope,trustedTypes,attribute,TrustedTypePolicyFactory,TrustedTypePolicyFactory,,False,False
 DedicatedWorkerGlobalScope,webkitRequestFileSystem,operation,Void,void,RequestFileSystemWorker,False,False
 DedicatedWorkerGlobalScope,webkitRequestFileSystemSync,operation,DOMFileSystemSync,DOMFileSystemSync,RequestFileSystemSyncWorker,False,False
 DedicatedWorkerGlobalScope,webkitResolveLocalFileSystemSyncURL,operation,EntrySync,EntrySync,,False,False
@@ -7025,7 +7024,6 @@ ServiceWorkerGlobalScope,onsync,attribute,EventHandlerNonNull,EventHandlerNonNul
 ServiceWorkerGlobalScope,registration,attribute,ServiceWorkerRegistration,ServiceWorkerRegistration,,False,False
 ServiceWorkerGlobalScope,serviceWorker,attribute,ServiceWorker,ServiceWorker,,False,False
 ServiceWorkerGlobalScope,skipWaiting,operation,VoidPromise,Promise<void>,,False,False
-ServiceWorkerGlobalScope,trustedTypes,attribute,TrustedTypePolicyFactory,TrustedTypePolicyFactory,,False,False
 ServiceWorkerRegistration,,interface,,,,True,False
 ServiceWorkerRegistration,active,attribute,ServiceWorker,ServiceWorker,,False,False
 ServiceWorkerRegistration,backgroundFetch,attribute,BackgroundFetchManager,BackgroundFetchManager,,False,False
@@ -7068,7 +7066,6 @@ SharedWorkerGlobalScope,TEMPORARY,constant,UnsignedShort,unsigned short,,False,F
 SharedWorkerGlobalScope,close,operation,Void,void,,False,False
 SharedWorkerGlobalScope,name,attribute,String,DOMString,,False,False
 SharedWorkerGlobalScope,onconnect,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
-SharedWorkerGlobalScope,trustedTypes,attribute,TrustedTypePolicyFactory,TrustedTypePolicyFactory,,False,False
 SharedWorkerGlobalScope,webkitRequestFileSystem,operation,Void,void,RequestFileSystemWorker,False,False
 SharedWorkerGlobalScope,webkitRequestFileSystemSync,operation,DOMFileSystemSync,DOMFileSystemSync,RequestFileSystemSyncWorker,False,False
 SharedWorkerGlobalScope,webkitResolveLocalFileSystemSyncURL,operation,EntrySync,EntrySync,,False,False
