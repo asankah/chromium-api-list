@@ -3427,7 +3427,6 @@ InternalRuntimeFlags,browserVerifiedUserActivationKeyboardEnabled,attribute,Bool
 InternalRuntimeFlags,browserVerifiedUserActivationMouseEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,builtInModuleAllEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,builtInModuleInfraEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,builtInModuleKvStorageEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,builtInModuleSwitchElementEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cacheInlineScriptCodeEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cacheStorageCodeCacheHintEnabled,attribute,Boolean,boolean,,False,False
@@ -7434,18 +7433,18 @@ TreeWalker,previousNode,operation,Node,Node,,False,False
 TreeWalker,previousSibling,operation,Node,Node,,False,False
 TreeWalker,root,attribute,Node,Node,,False,False
 TreeWalker,whatToShow,attribute,UnsignedLong,unsigned long,,False,False
-TrustedHTML,,interface,,,,False,False
+TrustedHTML,,interface,,,,True,False
 TrustedHTML,,operation,String,DOMString,,False,False
-TrustedScript,,interface,,,,False,False
+TrustedScript,,interface,,,,True,False
 TrustedScript,,operation,String,DOMString,,False,False
-TrustedScriptURL,,interface,,,,False,False
+TrustedScriptURL,,interface,,,,True,False
 TrustedScriptURL,,operation,String,DOMString,,False,False
-TrustedTypePolicy,,interface,,,,False,False
+TrustedTypePolicy,,interface,,,,True,False
 TrustedTypePolicy,createHTML,operation,TrustedHTML,TrustedHTML,,False,False
 TrustedTypePolicy,createScript,operation,TrustedScript,TrustedScript,,False,False
 TrustedTypePolicy,createScriptURL,operation,TrustedScriptURL,TrustedScriptURL,,False,False
 TrustedTypePolicy,name,attribute,String,DOMString,,False,False
-TrustedTypePolicyFactory,,interface,,,,False,False
+TrustedTypePolicyFactory,,interface,,,,True,False
 TrustedTypePolicyFactory,createPolicy,operation,TrustedTypePolicy,TrustedTypePolicy,,False,False
 TrustedTypePolicyFactory,defaultPolicy,attribute,TrustedTypePolicy,TrustedTypePolicy,,False,False
 TrustedTypePolicyFactory,emptyHTML,attribute,TrustedHTML,TrustedHTML,,False,False
@@ -10428,7 +10427,6 @@ Window,openDatabase,operation,Database,Database,OpenWebDatabase,False,False
 Window,opener,attribute,Window,Window,,False,False
 Window,orientation,attribute,Long,long,WindowOrientation,False,True
 Window,origin,attribute,String,DOMString,,False,False
-Window,originPolicyIds,attribute,StringArray,FrozenArray<DOMString>,,False,False
 Window,outerHeight,attribute,Long,long,WindowOuterHeight,False,True
 Window,outerWidth,attribute,Long,long,WindowOuterWidth,False,True
 Window,pageXOffset,attribute,Double,double,WindowPageXOffset,False,True
@@ -10476,7 +10474,7 @@ Window,stop,operation,Void,void,,False,False
 Window,styleMedia,attribute,StyleMedia,StyleMedia,StyleMedia,False,False
 Window,toolbar,attribute,BarProp,BarProp,BarPropToolbar,False,False
 Window,top,attribute,Window,Window,,False,False
-Window,trustedTypes,attribute,TrustedTypePolicyFactory,TrustedTypePolicyFactory,,False,False
+Window,trustedTypes,attribute,TrustedTypePolicyFactory,TrustedTypePolicyFactory,,True,False
 Window,visualViewport,attribute,VisualViewport,VisualViewport,,False,False
 Window,webkitCancelAnimationFrame,operation,Void,void,,False,False
 Window,webkitRequestAnimationFrame,operation,Long,long,,False,False
