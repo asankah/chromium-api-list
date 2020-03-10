@@ -1658,13 +1658,13 @@ Element,getDestinationInsertionPoints,operation,NodeList,NodeList,,False,False
 Element,getElementsByClassName,operation,HTMLCollection,HTMLCollection,,False,False
 Element,getElementsByTagName,operation,HTMLCollection,HTMLCollection,,False,False
 Element,getElementsByTagNameNS,operation,HTMLCollection,HTMLCollection,,False,False
-Element,getInnerHTML,operation,StringOrTrustedHTML,(DOMString or TrustedHTML),,False,False
+Element,getInnerHTML,operation,StringStringContext,[StringContext=TrustedHTML] DOMString,,False,False
 Element,hasAttribute,operation,Boolean,boolean,,False,False
 Element,hasAttributeNS,operation,Boolean,boolean,,False,False
 Element,hasAttributes,operation,Boolean,boolean,,False,False
 Element,hasPointerCapture,operation,Boolean,boolean,,False,False
 Element,id,attribute,String,DOMString,,False,False
-Element,innerHTML,attribute,StringOrTrustedHTML,(DOMString or TrustedHTML),,False,False
+Element,innerHTML,attribute,StringStringContextTreatNullAs,"[StringContext=TrustedHTML, TreatNullAs=EmptyString] DOMString",,False,False
 Element,insertAdjacentElement,operation,Element,Element,,False,False
 Element,insertAdjacentHTML,operation,Void,void,,False,False
 Element,insertAdjacentText,operation,Void,void,,False,False
@@ -1683,7 +1683,7 @@ Element,onfullscreenerror,attribute,EventHandlerNonNull,EventHandlerNonNull,,Fal
 Element,onsearch,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
 Element,onwebkitfullscreenchange,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
 Element,onwebkitfullscreenerror,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
-Element,outerHTML,attribute,StringOrTrustedHTML,(DOMString or TrustedHTML),,False,False
+Element,outerHTML,attribute,StringStringContextTreatNullAs,"[StringContext=TrustedHTML, TreatNullAs=EmptyString] DOMString",,False,False
 Element,part,attribute,DOMTokenList,DOMTokenList,,False,False
 Element,prefix,attribute,String,DOMString,,False,False
 Element,prepend,operation,Void,void,,False,False
@@ -1948,6 +1948,7 @@ FileSystemDirectoryHandle,getEntries,operation,Object,object,,False,False
 FileSystemDirectoryHandle,getFile,operation,FileSystemFileHandlePromise,Promise<FileSystemFileHandle>,,False,False
 FileSystemDirectoryHandle,getSystemDirectory,operation,FileSystemDirectoryHandlePromise,Promise<FileSystemDirectoryHandle>,FileSystemDirectoryHandle_GetSystemDirectory,False,False
 FileSystemDirectoryHandle,removeEntry,operation,VoidPromise,Promise<void>,,False,False
+FileSystemDirectoryHandle,resolve,operation,USVStringSequencePromise,Promise<sequence<USVString>>,FileSystemDirectoryHandle_Resolve,False,False
 FileSystemFileHandle,,interface,,,,True,False
 FileSystemFileHandle,createWritable,operation,FileSystemWritableFileStreamPromise,Promise<FileSystemWritableFileStream>,,False,False
 FileSystemFileHandle,createWriter,operation,FileSystemWriterPromise,Promise<FileSystemWriter>,,False,False
@@ -1955,6 +1956,7 @@ FileSystemFileHandle,getFile,operation,FilePromise,Promise<File>,,False,False
 FileSystemHandle,,interface,,,,True,False
 FileSystemHandle,isDirectory,attribute,Boolean,boolean,,False,False
 FileSystemHandle,isFile,attribute,Boolean,boolean,,False,False
+FileSystemHandle,isSameEntry,operation,BooleanPromise,Promise<boolean>,FileSystemHandle_IsSameEntry,False,False
 FileSystemHandle,name,attribute,USVString,USVString,,False,False
 FileSystemHandle,queryPermission,operation,PermissionStatePromise,Promise<PermissionState>,,False,False
 FileSystemHandle,requestPermission,operation,PermissionStatePromise,Promise<PermissionState>,,False,False
@@ -2578,7 +2580,7 @@ HTMLEmbedElement,align,attribute,String,DOMString,,False,False
 HTMLEmbedElement,getSVGDocument,operation,Document,Document,,False,False
 HTMLEmbedElement,height,attribute,String,DOMString,,False,False
 HTMLEmbedElement,name,attribute,String,DOMString,,False,False
-HTMLEmbedElement,src,attribute,StringOrTrustedScriptURL,(DOMString or TrustedScriptURL),,False,False
+HTMLEmbedElement,src,attribute,USVStringStringContext,[StringContext=TrustedScriptURL] USVString,,False,False
 HTMLEmbedElement,type,attribute,String,DOMString,,False,False
 HTMLEmbedElement,width,attribute,String,DOMString,,False,False
 HTMLFieldSetElement,,interface,,,,False,False
@@ -2692,7 +2694,7 @@ HTMLIFrameElement,referrerPolicy,attribute,String,DOMString,,False,False
 HTMLIFrameElement,sandbox,attribute,DOMTokenList,DOMTokenList,,False,False
 HTMLIFrameElement,scrolling,attribute,String,DOMString,,False,False
 HTMLIFrameElement,src,attribute,USVString,USVString,,False,False
-HTMLIFrameElement,srcdoc,attribute,StringOrTrustedHTML,(DOMString or TrustedHTML),,False,False
+HTMLIFrameElement,srcdoc,attribute,StringStringContext,[StringContext=TrustedHTML] DOMString,,False,False
 HTMLIFrameElement,width,attribute,String,DOMString,,False,False
 HTMLImageElement,,interface,,,,False,False
 HTMLImageElement,align,attribute,String,DOMString,,False,False
@@ -2916,11 +2918,11 @@ HTMLObjectElement,archive,attribute,String,DOMString,,False,False
 HTMLObjectElement,border,attribute,StringTreatNullAs,[TreatNullAs=EmptyString] DOMString,,False,False
 HTMLObjectElement,checkValidity,operation,Boolean,boolean,,False,False
 HTMLObjectElement,code,attribute,String,DOMString,,False,False
-HTMLObjectElement,codeBase,attribute,StringOrTrustedScriptURL,(DOMString or TrustedScriptURL),,False,False
+HTMLObjectElement,codeBase,attribute,USVStringStringContext,[StringContext=TrustedScriptURL] USVString,,False,False
 HTMLObjectElement,codeType,attribute,String,DOMString,,False,False
 HTMLObjectElement,contentDocument,attribute,Document,Document,,False,False
 HTMLObjectElement,contentWindow,attribute,Window,Window,,False,False
-HTMLObjectElement,data,attribute,StringOrTrustedScriptURL,(DOMString or TrustedScriptURL),,False,False
+HTMLObjectElement,data,attribute,USVStringStringContext,[StringContext=TrustedScriptURL] USVString,,False,False
 HTMLObjectElement,declare,attribute,Boolean,boolean,,False,False
 HTMLObjectElement,form,attribute,HTMLFormElement,HTMLFormElement,,False,False
 HTMLObjectElement,getSVGDocument,operation,Document,Document,,False,False
@@ -3007,8 +3009,8 @@ HTMLScriptElement,importance,attribute,String,DOMString,PriorityHints,False,Fals
 HTMLScriptElement,integrity,attribute,String,DOMString,,False,False
 HTMLScriptElement,noModule,attribute,Boolean,boolean,,False,False
 HTMLScriptElement,referrerPolicy,attribute,String,DOMString,,False,False
-HTMLScriptElement,src,attribute,StringOrTrustedScriptURL,(DOMString or TrustedScriptURL),,False,False
-HTMLScriptElement,text,attribute,StringOrTrustedScript,(DOMString or TrustedScript),,False,False
+HTMLScriptElement,src,attribute,USVStringStringContext,[StringContext=TrustedScriptURL] USVString,,False,False
+HTMLScriptElement,text,attribute,StringStringContext,[StringContext=TrustedScript] DOMString,,False,False
 HTMLScriptElement,type,attribute,String,DOMString,,False,False
 HTMLSelectElement,,interface,,,,False,False
 HTMLSelectElement,,operation,Void,void,,False,False
@@ -4005,7 +4007,6 @@ Internals,compareTreeScopePosition,operation,UnsignedShort,unsigned short,,False
 Internals,computedStyleIncludingVisitedInfo,operation,CSSStyleDeclaration,CSSStyleDeclaration,,False,False
 Internals,contextLifecycleStateObserverObjectCount,operation,UnsignedLong,unsigned long,,False,False
 Internals,countElementShadow,operation,UnsignedLong,unsigned long,,False,False
-Internals,countHitRegions,operation,UnsignedLong,unsigned long,,False,False
 Internals,counterValue,operation,String,DOMString,,False,False
 Internals,crash,operation,Void,void,,False,False
 Internals,createRejectedPromise,operation,AnyPromise,Promise<any>,,False,False
@@ -7051,7 +7052,7 @@ ShadowRoot,elementsFromPoint,operation,ElementSequence,sequence<Element>,,False,
 ShadowRoot,fullscreenElement,attribute,Element,Element,,False,False
 ShadowRoot,getSelection,operation,Selection,Selection,,False,False
 ShadowRoot,host,attribute,Element,Element,,False,False
-ShadowRoot,innerHTML,attribute,StringOrTrustedHTML,(DOMString or TrustedHTML),,False,False
+ShadowRoot,innerHTML,attribute,StringStringContextTreatNullAs,"[StringContext=TrustedHTML, TreatNullAs=EmptyString] DOMString",,False,False
 ShadowRoot,mode,attribute,ShadowRootMode,ShadowRootMode,,False,False
 ShadowRoot,pictureInPictureElement,attribute,HTMLVideoElement,HTMLVideoElement,ShadowRoot_PictureInPictureElement,False,False
 ShadowRoot,pointerLockElement,attribute,Element,Element,,False,False
@@ -7272,6 +7273,7 @@ TaskAttributionTiming,toJSON,operation,Object,object,,False,False
 TaskController,,interface,,,TaskControllerConstructor,False,False
 TaskController,setPriority,operation,Void,void,TaskControllerSetPriority,False,False
 TaskSignal,,interface,,,,False,False
+TaskSignal,onprioritychange,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
 TaskSignal,priority,attribute,TaskPriority,TaskPriority,TaskSignalPriority,False,False
 TestInterfaceConstructor,,interface,,,,False,False
 TestReportBody,,interface,,,,False,False
@@ -10427,6 +10429,7 @@ Window,openDatabase,operation,Database,Database,OpenWebDatabase,False,False
 Window,opener,attribute,Window,Window,,False,False
 Window,orientation,attribute,Long,long,WindowOrientation,False,True
 Window,origin,attribute,String,DOMString,,False,False
+Window,originPolicyIds,attribute,StringArray,FrozenArray<DOMString>,,False,False
 Window,outerHeight,attribute,Long,long,WindowOuterHeight,False,True
 Window,outerWidth,attribute,Long,long,WindowOuterWidth,False,True
 Window,pageXOffset,attribute,Double,double,WindowPageXOffset,False,True
