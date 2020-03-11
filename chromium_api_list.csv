@@ -175,7 +175,7 @@ AudioBuffer,copyFromChannel,operation,Void,void,AudioBuffer_CopyFromChannel,Fals
 AudioBuffer,copyToChannel,operation,Void,void,,False,False
 AudioBuffer,duration,attribute,Double,double,,False,False
 AudioBuffer,getChannelData,operation,Float32Array,Float32Array,AudioBuffer_GetChannelData,False,True
-AudioBuffer,length,attribute,Long,long,,False,False
+AudioBuffer,length,attribute,UnsignedLong,unsigned long,,False,False
 AudioBuffer,numberOfChannels,attribute,UnsignedLong,unsigned long,,False,False
 AudioBuffer,sampleRate,attribute,Float,float,,False,False
 AudioBufferSourceNode,,interface,,,,False,False
@@ -378,6 +378,7 @@ BlobEvent,isTrusted,attribute,Boolean,boolean,,False,False
 BlobEvent,timecode,attribute,Double,double,,False,False
 Bluetooth,,interface,,,,True,False
 Bluetooth,getAvailability,operation,BooleanPromise,Promise<boolean>,,False,False
+Bluetooth,getDevices,operation,BluetoothDeviceSequencePromise,Promise<sequence<BluetoothDevice>>,,False,False
 Bluetooth,onadvertisementreceived,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
 Bluetooth,requestDevice,operation,BluetoothDevicePromise,Promise<BluetoothDevice>,WebBluetoothRequestDevice,False,False
 Bluetooth,requestLEScan,operation,BluetoothLEScanPromise,Promise<BluetoothLEScan>,WebBluetoothRequestScan,False,False
@@ -1697,7 +1698,7 @@ Element,removeAttributeNS,operation,Void,void,,False,False
 Element,removeAttributeNode,operation,Attr,Attr,,False,False
 Element,replaceWith,operation,Void,void,,False,False
 Element,requestFullscreen,operation,VoidPromise,Promise<void>,,False,False
-Element,requestPointerLock,operation,Void,void,ElementRequestPointerLock,False,False
+Element,requestPointerLock,operation,Any,any,ElementRequestPointerLock,False,False
 Element,role,attribute,String,DOMString,,False,False
 Element,scroll,operation,Void,void,,False,False
 Element,scroll,operation,Void,void,,False,False
@@ -3768,6 +3769,7 @@ InternalRuntimeFlags,webAssemblyThreadsEnabled,attribute,Boolean,boolean,,False,
 InternalRuntimeFlags,webAuthEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,webAuthenticationFeaturePolicyEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,webBluetoothEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,webBluetoothGetDevicesEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,webBluetoothScanningEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,webCodecsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,webCryptoCurve25519Enabled,attribute,Boolean,boolean,,False,False
@@ -5621,10 +5623,10 @@ PushSubscriptionOptions,userVisibleOnly,attribute,Boolean,boolean,,False,False
 QuicTransport,,interface,,,,False,False
 QuicTransport,close,operation,Void,void,,False,False
 QuicTransport,closed,attribute,WebTransportCloseInfoPromise,Promise<WebTransportCloseInfo>,,False,False
-QuicTransport,createSendStream,operation,SendStreamPromise,Promise<SendStream>,,False,False
+QuicTransport,createSendStream,operation,SendStreamPromise,Promise<SendStream>,QuicTransportStreamApis,False,False
 QuicTransport,ready,attribute,VoidPromise,Promise<void>,,False,False
-QuicTransport,receiveDatagrams,operation,ReadableStream,ReadableStream,,False,False
-QuicTransport,sendDatagrams,operation,WritableStream,WritableStream,,False,False
+QuicTransport,receiveDatagrams,operation,ReadableStream,ReadableStream,QuicTransportDatagramApis,False,False
+QuicTransport,sendDatagrams,operation,WritableStream,WritableStream,QuicTransportDatagramApis,False,False
 RTCCertificate,,interface,,,,False,False
 RTCCertificate,expires,attribute,UnsignedLongLong,unsigned long long,,False,False
 RTCCertificate,getFingerprints,operation,RTCDtlsFingerprintSequence,sequence<RTCDtlsFingerprint>,,False,False
@@ -5825,8 +5827,8 @@ RTCQuicTransport,state,attribute,RTCQuicTransportState,RTCQuicTransportState,RTC
 RTCQuicTransport,stop,operation,Void,void,RTCQuicTransport_Stop,False,False
 RTCQuicTransport,transport,attribute,RTCIceTransport,RTCIceTransport,RTCQuicTransport_Transport,False,False
 RTCRtpReceiver,,interface,,,,False,False
-RTCRtpReceiver,createEncodedAudioStreams,operation,RTCInsertableStreams,RTCInsertableStreams,,False,False
-RTCRtpReceiver,createEncodedVideoStreams,operation,RTCInsertableStreams,RTCInsertableStreams,,False,False
+RTCRtpReceiver,createEncodedAudioStreams,operation,RTCInsertableStreams,RTCInsertableStreams,RTCRtpReceiver_CreateEncodedAudioStreams,False,False
+RTCRtpReceiver,createEncodedVideoStreams,operation,RTCInsertableStreams,RTCInsertableStreams,RTCRtpReceiver_CreateEncodedVideoStreams,False,False
 RTCRtpReceiver,getCapabilities,operation,RTCRtpCapabilities,RTCRtpCapabilities,,False,False
 RTCRtpReceiver,getContributingSources,operation,RTCRtpContributingSourceSequence,sequence<RTCRtpContributingSource>,,False,False
 RTCRtpReceiver,getParameters,operation,RTCRtpReceiveParameters,RTCRtpReceiveParameters,,False,False
@@ -5837,8 +5839,8 @@ RTCRtpReceiver,rtcpTransport,attribute,RTCDtlsTransport,RTCDtlsTransport,,False,
 RTCRtpReceiver,track,attribute,MediaStreamTrack,MediaStreamTrack,,False,False
 RTCRtpReceiver,transport,attribute,RTCDtlsTransport,RTCDtlsTransport,,False,False
 RTCRtpSender,,interface,,,,False,False
-RTCRtpSender,createEncodedAudioStreams,operation,RTCInsertableStreams,RTCInsertableStreams,,False,False
-RTCRtpSender,createEncodedVideoStreams,operation,RTCInsertableStreams,RTCInsertableStreams,,False,False
+RTCRtpSender,createEncodedAudioStreams,operation,RTCInsertableStreams,RTCInsertableStreams,RTCRtpSender_CreateEncodedAudioStreams,False,False
+RTCRtpSender,createEncodedVideoStreams,operation,RTCInsertableStreams,RTCInsertableStreams,RTCRtpSender_CreateEncodedVideoStreams,False,False
 RTCRtpSender,dtmf,attribute,RTCDTMFSender,RTCDTMFSender,RTCRtpSender_Dtmf,False,False
 RTCRtpSender,getCapabilities,operation,RTCRtpCapabilities,RTCRtpCapabilities,,False,False
 RTCRtpSender,getParameters,operation,RTCRtpSendParameters,RTCRtpSendParameters,,False,False
@@ -6851,6 +6853,7 @@ SVGViewElement,preserveAspectRatio,attribute,SVGAnimatedPreserveAspectRatio,SVGA
 SVGViewElement,viewBox,attribute,SVGAnimatedRect,SVGAnimatedRect,SVG1DOMFitToViewBox,False,False
 SVGViewElement,zoomAndPan,attribute,UnsignedShort,unsigned short,SVG1DOMZoomAndPan,False,False
 Scheduler,,interface,,,,False,False
+Scheduler,currentTaskSignal,attribute,TaskSignal,TaskSignal,,False,False
 Scheduler,postTask,operation,AnyPromise,Promise<any>,SchedulerPostTask,False,False
 Scheduling,,interface,,,,False,False
 Scheduling,isFramePending,operation,Boolean,boolean,,False,False
