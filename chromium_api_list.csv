@@ -1322,7 +1322,7 @@ Document,forms,attribute,HTMLCollection,HTMLCollection,Document_Forms,False,Fals
 Document,fullscreen,attribute,Boolean,boolean,,False,False
 Document,fullscreenElement,attribute,Element,Element,,False,False
 Document,fullscreenEnabled,attribute,Boolean,boolean,,False,False
-Document,getAnimations,operation,AnimationSequence,sequence<Animation>,,False,False
+Document,getAnimations,operation,AnimationSequence,sequence<Animation>,Document_GetAnimations,False,False
 Document,getElementById,operation,Element,Element,,False,False
 Document,getElementsByClassName,operation,HTMLCollection,HTMLCollection,,False,False
 Document,getElementsByName,operation,NodeList,NodeList,,False,False
@@ -1952,7 +1952,6 @@ FileSystemDirectoryHandle,removeEntry,operation,VoidPromise,Promise<void>,,False
 FileSystemDirectoryHandle,resolve,operation,USVStringSequencePromise,Promise<sequence<USVString>>,FileSystemDirectoryHandle_Resolve,False,False
 FileSystemFileHandle,,interface,,,,True,False
 FileSystemFileHandle,createWritable,operation,FileSystemWritableFileStreamPromise,Promise<FileSystemWritableFileStream>,,False,False
-FileSystemFileHandle,createWriter,operation,FileSystemWriterPromise,Promise<FileSystemWriter>,,False,False
 FileSystemFileHandle,getFile,operation,FilePromise,Promise<File>,,False,False
 FileSystemHandle,,interface,,,,True,False
 FileSystemHandle,isDirectory,attribute,Boolean,boolean,,False,False
@@ -3982,7 +3981,8 @@ InternalSettingsGenerated,setWideViewportQuirkEnabled,operation,Void,void,,False
 Internals,,interface,,,,False,False
 Internals,,operation,Long,long,,False,False
 Internals,DisableIntersectionObserverThrottleDelay,operation,Void,void,,False,False
-Internals,LAYER_TREE_INCLUDES_PAINT_INVALIDATIONS,constant,UnsignedShort,unsigned short,,False,False
+Internals,LAYER_TREE_INCLUDES_DETAILED_INVALIDATIONS,constant,UnsignedShort,unsigned short,,False,False
+Internals,LAYER_TREE_INCLUDES_INVALIDATIONS,constant,UnsignedShort,unsigned short,,False,False
 Internals,LifecycleUpdateCount,operation,UnsignedLong,unsigned long,,False,False
 Internals,absoluteCaretBounds,operation,DOMRectReadOnly,DOMRectReadOnly,,False,False
 Internals,activeMarkerCountForNode,operation,UnsignedLong,unsigned long,,False,False
@@ -4038,11 +4038,11 @@ Internals,forceImageReload,operation,Void,void,,False,False
 Internals,forceReload,operation,Void,void,,False,False
 Internals,forceStaleStateForMediaElement,operation,Void,void,,False,False
 Internals,formControlStateOfHistoryItem,operation,StringSequence,sequence<DOMString>,,False,False
+Internals,getAgentId,operation,String,DOMString,,False,False
 Internals,getCSSPropertyAliases,operation,StringSequence,sequence<DOMString>,,False,False
 Internals,getCSSPropertyLonghands,operation,StringSequence,sequence<DOMString>,,False,False
 Internals,getCSSPropertyShorthands,operation,StringSequence,sequence<DOMString>,,False,False
 Internals,getCurrentCursorInfo,operation,String,DOMString,,False,False
-Internals,getDocumentAgentId,operation,String,DOMString,,False,False
 Internals,getDragCaret,operation,StaticSelection,StaticSelection,,False,False
 Internals,getImageSourceURL,operation,String,DOMString,,False,False
 Internals,getInternalResponseURLList,operation,USVStringSequence,sequence<USVString>,,False,False
@@ -5169,7 +5169,6 @@ PagePopupController,formatMonth,operation,String,DOMString,,False,False
 PagePopupController,formatShortMonth,operation,String,DOMString,,False,False
 PagePopupController,formatWeek,operation,String,DOMString,,False,False
 PagePopupController,localizeNumberString,operation,String,DOMString,,False,False
-PagePopupController,selectFontsFromOwnerDocument,operation,Void,void,,False,False
 PagePopupController,setValue,operation,Void,void,,False,False
 PagePopupController,setValueAndClosePopup,operation,Void,void,,False,False
 PagePopupController,setWindowRect,operation,Void,void,,False,False
@@ -7053,12 +7052,14 @@ ShadowRoot,delegatesFocus,attribute,Boolean,boolean,,False,False
 ShadowRoot,elementFromPoint,operation,Element,Element,,False,False
 ShadowRoot,elementsFromPoint,operation,ElementSequence,sequence<Element>,,False,False
 ShadowRoot,fullscreenElement,attribute,Element,Element,,False,False
+ShadowRoot,getAnimations,operation,AnimationSequence,sequence<Animation>,ShadowRoot_GetAnimations,False,False
 ShadowRoot,getSelection,operation,Selection,Selection,,False,False
 ShadowRoot,host,attribute,Element,Element,,False,False
 ShadowRoot,innerHTML,attribute,StringStringContextTreatNullAs,"[StringContext=TrustedHTML, TreatNullAs=EmptyString] DOMString",,False,False
 ShadowRoot,mode,attribute,ShadowRootMode,ShadowRootMode,,False,False
 ShadowRoot,pictureInPictureElement,attribute,HTMLVideoElement,HTMLVideoElement,ShadowRoot_PictureInPictureElement,False,False
 ShadowRoot,pointerLockElement,attribute,Element,Element,,False,False
+ShadowRoot,slotAssignment,attribute,SlotAssignmentMode,SlotAssignmentMode,,False,False
 ShadowRoot,styleSheets,attribute,StyleSheetList,StyleSheetList,,False,False
 SharedWorker,,interface,,,,False,False
 SharedWorker,onerror,attribute,EventHandlerNonNull,EventHandlerNonNull,,False,False
