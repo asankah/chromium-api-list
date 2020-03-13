@@ -3427,9 +3427,6 @@ InternalRuntimeFlags,blockingDownloadsInSandboxEnabled,attribute,Boolean,boolean
 InternalRuntimeFlags,blockingFocusWithoutUserActivationEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,browserVerifiedUserActivationKeyboardEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,browserVerifiedUserActivationMouseEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,builtInModuleAllEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,builtInModuleInfraEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,builtInModuleSwitchElementEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cacheInlineScriptCodeEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cacheStorageCodeCacheHintEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,canvas2dContextLostRestoredEnabled,attribute,Boolean,boolean,,False,False
@@ -3742,6 +3739,7 @@ InternalRuntimeFlags,touchEventFeatureDetectionEnabled,attribute,Boolean,boolean
 InternalRuntimeFlags,trackLayoutPassesPerBlockEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,transferableStreamsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,translateServiceEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,trustTokensEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,trustedDOMTypesEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,unclosedFormControlIsInvalidEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,unifiedPointerCaptureInBlinkEnabled,attribute,Boolean,boolean,,False,False
@@ -3754,7 +3752,6 @@ InternalRuntimeFlags,userActivationPostMessageTransferEnabled,attribute,Boolean,
 InternalRuntimeFlags,userActivationSameOriginVisibilityEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,userAgentClientHintEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,v8IdleTasksEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,v8OptimizeWorkersForPerformanceEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,videoAutoFullscreenEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,videoFullscreenOrientationLockEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,videoPlaybackQualityEnabled,attribute,Boolean,boolean,,False,False
@@ -4879,7 +4876,6 @@ Navigator,serial,attribute,Serial,Serial,,False,False
 Navigator,serviceWorker,attribute,ServiceWorkerContainer,ServiceWorkerContainer,,True,False
 Navigator,setAppBadge,operation,VoidPromise,Promise<void>,BadgeSet,False,False
 Navigator,share,operation,VoidPromise,Promise<void>,WebShareShare,True,False
-Navigator,sms,attribute,SMSReceiver,SMSReceiver,,False,False
 Navigator,storage,attribute,StorageManager,StorageManager,,True,False
 Navigator,unregisterProtocolHandler,operation,Void,void,,True,False
 Navigator,usb,attribute,USB,USB,,False,False
@@ -6026,10 +6022,6 @@ Response,statusText,attribute,ByteString,ByteString,,False,False
 Response,text,operation,USVStringPromise,Promise<USVString>,,False,False
 Response,type,attribute,ResponseType,ResponseType,,False,False
 Response,url,attribute,USVString,USVString,,False,False
-SMS,,interface,,,,True,False
-SMS,content,attribute,String,DOMString,,False,False
-SMSReceiver,,interface,,,,True,False
-SMSReceiver,receive,operation,SMSPromise,Promise<SMS>,SMSReceiverStart,False,False
 SQLError,,interface,,,,False,False
 SQLError,CONSTRAINT_ERR,constant,UnsignedShort,unsigned short,,False,False
 SQLError,DATABASE_ERR,constant,UnsignedShort,unsigned short,,False,False
@@ -6852,7 +6844,7 @@ SVGViewElement,preserveAspectRatio,attribute,SVGAnimatedPreserveAspectRatio,SVGA
 SVGViewElement,viewBox,attribute,SVGAnimatedRect,SVGAnimatedRect,SVG1DOMFitToViewBox,False,False
 SVGViewElement,zoomAndPan,attribute,UnsignedShort,unsigned short,SVG1DOMZoomAndPan,False,False
 Scheduler,,interface,,,,False,False
-Scheduler,currentTaskSignal,attribute,TaskSignal,TaskSignal,,False,False
+Scheduler,currentTaskSignal,attribute,TaskSignal,TaskSignal,SchedulerCurrentTaskSignal,False,False
 Scheduler,postTask,operation,AnyPromise,Promise<any>,SchedulerPostTask,False,False
 Scheduling,,interface,,,,False,False
 Scheduling,isFramePending,operation,Boolean,boolean,,False,False
