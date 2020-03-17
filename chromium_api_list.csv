@@ -1239,7 +1239,6 @@ DictionaryTest,,interface,,,,False,False
 DictionaryTest,get,operation,InternalDictionary,InternalDictionary,,False,False
 DictionaryTest,getDerived,operation,InternalDictionaryDerived,InternalDictionaryDerived,,False,False
 DictionaryTest,getDerivedDerived,operation,InternalDictionaryDerivedDerived,InternalDictionaryDerivedDerived,,False,False
-DictionaryTest,getDictionaryMemberProperties,operation,Object,object,,False,False
 DictionaryTest,set,operation,Void,void,,False,False
 DictionaryTest,setDerived,operation,Void,void,,False,False
 DictionaryTest,setDerivedDerived,operation,Void,void,,False,False
@@ -3470,6 +3469,7 @@ InternalRuntimeFlags,cssLogicalEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssLogicalOverflowEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssMarkerPseudoElementEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssMaskSourceTypeEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,cssMathStyleEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssModulesEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssOffsetPathRayContainEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,cssOffsetPathRayEnabled,attribute,Boolean,boolean,,False,False
@@ -5992,6 +5992,7 @@ Request,url,attribute,USVString,USVString,,False,False
 ResizeObserver,,interface,,,,False,False
 ResizeObserver,disconnect,operation,Void,void,,False,False
 ResizeObserver,observe,operation,Void,void,,False,False
+ResizeObserver,observe,operation,Void,void,,False,False
 ResizeObserver,unobserve,operation,Void,void,,False,False
 ResizeObserverEntry,,interface,,,,False,False
 ResizeObserverEntry,borderBoxSize,attribute,ResizeObserverSize,ResizeObserverSize,,False,False
@@ -6891,7 +6892,6 @@ ScrollState,velocityX,attribute,Double,double,,False,False
 ScrollState,velocityY,attribute,Double,double,,False,False
 ScrollTimeline,,interface,,,,False,False
 ScrollTimeline,endScrollOffset,attribute,String,DOMString,,False,False
-ScrollTimeline,fill,attribute,FillMode,FillMode,,False,False
 ScrollTimeline,orientation,attribute,ScrollDirection,ScrollDirection,,False,False
 ScrollTimeline,scrollSource,attribute,Element,Element,,False,False
 ScrollTimeline,startScrollOffset,attribute,String,DOMString,,False,False
