@@ -3532,6 +3532,7 @@ InternalRuntimeFlags,fileHandlingEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,fileSystemEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,flatTreeStyleRecalcEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,focuslessSpatialNavigationEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,fontAccessEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,fontSrcLocalMatchingEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,forceDeferScriptInterventionEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,forceEagerMeasureMemoryEnabled,attribute,Boolean,boolean,,False,False
@@ -3570,7 +3571,6 @@ InternalRuntimeFlags,layoutNGEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,layoutNGFieldsetEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,layoutNGFlexBoxEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,layoutNGFragmentItemEnabled,attribute,Boolean,boolean,,False,False
-InternalRuntimeFlags,layoutNGFragmentPaintEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,layoutNGFragmentTraversalEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,layoutNGLineCacheEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,layoutNGTableEnabled,attribute,Boolean,boolean,,False,False
@@ -3730,6 +3730,9 @@ InternalRuntimeFlags,storageAccessAPIEnabled,attribute,Boolean,boolean,,False,Fa
 InternalRuntimeFlags,strictMimeTypesForWorkersEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,surfaceEmbeddingFeaturesEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,systemWakeLockEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,testFeatureDependentEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,testFeatureEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,testFeatureImpliedEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,textDetectorEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,textFragmentIdentifiersEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,timeZoneChangeEventEnabled,attribute,Boolean,boolean,,False,False
@@ -3844,11 +3847,6 @@ InternalSettingsGenerated,setCaretBrowsingEnabled,operation,Void,void,,False,Fal
 InternalSettingsGenerated,setCookieEnabled,operation,Void,void,,False,False
 InternalSettingsGenerated,setDNSPrefetchingEnabled,operation,Void,void,,False,False
 InternalSettingsGenerated,setDOMPasteAllowed,operation,Void,void,,False,False
-InternalSettingsGenerated,setDarkModeBackgroundBrightnessThreshold,operation,Void,void,,False,False
-InternalSettingsGenerated,setDarkModeContrast,operation,Void,void,,False,False
-InternalSettingsGenerated,setDarkModeEnabled,operation,Void,void,,False,False
-InternalSettingsGenerated,setDarkModeGrayscale,operation,Void,void,,False,False
-InternalSettingsGenerated,setDarkModeTextBrightnessThreshold,operation,Void,void,,False,False
 InternalSettingsGenerated,setDataSaverHoldbackWebApi,operation,Void,void,,False,False
 InternalSettingsGenerated,setDefaultFixedFontSize,operation,Void,void,,False,False
 InternalSettingsGenerated,setDefaultFontSize,operation,Void,void,,False,False
@@ -3865,6 +3863,11 @@ InternalSettingsGenerated,setDontSendKeyEventsToJavascript,operation,Void,void,,
 InternalSettingsGenerated,setDownloadableBinaryFontsEnabled,operation,Void,void,,False,False
 InternalSettingsGenerated,setEmbeddedMediaExperienceEnabled,operation,Void,void,,False,False
 InternalSettingsGenerated,setForceAndroidOverlayScrollbar,operation,Void,void,,False,False
+InternalSettingsGenerated,setForceDarkModeBackgroundBrightnessThreshold,operation,Void,void,,False,False
+InternalSettingsGenerated,setForceDarkModeContrast,operation,Void,void,,False,False
+InternalSettingsGenerated,setForceDarkModeEnabled,operation,Void,void,,False,False
+InternalSettingsGenerated,setForceDarkModeGrayscale,operation,Void,void,,False,False
+InternalSettingsGenerated,setForceDarkModeTextBrightnessThreshold,operation,Void,void,,False,False
 InternalSettingsGenerated,setForceMainWorldInitialization,operation,Void,void,,False,False
 InternalSettingsGenerated,setForceTouchEventFeatureDetectionForInspector,operation,Void,void,,False,False
 InternalSettingsGenerated,setForceZeroLayoutHeight,operation,Void,void,,False,False
@@ -5998,6 +6001,7 @@ ResizeObserverEntry,,interface,,,,False,False
 ResizeObserverEntry,borderBoxSize,attribute,ResizeObserverSize,ResizeObserverSize,,False,False
 ResizeObserverEntry,contentBoxSize,attribute,ResizeObserverSize,ResizeObserverSize,,False,False
 ResizeObserverEntry,contentRect,attribute,DOMRectReadOnly,DOMRectReadOnly,,False,False
+ResizeObserverEntry,devicePixelContentBoxSize,attribute,ResizeObserverSize,ResizeObserverSize,,False,False
 ResizeObserverEntry,target,attribute,Element,Element,,False,False
 ResizeObserverSize,,interface,,,,False,False
 ResizeObserverSize,blockSize,attribute,UnrestrictedDouble,unrestricted double,,False,False
@@ -10563,6 +10567,7 @@ WorkerNavigator,setAppBadge,operation,VoidPromise,Promise<void>,BadgeSet,False,F
 WorkerNavigator,storage,attribute,StorageManager,StorageManager,,True,False
 WorkerNavigator,usb,attribute,USB,USB,,False,False
 WorkerNavigator,userAgent,attribute,String,DOMString,NavigatorUserAgent,False,True
+WorkerNavigator,userAgentData,attribute,NavigatorUAData,NavigatorUAData,,True,False
 WorkerNavigator,wakeLock,attribute,WakeLock,WakeLock,,False,False
 Worklet,,interface,,,,True,False
 Worklet,addModule,operation,VoidPromise,Promise<void>,,False,False
