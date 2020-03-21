@@ -3393,6 +3393,7 @@ InternalRuntimeFlags,accelerated2dCanvasEnabled,attribute,Boolean,boolean,,False
 InternalRuntimeFlags,acceleratedSmallCanvasesEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,accessibilityExposeARIAAnnotationsEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,accessibilityExposeDisplayNoneEnabled,attribute,Boolean,boolean,,False,False
+InternalRuntimeFlags,accessibilityExposeHTMLElementEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,accessibilityObjectModelEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,adTaggingEnabled,attribute,Boolean,boolean,,False,False
 InternalRuntimeFlags,addressSpaceEnabled,attribute,Boolean,boolean,,False,False
@@ -5998,10 +5999,10 @@ ResizeObserver,observe,operation,Void,void,,False,False
 ResizeObserver,observe,operation,Void,void,,False,False
 ResizeObserver,unobserve,operation,Void,void,,False,False
 ResizeObserverEntry,,interface,,,,False,False
-ResizeObserverEntry,borderBoxSize,attribute,ResizeObserverSize,ResizeObserverSize,,False,False
-ResizeObserverEntry,contentBoxSize,attribute,ResizeObserverSize,ResizeObserverSize,,False,False
+ResizeObserverEntry,borderBoxSize,attribute,ResizeObserverSizeArray,FrozenArray<ResizeObserverSize>,,False,False
+ResizeObserverEntry,contentBoxSize,attribute,ResizeObserverSizeArray,FrozenArray<ResizeObserverSize>,,False,False
 ResizeObserverEntry,contentRect,attribute,DOMRectReadOnly,DOMRectReadOnly,,False,False
-ResizeObserverEntry,devicePixelContentBoxSize,attribute,ResizeObserverSize,ResizeObserverSize,,False,False
+ResizeObserverEntry,devicePixelContentBoxSize,attribute,ResizeObserverSizeArray,FrozenArray<ResizeObserverSize>,,False,False
 ResizeObserverEntry,target,attribute,Element,Element,,False,False
 ResizeObserverSize,,interface,,,,False,False
 ResizeObserverSize,blockSize,attribute,UnrestrictedDouble,unrestricted double,,False,False
