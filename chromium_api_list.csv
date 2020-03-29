@@ -3473,6 +3473,7 @@ InternalRuntimeFlags,canvas2dScrollPathIntoViewEnabled,attribute,Boolean,boolean
 InternalRuntimeFlags,canvasColorManagementEnabled,attribute,Boolean,boolean,,,
 InternalRuntimeFlags,canvasHitRegionEnabled,attribute,Boolean,boolean,,,
 InternalRuntimeFlags,canvasImageSmoothingEnabled,attribute,Boolean,boolean,,,
+InternalRuntimeFlags,captureTimeInCsrcEnabled,attribute,Boolean,boolean,,,
 InternalRuntimeFlags,clickPointerEventEnabled,attribute,Boolean,boolean,,,
 InternalRuntimeFlags,clickRetargettingEnabled,attribute,Boolean,boolean,,,
 InternalRuntimeFlags,cloneableNativeFileSystemHandlesEnabled,attribute,Boolean,boolean,,,
