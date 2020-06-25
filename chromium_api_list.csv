@@ -2935,6 +2935,7 @@ HTMLMediaElement,play,operation,VoidPromise,Promise<void>,,,
 HTMLMediaElement,playbackRate,attribute,Double,double,,,
 HTMLMediaElement,played,attribute,TimeRanges,TimeRanges,,,
 HTMLMediaElement,preload,attribute,String,DOMString,,,
+HTMLMediaElement,preservesPitch,attribute,Boolean,boolean,,,
 HTMLMediaElement,readyState,attribute,UnsignedShort,unsigned short,,,
 HTMLMediaElement,remote,attribute,RemotePlayback,RemotePlayback,HTMLMediaElement_Remote,,
 HTMLMediaElement,seekable,attribute,TimeRanges,TimeRanges,,,
@@ -3683,6 +3684,7 @@ InternalRuntimeFlags,mediaElementVolumeGreaterThanOneEnabled,attribute,Boolean,b
 InternalRuntimeFlags,mediaEngagementBypassAutoplayPoliciesEnabled,attribute,Boolean,boolean,,,
 InternalRuntimeFlags,mediaFeedsEnabled,attribute,Boolean,boolean,,,
 InternalRuntimeFlags,mediaLatencyHintEnabled,attribute,Boolean,boolean,,,
+InternalRuntimeFlags,mediaPreservesPitchEnabled,attribute,Boolean,boolean,,,
 InternalRuntimeFlags,mediaQueryNavigationControlsEnabled,attribute,Boolean,boolean,,,
 InternalRuntimeFlags,mediaSessionEnabled,attribute,Boolean,boolean,,,
 InternalRuntimeFlags,mediaSessionPositionEnabled,attribute,Boolean,boolean,,,
@@ -7013,22 +7015,22 @@ Scheduling,,interface,,,,,
 Scheduling,isFramePending,operation,Boolean,boolean,,,
 Scheduling,isInputPending,operation,Boolean,boolean,SchedulingIsInputPending,,
 Screen,,interface,,,,,
-Screen,availHeight,attribute,Long,long,Screen_AvailHeight,,True
-Screen,availLeft,attribute,Long,long,Screen_AvailLeft,,True
-Screen,availTop,attribute,Long,long,Screen_AvailTop,,True
-Screen,availWidth,attribute,Long,long,Screen_AvailWidth,,True
-Screen,colorDepth,attribute,UnsignedLong,unsigned long,Screen_ColorDepth,,True
-Screen,height,attribute,Long,long,Screen_Height,,True
+Screen,availHeight,attribute,Long,long,V8Screen_AvailHeight_AttributeGetter,,True
+Screen,availLeft,attribute,Long,long,V8Screen_AvailLeft_AttributeGetter,,True
+Screen,availTop,attribute,Long,long,V8Screen_AvailTop_AttributeGetter,,True
+Screen,availWidth,attribute,Long,long,V8Screen_AvailWidth_AttributeGetter,,True
+Screen,colorDepth,attribute,UnsignedLong,unsigned long,V8Screen_ColorDepth_AttributeGetter,,True
+Screen,height,attribute,Long,long,V8Screen_Height_AttributeGetter,,True
 Screen,id,attribute,String,DOMString,,,
 Screen,internal,attribute,Boolean,boolean,,,
-Screen,left,attribute,Long,long,,,
+Screen,left,attribute,Long,long,WindowScreenLeft,,True
 Screen,orientation,attribute,ScreenOrientation,ScreenOrientation,,,
 Screen,pixelDepth,attribute,UnsignedLong,unsigned long,Screen_PixelDepth,,True
 Screen,primary,attribute,Boolean,boolean,,,
 Screen,scaleFactor,attribute,Float,float,,,
-Screen,top,attribute,Long,long,,,
+Screen,top,attribute,Long,long,WindowScreenTop,,True
 Screen,touchSupport,attribute,Boolean,boolean,,,
-Screen,width,attribute,Long,long,Screen_Width,,True
+Screen,width,attribute,Long,long,V8Screen_Width_AttributeGetter,,True
 ScreenOrientation,,interface,,,,,
 ScreenOrientation,angle,attribute,UnsignedShort,unsigned short,ScreenOrientationAngle,,
 ScreenOrientation,lock,operation,VoidPromise,Promise<void>,ScreenOrientationLock,,
