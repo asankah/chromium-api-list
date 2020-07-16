@@ -25,8 +25,6 @@ API_LIST_BUILD_TARGET = 'generate_high_entropy_list'
 API_LIST_FILE = 'high_entropy_list.csv'
 API_LIST_TARGET_FILE = 'chromium_api_list.csv'
 
-COMMIT_POSITION_HEADER = 'Cr-Commit-Position: '
-
 
 def Main():
     parser = ArgumentParser()
@@ -99,16 +97,15 @@ def Main():
                 'Can\'t commit changes.')
         elif git_status[0].split() != ['M', API_LIST_TARGET_FILE]:
             logging.error(
-                'Unexpected changes found in the repository: "{}"'.format(
-                    git_status[0]))
+                f'Unexpected changes found in the repository: "{git_status[0]}"')
         else:
-            commit_message = '''Blink API list update from {commit_position!s}
+            commit_message = f'''Blink API list update from {commit_position!s}
 
 Source Chromium revision is https://crrev.com/{commit_hash!s}
 
 See https://github.com/asankah/chromium-api-list for details on how the
 list was generated.
-'''.format(commit_position=commit_position, commit_hash=commit_hash)
+'''
             check_call([
                 'git', 'commit', '-m', commit_message, '--',
                 API_LIST_TARGET_FILE
