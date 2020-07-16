@@ -29,11 +29,14 @@ Description of columns:
 | ---------------- | ---------------------------------------------------------- |
 | `interface`      | Name of the interface.                                     |
 | `name`           | Name of member. For a row describing an interface, the name field is empty. |
-| `entity_type`   | One of `interface`, `operation`, `attribute`, `constant`   |
-| `idl_type`       | The IDL data type of the member. Empty for interfaces.     |
+| `entity_type`    | One of `interface`, `operation`, `attribute`, `constant`   |
+| `arguments`      | List of argument types in parenthesis if the member is callable. |
+| `idl_type`       | The IDL data type of the member or the return type of a callable. Empty for interfaces.     |
 | `syntactic_form` | Human readable version of `idl_type`. Useful for display, but should not be used for anything else. |
 | `use_counter`    | Chromium UseCounter id for the member. Only present for attributes, interfaces, and operations whose prevalence is being measured.  Results of this measurement can be seen in the [Chrome Platform Status][CS] page. |
 | `secure_context` | `True` or `False` indicating whether the API requires a secure context. |
-| `high_entropy`   | `True` or `False` indicating whether this API is known to or suspected of being highly identifying. |
+| `high_entropy`   | Type of entropy source. Blank if the API is not considered a source of entropy. |
+| `source_file`    | Path to `.idl` file relative to the root of the Chromium repository. Blink APIs will have the `third_party/blink/` prefix. |
+| `source_line`    | If available, lists the line number for the start of the definition in the `.idl` file. |
 
 [CS]: https://www.chromestatus.com/metrics/feature/popularity
