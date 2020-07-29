@@ -353,7 +353,7 @@ BaseAudioContext,onstatechange,attribute,,EventHandlerNonNull,EventHandlerNonNul
 BaseAudioContext,sampleRate,attribute,,Float,float,,,,third_party/blink/renderer/modules/webaudio/base_audio_context.idl,
 BaseAudioContext,state,attribute,,AudioContextState,AudioContextState,,,,third_party/blink/renderer/modules/webaudio/base_audio_context.idl,
 BatteryManager,,interface,,,,,,,third_party/blink/renderer/modules/battery/battery_manager.idl,9
-BatteryManager,charging,attribute,,Boolean,boolean,BatteryManager_Charging,,(True),third_party/blink/renderer/modules/battery/battery_manager.idl,
+BatteryManager,charging,attribute,,Boolean,boolean,BatteryManager_Charging,,Direct,third_party/blink/renderer/modules/battery/battery_manager.idl,
 BatteryManager,chargingTime,attribute,,UnrestrictedDouble,unrestricted double,BatteryManager_ChargingTime,,(True),third_party/blink/renderer/modules/battery/battery_manager.idl,
 BatteryManager,dischargingTime,attribute,,UnrestrictedDouble,unrestricted double,BatteryManager_DischargingTime,,(True),third_party/blink/renderer/modules/battery/battery_manager.idl,
 BatteryManager,level,attribute,,Double,double,BatteryManager_Level,,(True),third_party/blink/renderer/modules/battery/battery_manager.idl,
@@ -2131,6 +2131,8 @@ GPUBindGroup,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_bind
 GPUBindGroupLayout,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_bind_group_layout.idl,9
 GPUBuffer,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer.idl,9
 GPUBuffer,destroy,operation,(),Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer.idl,
+GPUBuffer,getMappedRange,operation,"(UnsignedLongLongEnforceRange,UnsignedLongLongEnforceRange)",ArrayBuffer,ArrayBuffer,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer.idl,
+GPUBuffer,mapAsync,operation,"(UnsignedLongEnforceRange,UnsignedLongLongEnforceRange,UnsignedLongLongEnforceRange)",VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer.idl,
 GPUBuffer,mapReadAsync,operation,(),ArrayBufferPromise,Promise<ArrayBuffer>,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer.idl,
 GPUBuffer,mapWriteAsync,operation,(),ArrayBufferPromise,Promise<ArrayBuffer>,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer.idl,
 GPUBuffer,setSubData,operation,"(UnsignedLongLongEnforceRange,ArrayBufferViewAllowSharedFlexibleArrayBufferView,UnsignedLongLongEnforceRange,UnsignedLongLongEnforceRange)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer.idl,
@@ -2142,6 +2144,7 @@ GPUBufferUsage,INDEX,constant,,UnsignedLong,unsigned long,,,,third_party/blink/r
 GPUBufferUsage,INDIRECT,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,19
 GPUBufferUsage,MAP_READ,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,11
 GPUBufferUsage,MAP_WRITE,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,12
+GPUBufferUsage,QUERY_RESOLVE,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,20
 GPUBufferUsage,STORAGE,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,18
 GPUBufferUsage,UNIFORM,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,17
 GPUBufferUsage,VERTEX,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,16
@@ -2214,6 +2217,8 @@ GPUQueue,signal,operation,"(GPUFence,UnsignedLongLongEnforceRange)",Void,void,,,
 GPUQueue,submit,operation,(GPUCommandBufferSequence),Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_queue.idl,
 GPUQueue,writeBuffer,operation,"(GPUBuffer,UnsignedLongLongEnforceRange,ArrayBuffer,UnsignedLongLongEnforceRange,UnsignedLongLongEnforceRange)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_queue.idl,
 GPUQueue,writeBuffer,operation,"(GPUBuffer,UnsignedLongLongEnforceRange,ArrayBufferViewAllowShared,UnsignedLongLongEnforceRange,UnsignedLongLongEnforceRange)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_queue.idl,
+GPUQueue,writeTexture,operation,"(GPUTextureCopyView,ArrayBuffer,GPUTextureDataLayout,UnsignedLongEnforceRangeSequenceOrGPUExtent3DDict)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_queue.idl,
+GPUQueue,writeTexture,operation,"(GPUTextureCopyView,ArrayBufferViewAllowShared,GPUTextureDataLayout,UnsignedLongEnforceRangeSequenceOrGPUExtent3DDict)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_queue.idl,
 GPURenderBundle,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_bundle.idl,9
 GPURenderBundleEncoder,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_bundle_encoder.idl,9
 GPURenderBundleEncoder,draw,operation,"(UnsignedLongEnforceRange,UnsignedLongEnforceRange,UnsignedLongEnforceRange,UnsignedLongEnforceRange)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_render_encoder_base.idl,
@@ -3572,6 +3577,7 @@ InternalRuntimeFlags,cssContentVisibilityEnabled,attribute,,Boolean,boolean,,,,t
 InternalRuntimeFlags,cssContentVisibilityHiddenMatchableEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFocusVisibleEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFoldablesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssFontMetricsOverrideEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFontSizeAdjustEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssHexAlphaColorEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssIndependentTransformPropertiesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3819,6 +3825,7 @@ InternalRuntimeFlags,requestVideoFrameCallbackEnabled,attribute,,Boolean,boolean
 InternalRuntimeFlags,resizeObserverUpdatesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,restrictAutomaticLazyFrameLoadingToDataSaverEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,restrictAutomaticLazyImageLoadingToDataSaverEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,restrictGamepadAccessEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,rtcAdaptivePtimeEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,rtcAudioJitterBufferMaxPacketsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,rtcAudioJitterBufferRtxHandlingEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4380,6 +4387,7 @@ Internals,visibleSelectionFocusOffset,attribute,,UnsignedLong,unsigned long,,,,t
 Internals,waitForPeerConnectionDispatchEventsTaskCreated,operation,(RTCPeerConnection),AnyPromise,Promise<any>,,,,third_party/blink/renderer/modules/peerconnection/testing/internals_rtc_peer_connection.idl,
 Internals,wheelEventHandlerCount,operation,(Document),UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,workerThreadCount,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/testing/internals.idl,
+Internals,zeroBasedDocumentTimeToMonotonicTime,operation,(Double),LongLong,long long,,,,third_party/blink/renderer/core/testing/internals.idl,
 IntersectionObserver,,interface,,,,,,,third_party/blink/renderer/core/intersection_observer/intersection_observer.idl,12
 IntersectionObserver,delay,attribute,,Double,double,,,,third_party/blink/renderer/core/intersection_observer/intersection_observer.idl,
 IntersectionObserver,disconnect,operation,(),Void,void,,,,third_party/blink/renderer/core/intersection_observer/intersection_observer.idl,
@@ -4973,7 +4981,7 @@ NamedNodeMap,removeNamedItem,operation,(String),Attr,Attr,NamedNodeMapRemoveName
 NamedNodeMap,removeNamedItemNS,operation,"(String,String)",Attr,Attr,NamedNodeMapRemoveNamedItemNS,,,third_party/blink/renderer/core/dom/named_node_map.idl,
 NamedNodeMap,setNamedItem,operation,(Attr),Attr,Attr,NamedNodeMapSetNamedItem,,,third_party/blink/renderer/core/dom/named_node_map.idl,
 NamedNodeMap,setNamedItemNS,operation,(Attr),Attr,Attr,NamedNodeMapSetNamedItemNS,,,third_party/blink/renderer/core/dom/named_node_map.idl,
-NativeFileSystemDirectoryIterator,,interface,,,,,,,third_party/blink/renderer/modules/native_file_system/native_file_system_directory_iterator.idl,11
+NativeFileSystemDirectoryIterator,,interface,,,,,,,third_party/blink/renderer/modules/native_file_system/native_file_system_directory_iterator.idl,12
 NativeFileSystemDirectoryIterator,next,operation,(),AnyPromise,Promise<any>,,,,third_party/blink/renderer/modules/native_file_system/native_file_system_directory_iterator.idl,
 NativeIOFile,,interface,,,,,True,,third_party/blink/renderer/modules/native_io/native_io_file.idl,11
 NativeIOFile,close,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/native_io/native_io_file.idl,
@@ -7105,6 +7113,7 @@ ScrollState,velocityY,attribute,,Double,double,,,,third_party/blink/renderer/cor
 ScrollTimeline,,interface,,,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,9
 ScrollTimeline,endScrollOffset,attribute,,StringOrScrollTimelineElementBasedOffset,(DOMString or ScrollTimelineElementBasedOffset),,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 ScrollTimeline,orientation,attribute,,ScrollDirection,ScrollDirection,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
+ScrollTimeline,scrollOffsets,attribute,,StringOrScrollTimelineElementBasedOffsetArray,FrozenArray<(DOMString or ScrollTimelineElementBasedOffset)>,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 ScrollTimeline,scrollSource,attribute,,Element,Element,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 ScrollTimeline,startScrollOffset,attribute,,StringOrScrollTimelineElementBasedOffset,(DOMString or ScrollTimelineElementBasedOffset),,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 ScrollTimeline,timeRange,attribute,,DoubleOrScrollTimelineAutoKeyword,(double or ScrollTimelineAutoKeyword),,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
@@ -7918,15 +7927,15 @@ VirtualKeyboardGeometryChangeEvent,,interface,,,,,,,third_party/blink/renderer/m
 VirtualKeyboardGeometryChangeEvent,boundingRect,attribute,,DOMRect,DOMRect,,,,third_party/blink/renderer/modules/virtualkeyboard/virtual_keyboard_geometry_change_event.idl,
 VirtualKeyboardGeometryChangeEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/events/event.idl,
 VisualViewport,,interface,,,,,,,third_party/blink/renderer/core/frame/visual_viewport.idl,32
-VisualViewport,height,attribute,,Double,double,VisualViewport_Height,,(True),third_party/blink/renderer/core/frame/visual_viewport.idl,
-VisualViewport,offsetLeft,attribute,,Double,double,VisualViewport_OffsetLeft,,(True),third_party/blink/renderer/core/frame/visual_viewport.idl,
-VisualViewport,offsetTop,attribute,,Double,double,VisualViewport_OffsetTop,,(True),third_party/blink/renderer/core/frame/visual_viewport.idl,
+VisualViewport,height,attribute,,Double,double,VisualViewport_Height,,Direct,third_party/blink/renderer/core/frame/visual_viewport.idl,
+VisualViewport,offsetLeft,attribute,,Double,double,VisualViewport_OffsetLeft,,Direct,third_party/blink/renderer/core/frame/visual_viewport.idl,
+VisualViewport,offsetTop,attribute,,Double,double,VisualViewport_OffsetTop,,Direct,third_party/blink/renderer/core/frame/visual_viewport.idl,
 VisualViewport,onresize,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/core/frame/visual_viewport.idl,
 VisualViewport,onscroll,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/core/frame/visual_viewport.idl,
-VisualViewport,pageLeft,attribute,,Double,double,VisualViewport_PageLeft,,(True),third_party/blink/renderer/core/frame/visual_viewport.idl,
-VisualViewport,pageTop,attribute,,Double,double,VisualViewport_PageTop,,(True),third_party/blink/renderer/core/frame/visual_viewport.idl,
-VisualViewport,scale,attribute,,Double,double,VisualViewport_Scale,,(True),third_party/blink/renderer/core/frame/visual_viewport.idl,
-VisualViewport,width,attribute,,Double,double,VisualViewport_Width,,(True),third_party/blink/renderer/core/frame/visual_viewport.idl,
+VisualViewport,pageLeft,attribute,,Double,double,VisualViewport_PageLeft,,Direct,third_party/blink/renderer/core/frame/visual_viewport.idl,
+VisualViewport,pageTop,attribute,,Double,double,VisualViewport_PageTop,,Direct,third_party/blink/renderer/core/frame/visual_viewport.idl,
+VisualViewport,scale,attribute,,Double,double,VisualViewport_Scale,,Direct,third_party/blink/renderer/core/frame/visual_viewport.idl,
+VisualViewport,width,attribute,,Double,double,VisualViewport_Width,,Direct,third_party/blink/renderer/core/frame/visual_viewport.idl,
 WakeLock,,interface,,,,,True,,third_party/blink/renderer/modules/wake_lock/wake_lock.idl,14
 WakeLock,request,operation,(WakeLockType),WakeLockSentinelPromise,Promise<WakeLockSentinel>,,,,third_party/blink/renderer/modules/wake_lock/wake_lock.idl,
 WakeLockSentinel,,interface,,,,,True,,third_party/blink/renderer/modules/wake_lock/wake_lock_sentinel.idl,11
@@ -10513,7 +10522,7 @@ Window,crypto,attribute,,Crypto,Crypto,,,,third_party/blink/renderer/modules/cry
 Window,customElements,attribute,,CustomElementRegistry,CustomElementRegistry,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,defaultStatus,attribute,,String,DOMString,WindowDefaultStatus,,,third_party/blink/renderer/core/frame/window.idl,
 Window,defaultstatus,attribute,,String,DOMString,WindowDefaultstatus,,,third_party/blink/renderer/core/frame/window.idl,
-Window,devicePixelRatio,attribute,,Double,double,WindowDevicePixelRatio,,(True),third_party/blink/renderer/core/frame/window.idl,
+Window,devicePixelRatio,attribute,,Double,double,WindowDevicePixelRatio,,Direct,third_party/blink/renderer/core/frame/window.idl,
 Window,document,attribute,,Document,Document,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,event,attribute,,Any,any,WindowEvent,,,third_party/blink/renderer/core/frame/window.idl,
 Window,external,attribute,,External,External,,,,third_party/blink/renderer/core/frame/window.idl,
@@ -10531,8 +10540,8 @@ Window,getSelection,operation,(),Selection,Selection,,,,third_party/blink/render
 Window,getWindowSegments,operation,(),DOMRectArray,FrozenArray<DOMRect>,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,history,attribute,,History,History,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,indexedDB,attribute,,IDBFactory,IDBFactory,,,,third_party/blink/renderer/modules/indexeddb/window_indexed_database.idl,
-Window,innerHeight,attribute,,Long,long,WindowInnerHeight,,(True),third_party/blink/renderer/core/frame/window.idl,
-Window,innerWidth,attribute,,Long,long,WindowInnerWidth,,(True),third_party/blink/renderer/core/frame/window.idl,
+Window,innerHeight,attribute,,Long,long,WindowInnerHeight,,Direct,third_party/blink/renderer/core/frame/window.idl,
+Window,innerWidth,attribute,,Long,long,WindowInnerWidth,,Direct,third_party/blink/renderer/core/frame/window.idl,
 Window,isMultiScreen,operation,(),BooleanPromise,Promise<boolean>,,,,third_party/blink/renderer/modules/screen_enumeration/screen_enumeration.idl,
 Window,isSecureContext,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,launchQueue,attribute,,LaunchQueue,LaunchQueue,,,,third_party/blink/renderer/modules/launch/dom_window_launch_queue.idl,
@@ -10665,12 +10674,12 @@ Window,onwheel,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party
 Window,open,operation,"(USVString,String,StringTreatNullAs)",Window,Window,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,openDatabase,operation,"(String,String,String,UnsignedLong,DatabaseCallback)",Database,Database,OpenWebDatabase,,,third_party/blink/renderer/modules/webdatabase/window_web_database.idl,
 Window,opener,attribute,,Window,Window,,,,third_party/blink/renderer/core/frame/window.idl,
-Window,orientation,attribute,,Long,long,WindowOrientation,,(True),third_party/blink/renderer/core/frame/window.idl,
+Window,orientation,attribute,,Long,long,WindowOrientation,,Direct,third_party/blink/renderer/core/frame/window.idl,
 Window,origin,attribute,,String,DOMString,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,originIsolationRestricted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,originPolicyIds,attribute,,StringArray,FrozenArray<DOMString>,,,,third_party/blink/renderer/core/frame/window.idl,
-Window,outerHeight,attribute,,Long,long,WindowOuterHeight,,(True),third_party/blink/renderer/core/frame/window.idl,
-Window,outerWidth,attribute,,Long,long,WindowOuterWidth,,(True),third_party/blink/renderer/core/frame/window.idl,
+Window,outerHeight,attribute,,Long,long,WindowOuterHeight,,Direct,third_party/blink/renderer/core/frame/window.idl,
+Window,outerWidth,attribute,,Long,long,WindowOuterWidth,,Direct,third_party/blink/renderer/core/frame/window.idl,
 Window,pageXOffset,attribute,,Double,double,WindowPageXOffset,,(True),third_party/blink/renderer/core/frame/window.idl,
 Window,pageYOffset,attribute,,Double,double,WindowPageYOffset,,(True),third_party/blink/renderer/core/frame/window.idl,
 Window,parent,attribute,,Window,Window,,,,third_party/blink/renderer/core/frame/window.idl,
@@ -10689,10 +10698,10 @@ Window,resizeBy,operation,"(Long,Long)",Void,void,WindowResize,,,third_party/bli
 Window,resizeTo,operation,"(Long,Long)",Void,void,WindowResize,,,third_party/blink/renderer/core/frame/window.idl,
 Window,scheduler,attribute,,Scheduler,Scheduler,,,,third_party/blink/renderer/modules/scheduler/window_scheduler.idl,
 Window,screen,attribute,,Screen,Screen,,,,third_party/blink/renderer/core/frame/window.idl,
-Window,screenLeft,attribute,,Long,long,WindowScreenLeft,,(True),third_party/blink/renderer/core/frame/window.idl,
-Window,screenTop,attribute,,Long,long,WindowScreenTop,,(True),third_party/blink/renderer/core/frame/window.idl,
-Window,screenX,attribute,,Long,long,WindowScreenX,,(True),third_party/blink/renderer/core/frame/window.idl,
-Window,screenY,attribute,,Long,long,WindowScreenY,,(True),third_party/blink/renderer/core/frame/window.idl,
+Window,screenLeft,attribute,,Long,long,WindowScreenLeft,,Direct,third_party/blink/renderer/core/frame/window.idl,
+Window,screenTop,attribute,,Long,long,WindowScreenTop,,Direct,third_party/blink/renderer/core/frame/window.idl,
+Window,screenX,attribute,,Long,long,WindowScreenX,,Direct,third_party/blink/renderer/core/frame/window.idl,
+Window,screenY,attribute,,Long,long,WindowScreenY,,Direct,third_party/blink/renderer/core/frame/window.idl,
 Window,scroll,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,scroll,operation,(ScrollToOptions),Void,void,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,scrollBy,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/core/frame/window.idl,
