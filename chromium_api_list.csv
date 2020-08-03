@@ -3401,7 +3401,7 @@ IDBObjectStore,name,attribute,,String,DOMString,,,,third_party/blink/renderer/mo
 IDBObjectStore,openCursor,operation,"(Any,IDBCursorDirection)",IDBRequest,IDBRequest,IndexedDBRead,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
 IDBObjectStore,openKeyCursor,operation,"(Any,IDBCursorDirection)",IDBRequest,IDBRequest,IndexedDBRead,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
 IDBObjectStore,put,operation,"(Any,Any)",IDBRequest,IDBRequest,IndexedDBWrite,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
-IDBObjectStore,putAll,operation,(AnySequence),IDBRequest,IDBRequest,IndexedDBWrite,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
+IDBObjectStore,putAll,operation,(AnySequence),IDBRequestSequence,sequence<IDBRequest>,IndexedDBWrite,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
 IDBObjectStore,transaction,attribute,,IDBTransaction,IDBTransaction,,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
 IDBObservation,,interface,,,,,,,third_party/blink/renderer/modules/indexeddb/idb_observation.idl,17
 IDBObservation,key,attribute,,Any,any,,,,third_party/blink/renderer/modules/indexeddb/idb_observation.idl,
