@@ -4110,6 +4110,7 @@ InternalSettingsGenerated,setThreadedScrollingEnabled,operation,(Boolean),Void,v
 InternalSettingsGenerated,setTouchAdjustmentEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setTouchDragDropEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setTouchEditingEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
+InternalSettingsGenerated,setUseAXMenuList,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setUseLegacyBackgroundSizeShorthandBehavior,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setUseWideViewport,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setValidationMessageTimerMagnification,operation,(Long),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
@@ -11066,7 +11067,7 @@ XRViewport,y,attribute,,Long,long,,,,third_party/blink/renderer/modules/xr/xr_vi
 XRWebGLBinding,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_webgl_binding.idl,10
 XRWebGLBinding,getCameraImage,operation,"(XRFrame,XRView)",WebGLTexture,WebGLTexture,,,,third_party/blink/renderer/modules/xr/xr_webgl_binding.idl,
 XRWebGLBinding,getReflectionCubeMap,operation,(XRLightProbe),WebGLTexture,WebGLTexture,,,,third_party/blink/renderer/modules/xr/xr_webgl_binding.idl,
-XRWebGLLayer,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_webgl_layer.idl,12
+XRWebGLLayer,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_webgl_layer.idl,10
 XRWebGLLayer,antialias,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/xr/xr_webgl_layer.idl,
 XRWebGLLayer,framebuffer,attribute,,WebGLFramebuffer,WebGLFramebuffer,,,,third_party/blink/renderer/modules/xr/xr_webgl_layer.idl,
 XRWebGLLayer,framebufferHeight,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/xr/xr_webgl_layer.idl,
