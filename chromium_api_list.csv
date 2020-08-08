@@ -958,6 +958,12 @@ CookieStoreManager,,interface,,,,,True,,third_party/blink/renderer/modules/cooki
 CookieStoreManager,getSubscriptions,operation,(),CookieStoreGetOptionsSequencePromise,Promise<sequence<CookieStoreGetOptions>>,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/cookie_store_manager.idl,
 CookieStoreManager,subscribe,operation,(CookieStoreGetOptionsSequence),VoidPromise,Promise<void>,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/cookie_store_manager.idl,
 CookieStoreManager,unsubscribe,operation,(CookieStoreGetOptionsSequence),VoidPromise,Promise<void>,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/cookie_store_manager.idl,
+CoopAccessViolationReportBody,,interface,,,,,,,third_party/blink/renderer/core/frame/coop_access_violation_report_body.idl,9
+CoopAccessViolationReportBody,columnNumber,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/frame/coop_access_violation_report_body.idl,
+CoopAccessViolationReportBody,lineNumber,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/frame/coop_access_violation_report_body.idl,
+CoopAccessViolationReportBody,property,attribute,,String,DOMString,,,,third_party/blink/renderer/core/frame/coop_access_violation_report_body.idl,
+CoopAccessViolationReportBody,sourceFile,attribute,,String,DOMString,,,,third_party/blink/renderer/core/frame/coop_access_violation_report_body.idl,
+CoopAccessViolationReportBody,toJSON,operation,(),Object,object,,,,third_party/blink/renderer/core/frame/coop_access_violation_report_body.idl,
 CountQueuingStrategy,,interface,,,,,,,third_party/blink/renderer/core/streams/count_queuing_strategy.idl,9
 CountQueuingStrategy,highWaterMark,attribute,,UnrestrictedDouble,unrestricted double,,,,third_party/blink/renderer/core/streams/count_queuing_strategy.idl,
 CountQueuingStrategy,size,attribute,,Any,any,,,,third_party/blink/renderer/core/streams/count_queuing_strategy.idl,
@@ -1189,7 +1195,7 @@ DataTransfer,setDragImage,operation,"(Element,Long,Long)",Void,void,,,,third_par
 DataTransfer,types,attribute,,StringArray,FrozenArray<DOMString>,,,,third_party/blink/renderer/core/clipboard/data_transfer.idl,
 DataTransferItem,,interface,,,,,,,third_party/blink/renderer/core/clipboard/data_transfer_item.idl,35
 DataTransferItem,getAsFile,operation,(),File,File,,,,third_party/blink/renderer/core/clipboard/data_transfer_item.idl,
-DataTransferItem,getAsFileSystemHandle,operation,(),FileSystemHandle,FileSystemHandle,NativeFileSystemDragAndDrop,,,third_party/blink/renderer/modules/native_file_system/data_transfer_item_native_file_system.idl,
+DataTransferItem,getAsFileSystemHandle,operation,(),FileSystemHandleOrNullPromise,Promise<FileSystemHandle?>,NativeFileSystemDragAndDrop,,,third_party/blink/renderer/modules/native_file_system/data_transfer_item_native_file_system.idl,
 DataTransferItem,getAsString,operation,(FunctionStringCallback),Void,void,,,,third_party/blink/renderer/core/clipboard/data_transfer_item.idl,
 DataTransferItem,kind,attribute,,String,DOMString,,,,third_party/blink/renderer/core/clipboard/data_transfer_item.idl,
 DataTransferItem,type,attribute,,String,DOMString,,,,third_party/blink/renderer/core/clipboard/data_transfer_item.idl,
@@ -2406,6 +2412,7 @@ HTMLAllCollection,namedItem,operation,(String),HTMLCollectionOrElement,(HTMLColl
 HTMLAnchorElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,25
 HTMLAnchorElement,,operation,(),String,DOMString,,,,third_party/blink/renderer/core/html/html_hyperlink_element_utils.idl,9
 HTMLAnchorElement,charset,attribute,,String,DOMString,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
+HTMLAnchorElement,conversionDestination,attribute,,USVString,USVString,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
 HTMLAnchorElement,coords,attribute,,String,DOMString,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
 HTMLAnchorElement,download,attribute,,String,DOMString,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
 HTMLAnchorElement,hash,attribute,,USVString,USVString,,,,third_party/blink/renderer/core/html/html_hyperlink_element_utils.idl,
@@ -2414,6 +2421,8 @@ HTMLAnchorElement,hostname,attribute,,USVString,USVString,,,,third_party/blink/r
 HTMLAnchorElement,href,attribute,,USVString,USVString,,,,third_party/blink/renderer/core/html/html_hyperlink_element_utils.idl,
 HTMLAnchorElement,hrefTranslate,attribute,,String,DOMString,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
 HTMLAnchorElement,hreflang,attribute,,String,DOMString,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
+HTMLAnchorElement,impressionData,attribute,,String,DOMString,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
+HTMLAnchorElement,impressionExpiry,attribute,,String,DOMString,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
 HTMLAnchorElement,name,attribute,,String,DOMString,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
 HTMLAnchorElement,origin,attribute,,USVString,USVString,,,,third_party/blink/renderer/core/html/html_hyperlink_element_utils.idl,
 HTMLAnchorElement,password,attribute,,USVString,USVString,,,,third_party/blink/renderer/core/html/html_hyperlink_element_utils.idl,
@@ -2424,6 +2433,7 @@ HTMLAnchorElement,protocol,attribute,,USVString,USVString,,,,third_party/blink/r
 HTMLAnchorElement,referrerPolicy,attribute,,String,DOMString,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
 HTMLAnchorElement,rel,attribute,,String,DOMString,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
 HTMLAnchorElement,relList,attribute,,DOMTokenList,DOMTokenList,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
+HTMLAnchorElement,reportingOrigin,attribute,,USVString,USVString,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
 HTMLAnchorElement,rev,attribute,,String,DOMString,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
 HTMLAnchorElement,search,attribute,,USVString,USVString,,,,third_party/blink/renderer/core/html/html_hyperlink_element_utils.idl,
 HTMLAnchorElement,shape,attribute,,String,DOMString,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
@@ -3402,7 +3412,7 @@ IDBObjectStore,name,attribute,,String,DOMString,,,,third_party/blink/renderer/mo
 IDBObjectStore,openCursor,operation,"(Any,IDBCursorDirection)",IDBRequest,IDBRequest,IndexedDBRead,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
 IDBObjectStore,openKeyCursor,operation,"(Any,IDBCursorDirection)",IDBRequest,IDBRequest,IndexedDBRead,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
 IDBObjectStore,put,operation,"(Any,Any)",IDBRequest,IDBRequest,IndexedDBWrite,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
-IDBObjectStore,putAll,operation,(AnySequence),IDBRequestSequence,sequence<IDBRequest>,IndexedDBWrite,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
+IDBObjectStore,putAll,operation,(AnySequence),IDBRequest,IDBRequest,IndexedDBWrite,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
 IDBObjectStore,transaction,attribute,,IDBTransaction,IDBTransaction,,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
 IDBObservation,,interface,,,,,,,third_party/blink/renderer/modules/indexeddb/idb_observation.idl,17
 IDBObservation,key,attribute,,Any,any,,,,third_party/blink/renderer/modules/indexeddb/idb_observation.idl,
@@ -3531,6 +3541,7 @@ InternalRuntimeFlags,backgroundFetchEnabled,attribute,,Boolean,boolean,,,,third_
 InternalRuntimeFlags,backgroundVideoTrackOptimizationEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,badgingEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,barcodeDetectorEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,batterySavingsMetaEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,beforeMatchEventEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,bidiCaretAffinityEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,blinkRuntimeCallStatsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3654,6 +3665,7 @@ InternalRuntimeFlags,featurePolicyVibrateFeatureEnabled,attribute,,Boolean,boole
 InternalRuntimeFlags,fetchUploadStreamingEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileHandlingEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileSystemEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,flexAspectRatioEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,focuslessSpatialNavigationEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fontAccessEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fontSrcLocalMatchingEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4757,10 +4769,6 @@ MediaSession,metadata,attribute,,MediaMetadata,MediaMetadata,MediaSession_Metada
 MediaSession,playbackState,attribute,,MediaSessionPlaybackState,MediaSessionPlaybackState,MediaSession_PlaybackState,,,third_party/blink/renderer/modules/mediasession/media_session.idl,
 MediaSession,setActionHandler,operation,"(MediaSessionAction,MediaSessionActionHandler)",Void,void,MediaSession_SetActionHandler,,,third_party/blink/renderer/modules/mediasession/media_session.idl,
 MediaSession,setPositionState,operation,(MediaPositionState),Void,void,MediaSession_SetPositionState,,,third_party/blink/renderer/modules/mediasession/media_session.idl,
-MediaSettingsRange,,interface,,,,,,,third_party/blink/renderer/modules/imagecapture/media_settings_range.idl,8
-MediaSettingsRange,max,attribute,,Double,double,,,,third_party/blink/renderer/modules/imagecapture/media_settings_range.idl,
-MediaSettingsRange,min,attribute,,Double,double,,,,third_party/blink/renderer/modules/imagecapture/media_settings_range.idl,
-MediaSettingsRange,step,attribute,,Double,double,,,,third_party/blink/renderer/modules/imagecapture/media_settings_range.idl,
 MediaSource,,interface,,,,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,42
 MediaSource,activeSourceBuffers,attribute,,SourceBufferList,SourceBufferList,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,
 MediaSource,addSourceBuffer,operation,(String),SourceBuffer,SourceBuffer,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,
@@ -5685,11 +5693,6 @@ Permissions,query,operation,(Object),PermissionStatusPromise,Promise<PermissionS
 Permissions,request,operation,(Object),PermissionStatusPromise,Promise<PermissionStatus>,Permissions_Request,,,third_party/blink/renderer/modules/permissions/permissions.idl,
 Permissions,requestAll,operation,(ObjectSequence),PermissionStatusSequencePromise,Promise<sequence<PermissionStatus>>,Permissions_RequestAll,,,third_party/blink/renderer/modules/permissions/permissions.idl,
 Permissions,revoke,operation,(Object),PermissionStatusPromise,Promise<PermissionStatus>,Permissions_Revoke,,,third_party/blink/renderer/modules/permissions/permissions.idl,
-PhotoCapabilities,,interface,,,,,,,third_party/blink/renderer/modules/imagecapture/photo_capabilities.idl,27
-PhotoCapabilities,fillLightMode,attribute,,FillLightModeArray,FrozenArray<FillLightMode>,,,,third_party/blink/renderer/modules/imagecapture/photo_capabilities.idl,
-PhotoCapabilities,imageHeight,attribute,,MediaSettingsRange,MediaSettingsRange,,,,third_party/blink/renderer/modules/imagecapture/photo_capabilities.idl,
-PhotoCapabilities,imageWidth,attribute,,MediaSettingsRange,MediaSettingsRange,,,,third_party/blink/renderer/modules/imagecapture/photo_capabilities.idl,
-PhotoCapabilities,redEyeReduction,attribute,,RedEyeReduction,RedEyeReduction,,,,third_party/blink/renderer/modules/imagecapture/photo_capabilities.idl,
 PictureInPictureEvent,,interface,,,,,,,third_party/blink/renderer/modules/picture_in_picture/picture_in_picture_event.idl,9
 PictureInPictureEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/events/event.idl,
 PictureInPictureEvent,pictureInPictureWindow,attribute,,PictureInPictureWindow,PictureInPictureWindow,,,,third_party/blink/renderer/modules/picture_in_picture/picture_in_picture_event.idl,
@@ -10806,7 +10809,6 @@ WorkerNavigator,appVersion,attribute,,String,DOMString,NavigatorAppVersion,,Dire
 WorkerNavigator,clearAppBadge,operation,(),VoidPromise,Promise<void>,BadgeClear,,,third_party/blink/renderer/modules/badging/worker_navigator_badge.idl,
 WorkerNavigator,connection,attribute,,NetworkInformation,NetworkInformation,NetInfo,,,third_party/blink/renderer/modules/netinfo/worker_navigator_network_information.idl,
 WorkerNavigator,deviceMemory,attribute,,Float,float,NavigatorDeviceMemory,True,Direct,third_party/blink/renderer/core/frame/navigator_device_memory.idl,
-WorkerNavigator,fonts,attribute,,FontManager,FontManager,,,,third_party/blink/renderer/modules/font_access/worker_navigator_fonts.idl,
 WorkerNavigator,gpu,attribute,,GPU,GPU,,,,third_party/blink/renderer/modules/webgpu/worker_navigator_gpu.idl,
 WorkerNavigator,hardwareConcurrency,attribute,,UnsignedLongLong,unsigned long long,NavigatorHardwareConcurrency,,Direct,third_party/blink/renderer/core/frame/navigator_concurrent_hardware.idl,
 WorkerNavigator,language,attribute,,String,DOMString,NavigatorLanguage,,Direct,third_party/blink/renderer/core/frame/navigator_language.idl,
@@ -11034,7 +11036,6 @@ XRSession,requestHitTestSourceForTransientInput,operation,(XRTransientInputHitTe
 XRSession,requestLightProbe,operation,(),XRLightProbePromise,Promise<XRLightProbe>,,,,third_party/blink/renderer/modules/xr/xr_session.idl,
 XRSession,requestReferenceSpace,operation,(XRReferenceSpaceType),XRReferenceSpacePromise,Promise<XRReferenceSpace>,,,,third_party/blink/renderer/modules/xr/xr_session.idl,
 XRSession,updateRenderState,operation,(XRRenderStateInit),Void,void,,,,third_party/blink/renderer/modules/xr/xr_session.idl,
-XRSession,updateWorldTrackingState,operation,(XRWorldTrackingStateInit),Void,void,,,,third_party/blink/renderer/modules/xr/xr_session.idl,
 XRSession,visibilityState,attribute,,XRVisibilityState,XRVisibilityState,,,,third_party/blink/renderer/modules/xr/xr_session.idl,
 XRSession,worldTrackingState,attribute,,XRWorldTrackingState,XRWorldTrackingState,,,,third_party/blink/renderer/modules/xr/xr_session.idl,
 XRSessionEvent,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_session_event.idl,10
