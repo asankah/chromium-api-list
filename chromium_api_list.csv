@@ -4089,6 +4089,7 @@ InternalSettingsGenerated,setRubberBandingOnCompositorThread,operation,(Boolean)
 InternalSettingsGenerated,setScriptEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setScrollAnimatorEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setSelectTrailingWhitespaceEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
+InternalSettingsGenerated,setSelectionClipboardBufferAvailable,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setSelectionIncludesAltImageText,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setShouldClearDocumentBackground,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setShouldPrintBackgrounds,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
@@ -4993,11 +4994,13 @@ NativeFileSystemDirectoryIterator,,interface,,,,,,,third_party/blink/renderer/mo
 NativeFileSystemDirectoryIterator,next,operation,(),AnyPromise,Promise<any>,,,,third_party/blink/renderer/modules/native_file_system/native_file_system_directory_iterator.idl,
 NativeIOFile,,interface,,,,,True,,third_party/blink/renderer/modules/native_io/native_io_file.idl,11
 NativeIOFile,close,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/native_io/native_io_file.idl,
+NativeIOFile,flush,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/native_io/native_io_file.idl,
 NativeIOFile,getLength,operation,(),UnsignedLongLongPromise,Promise<unsigned long long>,,,,third_party/blink/renderer/modules/native_io/native_io_file.idl,
 NativeIOFile,read,operation,"(ArrayBufferViewAllowShared,UnsignedLongLong)",UnsignedLongLongPromise,Promise<unsigned long long>,,,,third_party/blink/renderer/modules/native_io/native_io_file.idl,
 NativeIOFile,write,operation,"(ArrayBufferViewAllowShared,UnsignedLongLong)",UnsignedLongLongPromise,Promise<unsigned long long>,,,,third_party/blink/renderer/modules/native_io/native_io_file.idl,
 NativeIOFileSync,,interface,,,,,True,,third_party/blink/renderer/modules/native_io/native_io_file_sync.idl,11
 NativeIOFileSync,close,operation,(),Void,void,,,,third_party/blink/renderer/modules/native_io/native_io_file_sync.idl,
+NativeIOFileSync,flush,operation,(),Void,void,,,,third_party/blink/renderer/modules/native_io/native_io_file_sync.idl,
 NativeIOFileSync,getLength,operation,(),UnsignedLongLong,unsigned long long,,,,third_party/blink/renderer/modules/native_io/native_io_file_sync.idl,
 NativeIOFileSync,read,operation,"(ArrayBufferViewAllowShared,UnsignedLongLong)",UnsignedLongLong,unsigned long long,,,,third_party/blink/renderer/modules/native_io/native_io_file_sync.idl,
 NativeIOFileSync,write,operation,"(ArrayBufferViewAllowShared,UnsignedLongLong)",UnsignedLongLong,unsigned long long,,,,third_party/blink/renderer/modules/native_io/native_io_file_sync.idl,
