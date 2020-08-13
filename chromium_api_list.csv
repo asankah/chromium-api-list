@@ -1981,6 +1981,7 @@ FetchEvent,,interface,,,,,,,third_party/blink/renderer/modules/service_worker/fe
 FetchEvent,addPerformanceEntry,operation,(PerformanceMark),Void,void,,,,third_party/blink/renderer/modules/service_worker/fetch_event.idl,
 FetchEvent,addPerformanceEntry,operation,(PerformanceMeasure),Void,void,,,,third_party/blink/renderer/modules/service_worker/fetch_event.idl,
 FetchEvent,clientId,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/service_worker/fetch_event.idl,
+FetchEvent,handled,attribute,,VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/service_worker/fetch_event.idl,
 FetchEvent,isReload,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/service_worker/fetch_event.idl,
 FetchEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/events/event.idl,
 FetchEvent,preloadResponse,attribute,,AnyPromise,Promise<any>,,,,third_party/blink/renderer/modules/service_worker/fetch_event.idl,
@@ -2130,7 +2131,7 @@ GCObservation,,interface,,,,,,,third_party/blink/renderer/core/testing/gc_observ
 GCObservation,wasCollected,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/gc_observation.idl,
 GPU,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,26
 GPU,requestAdapter,operation,(GPURequestAdapterOptions),GPUAdapterOrNullPromise,Promise<GPUAdapter?>,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,
-GPUAdapter,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,13
+GPUAdapter,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,15
 GPUAdapter,extensions,attribute,,GPUExtensionNameArray,FrozenArray<GPUExtensionName>,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,name,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,requestDevice,operation,(GPUDeviceDescriptor),GPUDevicePromise,Promise<GPUDevice>,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
@@ -2142,7 +2143,6 @@ GPUBuffer,getMappedRange,operation,"(UnsignedLongLongEnforceRange,UnsignedLongLo
 GPUBuffer,mapAsync,operation,"(UnsignedLongEnforceRange,UnsignedLongLongEnforceRange,UnsignedLongLongEnforceRange)",VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer.idl,
 GPUBuffer,mapReadAsync,operation,(),ArrayBufferPromise,Promise<ArrayBuffer>,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer.idl,
 GPUBuffer,mapWriteAsync,operation,(),ArrayBufferPromise,Promise<ArrayBuffer>,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer.idl,
-GPUBuffer,setSubData,operation,"(UnsignedLongLongEnforceRange,ArrayBufferViewAllowSharedFlexibleArrayBufferView,UnsignedLongLongEnforceRange,UnsignedLongLongEnforceRange)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer.idl,
 GPUBuffer,unmap,operation,(),Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer.idl,
 GPUBufferUsage,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,10
 GPUBufferUsage,COPY_DST,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,14
@@ -2203,6 +2203,7 @@ GPUDevice,createSampler,operation,(GPUSamplerDescriptor),GPUSampler,GPUSampler,,
 GPUDevice,createShaderModule,operation,(GPUShaderModuleDescriptor),GPUShaderModule,GPUShaderModule,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createTexture,operation,(GPUTextureDescriptor),GPUTexture,GPUTexture,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,defaultQueue,attribute,,GPUQueue,GPUQueue,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
+GPUDevice,extensions,attribute,,GPUExtensionNameArray,FrozenArray<GPUExtensionName>,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,lost,attribute,,GPUDeviceLostInfoPromise,Promise<GPUDeviceLostInfo>,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,onuncapturederror,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,popErrorScope,operation,(),GPUOutOfMemoryErrorOrGPUValidationErrorOrNullPromise,Promise<GPUError?>,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
@@ -3566,6 +3567,7 @@ InternalRuntimeFlags,clickRetargettingEnabled,attribute,,Boolean,boolean,,,,thir
 InternalRuntimeFlags,compositeAfterPaintEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,compositeSVGEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,compositedSelectionUpdateEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,compositingOptimizationsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,computedAccessibilityInfoEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,consolidatedMovementXYEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,contactsManagerEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4122,7 +4124,6 @@ InternalSettingsGenerated,setTextTrackWindowColor,operation,(String),Void,void,,
 InternalSettingsGenerated,setTextTrackWindowPadding,operation,(String),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setTextTrackWindowRadius,operation,(String),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setThreadedScrollingEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
-InternalSettingsGenerated,setTouchAdjustmentEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setTouchDragDropEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setTouchEditingEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setUseAXMenuList,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
