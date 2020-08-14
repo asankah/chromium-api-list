@@ -184,7 +184,7 @@ AudioBufferSourceNode,loopStart,attribute,,Double,double,,,,third_party/blink/re
 AudioBufferSourceNode,playbackRate,attribute,,AudioParam,AudioParam,,,,third_party/blink/renderer/modules/webaudio/audio_buffer_source_node.idl,
 AudioBufferSourceNode,start,operation,"(Double,Double,Double)",Void,void,,,,third_party/blink/renderer/modules/webaudio/audio_buffer_source_node.idl,
 AudioContext,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/audio_context.idl,37
-AudioContext,baseLatency,attribute,,Double,double,,,,third_party/blink/renderer/modules/webaudio/audio_context.idl,
+AudioContext,baseLatency,attribute,,Double,double,AudioContextBaseLatency,,Direct,third_party/blink/renderer/modules/webaudio/audio_context.idl,
 AudioContext,close,operation,(),VoidPromise,Promise<void>,AudioContextClose,,,third_party/blink/renderer/modules/webaudio/audio_context.idl,
 AudioContext,createMediaElementSource,operation,(HTMLMediaElement),MediaElementAudioSourceNode,MediaElementAudioSourceNode,AudioContextCreateMediaElementSource,,,third_party/blink/renderer/modules/webaudio/audio_context.idl,
 AudioContext,createMediaStreamDestination,operation,(),MediaStreamAudioDestinationNode,MediaStreamAudioDestinationNode,AudioContextCreateMediaStreamDestination,,,third_party/blink/renderer/modules/webaudio/audio_context.idl,
@@ -1856,6 +1856,7 @@ ElementInternals,reportValidity,operation,(),Boolean,boolean,,,,third_party/blin
 ElementInternals,role,attribute,,String,DOMString,,,,third_party/blink/renderer/core/dom/accessibility_role.idl,
 ElementInternals,setFormValue,operation,"(FileOrUSVStringOrFormData,FileOrUSVStringOrFormData)",Void,void,,,,third_party/blink/renderer/core/html/custom/element_internals.idl,
 ElementInternals,setValidity,operation,"(ValidityStateFlags,String,Element)",Void,void,,,,third_party/blink/renderer/core/html/custom/element_internals.idl,
+ElementInternals,shadowRoot,attribute,,ShadowRoot,ShadowRoot,ElementInternalsShadowRoot,,,third_party/blink/renderer/core/html/custom/element_internals.idl,
 ElementInternals,states,attribute,,DOMTokenList,DOMTokenList,,,,third_party/blink/renderer/core/html/custom/element_internals.idl,
 ElementInternals,validationMessage,attribute,,String,DOMString,,,,third_party/blink/renderer/core/html/custom/element_internals.idl,
 ElementInternals,validity,attribute,,ValidityState,ValidityState,,,,third_party/blink/renderer/core/html/custom/element_internals.idl,
@@ -2106,12 +2107,12 @@ FontFaceSetLoadEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/r
 FontIterator,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_iterator.idl,13
 FontIterator,next,operation,(),AnyPromise,Promise<any>,,,,third_party/blink/renderer/modules/font_access/font_iterator.idl,
 FontManager,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_manager.idl,11
-FontManager,query,operation,(),Object,object,,,,third_party/blink/renderer/modules/font_access/font_manager.idl,
+FontManager,query,operation,(),Object,object,FontManager_Query,,,third_party/blink/renderer/modules/font_access/font_manager.idl,
 FontMetadata,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_metadata.idl,10
-FontMetadata,blob,operation,(),BlobPromise,Promise<Blob>,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
+FontMetadata,blob,operation,(),BlobPromise,Promise<Blob>,FontMetadata_Blob,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontMetadata,family,attribute,,USVString,USVString,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontMetadata,fullName,attribute,,USVString,USVString,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
-FontMetadata,getTables,operation,(ByteStringSequence),FontTableMapPromise,Promise<FontTableMap>,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
+FontMetadata,getTables,operation,(ByteStringSequence),FontTableMapPromise,Promise<FontTableMap>,FontMetadata_GetTables,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontMetadata,postscriptName,attribute,,USVString,USVString,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontTableMap,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_table_map.idl,10
 FormData,,interface,,,,,,,third_party/blink/renderer/core/html/forms/form_data.idl,37
@@ -3413,7 +3414,7 @@ IDBObjectStore,name,attribute,,String,DOMString,,,,third_party/blink/renderer/mo
 IDBObjectStore,openCursor,operation,"(Any,IDBCursorDirection)",IDBRequest,IDBRequest,IndexedDBRead,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
 IDBObjectStore,openKeyCursor,operation,"(Any,IDBCursorDirection)",IDBRequest,IDBRequest,IndexedDBRead,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
 IDBObjectStore,put,operation,"(Any,Any)",IDBRequest,IDBRequest,IndexedDBWrite,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
-IDBObjectStore,putAll,operation,(AnySequence),IDBRequest,IDBRequest,IndexedDBWrite,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
+IDBObjectStore,putAllValues,operation,(AnySequence),IDBRequest,IDBRequest,IndexedDBWrite,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
 IDBObjectStore,transaction,attribute,,IDBTransaction,IDBTransaction,,,,third_party/blink/renderer/modules/indexeddb/idb_object_store.idl,
 IDBObservation,,interface,,,,,,,third_party/blink/renderer/modules/indexeddb/idb_observation.idl,17
 IDBObservation,key,attribute,,Any,any,,,,third_party/blink/renderer/modules/indexeddb/idb_observation.idl,
@@ -4144,8 +4145,8 @@ Internals,,interface,,,,,,,third_party/blink/renderer/core/testing/internals.idl
 Internals,,operation,(UnsignedLong),Long,long,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,DisableFrequencyCappingForOverlayPopupDetection,operation,(),Void,void,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,DisableIntersectionObserverThrottleDelay,operation,(),Void,void,,,,third_party/blink/renderer/core/testing/internals.idl,
-Internals,LAYER_TREE_INCLUDES_DETAILED_INVALIDATIONS,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/testing/internals.idl,199
-Internals,LAYER_TREE_INCLUDES_INVALIDATIONS,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/testing/internals.idl,198
+Internals,LAYER_TREE_INCLUDES_DETAILED_INVALIDATIONS,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/testing/internals.idl,200
+Internals,LAYER_TREE_INCLUDES_INVALIDATIONS,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/testing/internals.idl,199
 Internals,LifecycleUpdateCount,operation,(),UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,absoluteCaretBounds,operation,(),DOMRectReadOnly,DOMRectReadOnly,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,activeMarkerCountForNode,operation,(Node),UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/testing/internals.idl,
@@ -4354,6 +4355,7 @@ Internals,setPseudoClassState,operation,"(Element,String,Boolean)",Void,void,,,,
 Internals,setSaveDataEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/modules/netinfo/testing/internals_net_info.idl,
 Internals,setScrollChain,operation,"(ScrollState,ElementSequence)",Void,void,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,setScrollbarVisibilityInScrollableArea,operation,"(Node,Boolean)",Boolean,boolean,,,,third_party/blink/renderer/core/testing/internals.idl,
+Internals,setSelectionRangeForNumberType,operation,"(Element,UnsignedLong,UnsignedLong)",Void,void,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,setShouldRevealPassword,operation,"(Element,Boolean)",Void,void,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,setStorageAccess,operation,"(USVString,USVString,Boolean)",VoidPromise,Promise<void>,,,,third_party/blink/renderer/core/dom/testing/internals_storage_access.idl,
 Internals,setSuggestedValue,operation,"(Element,String)",Void,void,,,,third_party/blink/renderer/core/testing/internals.idl,
@@ -7936,9 +7938,6 @@ VideoTrackList,selectedIndex,attribute,,Long,long,,,,third_party/blink/renderer/
 VideoTrackReader,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_track_reader.idl,10
 VideoTrackReader,start,operation,(VideoFrameOutputCallback),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_track_reader.idl,
 VideoTrackReader,stop,operation,(),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_track_reader.idl,
-VideoTrackWriter,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_track_writer.idl,10
-VideoTrackWriter,track,attribute,,MediaStreamTrack,MediaStreamTrack,,,,third_party/blink/renderer/modules/webcodecs/video_track_writer.idl,
-VideoTrackWriter,writable,attribute,,WritableStream,WritableStream,,,,third_party/blink/renderer/modules/webcodecs/video_track_writer.idl,
 VirtualKeyboard,,interface,,,,,,,third_party/blink/renderer/modules/virtualkeyboard/virtual_keyboard.idl,12
 VirtualKeyboard,boundingRect,attribute,,DOMRect,DOMRect,,,,third_party/blink/renderer/modules/virtualkeyboard/virtual_keyboard.idl,
 VirtualKeyboard,hide,operation,(),Void,void,,,,third_party/blink/renderer/modules/virtualkeyboard/virtual_keyboard.idl,
@@ -10557,14 +10556,14 @@ Window,getComputedAccessibleNode,operation,(Element),ComputedAccessibleNodePromi
 Window,getComputedStyle,operation,"(Element,String)",CSSStyleDeclaration,CSSStyleDeclaration,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,getDigitalGoodsService,operation,(String),DigitalGoodsServiceOrNullPromise,Promise<DigitalGoodsService?>,,,,third_party/blink/renderer/modules/payments/goods/dom_window_digital_goods.idl,
 Window,getOriginPrivateDirectory,operation,(),FileSystemDirectoryHandlePromise,Promise<FileSystemDirectoryHandle>,Window_GetOriginPrivateDirectory,,,third_party/blink/renderer/modules/native_file_system/window_native_file_system.idl,
-Window,getScreens,operation,(),ScreenSequencePromise,Promise<sequence<Screen>>,,,,third_party/blink/renderer/modules/screen_enumeration/screen_enumeration.idl,
+Window,getScreens,operation,(),ScreenSequencePromise,Promise<sequence<Screen>>,Window_GetScreens,,,third_party/blink/renderer/modules/screen_enumeration/screen_enumeration.idl,
 Window,getSelection,operation,(),Selection,Selection,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,getWindowSegments,operation,(),DOMRectArray,FrozenArray<DOMRect>,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,history,attribute,,History,History,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,indexedDB,attribute,,IDBFactory,IDBFactory,,,,third_party/blink/renderer/modules/indexeddb/window_indexed_database.idl,
 Window,innerHeight,attribute,,Long,long,WindowInnerHeight,,Direct,third_party/blink/renderer/core/frame/window.idl,
 Window,innerWidth,attribute,,Long,long,WindowInnerWidth,,Direct,third_party/blink/renderer/core/frame/window.idl,
-Window,isMultiScreen,operation,(),BooleanPromise,Promise<boolean>,,,,third_party/blink/renderer/modules/screen_enumeration/screen_enumeration.idl,
+Window,isMultiScreen,operation,(),BooleanPromise,Promise<boolean>,Window_IsMultiScreen,,,third_party/blink/renderer/modules/screen_enumeration/screen_enumeration.idl,
 Window,isSecureContext,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,launchQueue,attribute,,LaunchQueue,LaunchQueue,,,,third_party/blink/renderer/modules/launch/dom_window_launch_queue.idl,
 Window,length,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/frame/window.idl,
@@ -10663,7 +10662,7 @@ Window,onratechange,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_
 Window,onrejectionhandled,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/core/frame/window_event_handlers.idl,
 Window,onreset,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Window,onresize,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
-Window,onscreenschange,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/modules/screen_enumeration/screen_enumeration.idl,
+Window,onscreenschange,attribute,,EventHandlerNonNull,EventHandlerNonNull,Window_Onscreenschange,,,third_party/blink/renderer/modules/screen_enumeration/screen_enumeration.idl,
 Window,onscroll,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Window,onscrollend,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Window,onsearch,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/core/frame/window.idl,
