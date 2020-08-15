@@ -447,7 +447,7 @@ BluetoothRemoteGATTCharacteristic,readValue,operation,(),DataViewPromise,Promise
 BluetoothRemoteGATTCharacteristic,service,attribute,,BluetoothRemoteGATTService,BluetoothRemoteGATTService,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
 BluetoothRemoteGATTCharacteristic,startNotifications,operation,(),BluetoothRemoteGATTCharacteristicPromise,Promise<BluetoothRemoteGATTCharacteristic>,WebBluetoothRemoteCharacteristicStartNotifications,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
 BluetoothRemoteGATTCharacteristic,stopNotifications,operation,(),BluetoothRemoteGATTCharacteristicPromise,Promise<BluetoothRemoteGATTCharacteristic>,WebBluetoothRemoteCharacteristicStopNotifications,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
-BluetoothRemoteGATTCharacteristic,uuid,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
+BluetoothRemoteGATTCharacteristic,uuid,attribute,,String,DOMString,BluetoothRemoteGATTCharacteristic_Uuid,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
 BluetoothRemoteGATTCharacteristic,value,attribute,,DataView,DataView,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
 BluetoothRemoteGATTCharacteristic,writeValue,operation,(ArrayBufferOrArrayBufferView),VoidPromise,Promise<void>,WebBluetoothRemoteCharacteristicWriteValue,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
 BluetoothRemoteGATTCharacteristic,writeValueWithResponse,operation,(ArrayBufferOrArrayBufferView),VoidPromise,Promise<void>,WebBluetoothRemoteCharacteristicWriteValueWithResponse,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
@@ -455,7 +455,7 @@ BluetoothRemoteGATTCharacteristic,writeValueWithoutResponse,operation,(ArrayBuff
 BluetoothRemoteGATTDescriptor,,interface,,,,,True,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_descriptor.idl,13
 BluetoothRemoteGATTDescriptor,characteristic,attribute,,BluetoothRemoteGATTCharacteristic,BluetoothRemoteGATTCharacteristic,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_descriptor.idl,
 BluetoothRemoteGATTDescriptor,readValue,operation,(),DataViewPromise,Promise<DataView>,WebBluetoothRemoteDescriptorReadValue,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_descriptor.idl,
-BluetoothRemoteGATTDescriptor,uuid,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_descriptor.idl,
+BluetoothRemoteGATTDescriptor,uuid,attribute,,String,DOMString,BluetoothRemoteGATTDescriptor_Uuid,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_descriptor.idl,
 BluetoothRemoteGATTDescriptor,value,attribute,,DataView,DataView,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_descriptor.idl,
 BluetoothRemoteGATTDescriptor,writeValue,operation,(ArrayBufferOrArrayBufferView),VoidPromise,Promise<void>,WebBluetoothRemoteDescriptorWriteValue,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_descriptor.idl,
 BluetoothRemoteGATTServer,,interface,,,,,True,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_server.idl,13
@@ -470,7 +470,7 @@ BluetoothRemoteGATTService,device,attribute,,BluetoothDevice,BluetoothDevice,,,,
 BluetoothRemoteGATTService,getCharacteristic,operation,(StringOrUnsignedLong),BluetoothRemoteGATTCharacteristicPromise,Promise<BluetoothRemoteGATTCharacteristic>,WebBluetoothRemoteServiceGetCharacteristic,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_service.idl,
 BluetoothRemoteGATTService,getCharacteristics,operation,(StringOrUnsignedLong),BluetoothRemoteGATTCharacteristicSequencePromise,Promise<sequence<BluetoothRemoteGATTCharacteristic>>,WebBluetoothRemoteServiceGetCharacteristics,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_service.idl,
 BluetoothRemoteGATTService,isPrimary,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_service.idl,
-BluetoothRemoteGATTService,uuid,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_service.idl,
+BluetoothRemoteGATTService,uuid,attribute,,String,DOMString,BluetoothRemoteGATTService_Uuid,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_service.idl,
 BluetoothServiceDataMap,,interface,,,,,True,,third_party/blink/renderer/modules/bluetooth/bluetooth_service_data_map.idl,11
 BluetoothUUID,,interface,,,,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_uuid.idl,10
 BluetoothUUID,canonicalUUID,operation,(UnsignedLongEnforceRange),String,DOMString,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_uuid.idl,
@@ -2112,7 +2112,6 @@ FontMetadata,,interface,,,,,True,,third_party/blink/renderer/modules/font_access
 FontMetadata,blob,operation,(),BlobPromise,Promise<Blob>,FontMetadata_Blob,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontMetadata,family,attribute,,USVString,USVString,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontMetadata,fullName,attribute,,USVString,USVString,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
-FontMetadata,getTables,operation,(ByteStringSequence),FontTableMapPromise,Promise<FontTableMap>,FontMetadata_GetTables,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontMetadata,postscriptName,attribute,,USVString,USVString,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontTableMap,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_table_map.idl,10
 FormData,,interface,,,,,,,third_party/blink/renderer/core/html/forms/form_data.idl,37
@@ -7901,6 +7900,7 @@ VideoEncoder,encode,operation,"(VideoFrame,VideoEncoderEncodeOptions)",Void,void
 VideoEncoder,flush,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,reset,operation,(),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoFrame,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,16
+VideoFrame,clone,operation,(),VideoFrame,VideoFrame,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedHeight,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedWidth,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,createImageBitmap,operation,(ImageBitmapOptions),ImageBitmapPromise,Promise<ImageBitmap>,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
@@ -10729,8 +10729,8 @@ Window,scrollBy,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,
 Window,scrollBy,operation,(ScrollToOptions),Void,void,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,scrollTo,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,scrollTo,operation,(ScrollToOptions),Void,void,,,,third_party/blink/renderer/core/frame/window.idl,
-Window,scrollX,attribute,,Double,double,WindowScrollX,,(True),third_party/blink/renderer/core/frame/window.idl,
-Window,scrollY,attribute,,Double,double,WindowScrollY,,(True),third_party/blink/renderer/core/frame/window.idl,
+Window,scrollX,attribute,,Double,double,WindowScrollX,,Direct,third_party/blink/renderer/core/frame/window.idl,
+Window,scrollY,attribute,,Double,double,WindowScrollY,,Direct,third_party/blink/renderer/core/frame/window.idl,
 Window,scrollbars,attribute,,BarProp,BarProp,BarPropScrollbars,,,third_party/blink/renderer/core/frame/window.idl,
 Window,self,attribute,,Window,Window,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,sessionStorage,attribute,,Storage,Storage,,,,third_party/blink/renderer/modules/storage/window_storage.idl,
