@@ -2133,7 +2133,7 @@ GPU,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,26
 GPU,requestAdapter,operation,(GPURequestAdapterOptions),GPUAdapterOrNullPromise,Promise<GPUAdapter?>,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,
 GPUAdapter,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,15
 GPUAdapter,extensions,attribute,,GPUExtensionNameArray,FrozenArray<GPUExtensionName>,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
-GPUAdapter,name,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
+GPUAdapter,name,attribute,,String,DOMString,GPUAdapter_Name,,Direct,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,requestDevice,operation,(GPUDeviceDescriptor),GPUDevicePromise,Promise<GPUDevice>,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUBindGroup,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_bind_group.idl,9
 GPUBindGroupLayout,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_bind_group_layout.idl,9
@@ -7094,11 +7094,11 @@ Screen,availWidth,attribute,,Long,long,Screen_AvailWidth,,Direct,third_party/bli
 Screen,colorDepth,attribute,,UnsignedLong,unsigned long,Screen_ColorDepth,,Direct,third_party/blink/renderer/core/frame/screen.idl,
 Screen,height,attribute,,Long,long,Screen_Height,,Direct,third_party/blink/renderer/core/frame/screen.idl,
 Screen,id,attribute,,String,DOMString,,,,third_party/blink/renderer/core/frame/screen.idl,
-Screen,internal,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/frame/screen.idl,
+Screen,internal,attribute,,Boolean,boolean,WindowScreenInternal,,Direct,third_party/blink/renderer/core/frame/screen.idl,
 Screen,left,attribute,,Long,long,WindowScreenLeft,,Direct,third_party/blink/renderer/core/frame/screen.idl,
 Screen,orientation,attribute,,ScreenOrientation,ScreenOrientation,,,,third_party/blink/renderer/modules/screen_orientation/screen_screen_orientation.idl,
 Screen,pixelDepth,attribute,,UnsignedLong,unsigned long,Screen_PixelDepth,,(True),third_party/blink/renderer/core/frame/screen.idl,
-Screen,primary,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/frame/screen.idl,
+Screen,primary,attribute,,Boolean,boolean,WindowScreenPrimary,,Direct,third_party/blink/renderer/core/frame/screen.idl,
 Screen,scaleFactor,attribute,,Float,float,,,,third_party/blink/renderer/core/frame/screen.idl,
 Screen,top,attribute,,Long,long,WindowScreenTop,,Direct,third_party/blink/renderer/core/frame/screen.idl,
 Screen,touchSupport,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/frame/screen.idl,
@@ -7897,6 +7897,7 @@ VideoEncoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video
 VideoEncoder,close,operation,(),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,configure,operation,(VideoEncoderConfig),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,encode,operation,"(VideoFrame,VideoEncoderEncodeOptions)",Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
+VideoEncoder,encodeQueueSize,attribute,,Long,long,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,flush,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,reset,operation,(),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoFrame,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,16
