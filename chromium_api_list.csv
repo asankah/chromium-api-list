@@ -5001,12 +5001,14 @@ NativeIOFile,close,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/r
 NativeIOFile,flush,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/native_io/native_io_file.idl,
 NativeIOFile,getLength,operation,(),UnsignedLongLongPromise,Promise<unsigned long long>,,,,third_party/blink/renderer/modules/native_io/native_io_file.idl,
 NativeIOFile,read,operation,"(ArrayBufferViewAllowShared,UnsignedLongLong)",UnsignedLongLongPromise,Promise<unsigned long long>,,,,third_party/blink/renderer/modules/native_io/native_io_file.idl,
+NativeIOFile,setLength,operation,(UnsignedLongLong),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/native_io/native_io_file.idl,
 NativeIOFile,write,operation,"(ArrayBufferViewAllowShared,UnsignedLongLong)",UnsignedLongLongPromise,Promise<unsigned long long>,,,,third_party/blink/renderer/modules/native_io/native_io_file.idl,
 NativeIOFileSync,,interface,,,,,True,,third_party/blink/renderer/modules/native_io/native_io_file_sync.idl,11
 NativeIOFileSync,close,operation,(),Void,void,,,,third_party/blink/renderer/modules/native_io/native_io_file_sync.idl,
 NativeIOFileSync,flush,operation,(),Void,void,,,,third_party/blink/renderer/modules/native_io/native_io_file_sync.idl,
 NativeIOFileSync,getLength,operation,(),UnsignedLongLong,unsigned long long,,,,third_party/blink/renderer/modules/native_io/native_io_file_sync.idl,
 NativeIOFileSync,read,operation,"(ArrayBufferViewAllowShared,UnsignedLongLong)",UnsignedLongLong,unsigned long long,,,,third_party/blink/renderer/modules/native_io/native_io_file_sync.idl,
+NativeIOFileSync,setLength,operation,(UnsignedLongLong),Void,void,,,,third_party/blink/renderer/modules/native_io/native_io_file_sync.idl,
 NativeIOFileSync,write,operation,"(ArrayBufferViewAllowShared,UnsignedLongLong)",UnsignedLongLong,unsigned long long,,,,third_party/blink/renderer/modules/native_io/native_io_file_sync.idl,
 NativeIOManager,,interface,,,,,True,,third_party/blink/renderer/modules/native_io/native_io_manager.idl,11
 NativeIOManager,delete,operation,(String),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/native_io/native_io_manager.idl,
