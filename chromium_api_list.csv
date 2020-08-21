@@ -426,7 +426,7 @@ BluetoothCharacteristicProperties,writeWithoutResponse,attribute,,Boolean,boolea
 BluetoothDevice,,interface,,,,,True,,third_party/blink/renderer/modules/bluetooth/bluetooth_device.idl,12
 BluetoothDevice,gatt,attribute,,BluetoothRemoteGATTServer,BluetoothRemoteGATTServer,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_device.idl,
 BluetoothDevice,id,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_device.idl,
-BluetoothDevice,name,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_device.idl,
+BluetoothDevice,name,attribute,,String,DOMString,BluetoothDeviceName,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_device.idl,
 BluetoothDevice,onadvertisementreceived,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_device.idl,
 BluetoothDevice,ongattserverdisconnected,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_device.idl,
 BluetoothDevice,watchAdvertisements,operation,(WatchAdvertisementsOptions),VoidPromise,Promise<void>,WebBluetoothWatchAdvertisements,,,third_party/blink/renderer/modules/bluetooth/bluetooth_device.idl,
@@ -1964,7 +1964,7 @@ FaceDetector,detect,operation,(HTMLImageElementOrSVGImageElementOrHTMLVideoEleme
 FeaturePolicy,,interface,,,,,,,third_party/blink/renderer/core/feature_policy/feature_policy.idl,9
 FeaturePolicy,allowedFeatures,operation,(),StringSequence,sequence<DOMString>,FeaturePolicyJSAPI,,,third_party/blink/renderer/core/feature_policy/feature_policy.idl,
 FeaturePolicy,allowsFeature,operation,"(String,String)",Boolean,boolean,FeaturePolicyJSAPI,,,third_party/blink/renderer/core/feature_policy/feature_policy.idl,
-FeaturePolicy,features,operation,(),StringSequence,sequence<DOMString>,FeaturePolicyJSAPI,,,third_party/blink/renderer/core/feature_policy/feature_policy.idl,
+FeaturePolicy,features,operation,(),StringSequence,sequence<DOMString>,FeaturePolicyJSAPI,,Direct,third_party/blink/renderer/core/feature_policy/feature_policy.idl,
 FeaturePolicy,getAllowlistForFeature,operation,(String),StringSequence,sequence<DOMString>,FeaturePolicyJSAPI,,,third_party/blink/renderer/core/feature_policy/feature_policy.idl,
 FeaturePolicyViolationReportBody,,interface,,,,,,,third_party/blink/renderer/core/frame/feature_policy_violation_report_body.idl,9
 FeaturePolicyViolationReportBody,columnNumber,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/frame/feature_policy_violation_report_body.idl,
@@ -2290,7 +2290,7 @@ Gamepad,,interface,,,,,,,third_party/blink/renderer/modules/gamepad/gamepad.idl,
 Gamepad,axes,attribute,,DoubleArray,FrozenArray<double>,GamepadAxes,,,third_party/blink/renderer/modules/gamepad/gamepad.idl,
 Gamepad,buttons,attribute,,GamepadButtonArray,FrozenArray<GamepadButton>,GamepadButtons,,,third_party/blink/renderer/modules/gamepad/gamepad.idl,
 Gamepad,connected,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/gamepad/gamepad.idl,
-Gamepad,id,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/gamepad/gamepad.idl,
+Gamepad,id,attribute,,String,DOMString,GamepadId,,Direct,third_party/blink/renderer/modules/gamepad/gamepad.idl,
 Gamepad,index,attribute,,Long,long,,,,third_party/blink/renderer/modules/gamepad/gamepad.idl,
 Gamepad,mapping,attribute,,GamepadMappingType,GamepadMappingType,,,,third_party/blink/renderer/modules/gamepad/gamepad.idl,
 Gamepad,timestamp,attribute,,Double,double,,,,third_party/blink/renderer/modules/gamepad/gamepad.idl,
@@ -3495,7 +3495,7 @@ ImageDecoder,type,attribute,,USVString,USVString,,,,third_party/blink/renderer/m
 Ink,,interface,,,,,,,third_party/blink/renderer/modules/delegated_ink/ink.idl,14
 Ink,requestPresenter,operation,"(PresenterType,Element)",DelegatedInkTrailPresenterPromise,Promise<DelegatedInkTrailPresenter>,,,,third_party/blink/renderer/modules/delegated_ink/ink.idl,
 InputDeviceCapabilities,,interface,,,,,,,third_party/blink/renderer/core/input/input_device_capabilities.idl,16
-InputDeviceCapabilities,firesTouchEvents,attribute,,Boolean,boolean,InputDeviceCapabilities_FiresTouchEvents,,,third_party/blink/renderer/core/input/input_device_capabilities.idl,
+InputDeviceCapabilities,firesTouchEvents,attribute,,Boolean,boolean,InputDeviceCapabilities_FiresTouchEvents,,Direct,third_party/blink/renderer/core/input/input_device_capabilities.idl,
 InputDeviceInfo,,interface,,,,,,,third_party/blink/renderer/modules/mediastream/input_device_info.idl,8
 InputDeviceInfo,getCapabilities,operation,(),MediaTrackCapabilities,MediaTrackCapabilities,,,,third_party/blink/renderer/modules/mediastream/input_device_info.idl,
 InputEvent,,interface,,,,,,,third_party/blink/renderer/core/events/input_event.idl,10
@@ -3851,6 +3851,7 @@ InternalRuntimeFlags,rtcSvcScalabilityModeEnabled,attribute,,Boolean,boolean,,,,
 InternalRuntimeFlags,rtcUnifiedPlanByDefaultEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,rtcUnifiedPlanEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sameSiteByDefaultCookiesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,sanitizerAPIEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,screenWakeLockEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scriptedSpeechRecognitionEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scriptedSpeechSynthesisEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5101,7 +5102,7 @@ NetworkInformation,effectiveType,attribute,,EffectiveConnectionType,EffectiveCon
 NetworkInformation,onchange,attribute,,EventHandlerNonNull,EventHandlerNonNull,NetInfoOnChange,,,third_party/blink/renderer/modules/netinfo/network_information.idl,
 NetworkInformation,ontypechange,attribute,,EventHandlerNonNull,EventHandlerNonNull,NetInfoOnTypeChange,,,third_party/blink/renderer/modules/netinfo/network_information.idl,
 NetworkInformation,rtt,attribute,,UnsignedLongLong,unsigned long long,NetInfoRtt,,,third_party/blink/renderer/modules/netinfo/network_information.idl,
-NetworkInformation,saveData,attribute,,Boolean,boolean,NetInfoSaveData,,,third_party/blink/renderer/modules/netinfo/network_information.idl,
+NetworkInformation,saveData,attribute,,Boolean,boolean,NetInfoSaveData,,Direct,third_party/blink/renderer/modules/netinfo/network_information.idl,
 NetworkInformation,type,attribute,,ConnectionType,ConnectionType,NetInfoType,,,third_party/blink/renderer/modules/netinfo/network_information.idl,
 Node,,interface,,,,,,,third_party/blink/renderer/core/dom/node.idl,25
 Node,ATTRIBUTE_NODE,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/dom/node.idl,27
@@ -5715,11 +5716,11 @@ Plane,readInto,operation,(ArrayBufferViewAllowShared),Void,void,,,,third_party/b
 Plane,rows,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webcodecs/plane.idl,
 Plane,stride,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webcodecs/plane.idl,
 Plugin,,interface,,,,,,,third_party/blink/renderer/modules/plugins/plugin.idl,27
-Plugin,description,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/plugins/plugin.idl,
-Plugin,filename,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/plugins/plugin.idl,
+Plugin,description,attribute,,String,DOMString,PluginDescription,,Direct,third_party/blink/renderer/modules/plugins/plugin.idl,
+Plugin,filename,attribute,,String,DOMString,PluginFilename,,Direct,third_party/blink/renderer/modules/plugins/plugin.idl,
 Plugin,item,operation,(UnsignedLong),MimeType,MimeType,,,,third_party/blink/renderer/modules/plugins/plugin.idl,
 Plugin,length,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/plugins/plugin.idl,
-Plugin,name,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/plugins/plugin.idl,
+Plugin,name,attribute,,String,DOMString,PluginName,,Direct,third_party/blink/renderer/modules/plugins/plugin.idl,
 Plugin,namedItem,operation,(String),MimeType,MimeType,,,,third_party/blink/renderer/modules/plugins/plugin.idl,
 PluginArray,,interface,,,,,,,third_party/blink/renderer/modules/plugins/plugin_array.idl,27
 PluginArray,item,operation,(UnsignedLong),Plugin,Plugin,,,,third_party/blink/renderer/modules/plugins/plugin_array.idl,
@@ -5894,16 +5895,16 @@ RTCDtlsTransport,iceTransport,attribute,,RTCIceTransport,RTCIceTransport,,,,thir
 RTCDtlsTransport,onerror,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/modules/peerconnection/rtc_dtls_transport.idl,
 RTCDtlsTransport,onstatechange,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/modules/peerconnection/rtc_dtls_transport.idl,
 RTCDtlsTransport,state,attribute,,RTCDtlsTransportState,RTCDtlsTransportState,,,,third_party/blink/renderer/modules/peerconnection/rtc_dtls_transport.idl,
-RTCEncodedAudioFrame,,interface,,,,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_audio_frame.idl,12
-RTCEncodedAudioFrame,,operation,(),String,DOMString,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_audio_frame.idl,21
+RTCEncodedAudioFrame,,interface,,,,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_audio_frame.idl,11
+RTCEncodedAudioFrame,,operation,(),String,DOMString,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_audio_frame.idl,20
 RTCEncodedAudioFrame,additionalData,attribute,,ArrayBuffer,ArrayBuffer,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_audio_frame.idl,
 RTCEncodedAudioFrame,contributingSources,attribute,,UnsignedLongArray,FrozenArray<unsigned long>,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_audio_frame.idl,
 RTCEncodedAudioFrame,data,attribute,,ArrayBuffer,ArrayBuffer,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_audio_frame.idl,
 RTCEncodedAudioFrame,getMetadata,operation,(),RTCEncodedAudioFrameMetadata,RTCEncodedAudioFrameMetadata,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_audio_frame.idl,
 RTCEncodedAudioFrame,synchronizationSource,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_audio_frame.idl,
 RTCEncodedAudioFrame,timestamp,attribute,,UnsignedLongLong,unsigned long long,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_audio_frame.idl,
-RTCEncodedVideoFrame,,interface,,,,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_video_frame.idl,18
-RTCEncodedVideoFrame,,operation,(),String,DOMString,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_video_frame.idl,27
+RTCEncodedVideoFrame,,interface,,,,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_video_frame.idl,17
+RTCEncodedVideoFrame,,operation,(),String,DOMString,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_video_frame.idl,26
 RTCEncodedVideoFrame,additionalData,attribute,,ArrayBuffer,ArrayBuffer,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_video_frame.idl,
 RTCEncodedVideoFrame,data,attribute,,ArrayBuffer,ArrayBuffer,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_video_frame.idl,
 RTCEncodedVideoFrame,getMetadata,operation,(),RTCEncodedVideoFrameMetadata,RTCEncodedVideoFrameMetadata,,,,third_party/blink/renderer/modules/peerconnection/rtc_encoded_video_frame.idl,
@@ -5921,15 +5922,15 @@ RTCErrorEvent,,interface,,,,,,,third_party/blink/renderer/modules/peerconnection
 RTCErrorEvent,error,attribute,,RTCError,RTCError,,,,third_party/blink/renderer/modules/peerconnection/rtc_error_event.idl,
 RTCErrorEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/events/event.idl,
 RTCIceCandidate,,interface,,,,,,,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,61
-RTCIceCandidate,address,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
-RTCIceCandidate,candidate,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
+RTCIceCandidate,address,attribute,,String,DOMString,RTCIceCandidateAddress,,Direct,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
+RTCIceCandidate,candidate,attribute,,String,DOMString,RTCIceCandidateCandidate,,Direct,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
 RTCIceCandidate,component,attribute,,RTCIceComponent,RTCIceComponent,,,,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
 RTCIceCandidate,foundation,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
-RTCIceCandidate,port,attribute,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
+RTCIceCandidate,port,attribute,,UnsignedShort,unsigned short,RTCIceCandidatePort,,Direct,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
 RTCIceCandidate,priority,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
 RTCIceCandidate,protocol,attribute,,RTCIceProtocol,RTCIceProtocol,,,,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
-RTCIceCandidate,relatedAddress,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
-RTCIceCandidate,relatedPort,attribute,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
+RTCIceCandidate,relatedAddress,attribute,,String,DOMString,RTCIceCandidateRelatedAddress,,Direct,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
+RTCIceCandidate,relatedPort,attribute,,UnsignedShort,unsigned short,RTCIceCandidateRelatedPort,,Direct,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
 RTCIceCandidate,sdpMLineIndex,attribute,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
 RTCIceCandidate,sdpMid,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
 RTCIceCandidate,tcpType,attribute,,RTCIceTcpCandidateType,RTCIceTcpCandidateType,,,,third_party/blink/renderer/modules/peerconnection/rtc_ice_candidate.idl,
@@ -7081,6 +7082,8 @@ SVGViewElement,SVG_ZOOMANDPAN_UNKNOWN,constant,,UnsignedShort,unsigned short,,,,
 SVGViewElement,preserveAspectRatio,attribute,,SVGAnimatedPreserveAspectRatio,SVGAnimatedPreserveAspectRatio,SVG1DOMFitToViewBox,,,third_party/blink/renderer/core/svg/svg_fit_to_view_box.idl,
 SVGViewElement,viewBox,attribute,,SVGAnimatedRect,SVGAnimatedRect,SVG1DOMFitToViewBox,,,third_party/blink/renderer/core/svg/svg_fit_to_view_box.idl,
 SVGViewElement,zoomAndPan,attribute,,UnsignedShort,unsigned short,SVG1DOMZoomAndPan,,,third_party/blink/renderer/core/svg/svg_zoom_and_pan.idl,
+Sanitizer,,interface,,,,,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,10
+Sanitizer,saneStringFrom,operation,(String),String,DOMString,,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Scheduler,,interface,,,,,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,11
 Scheduler,currentTaskSignal,attribute,,TaskSignal,TaskSignal,SchedulerCurrentTaskSignal,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,
 Scheduler,postTask,operation,"(Function,SchedulerPostTaskOptions,Any)",AnyPromise,Promise<any>,SchedulerPostTask,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,
@@ -7890,6 +7893,7 @@ ValidityState,typeMismatch,attribute,,Boolean,boolean,,,,third_party/blink/rende
 ValidityState,valid,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/html/forms/validity_state.idl,
 ValidityState,valueMissing,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/html/forms/validity_state.idl,
 VideoDecoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,17
+VideoDecoder,close,operation,(),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,configure,operation,(EncodedVideoConfig),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,decode,operation,(EncodedVideoChunk),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,decodeQueueSize,attribute,,Long,long,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
