@@ -199,6 +199,7 @@ AudioDecoder,decode,operation,(EncodedAudioChunk),Void,void,,,,third_party/blink
 AudioDecoder,decodeQueueSize,attribute,,Long,long,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
 AudioDecoder,flush,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
 AudioDecoder,reset,operation,(),Void,void,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
+AudioDecoder,state,attribute,,CodecState,CodecState,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
 AudioDestinationNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/audio_destination_node.idl,28
 AudioDestinationNode,maxChannelCount,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webaudio/audio_destination_node.idl,
 AudioFrame,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,9
@@ -291,7 +292,7 @@ AuthenticatorAttestationResponse,attestationObject,attribute,,ArrayBuffer,ArrayB
 AuthenticatorAttestationResponse,getAuthenticatorData,operation,(),ArrayBuffer,ArrayBuffer,,,,third_party/blink/renderer/modules/credentialmanager/authenticator_attestation_response.idl,
 AuthenticatorAttestationResponse,getPublicKey,operation,(),ArrayBuffer,ArrayBuffer,,,,third_party/blink/renderer/modules/credentialmanager/authenticator_attestation_response.idl,
 AuthenticatorAttestationResponse,getPublicKeyAlgorithm,operation,(),Long,long,,,,third_party/blink/renderer/modules/credentialmanager/authenticator_attestation_response.idl,
-AuthenticatorAttestationResponse,getTransports,operation,(),StringSequence,sequence<DOMString>,,,,third_party/blink/renderer/modules/credentialmanager/authenticator_attestation_response.idl,
+AuthenticatorAttestationResponse,getTransports,operation,(),StringSequence,sequence<DOMString>,AuthenticatorAttestationResponse_GetTransports,,Direct,third_party/blink/renderer/modules/credentialmanager/authenticator_attestation_response.idl,
 AuthenticatorResponse,,interface,,,,,True,,third_party/blink/renderer/modules/credentialmanager/authenticator_response.idl,11
 AuthenticatorResponse,clientDataJSON,attribute,,ArrayBuffer,ArrayBuffer,,,,third_party/blink/renderer/modules/credentialmanager/authenticator_response.idl,
 BackgroundFetchEvent,,interface,,,,,,,third_party/blink/renderer/modules/background_fetch/background_fetch_event.idl,10
@@ -3764,7 +3765,6 @@ InternalRuntimeFlags,mojoJSEnabled,attribute,,Boolean,boolean,,,,third_party/bli
 InternalRuntimeFlags,mojoJSTestEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,mouseSubframeNoImplicitCaptureEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,namedPagesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,nativeFileSystemDragAndDropEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,nativeFileSystemEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,nativeIOEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,navigatorContentUtilsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3837,7 +3837,6 @@ InternalRuntimeFlags,pushMessagingSubscriptionChangeEnabled,attribute,,Boolean,b
 InternalRuntimeFlags,quicTransportEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,quotaChangeEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,rawClipboardEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,reducedReferrerGranularityEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,remotePlaybackBackendEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,remotePlaybackEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,requestVideoFrameCallbackEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -7095,7 +7094,7 @@ SVGViewElement,preserveAspectRatio,attribute,,SVGAnimatedPreserveAspectRatio,SVG
 SVGViewElement,viewBox,attribute,,SVGAnimatedRect,SVGAnimatedRect,SVG1DOMFitToViewBox,,,third_party/blink/renderer/core/svg/svg_fit_to_view_box.idl,
 SVGViewElement,zoomAndPan,attribute,,UnsignedShort,unsigned short,SVG1DOMZoomAndPan,,,third_party/blink/renderer/core/svg/svg_zoom_and_pan.idl,
 Sanitizer,,interface,,,,,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,10
-Sanitizer,saneStringFrom,operation,(String),String,DOMString,,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
+Sanitizer,sanitizeToString,operation,(String),String,DOMString,,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Scheduler,,interface,,,,,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,11
 Scheduler,currentTaskSignal,attribute,,TaskSignal,TaskSignal,SchedulerCurrentTaskSignal,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,
 Scheduler,postTask,operation,"(Function,SchedulerPostTaskOptions,Any)",AnyPromise,Promise<any>,SchedulerPostTask,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,
@@ -7911,6 +7910,7 @@ VideoDecoder,decode,operation,(EncodedVideoChunk),Void,void,,,,third_party/blink
 VideoDecoder,decodeQueueSize,attribute,,Long,long,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,flush,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,reset,operation,(),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
+VideoDecoder,state,attribute,,CodecState,CodecState,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoEncoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,10
 VideoEncoder,close,operation,(),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,configure,operation,(VideoEncoderConfig),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
@@ -7918,6 +7918,7 @@ VideoEncoder,encode,operation,"(VideoFrame,VideoEncoderEncodeOptions)",Void,void
 VideoEncoder,encodeQueueSize,attribute,,Long,long,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,flush,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,reset,operation,(),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
+VideoEncoder,state,attribute,,CodecState,CodecState,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoFrame,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,16
 VideoFrame,clone,operation,(),VideoFrame,VideoFrame,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedHeight,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
