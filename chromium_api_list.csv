@@ -658,6 +658,7 @@ CSSSkewY,ay,attribute,,CSSNumericValue,CSSNumericValue,,,,third_party/blink/rend
 CSSStyleDeclaration,,interface,,,,,,,third_party/blink/renderer/core/css/css_style_declaration.idl,25
 CSSStyleDeclaration,,operation,"(String,StringTreatNullAs)",Void,void,,,,third_party/blink/renderer/core/css/css_style_declaration.idl,
 CSSStyleDeclaration,,operation,(String),String,DOMString,,,,third_party/blink/renderer/core/css/css_style_declaration.idl,
+CSSStyleDeclaration,,operation,(String),Void,void,,,,third_party/blink/renderer/core/css/css_style_declaration.idl,
 CSSStyleDeclaration,cssFloat,attribute,,StringTreatNullAs,[TreatNullAs=EmptyString] DOMString,,,,third_party/blink/renderer/core/css/css_style_declaration.idl,
 CSSStyleDeclaration,cssText,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_style_declaration.idl,
 CSSStyleDeclaration,getPropertyPriority,operation,(String),String,DOMString,,,,third_party/blink/renderer/core/css/css_style_declaration.idl,
@@ -763,7 +764,6 @@ CanvasRenderingContext2D,clip,operation,(CanvasFillRule),Void,void,,,,third_part
 CanvasRenderingContext2D,closePath,operation,(),Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 CanvasRenderingContext2D,createConicGradient,operation,"(Double,Double,Double)",CanvasGradient,CanvasGradient,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,createImageData,operation,"(LongEnforceRange,LongEnforceRange)",ImageData,ImageData,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
-CanvasRenderingContext2D,createImageData,operation,"(Uint8ClampedArrayOrUint16ArrayOrFloat32Array,UnsignedLong,UnsignedLong,ImageDataColorSettings)",ImageData,ImageData,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,createImageData,operation,"(UnsignedLong,UnsignedLong,ImageDataColorSettings)",ImageData,ImageData,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,createImageData,operation,(ImageData),ImageData,ImageData,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,createLinearGradient,operation,"(Double,Double,Double,Double)",CanvasGradient,CanvasGradient,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
@@ -3718,6 +3718,7 @@ InternalRuntimeFlags,layoutNGForControlsEnabled,attribute,,Boolean,boolean,,,,th
 InternalRuntimeFlags,layoutNGFragmentItemEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGFragmentTraversalEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGGridEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,layoutNGPrintingEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGRubyEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGTableEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutShiftAttributionEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5271,7 +5272,6 @@ OffscreenCanvasRenderingContext2D,closePath,operation,(),Void,void,,,,third_part
 OffscreenCanvasRenderingContext2D,commit,operation,(),Void,void,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,createConicGradient,operation,"(Double,Double,Double)",CanvasGradient,CanvasGradient,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,createImageData,operation,"(Long,Long)",ImageData,ImageData,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
-OffscreenCanvasRenderingContext2D,createImageData,operation,"(Uint8ClampedArrayOrUint16ArrayOrFloat32Array,UnsignedLong,UnsignedLong,ImageDataColorSettings)",ImageData,ImageData,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,createImageData,operation,"(UnsignedLong,UnsignedLong,ImageDataColorSettings)",ImageData,ImageData,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,createImageData,operation,(ImageData),ImageData,ImageData,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,createLinearGradient,operation,"(Double,Double,Double,Double)",CanvasGradient,CanvasGradient,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
@@ -5506,6 +5506,7 @@ PaymentAddress,recipient,attribute,,String,DOMString,,,,third_party/blink/render
 PaymentAddress,region,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/payments/payment_address.idl,
 PaymentAddress,sortingCode,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/payments/payment_address.idl,
 PaymentAddress,toJSON,operation,(),Object,object,,,,third_party/blink/renderer/modules/payments/payment_address.idl,
+PaymentCredential,,interface,,,,,True,,third_party/blink/renderer/modules/credentialmanager/payment_credential.idl,11
 PaymentInstruments,,interface,,,,,,,third_party/blink/renderer/modules/payments/payment_instruments.idl,10
 PaymentInstruments,clear,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/payments/payment_instruments.idl,
 PaymentInstruments,delete,operation,(String),BooleanPromise,Promise<boolean>,,,,third_party/blink/renderer/modules/payments/payment_instruments.idl,
