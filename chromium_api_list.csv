@@ -3543,6 +3543,7 @@ InternalRuntimeFlags,automationControlledEnabled,attribute,,Boolean,boolean,,,,t
 InternalRuntimeFlags,autoplayIgnoresWebAudioEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,azimuthAltitudeEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,backForwardCacheEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,backForwardCacheExperimentHTTPHeaderEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,backgroundFetchEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,backgroundVideoTrackOptimizationEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,badgingEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3642,6 +3643,7 @@ InternalRuntimeFlags,delayAsyncScriptExecutionUntilFirstPaintOrFinishedParsingEn
 InternalRuntimeFlags,delegatedInkTrailsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,desktopCaptureDisableLocalEchoControlEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,digitalGoodsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,directSocketsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,disableHardwareNoiseSuppressionEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,disableLayerSquashingEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,disallowDocumentAccessEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3946,6 +3948,7 @@ InternalRuntimeFlags,webVTTRegionsEnabled,attribute,,Boolean,boolean,,,,third_pa
 InternalRuntimeFlags,webXRARModuleEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webXRAnchorsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webXRCameraAccessEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webXRDepthEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webXREnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webXRHitTestEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webXRHitTestEntityTypesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5068,6 +5071,8 @@ Navigator,mediaDevices,attribute,,MediaDevices,MediaDevices,,True,,third_party/b
 Navigator,mediaSession,attribute,,MediaSession,MediaSession,,,,third_party/blink/renderer/modules/mediasession/navigator_media_session.idl,
 Navigator,mimeTypes,attribute,,MimeTypeArray,MimeTypeArray,NavigatorMimeTypes,,(True),third_party/blink/renderer/modules/plugins/navigator_plugins.idl,
 Navigator,onLine,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/frame/navigator_on_line.idl,
+Navigator,openTCPSocket,operation,(SocketOptions),VoidPromise,Promise<void>,Navigator_OpenTCPSocket,True,,third_party/blink/renderer/modules/direct_sockets/navigator_socket.idl,
+Navigator,openUDPSocket,operation,(SocketOptions),VoidPromise,Promise<void>,Navigator_OpenUDPSocket,True,,third_party/blink/renderer/modules/direct_sockets/navigator_socket.idl,
 Navigator,permissions,attribute,,Permissions,Permissions,,,,third_party/blink/renderer/modules/permissions/navigator_permissions.idl,
 Navigator,platform,attribute,,String,DOMString,NavigatorPlatform,,Direct,third_party/blink/renderer/core/frame/navigator_id.idl,
 Navigator,plugins,attribute,,PluginArray,PluginArray,NavigatorPlugins,,(True),third_party/blink/renderer/modules/plugins/navigator_plugins.idl,
@@ -7906,7 +7911,7 @@ ValidityState,valid,attribute,,Boolean,boolean,,,,third_party/blink/renderer/cor
 ValidityState,valueMissing,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/html/forms/validity_state.idl,
 VideoDecoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,17
 VideoDecoder,close,operation,(),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
-VideoDecoder,configure,operation,(EncodedVideoConfig),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
+VideoDecoder,configure,operation,(VideoDecoderConfig),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,decode,operation,(EncodedVideoChunk),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,decodeQueueSize,attribute,,Long,long,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,flush,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
@@ -7920,7 +7925,7 @@ VideoEncoder,encodeQueueSize,attribute,,Long,long,,,,third_party/blink/renderer/
 VideoEncoder,flush,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,reset,operation,(),Void,void,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,state,attribute,,CodecState,CodecState,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
-VideoFrame,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,16
+VideoFrame,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,11
 VideoFrame,clone,operation,(),VideoFrame,VideoFrame,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedHeight,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedWidth,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
@@ -10978,8 +10983,14 @@ XRBoundedReferenceSpace,,interface,,,,,True,,third_party/blink/renderer/modules/
 XRBoundedReferenceSpace,boundsGeometry,attribute,,DOMPointReadOnlyArray,FrozenArray<DOMPointReadOnly>,,,,third_party/blink/renderer/modules/xr/xr_bounded_reference_space.idl,
 XRDOMOverlayState,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_dom_overlay_state.idl,15
 XRDOMOverlayState,type,attribute,,XRDOMOverlayType,XRDOMOverlayType,,,,third_party/blink/renderer/modules/xr/xr_dom_overlay_state.idl,
+XRDepthInformation,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_depth_information.idl,9
+XRDepthInformation,data,attribute,,Uint16Array,Uint16Array,,,,third_party/blink/renderer/modules/xr/xr_depth_information.idl,
+XRDepthInformation,getDepth,operation,"(UnsignedLong,UnsignedLong)",Float,float,,,,third_party/blink/renderer/modules/xr/xr_depth_information.idl,
+XRDepthInformation,height,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/xr/xr_depth_information.idl,
+XRDepthInformation,width,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/xr/xr_depth_information.idl,
 XRFrame,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_frame.idl,10
 XRFrame,createAnchor,operation,"(XRRigidTransform,XRSpace)",XRAnchorPromise,Promise<XRAnchor>,XRFrameCreateAnchor,,,third_party/blink/renderer/modules/xr/xr_frame.idl,
+XRFrame,getDepthInformation,operation,(XRView),XRDepthInformation,XRDepthInformation,,,,third_party/blink/renderer/modules/xr/xr_frame.idl,
 XRFrame,getHitTestResults,operation,(XRHitTestSource),XRHitTestResultArray,FrozenArray<XRHitTestResult>,,,,third_party/blink/renderer/modules/xr/xr_frame.idl,
 XRFrame,getHitTestResultsForTransientInput,operation,(XRTransientInputHitTestSource),XRTransientInputHitTestResultArray,FrozenArray<XRTransientInputHitTestResult>,,,,third_party/blink/renderer/modules/xr/xr_frame.idl,
 XRFrame,getLightEstimate,operation,(XRLightProbe),XRLightEstimate,XRLightEstimate,,,,third_party/blink/renderer/modules/xr/xr_frame.idl,
