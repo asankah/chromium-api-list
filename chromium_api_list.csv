@@ -3796,7 +3796,6 @@ InternalRuntimeFlags,originTrialsSampleAPIImpliedEnabled,attribute,,Boolean,bool
 InternalRuntimeFlags,originTrialsSampleAPIInvalidOSEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,originTrialsSampleAPINavigationEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,originTrialsSampleAPIThirdPartyEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,outOfBlinkCorsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,overflowClipEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,overflowIconsForMediaControlsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,overscrollCustomizationEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4245,6 +4244,7 @@ Internals,htmlTags,operation,(),StringSequence,sequence<DOMString>,,,,third_part
 Internals,idleTimeSpellCheckerState,operation,(Document),String,DOMString,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,innerEditorElement,operation,(Element),Element,Element,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,interestedElement,attribute,,Element,Element,,,,third_party/blink/renderer/core/testing/internals.idl,
+Internals,isActivated,operation,(),Boolean,boolean,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,isAnimatedCSSPropertyUseCounted,operation,"(Document,String)",Boolean,boolean,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,isCSSPropertyUseCounted,operation,"(Document,String)",Boolean,boolean,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,isCompositedAnimation,operation,(Animation),Boolean,boolean,,,,third_party/blink/renderer/core/testing/internals.idl,
@@ -4792,7 +4792,7 @@ MediaSession,metadata,attribute,,MediaMetadata,MediaMetadata,MediaSession_Metada
 MediaSession,playbackState,attribute,,MediaSessionPlaybackState,MediaSessionPlaybackState,MediaSession_PlaybackState,,,third_party/blink/renderer/modules/mediasession/media_session.idl,
 MediaSession,setActionHandler,operation,"(MediaSessionAction,MediaSessionActionHandler)",Void,void,MediaSession_SetActionHandler,,,third_party/blink/renderer/modules/mediasession/media_session.idl,
 MediaSession,setPositionState,operation,(MediaPositionState),Void,void,MediaSession_SetPositionState,,,third_party/blink/renderer/modules/mediasession/media_session.idl,
-MediaSource,,interface,,,,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,42
+MediaSource,,interface,,,,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,41
 MediaSource,activeSourceBuffers,attribute,,SourceBufferList,SourceBufferList,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,
 MediaSource,addSourceBuffer,operation,(String),SourceBuffer,SourceBuffer,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,
 MediaSource,clearLiveSeekableRange,operation,(),Void,void,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,
