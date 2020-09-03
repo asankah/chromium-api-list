@@ -2033,12 +2033,8 @@ FileReaderSync,readAsDataURL,operation,(Blob),String,DOMString,,,,third_party/bl
 FileReaderSync,readAsText,operation,"(Blob,String)",String,DOMString,,,,third_party/blink/renderer/core/fileapi/file_reader_sync.idl,
 FileSystemDirectoryHandle,,interface,,,,,True,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,12
 FileSystemDirectoryHandle,entries,operation,(),NativeFileSystemDirectoryIterator,NativeFileSystemDirectoryIterator,,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
-FileSystemDirectoryHandle,getDirectory,operation,"(USVString,FileSystemGetDirectoryOptions)",FileSystemDirectoryHandlePromise,Promise<FileSystemDirectoryHandle>,,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
 FileSystemDirectoryHandle,getDirectoryHandle,operation,"(USVString,FileSystemGetDirectoryOptions)",FileSystemDirectoryHandlePromise,Promise<FileSystemDirectoryHandle>,,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
-FileSystemDirectoryHandle,getEntries,operation,(),Object,object,,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
-FileSystemDirectoryHandle,getFile,operation,"(USVString,FileSystemGetFileOptions)",FileSystemFileHandlePromise,Promise<FileSystemFileHandle>,,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
 FileSystemDirectoryHandle,getFileHandle,operation,"(USVString,FileSystemGetFileOptions)",FileSystemFileHandlePromise,Promise<FileSystemFileHandle>,,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
-FileSystemDirectoryHandle,getSystemDirectory,operation,(GetSystemDirectoryOptions),FileSystemDirectoryHandlePromise,Promise<FileSystemDirectoryHandle>,FileSystemDirectoryHandle_GetSystemDirectory,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
 FileSystemDirectoryHandle,keys,operation,(),NativeFileSystemDirectoryIterator,NativeFileSystemDirectoryIterator,,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
 FileSystemDirectoryHandle,removeEntry,operation,"(USVString,FileSystemRemoveOptions)",VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
 FileSystemDirectoryHandle,resolve,operation,(FileSystemHandle),USVStringSequenceOrNullPromise,Promise<sequence<USVString>?>,FileSystemDirectoryHandle_Resolve,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
@@ -2047,8 +2043,6 @@ FileSystemFileHandle,,interface,,,,,True,,third_party/blink/renderer/modules/nat
 FileSystemFileHandle,createWritable,operation,(FileSystemCreateWriterOptions),FileSystemWritableFileStreamPromise,Promise<FileSystemWritableFileStream>,,,,third_party/blink/renderer/modules/native_file_system/file_system_file_handle.idl,
 FileSystemFileHandle,getFile,operation,(),FilePromise,Promise<File>,,,,third_party/blink/renderer/modules/native_file_system/file_system_file_handle.idl,
 FileSystemHandle,,interface,,,,,True,,third_party/blink/renderer/modules/native_file_system/file_system_handle.idl,18
-FileSystemHandle,isDirectory,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/native_file_system/file_system_handle.idl,
-FileSystemHandle,isFile,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/native_file_system/file_system_handle.idl,
 FileSystemHandle,isSameEntry,operation,(FileSystemHandle),BooleanPromise,Promise<boolean>,FileSystemHandle_IsSameEntry,,,third_party/blink/renderer/modules/native_file_system/file_system_handle.idl,
 FileSystemHandle,kind,attribute,,FileSystemHandleKind,FileSystemHandleKind,,,,third_party/blink/renderer/modules/native_file_system/file_system_handle.idl,
 FileSystemHandle,name,attribute,,USVString,USVString,,,,third_party/blink/renderer/modules/native_file_system/file_system_handle.idl,
@@ -2136,7 +2130,7 @@ GCObservation,,interface,,,,,,,third_party/blink/renderer/core/testing/gc_observ
 GCObservation,wasCollected,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/gc_observation.idl,
 GPU,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,26
 GPU,requestAdapter,operation,(GPURequestAdapterOptions),GPUAdapterOrNullPromise,Promise<GPUAdapter?>,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,
-GPUAdapter,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,15
+GPUAdapter,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,16
 GPUAdapter,extensions,attribute,,GPUExtensionNameArray,FrozenArray<GPUExtensionName>,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,name,attribute,,String,DOMString,GPUAdapter_Name,,Direct,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,requestDevice,operation,(GPUDeviceDescriptor),GPUDevicePromise,Promise<GPUDevice>,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
@@ -3731,7 +3725,6 @@ InternalRuntimeFlags,lazyFrameVisibleLoadTimeMetricsEnabled,attribute,,Boolean,b
 InternalRuntimeFlags,lazyImageLoadingEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,lazyImageVisibleLoadTimeMetricsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,lazyInitializeMediaControlsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,legacyNativeFileSystemEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,legacyWindowsDWriteFontFallbackEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,linkDisabledNewSpecBehaviorEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,manualSlottingEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4006,6 +3999,7 @@ InternalSettingsGenerated,setAccelerated2dCanvasMSAASampleCount,operation,(Long)
 InternalSettingsGenerated,setAcceleratedCompositingEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setAccessibilityAlwaysShowFocus,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setAccessibilityFontScaleFactor,operation,(Double),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
+InternalSettingsGenerated,setAccessibilityIncludeSvgGElement,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setAccessibilityPasswordValuesEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setAllowCustomScrollbarInMainFrame,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setAllowFileAccessFromFileURLs,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
@@ -7106,6 +7100,7 @@ SVGViewElement,preserveAspectRatio,attribute,,SVGAnimatedPreserveAspectRatio,SVG
 SVGViewElement,viewBox,attribute,,SVGAnimatedRect,SVGAnimatedRect,SVG1DOMFitToViewBox,,,third_party/blink/renderer/core/svg/svg_fit_to_view_box.idl,
 SVGViewElement,zoomAndPan,attribute,,UnsignedShort,unsigned short,SVG1DOMZoomAndPan,,,third_party/blink/renderer/core/svg/svg_zoom_and_pan.idl,
 Sanitizer,,interface,,,,,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,10
+Sanitizer,sanitize,operation,(String),DocumentFragment,DocumentFragment,,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Sanitizer,sanitizeToString,operation,(String),String,DOMString,,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Scheduler,,interface,,,,,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,11
 Scheduler,currentTaskSignal,attribute,,TaskSignal,TaskSignal,SchedulerCurrentTaskSignal,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,
@@ -10561,7 +10556,6 @@ Window,caches,attribute,,CacheStorage,CacheStorage,GlobalCacheStorage,True,,thir
 Window,cancelAnimationFrame,operation,(Long),Void,void,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,cancelIdleCallback,operation,(Long),Void,void,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,captureEvents,operation,(),Void,void,WindowCaptureEvents,,,third_party/blink/renderer/core/frame/window.idl,
-Window,chooseFileSystemEntries,operation,(ChooseFileSystemEntriesOptions),FileSystemHandleOrFileSystemHandleSequencePromise,Promise<(FileSystemHandle or sequence<FileSystemHandle>)>,Window_ChooseFileSystemEntries,,,third_party/blink/renderer/modules/native_file_system/window_native_file_system.idl,
 Window,clearInterval,operation,(Long),Void,void,,,,third_party/blink/renderer/core/frame/window_or_worker_global_scope.idl,
 Window,clearTimeout,operation,(Long),Void,void,,,,third_party/blink/renderer/core/frame/window_or_worker_global_scope.idl,
 Window,clientInformation,attribute,,Navigator,Navigator,WindowClientInformation,,,third_party/blink/renderer/core/frame/window.idl,
@@ -10733,7 +10727,6 @@ Window,opener,attribute,,Window,Window,,,,third_party/blink/renderer/core/frame/
 Window,orientation,attribute,,Long,long,WindowOrientation,,Direct,third_party/blink/renderer/core/frame/window.idl,
 Window,origin,attribute,,String,DOMString,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,originIsolated,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/frame/window.idl,
-Window,originIsolationRestricted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,originPolicyIds,attribute,,StringArray,FrozenArray<DOMString>,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,outerHeight,attribute,,Long,long,WindowOuterHeight,,Direct,third_party/blink/renderer/core/frame/window.idl,
 Window,outerWidth,attribute,,Long,long,WindowOuterWidth,,Direct,third_party/blink/renderer/core/frame/window.idl,
