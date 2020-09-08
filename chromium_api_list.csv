@@ -7990,6 +7990,7 @@ WakeLock,request,operation,(WakeLockType),WakeLockSentinelPromise,Promise<WakeLo
 WakeLockSentinel,,interface,,,,,True,,third_party/blink/renderer/modules/wake_lock/wake_lock_sentinel.idl,11
 WakeLockSentinel,onrelease,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/modules/wake_lock/wake_lock_sentinel.idl,
 WakeLockSentinel,release,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/wake_lock/wake_lock_sentinel.idl,
+WakeLockSentinel,released,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/wake_lock/wake_lock_sentinel.idl,
 WakeLockSentinel,type,attribute,,WakeLockType,WakeLockType,,,,third_party/blink/renderer/modules/wake_lock/wake_lock_sentinel.idl,
 WaveShaperNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/wave_shaper_node.idl,35
 WaveShaperNode,curve,attribute,,Float32Array,Float32Array,,,,third_party/blink/renderer/modules/webaudio/wave_shaper_node.idl,
