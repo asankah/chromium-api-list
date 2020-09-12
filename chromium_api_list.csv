@@ -563,7 +563,7 @@ CSSKeyframesRule,cssRules,attribute,,CSSRuleList,CSSRuleList,,,,third_party/blin
 CSSKeyframesRule,deleteRule,operation,(String),Void,void,,,,third_party/blink/renderer/core/css/css_keyframes_rule.idl,
 CSSKeyframesRule,findRule,operation,(String),CSSKeyframeRule,CSSKeyframeRule,,,,third_party/blink/renderer/core/css/css_keyframes_rule.idl,
 CSSKeyframesRule,name,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_keyframes_rule.idl,
-CSSKeywordValue,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_keyword_value.idl,10
+CSSKeywordValue,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_keyword_value.idl,12
 CSSKeywordValue,value,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/cssom/css_keyword_value.idl,
 CSSMathInvert,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_math_invert.idl,9
 CSSMathInvert,value,attribute,,DoubleOrCSSNumericValue,(double or CSSNumericValue),,,,third_party/blink/renderer/core/css/cssom/css_math_invert.idl,
@@ -942,8 +942,8 @@ ConvolverNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/convo
 ConvolverNode,buffer,attribute,,AudioBuffer,AudioBuffer,,,,third_party/blink/renderer/modules/webaudio/convolver_node.idl,
 ConvolverNode,normalize,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/webaudio/convolver_node.idl,
 CookieChangeEvent,,interface,,,,,True,,third_party/blink/renderer/modules/cookie_store/cookie_change_event.idl,15
-CookieChangeEvent,changed,attribute,,CookieListItemSequence,sequence<CookieListItem>,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/cookie_change_event.idl,
-CookieChangeEvent,deleted,attribute,,CookieListItemSequence,sequence<CookieListItem>,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/cookie_change_event.idl,
+CookieChangeEvent,changed,attribute,,CookieListItemArray,FrozenArray<CookieListItem>,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/cookie_change_event.idl,
+CookieChangeEvent,deleted,attribute,,CookieListItemArray,FrozenArray<CookieListItem>,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/cookie_change_event.idl,
 CookieChangeEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/events/event.idl,
 CookieStore,,interface,,,,,True,,third_party/blink/renderer/modules/cookie_store/cookie_store.idl,11
 CookieStore,delete,operation,(CookieStoreDeleteOptions),VoidPromise,Promise<void>,CookieStore_Delete,,,third_party/blink/renderer/modules/cookie_store/cookie_store.idl,
@@ -1947,8 +1947,8 @@ EventTarget,addEventListener,operation,"(String,EventListener,AddEventListenerOp
 EventTarget,dispatchEvent,operation,(Event),Boolean,boolean,,,,third_party/blink/renderer/core/dom/events/event_target.idl,
 EventTarget,removeEventListener,operation,"(String,EventListener,EventListenerOptionsOrBoolean)",Void,void,,,,third_party/blink/renderer/core/dom/events/event_target.idl,
 ExtendableCookieChangeEvent,,interface,,,,,,,third_party/blink/renderer/modules/cookie_store/extendable_cookie_change_event.idl,13
-ExtendableCookieChangeEvent,changed,attribute,,CookieListItemSequence,sequence<CookieListItem>,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/extendable_cookie_change_event.idl,
-ExtendableCookieChangeEvent,deleted,attribute,,CookieListItemSequence,sequence<CookieListItem>,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/extendable_cookie_change_event.idl,
+ExtendableCookieChangeEvent,changed,attribute,,CookieListItemArray,FrozenArray<CookieListItem>,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/extendable_cookie_change_event.idl,
+ExtendableCookieChangeEvent,deleted,attribute,,CookieListItemArray,FrozenArray<CookieListItem>,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/extendable_cookie_change_event.idl,
 ExtendableCookieChangeEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/events/event.idl,
 ExtendableEvent,,interface,,,,,,,third_party/blink/renderer/modules/service_worker/extendable_event.idl,34
 ExtendableEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/events/event.idl,
@@ -4132,6 +4132,7 @@ InternalSettingsGenerated,setTextTrackWindowPadding,operation,(String),Void,void
 InternalSettingsGenerated,setTextTrackWindowRadius,operation,(String),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setThreadedScrollingEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setTouchDragDropEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
+InternalSettingsGenerated,setTouchDragEndContextMenu,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setTouchEditingEnabled,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setUseAXMenuList,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setUseLegacyBackgroundSizeShorthandBehavior,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
@@ -7098,6 +7099,7 @@ SVGViewElement,preserveAspectRatio,attribute,,SVGAnimatedPreserveAspectRatio,SVG
 SVGViewElement,viewBox,attribute,,SVGAnimatedRect,SVGAnimatedRect,SVG1DOMFitToViewBox,,,third_party/blink/renderer/core/svg/svg_fit_to_view_box.idl,
 SVGViewElement,zoomAndPan,attribute,,UnsignedShort,unsigned short,SVG1DOMZoomAndPan,,,third_party/blink/renderer/core/svg/svg_zoom_and_pan.idl,
 Sanitizer,,interface,,,,,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,10
+Sanitizer,creationOptions,attribute,,SanitizerConfig,SanitizerConfig,,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Sanitizer,sanitize,operation,(String),DocumentFragment,DocumentFragment,,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Sanitizer,sanitizeToString,operation,(String),String,DOMString,,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Scheduler,,interface,,,,,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,11
@@ -7147,12 +7149,12 @@ ScrollState,positionX,attribute,,Long,long,,,,third_party/blink/renderer/core/pa
 ScrollState,positionY,attribute,,Long,long,,,,third_party/blink/renderer/core/page/scrolling/scroll_state.idl,
 ScrollState,velocityX,attribute,,Double,double,,,,third_party/blink/renderer/core/page/scrolling/scroll_state.idl,
 ScrollState,velocityY,attribute,,Double,double,,,,third_party/blink/renderer/core/page/scrolling/scroll_state.idl,
-ScrollTimeline,,interface,,,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,9
-ScrollTimeline,endScrollOffset,attribute,,StringOrScrollTimelineElementBasedOffset,(DOMString or ScrollTimelineElementBasedOffset),,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
+ScrollTimeline,,interface,,,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,12
+ScrollTimeline,endScrollOffset,attribute,,CSSNumericValueOrStringOrCSSKeywordValueOrScrollTimelineElementBasedOffset,(ScrollTimelineContainerBasedOffset or ScrollTimelineElementBasedOffset),,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 ScrollTimeline,orientation,attribute,,ScrollDirection,ScrollDirection,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
-ScrollTimeline,scrollOffsets,attribute,,StringOrScrollTimelineElementBasedOffsetArray,FrozenArray<(DOMString or ScrollTimelineElementBasedOffset)>,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
+ScrollTimeline,scrollOffsets,attribute,,CSSNumericValueOrStringOrCSSKeywordValueOrScrollTimelineElementBasedOffsetArray,FrozenArray<ScrollTimelineOffset>,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 ScrollTimeline,scrollSource,attribute,,Element,Element,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
-ScrollTimeline,startScrollOffset,attribute,,StringOrScrollTimelineElementBasedOffset,(DOMString or ScrollTimelineElementBasedOffset),,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
+ScrollTimeline,startScrollOffset,attribute,,CSSNumericValueOrStringOrCSSKeywordValueOrScrollTimelineElementBasedOffset,(ScrollTimelineContainerBasedOffset or ScrollTimelineElementBasedOffset),,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 ScrollTimeline,timeRange,attribute,,DoubleOrScrollTimelineAutoKeyword,(double or ScrollTimelineAutoKeyword),,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 SecurityPolicyViolationEvent,,interface,,,,,,,third_party/blink/renderer/core/events/security_policy_violation_event.idl,34
 SecurityPolicyViolationEvent,blockedURI,attribute,,String,DOMString,SecurityPolicyViolationEvent_BlockedURI,,,third_party/blink/renderer/core/events/security_policy_violation_event.idl,
