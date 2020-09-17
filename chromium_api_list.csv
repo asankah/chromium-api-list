@@ -4346,6 +4346,7 @@ Internals,setEditingValue,operation,"(Element,String)",Void,void,,,,third_party/
 Internals,setFocused,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,setFormControlStateOfHistoryItem,operation,(StringSequence),Void,void,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,setInitialFocus,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internals.idl,
+Internals,setIsAdSubframe,operation,(HTMLIFrameElement),Void,void,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,setIsCursorVisible,operation,"(Document,Boolean)",Void,void,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,setIsLowEndDevice,operation,(Boolean),Void,void,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,setMarkedTextMatchesAreHighlighted,operation,"(Document,Boolean)",Void,void,,,,third_party/blink/renderer/core/testing/internals.idl,
@@ -10529,6 +10530,16 @@ WebSocketStream,close,operation,(WebSocketCloseInfo),Void,void,,,,third_party/bl
 WebSocketStream,closed,attribute,,WebSocketCloseInfoPromise,Promise<WebSocketCloseInfo>,,,,third_party/blink/renderer/modules/websockets/websocket_stream.idl,
 WebSocketStream,connection,attribute,,WebSocketConnectionPromise,Promise<WebSocketConnection>,,,,third_party/blink/renderer/modules/websockets/websocket_stream.idl,
 WebSocketStream,url,attribute,,USVString,USVString,,,,third_party/blink/renderer/modules/websockets/websocket_stream.idl,
+WebTransport,,interface,,,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,10
+WebTransport,close,operation,(WebTransportCloseInfo),Void,void,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
+WebTransport,closed,attribute,,WebTransportCloseInfoPromise,Promise<WebTransportCloseInfo>,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
+WebTransport,createBidirectionalStream,operation,(),BidirectionalStreamPromise,Promise<BidirectionalStream>,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
+WebTransport,createSendStream,operation,(),SendStreamPromise,Promise<SendStream>,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
+WebTransport,ready,attribute,,VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
+WebTransport,receiveBidirectionalStreams,operation,(),ReadableStream,ReadableStream,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
+WebTransport,receiveDatagrams,operation,(),ReadableStream,ReadableStream,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
+WebTransport,receiveStreams,operation,(),ReadableStream,ReadableStream,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
+WebTransport,sendDatagrams,operation,(),WritableStream,WritableStream,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WheelEvent,,interface,,,,,,,third_party/blink/renderer/core/events/wheel_event.idl,26
 WheelEvent,DOM_DELTA_LINE,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/events/wheel_event.idl,30
 WheelEvent,DOM_DELTA_PAGE,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/events/wheel_event.idl,31
