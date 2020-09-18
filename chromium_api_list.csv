@@ -3593,6 +3593,7 @@ InternalRuntimeFlags,cssContentVisibilityEnabled,attribute,,Boolean,boolean,,,,t
 InternalRuntimeFlags,cssContentVisibilityHiddenMatchableEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFocusVisibleEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFoldablesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssFontFaceAdvanceOverrideEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFontMetricsOverrideEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFontSizeAdjustEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssHexAlphaColorEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -10998,6 +10999,7 @@ XRDepthInformation,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr
 XRDepthInformation,data,attribute,,Uint16Array,Uint16Array,,,,third_party/blink/renderer/modules/xr/xr_depth_information.idl,
 XRDepthInformation,getDepth,operation,"(UnsignedLong,UnsignedLong)",Float,float,,,,third_party/blink/renderer/modules/xr/xr_depth_information.idl,
 XRDepthInformation,height,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/xr/xr_depth_information.idl,
+XRDepthInformation,normTextureFromNormView,attribute,,XRRigidTransform,XRRigidTransform,,,,third_party/blink/renderer/modules/xr/xr_depth_information.idl,
 XRDepthInformation,width,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/xr/xr_depth_information.idl,
 XRFrame,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_frame.idl,10
 XRFrame,createAnchor,operation,"(XRRigidTransform,XRSpace)",XRAnchorPromise,Promise<XRAnchor>,XRFrameCreateAnchor,,,third_party/blink/renderer/modules/xr/xr_frame.idl,
