@@ -3462,6 +3462,7 @@ IdleDeadline,didTimeout,attribute,,Boolean,boolean,,,,third_party/blink/renderer
 IdleDeadline,timeRemaining,operation,(),Double,double,,,,third_party/blink/renderer/core/dom/idle_deadline.idl,
 IdleDetector,,interface,,,,,True,,third_party/blink/renderer/modules/idle/idle_detector.idl,22
 IdleDetector,onchange,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/modules/idle/idle_detector.idl,
+IdleDetector,requestPermission,operation,(),PermissionStatePromise,Promise<PermissionState>,IdleDetectionPermissionRequested,,,third_party/blink/renderer/modules/idle/idle_detector.idl,
 IdleDetector,screenState,attribute,,ScreenIdleState,ScreenIdleState,,,,third_party/blink/renderer/modules/idle/idle_detector.idl,
 IdleDetector,start,operation,(IdleOptions),VoidPromise,Promise<void>,IdleDetectionStart,,,third_party/blink/renderer/modules/idle/idle_detector.idl,
 IdleDetector,userState,attribute,,UserIdleState,UserIdleState,,,,third_party/blink/renderer/modules/idle/idle_detector.idl,
@@ -3522,6 +3523,7 @@ InternalRuntimeFlags,addressSpaceEnabled,attribute,,Boolean,boolean,,,,third_par
 InternalRuntimeFlags,allowActivationDelegationAttrEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,allowContentInitiatedDataUrlNavigationsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,allowSyncXHRInPageDismissalEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,androidDownloadableFontsMatchingEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,animationWorkletEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,aomAriaPropertiesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,aomAriaRelationshipPropertiesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
