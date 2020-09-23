@@ -812,6 +812,7 @@ CanvasRenderingContext2D,removeHitRegion,operation,(String),Void,void,,,,third_p
 CanvasRenderingContext2D,resetTransform,operation,(),Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,restore,operation,(),Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,rotate,operation,(UnrestrictedDouble),Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
+CanvasRenderingContext2D,roundRect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,DoubleOrDOMPointSequence)",Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 CanvasRenderingContext2D,save,operation,(),Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,scale,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,scrollPathIntoView,operation,(Path2D),Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
@@ -2130,7 +2131,7 @@ GCObservation,,interface,,,,,,,third_party/blink/renderer/core/testing/gc_observ
 GCObservation,wasCollected,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/gc_observation.idl,
 GPU,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,26
 GPU,requestAdapter,operation,(GPURequestAdapterOptions),GPUAdapterOrNullPromise,Promise<GPUAdapter?>,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,
-GPUAdapter,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,16
+GPUAdapter,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,17
 GPUAdapter,extensions,attribute,,GPUExtensionNameArray,FrozenArray<GPUExtensionName>,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,name,attribute,,String,DOMString,GPUAdapter_Name,,Direct,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,requestDevice,operation,(GPUDeviceDescriptor),GPUDevicePromise,Promise<GPUDevice>,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
@@ -2173,6 +2174,8 @@ GPUCommandEncoder,finish,operation,(GPUCommandBufferDescriptor),GPUCommandBuffer
 GPUCommandEncoder,insertDebugMarker,operation,(USVString),Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,
 GPUCommandEncoder,popDebugGroup,operation,(),Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,
 GPUCommandEncoder,pushDebugGroup,operation,(USVString),Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,
+GPUCommandEncoder,resolveQuerySet,operation,"(GPUQuerySet,UnsignedLongEnforceRange,UnsignedLongEnforceRange,GPUBuffer,UnsignedLongLongEnforceRange)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,
+GPUCommandEncoder,writeTimestamp,operation,"(GPUQuerySet,UnsignedLongEnforceRange)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,
 GPUComputePassEncoder,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_compute_pass_encoder.idl,9
 GPUComputePassEncoder,dispatch,operation,"(UnsignedLongEnforceRange,UnsignedLongEnforceRange,UnsignedLongEnforceRange)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_compute_pass_encoder.idl,
 GPUComputePassEncoder,dispatchIndirect,operation,"(GPUBuffer,UnsignedLongLongEnforceRange)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_compute_pass_encoder.idl,
@@ -2183,6 +2186,7 @@ GPUComputePassEncoder,pushDebugGroup,operation,(USVString),Void,void,,,,third_pa
 GPUComputePassEncoder,setBindGroup,operation,"(UnsignedLongEnforceRange,GPUBindGroup,Uint32ArrayAllowSharedFlexibleArrayBufferView,UnsignedLongLongEnforceRange,UnsignedLongEnforceRange)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_programmable_pass_encoder.idl,
 GPUComputePassEncoder,setBindGroup,operation,"(UnsignedLongEnforceRange,GPUBindGroup,UnsignedLongEnforceRangeSequence)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_programmable_pass_encoder.idl,
 GPUComputePassEncoder,setPipeline,operation,(GPUComputePipeline),Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_compute_pass_encoder.idl,
+GPUComputePassEncoder,writeTimestamp,operation,"(GPUQuerySet,UnsignedLongEnforceRange)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_compute_pass_encoder.idl,
 GPUComputePipeline,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_compute_pipeline.idl,9
 GPUComputePipeline,getBindGroupLayout,operation,(UnsignedLongEnforceRange),GPUBindGroupLayout,GPUBindGroupLayout,,,,third_party/blink/renderer/modules/webgpu/gpu_compute_pipeline.idl,
 GPUDevice,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,9
@@ -2193,6 +2197,7 @@ GPUDevice,createBuffer,operation,(GPUBufferDescriptor),GPUBuffer,GPUBuffer,,,,th
 GPUDevice,createCommandEncoder,operation,(GPUCommandEncoderDescriptor),GPUCommandEncoder,GPUCommandEncoder,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createComputePipeline,operation,(GPUComputePipelineDescriptor),GPUComputePipeline,GPUComputePipeline,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createPipelineLayout,operation,(GPUPipelineLayoutDescriptor),GPUPipelineLayout,GPUPipelineLayout,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
+GPUDevice,createQuerySet,operation,(GPUQuerySetDescriptor),GPUQuerySet,GPUQuerySet,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createRenderBundleEncoder,operation,(GPURenderBundleEncoderDescriptor),GPURenderBundleEncoder,GPURenderBundleEncoder,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createRenderPipeline,operation,(GPURenderPipelineDescriptor),GPURenderPipeline,GPURenderPipeline,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createSampler,operation,(GPUSamplerDescriptor),GPUSampler,GPUSampler,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
@@ -2214,6 +2219,8 @@ GPUMapMode,READ,constant,,UnsignedLong,unsigned long,,,,third_party/blink/render
 GPUMapMode,WRITE,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgpu/gpu_map_mode.idl,12
 GPUOutOfMemoryError,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_out_of_memory_error.idl,9
 GPUPipelineLayout,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_pipeline_layout.idl,9
+GPUQuerySet,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_query_set.idl,9
+GPUQuerySet,destroy,operation,(),Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_query_set.idl,
 GPUQueue,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_queue.idl,9
 GPUQueue,copyImageBitmapToTexture,operation,"(GPUImageBitmapCopyView,GPUTextureCopyView,UnsignedLongEnforceRangeSequenceOrGPUExtent3DDict)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_queue.idl,
 GPUQueue,createFence,operation,(GPUFenceDescriptor),GPUFence,GPUFence,,,,third_party/blink/renderer/modules/webgpu/gpu_queue.idl,
@@ -2259,6 +2266,7 @@ GPURenderPassEncoder,setScissorRect,operation,"(UnsignedLongEnforceRange,Unsigne
 GPURenderPassEncoder,setStencilReference,operation,(UnsignedLongEnforceRange),Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_render_pass_encoder.idl,
 GPURenderPassEncoder,setVertexBuffer,operation,"(UnsignedLongEnforceRange,GPUBuffer,UnsignedLongLongEnforceRange,UnsignedLongLongEnforceRange)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_render_encoder_base.idl,
 GPURenderPassEncoder,setViewport,operation,"(Float,Float,Float,Float,Float,Float)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_render_pass_encoder.idl,
+GPURenderPassEncoder,writeTimestamp,operation,"(GPUQuerySet,UnsignedLongEnforceRange)",Void,void,,,,third_party/blink/renderer/modules/webgpu/gpu_render_pass_encoder.idl,
 GPURenderPipeline,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_pipeline.idl,9
 GPURenderPipeline,getBindGroupLayout,operation,(UnsignedLongEnforceRange),GPUBindGroupLayout,GPUBindGroupLayout,,,,third_party/blink/renderer/modules/webgpu/gpu_render_pipeline.idl,
 GPUSampler,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_sampler.idl,9
@@ -3606,8 +3614,8 @@ InternalRuntimeFlags,cssLogicalOverflowEnabled,attribute,,Boolean,boolean,,,,thi
 InternalRuntimeFlags,cssMarkerNestedPseudoElementEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssMarkerPseudoElementEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssMatchedPropertiesCacheDependenciesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssMathShiftEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssMathStyleEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cssMathSuperscriptShiftStyleEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssMathVariantEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssModulesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssOffsetPathRayContainEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5322,6 +5330,7 @@ OffscreenCanvasRenderingContext2D,rect,operation,"(UnrestrictedDouble,Unrestrict
 OffscreenCanvasRenderingContext2D,resetTransform,operation,(),Void,void,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,restore,operation,(),Void,void,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,rotate,operation,(UnrestrictedDouble),Void,void,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
+OffscreenCanvasRenderingContext2D,roundRect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,DoubleOrDOMPointSequence)",Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 OffscreenCanvasRenderingContext2D,save,operation,(),Void,void,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,scale,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,setLineDash,operation,(UnrestrictedDoubleSequence),Void,void,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
@@ -5448,6 +5457,7 @@ PaintRenderingContext2D,rect,operation,"(UnrestrictedDouble,UnrestrictedDouble,U
 PaintRenderingContext2D,resetTransform,operation,(),Void,void,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,restore,operation,(),Void,void,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,rotate,operation,(UnrestrictedDouble),Void,void,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
+PaintRenderingContext2D,roundRect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,DoubleOrDOMPointSequence)",Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 PaintRenderingContext2D,save,operation,(),Void,void,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,scale,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,setLineDash,operation,(UnrestrictedDoubleSequence),Void,void,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
@@ -5501,6 +5511,7 @@ Path2D,lineTo,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,t
 Path2D,moveTo,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 Path2D,quadraticCurveTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 Path2D,rect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
+Path2D,roundRect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,DoubleOrDOMPointSequence)",Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 PaymentAddress,,interface,,,,,True,,third_party/blink/renderer/modules/payments/payment_address.idl,11
 PaymentAddress,addressLine,attribute,,StringArray,FrozenArray<DOMString>,,,,third_party/blink/renderer/modules/payments/payment_address.idl,
 PaymentAddress,city,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/payments/payment_address.idl,
@@ -10547,14 +10558,14 @@ WheelEvent,,interface,,,,,,,third_party/blink/renderer/core/events/wheel_event.i
 WheelEvent,DOM_DELTA_LINE,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/events/wheel_event.idl,30
 WheelEvent,DOM_DELTA_PAGE,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/events/wheel_event.idl,31
 WheelEvent,DOM_DELTA_PIXEL,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/events/wheel_event.idl,29
-WheelEvent,deltaMode,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/events/wheel_event.idl,
+WheelEvent,deltaMode,attribute,,UnsignedLong,unsigned long,WheelEvent_DeltaMode,,Direct,third_party/blink/renderer/core/events/wheel_event.idl,
 WheelEvent,deltaX,attribute,,Double,double,,,,third_party/blink/renderer/core/events/wheel_event.idl,
 WheelEvent,deltaY,attribute,,Double,double,,,,third_party/blink/renderer/core/events/wheel_event.idl,
 WheelEvent,deltaZ,attribute,,Double,double,,,,third_party/blink/renderer/core/events/wheel_event.idl,
 WheelEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/events/event.idl,
-WheelEvent,wheelDelta,attribute,,Long,long,WheelEventWheelDelta,,,third_party/blink/renderer/core/events/wheel_event.idl,
-WheelEvent,wheelDeltaX,attribute,,Long,long,WheelEventWheelDeltaX,,,third_party/blink/renderer/core/events/wheel_event.idl,
-WheelEvent,wheelDeltaY,attribute,,Long,long,WheelEventWheelDeltaY,,,third_party/blink/renderer/core/events/wheel_event.idl,
+WheelEvent,wheelDelta,attribute,,Long,long,WheelEventWheelDelta,,Direct,third_party/blink/renderer/core/events/wheel_event.idl,
+WheelEvent,wheelDeltaX,attribute,,Long,long,WheelEventWheelDeltaX,,Direct,third_party/blink/renderer/core/events/wheel_event.idl,
+WheelEvent,wheelDeltaY,attribute,,Long,long,WheelEventWheelDeltaY,,Direct,third_party/blink/renderer/core/events/wheel_event.idl,
 Window,,interface,,,,,,,third_party/blink/renderer/core/frame/window.idl,35
 Window,,operation,(String),Object,object,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,,operation,(UnsignedLong),Window,Window,,,,third_party/blink/renderer/core/frame/window.idl,
