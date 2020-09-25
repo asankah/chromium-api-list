@@ -367,7 +367,7 @@ BeforeCreatePolicyEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blin
 BeforeCreatePolicyEvent,policyName,attribute,,String,DOMString,,,,third_party/blink/renderer/core/events/before_create_policy_event.idl,
 BeforeInstallPromptEvent,,interface,,,,,,,third_party/blink/renderer/modules/app_banner/before_install_prompt_event.idl,8
 BeforeInstallPromptEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/events/event.idl,
-BeforeInstallPromptEvent,platforms,attribute,,StringArray,FrozenArray<DOMString>,,,,third_party/blink/renderer/modules/app_banner/before_install_prompt_event.idl,
+BeforeInstallPromptEvent,platforms,attribute,,StringArray,FrozenArray<DOMString>,BeforeInstallPromptEvent_Platforms,,Direct,third_party/blink/renderer/modules/app_banner/before_install_prompt_event.idl,
 BeforeInstallPromptEvent,prompt,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/app_banner/before_install_prompt_event.idl,
 BeforeInstallPromptEvent,userChoice,attribute,,AppBannerPromptResultPromise,Promise<AppBannerPromptResult>,,,,third_party/blink/renderer/modules/app_banner/before_install_prompt_event.idl,
 BeforeUnloadEvent,,interface,,,,,,,third_party/blink/renderer/core/events/before_unload_event.idl,34
@@ -3522,7 +3522,6 @@ InstallEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/
 InternalRuntimeFlags,,interface,,,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,11
 InternalRuntimeFlags,accelerated2dCanvasEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,acceleratedSmallCanvasesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,accessibilityExposeARIAAnnotationsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,accessibilityExposeDisplayNoneEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,accessibilityExposeHTMLElementEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,accessibilityObjectModelEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3959,6 +3958,7 @@ InternalRuntimeFlags,webXREnabled,attribute,,Boolean,boolean,,,,third_party/blin
 InternalRuntimeFlags,webXRHitTestEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webXRHitTestEntityTypesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webXRLightEstimationEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webXRMultiGpuEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webXRPlaneDetectionEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webXRReflectionEstimationEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webgl2ComputeContextEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4454,8 +4454,6 @@ InterventionReportBody,toJSON,operation,(),Object,object,,,,third_party/blink/re
 IntrinsicSizes,,interface,,,,,,,third_party/blink/renderer/core/layout/ng/custom/intrinsic_sizes.idl,12
 IntrinsicSizes,maxContentSize,attribute,,Double,double,,,,third_party/blink/renderer/core/layout/ng/custom/intrinsic_sizes.idl,
 IntrinsicSizes,minContentSize,attribute,,Double,double,,,,third_party/blink/renderer/core/layout/ng/custom/intrinsic_sizes.idl,
-IsInputPendingOptions,,interface,,,,,,,third_party/blink/renderer/core/frame/is_input_pending_options.idl,9
-IsInputPendingOptions,includeContinuous,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/frame/is_input_pending_options.idl,
 Iterator,,interface,,,,,,,third_party/blink/renderer/core/dom/iterator.idl,9
 Iterator,next,operation,(Any),Any,any,,,,third_party/blink/renderer/core/dom/iterator.idl,
 KHRParallelShaderCompile,,interface,,,,,,,third_party/blink/renderer/modules/webgl/khr_parallel_shader_compile.idl,31
@@ -7589,9 +7587,11 @@ TextFormatUpdateEvent,backgroundColor,attribute,,String,DOMString,,,,third_party
 TextFormatUpdateEvent,formatRangeEnd,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/editing/ime/text_format_update_event.idl,
 TextFormatUpdateEvent,formatRangeStart,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/editing/ime/text_format_update_event.idl,
 TextFormatUpdateEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/events/event.idl,
-TextFormatUpdateEvent,textDecorationColor,attribute,,String,DOMString,,,,third_party/blink/renderer/core/editing/ime/text_format_update_event.idl,
-TextFormatUpdateEvent,textUnderlineStyle,attribute,,String,DOMString,,,,third_party/blink/renderer/core/editing/ime/text_format_update_event.idl,
+TextFormatUpdateEvent,suggestionHighlightColor,attribute,,String,DOMString,,,,third_party/blink/renderer/core/editing/ime/text_format_update_event.idl,
+TextFormatUpdateEvent,textColor,attribute,,String,DOMString,,,,third_party/blink/renderer/core/editing/ime/text_format_update_event.idl,
 TextFormatUpdateEvent,underlineColor,attribute,,String,DOMString,,,,third_party/blink/renderer/core/editing/ime/text_format_update_event.idl,
+TextFormatUpdateEvent,underlineStyle,attribute,,String,DOMString,,,,third_party/blink/renderer/core/editing/ime/text_format_update_event.idl,
+TextFormatUpdateEvent,underlineThickness,attribute,,String,DOMString,,,,third_party/blink/renderer/core/editing/ime/text_format_update_event.idl,
 TextMetrics,,interface,,,,,,,third_party/blink/renderer/core/html/canvas/text_metrics.idl,29
 TextMetrics,actualBoundingBoxAscent,attribute,,Double,double,,,,third_party/blink/renderer/core/html/canvas/text_metrics.idl,
 TextMetrics,actualBoundingBoxDescent,attribute,,Double,double,,,,third_party/blink/renderer/core/html/canvas/text_metrics.idl,
