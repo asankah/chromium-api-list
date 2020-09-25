@@ -351,7 +351,7 @@ BaseAudioContext,decodeAudioData,operation,"(ArrayBuffer,DecodeSuccessCallback,D
 BaseAudioContext,destination,attribute,,AudioDestinationNode,AudioDestinationNode,,,,third_party/blink/renderer/modules/webaudio/base_audio_context.idl,
 BaseAudioContext,listener,attribute,,AudioListener,AudioListener,,,,third_party/blink/renderer/modules/webaudio/base_audio_context.idl,
 BaseAudioContext,onstatechange,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/modules/webaudio/base_audio_context.idl,
-BaseAudioContext,sampleRate,attribute,,Float,float,,,,third_party/blink/renderer/modules/webaudio/base_audio_context.idl,
+BaseAudioContext,sampleRate,attribute,,Float,float,BaseAudioContext_SampleRate,,Direct,third_party/blink/renderer/modules/webaudio/base_audio_context.idl,
 BaseAudioContext,state,attribute,,AudioContextState,AudioContextState,,,,third_party/blink/renderer/modules/webaudio/base_audio_context.idl,
 BatteryManager,,interface,,,,,,,third_party/blink/renderer/modules/battery/battery_manager.idl,9
 BatteryManager,charging,attribute,,Boolean,boolean,BatteryManager_Charging,,Direct,third_party/blink/renderer/modules/battery/battery_manager.idl,
@@ -3613,6 +3613,7 @@ InternalRuntimeFlags,cssLogicalOverflowEnabled,attribute,,Boolean,boolean,,,,thi
 InternalRuntimeFlags,cssMarkerNestedPseudoElementEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssMarkerPseudoElementEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssMatchedPropertiesCacheDependenciesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssMathDepthEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssMathShiftEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssMathStyleEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssMathVariantEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4698,9 +4699,9 @@ MediaCapabilities,decodingInfo,operation,(MediaDecodingConfiguration),MediaCapab
 MediaCapabilities,encodingInfo,operation,(MediaEncodingConfiguration),MediaCapabilitiesInfoPromise,Promise<MediaCapabilitiesInfo>,MediaCapabilities_EncodingInfo,,,third_party/blink/renderer/modules/media_capabilities/media_capabilities.idl,
 MediaDeviceInfo,,interface,,,,,True,,third_party/blink/renderer/modules/mediastream/media_device_info.idl,37
 MediaDeviceInfo,deviceId,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/mediastream/media_device_info.idl,
-MediaDeviceInfo,groupId,attribute,,String,DOMString,MediaDeviceInfo_GroupId,,Direct,third_party/blink/renderer/modules/mediastream/media_device_info.idl,
-MediaDeviceInfo,kind,attribute,,MediaDeviceKind,MediaDeviceKind,MediaDeviceInfo_Kind,,Direct,third_party/blink/renderer/modules/mediastream/media_device_info.idl,
-MediaDeviceInfo,label,attribute,,String,DOMString,MediaDeviceInfo_Label,,Direct,third_party/blink/renderer/modules/mediastream/media_device_info.idl,
+MediaDeviceInfo,groupId,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/mediastream/media_device_info.idl,
+MediaDeviceInfo,kind,attribute,,MediaDeviceKind,MediaDeviceKind,,,,third_party/blink/renderer/modules/mediastream/media_device_info.idl,
+MediaDeviceInfo,label,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/mediastream/media_device_info.idl,
 MediaDeviceInfo,toJSON,operation,(),Object,object,,,,third_party/blink/renderer/modules/mediastream/media_device_info.idl,
 MediaDevices,,interface,,,,,True,,third_party/blink/renderer/modules/mediastream/media_devices.idl,13
 MediaDevices,enumerateDevices,operation,(),MediaDeviceInfoSequencePromise,Promise<sequence<MediaDeviceInfo>>,MediaDevicesEnumerateDevices,,(True),third_party/blink/renderer/modules/mediastream/media_devices.idl,
