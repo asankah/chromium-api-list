@@ -309,7 +309,7 @@ BackgroundFetchRegistration,,interface,,,,,,,third_party/blink/renderer/modules/
 BackgroundFetchRegistration,abort,operation,(),BooleanPromise,Promise<boolean>,BackgroundFetchRegistrationAbort,,,third_party/blink/renderer/modules/background_fetch/background_fetch_registration.idl,
 BackgroundFetchRegistration,downloadTotal,attribute,,UnsignedLongLong,unsigned long long,,,,third_party/blink/renderer/modules/background_fetch/background_fetch_registration.idl,
 BackgroundFetchRegistration,downloaded,attribute,,UnsignedLongLong,unsigned long long,,,,third_party/blink/renderer/modules/background_fetch/background_fetch_registration.idl,
-BackgroundFetchRegistration,failureReason,attribute,,BackgroundFetchFailureReason,BackgroundFetchFailureReason,,,,third_party/blink/renderer/modules/background_fetch/background_fetch_registration.idl,
+BackgroundFetchRegistration,failureReason,attribute,,BackgroundFetchFailureReason,BackgroundFetchFailureReason,BackgroundFetchRegistration_FailureReason,,(True),third_party/blink/renderer/modules/background_fetch/background_fetch_registration.idl,
 BackgroundFetchRegistration,id,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/background_fetch/background_fetch_registration.idl,
 BackgroundFetchRegistration,match,operation,"(RequestOrUSVString,CacheQueryOptions)",BackgroundFetchRecordPromise,Promise<BackgroundFetchRecord>,BackgroundFetchRegistrationMatch,,,third_party/blink/renderer/modules/background_fetch/background_fetch_registration.idl,
 BackgroundFetchRegistration,matchAll,operation,"(RequestOrUSVString,CacheQueryOptions)",BackgroundFetchRecordSequencePromise,Promise<sequence<BackgroundFetchRecord>>,BackgroundFetchRegistrationMatchAll,,,third_party/blink/renderer/modules/background_fetch/background_fetch_registration.idl,
@@ -809,6 +809,7 @@ CanvasRenderingContext2D,putImageData,operation,"(ImageData,LongEnforceRange,Lon
 CanvasRenderingContext2D,quadraticCurveTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 CanvasRenderingContext2D,rect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 CanvasRenderingContext2D,removeHitRegion,operation,(String),Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
+CanvasRenderingContext2D,reset,operation,(),Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,resetTransform,operation,(),Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,restore,operation,(),Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,rotate,operation,(UnrestrictedDouble),Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
@@ -1197,7 +1198,7 @@ DataTransfer,setDragImage,operation,"(Element,Long,Long)",Void,void,,,,third_par
 DataTransfer,types,attribute,,StringArray,FrozenArray<DOMString>,,,,third_party/blink/renderer/core/clipboard/data_transfer.idl,
 DataTransferItem,,interface,,,,,,,third_party/blink/renderer/core/clipboard/data_transfer_item.idl,35
 DataTransferItem,getAsFile,operation,(),File,File,,,,third_party/blink/renderer/core/clipboard/data_transfer_item.idl,
-DataTransferItem,getAsFileSystemHandle,operation,(),FileSystemHandleOrNullPromise,Promise<FileSystemHandle?>,NativeFileSystemDragAndDrop,,,third_party/blink/renderer/modules/native_file_system/data_transfer_item_native_file_system.idl,
+DataTransferItem,getAsFileSystemHandle,operation,(),FileSystemHandleOrNullPromise,Promise<FileSystemHandle?>,NativeFileSystemDragAndDrop,,,third_party/blink/renderer/modules/file_system_access/data_transfer_item_native_file_system.idl,
 DataTransferItem,getAsString,operation,(FunctionStringCallback),Void,void,,,,third_party/blink/renderer/core/clipboard/data_transfer_item.idl,
 DataTransferItem,kind,attribute,,String,DOMString,,,,third_party/blink/renderer/core/clipboard/data_transfer_item.idl,
 DataTransferItem,type,attribute,,String,DOMString,,,,third_party/blink/renderer/core/clipboard/data_transfer_item.idl,
@@ -1592,6 +1593,10 @@ EXTBlendMinMax,MAX_EXT,constant,,UnsignedLong,unsigned long,,,,third_party/blink
 EXTBlendMinMax,MIN_EXT,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgl/ext_blend_min_max.idl,11
 EXTColorBufferFloat,,interface,,,,,,,third_party/blink/renderer/modules/webgl/ext_color_buffer_float.idl,9
 EXTColorBufferHalfFloat,,interface,,,,,,,third_party/blink/renderer/modules/webgl/ext_color_buffer_half_float.idl,30
+EXTColorBufferHalfFloat,FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgl/ext_color_buffer_half_float.idl,33
+EXTColorBufferHalfFloat,RGB16F_EXT,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgl/ext_color_buffer_half_float.idl,32
+EXTColorBufferHalfFloat,RGBA16F_EXT,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgl/ext_color_buffer_half_float.idl,31
+EXTColorBufferHalfFloat,UNSIGNED_NORMALIZED_EXT,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgl/ext_color_buffer_half_float.idl,34
 EXTDisjointTimerQuery,,interface,,,,,,,third_party/blink/renderer/modules/webgl/ext_disjoint_timer_query.idl,12
 EXTDisjointTimerQuery,CURRENT_QUERY_EXT,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgl/ext_disjoint_timer_query.idl,14
 EXTDisjointTimerQuery,GPU_DISJOINT_EXT,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgl/ext_disjoint_timer_query.idl,19
@@ -2033,28 +2038,28 @@ FileReaderSync,readAsArrayBuffer,operation,(Blob),ArrayBuffer,ArrayBuffer,,,,thi
 FileReaderSync,readAsBinaryString,operation,(Blob),String,DOMString,,,,third_party/blink/renderer/core/fileapi/file_reader_sync.idl,
 FileReaderSync,readAsDataURL,operation,(Blob),String,DOMString,,,,third_party/blink/renderer/core/fileapi/file_reader_sync.idl,
 FileReaderSync,readAsText,operation,"(Blob,String)",String,DOMString,,,,third_party/blink/renderer/core/fileapi/file_reader_sync.idl,
-FileSystemDirectoryHandle,,interface,,,,,True,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,12
-FileSystemDirectoryHandle,entries,operation,(),NativeFileSystemDirectoryIterator,NativeFileSystemDirectoryIterator,,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
-FileSystemDirectoryHandle,getDirectoryHandle,operation,"(USVString,FileSystemGetDirectoryOptions)",FileSystemDirectoryHandlePromise,Promise<FileSystemDirectoryHandle>,,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
-FileSystemDirectoryHandle,getFileHandle,operation,"(USVString,FileSystemGetFileOptions)",FileSystemFileHandlePromise,Promise<FileSystemFileHandle>,,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
-FileSystemDirectoryHandle,keys,operation,(),NativeFileSystemDirectoryIterator,NativeFileSystemDirectoryIterator,,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
-FileSystemDirectoryHandle,removeEntry,operation,"(USVString,FileSystemRemoveOptions)",VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
-FileSystemDirectoryHandle,resolve,operation,(FileSystemHandle),USVStringSequenceOrNullPromise,Promise<sequence<USVString>?>,FileSystemDirectoryHandle_Resolve,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
-FileSystemDirectoryHandle,values,operation,(),NativeFileSystemDirectoryIterator,NativeFileSystemDirectoryIterator,,,,third_party/blink/renderer/modules/native_file_system/file_system_directory_handle.idl,
-FileSystemFileHandle,,interface,,,,,True,,third_party/blink/renderer/modules/native_file_system/file_system_file_handle.idl,12
-FileSystemFileHandle,createWritable,operation,(FileSystemCreateWriterOptions),FileSystemWritableFileStreamPromise,Promise<FileSystemWritableFileStream>,,,,third_party/blink/renderer/modules/native_file_system/file_system_file_handle.idl,
-FileSystemFileHandle,getFile,operation,(),FilePromise,Promise<File>,,,,third_party/blink/renderer/modules/native_file_system/file_system_file_handle.idl,
-FileSystemHandle,,interface,,,,,True,,third_party/blink/renderer/modules/native_file_system/file_system_handle.idl,18
-FileSystemHandle,isSameEntry,operation,(FileSystemHandle),BooleanPromise,Promise<boolean>,FileSystemHandle_IsSameEntry,,,third_party/blink/renderer/modules/native_file_system/file_system_handle.idl,
-FileSystemHandle,kind,attribute,,FileSystemHandleKind,FileSystemHandleKind,,,,third_party/blink/renderer/modules/native_file_system/file_system_handle.idl,
-FileSystemHandle,name,attribute,,USVString,USVString,,,,third_party/blink/renderer/modules/native_file_system/file_system_handle.idl,
-FileSystemHandle,queryPermission,operation,(FileSystemHandlePermissionDescriptor),PermissionStatePromise,Promise<PermissionState>,,,,third_party/blink/renderer/modules/native_file_system/file_system_handle.idl,
-FileSystemHandle,requestPermission,operation,(FileSystemHandlePermissionDescriptor),PermissionStatePromise,Promise<PermissionState>,,,,third_party/blink/renderer/modules/native_file_system/file_system_handle.idl,
-FileSystemWritableFileStream,,interface,,,,,True,,third_party/blink/renderer/modules/native_file_system/file_system_writable_file_stream.idl,11
-FileSystemWritableFileStream,close,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/native_file_system/file_system_writable_file_stream.idl,
-FileSystemWritableFileStream,seek,operation,(UnsignedLongLong),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/native_file_system/file_system_writable_file_stream.idl,
-FileSystemWritableFileStream,truncate,operation,(UnsignedLongLong),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/native_file_system/file_system_writable_file_stream.idl,
-FileSystemWritableFileStream,write,operation,(ArrayBufferOrArrayBufferViewOrBlobOrUSVStringOrWriteParams),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/native_file_system/file_system_writable_file_stream.idl,
+FileSystemDirectoryHandle,,interface,,,,,True,,third_party/blink/renderer/modules/file_system_access/file_system_directory_handle.idl,12
+FileSystemDirectoryHandle,entries,operation,(),NativeFileSystemDirectoryIterator,NativeFileSystemDirectoryIterator,,,,third_party/blink/renderer/modules/file_system_access/file_system_directory_handle.idl,
+FileSystemDirectoryHandle,getDirectoryHandle,operation,"(USVString,FileSystemGetDirectoryOptions)",FileSystemDirectoryHandlePromise,Promise<FileSystemDirectoryHandle>,,,,third_party/blink/renderer/modules/file_system_access/file_system_directory_handle.idl,
+FileSystemDirectoryHandle,getFileHandle,operation,"(USVString,FileSystemGetFileOptions)",FileSystemFileHandlePromise,Promise<FileSystemFileHandle>,,,,third_party/blink/renderer/modules/file_system_access/file_system_directory_handle.idl,
+FileSystemDirectoryHandle,keys,operation,(),NativeFileSystemDirectoryIterator,NativeFileSystemDirectoryIterator,,,,third_party/blink/renderer/modules/file_system_access/file_system_directory_handle.idl,
+FileSystemDirectoryHandle,removeEntry,operation,"(USVString,FileSystemRemoveOptions)",VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/file_system_access/file_system_directory_handle.idl,
+FileSystemDirectoryHandle,resolve,operation,(FileSystemHandle),USVStringSequenceOrNullPromise,Promise<sequence<USVString>?>,FileSystemDirectoryHandle_Resolve,,,third_party/blink/renderer/modules/file_system_access/file_system_directory_handle.idl,
+FileSystemDirectoryHandle,values,operation,(),NativeFileSystemDirectoryIterator,NativeFileSystemDirectoryIterator,,,,third_party/blink/renderer/modules/file_system_access/file_system_directory_handle.idl,
+FileSystemFileHandle,,interface,,,,,True,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,12
+FileSystemFileHandle,createWritable,operation,(FileSystemCreateWriterOptions),FileSystemWritableFileStreamPromise,Promise<FileSystemWritableFileStream>,,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
+FileSystemFileHandle,getFile,operation,(),FilePromise,Promise<File>,,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
+FileSystemHandle,,interface,,,,,True,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,18
+FileSystemHandle,isSameEntry,operation,(FileSystemHandle),BooleanPromise,Promise<boolean>,FileSystemHandle_IsSameEntry,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
+FileSystemHandle,kind,attribute,,FileSystemHandleKind,FileSystemHandleKind,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
+FileSystemHandle,name,attribute,,USVString,USVString,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
+FileSystemHandle,queryPermission,operation,(FileSystemHandlePermissionDescriptor),PermissionStatePromise,Promise<PermissionState>,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
+FileSystemHandle,requestPermission,operation,(FileSystemHandlePermissionDescriptor),PermissionStatePromise,Promise<PermissionState>,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
+FileSystemWritableFileStream,,interface,,,,,True,,third_party/blink/renderer/modules/file_system_access/file_system_writable_file_stream.idl,11
+FileSystemWritableFileStream,close,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/file_system_access/file_system_writable_file_stream.idl,
+FileSystemWritableFileStream,seek,operation,(UnsignedLongLong),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/file_system_access/file_system_writable_file_stream.idl,
+FileSystemWritableFileStream,truncate,operation,(UnsignedLongLong),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/file_system_access/file_system_writable_file_stream.idl,
+FileSystemWritableFileStream,write,operation,(ArrayBufferOrArrayBufferViewOrBlobOrUSVStringOrWriteParams),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/file_system_access/file_system_writable_file_stream.idl,
 FileWriter,,interface,,,,,,,third_party/blink/renderer/modules/filesystem/file_writer.idl,36
 FileWriter,DONE,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/modules/filesystem/file_writer.idl,40
 FileWriter,INIT,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/modules/filesystem/file_writer.idl,38
@@ -3723,7 +3728,6 @@ InternalRuntimeFlags,langClientHintHeaderEnabled,attribute,,Boolean,boolean,,,,t
 InternalRuntimeFlags,layoutNGBlockFragmentationEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGFieldsetEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,layoutNGFlexBoxEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGForControlsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGFragmentItemEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGFragmentTraversalEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5017,8 +5021,8 @@ NamedNodeMap,removeNamedItem,operation,(String),Attr,Attr,NamedNodeMapRemoveName
 NamedNodeMap,removeNamedItemNS,operation,"(String,String)",Attr,Attr,NamedNodeMapRemoveNamedItemNS,,,third_party/blink/renderer/core/dom/named_node_map.idl,
 NamedNodeMap,setNamedItem,operation,(Attr),Attr,Attr,NamedNodeMapSetNamedItem,,,third_party/blink/renderer/core/dom/named_node_map.idl,
 NamedNodeMap,setNamedItemNS,operation,(Attr),Attr,Attr,NamedNodeMapSetNamedItemNS,,,third_party/blink/renderer/core/dom/named_node_map.idl,
-NativeFileSystemDirectoryIterator,,interface,,,,,,,third_party/blink/renderer/modules/native_file_system/native_file_system_directory_iterator.idl,12
-NativeFileSystemDirectoryIterator,next,operation,(),AnyPromise,Promise<any>,,,,third_party/blink/renderer/modules/native_file_system/native_file_system_directory_iterator.idl,
+NativeFileSystemDirectoryIterator,,interface,,,,,,,third_party/blink/renderer/modules/file_system_access/native_file_system_directory_iterator.idl,12
+NativeFileSystemDirectoryIterator,next,operation,(),AnyPromise,Promise<any>,,,,third_party/blink/renderer/modules/file_system_access/native_file_system_directory_iterator.idl,
 NativeIOFile,,interface,,,,,True,,third_party/blink/renderer/modules/native_io/native_io_file.idl,11
 NativeIOFile,close,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/native_io/native_io_file.idl,
 NativeIOFile,flush,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/native_io/native_io_file.idl,
@@ -5328,6 +5332,7 @@ OffscreenCanvasRenderingContext2D,putImageData,operation,"(ImageData,Long,Long)"
 OffscreenCanvasRenderingContext2D,putImageData,operation,"(ImageData,Long,Long,Long,Long,Long,Long)",Void,void,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,quadraticCurveTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 OffscreenCanvasRenderingContext2D,rect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
+OffscreenCanvasRenderingContext2D,reset,operation,(),Void,void,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,resetTransform,operation,(),Void,void,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,restore,operation,(),Void,void,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,rotate,operation,(UnrestrictedDouble),Void,void,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
@@ -7489,7 +7494,7 @@ StorageEvent,storageArea,attribute,,Storage,Storage,,,,third_party/blink/rendere
 StorageEvent,url,attribute,,USVString,USVString,,,,third_party/blink/renderer/modules/storage/storage_event.idl,
 StorageManager,,interface,,,,,True,,third_party/blink/renderer/modules/quota/storage_manager.idl,10
 StorageManager,estimate,operation,(),StorageEstimatePromise,Promise<StorageEstimate>,DurableStorageEstimate,,,third_party/blink/renderer/modules/quota/storage_manager.idl,
-StorageManager,getDirectory,operation,(),FileSystemDirectoryHandlePromise,Promise<FileSystemDirectoryHandle>,StorageManager_GetDirectory,,,third_party/blink/renderer/modules/native_file_system/storage_manager_native_file_system.idl,
+StorageManager,getDirectory,operation,(),FileSystemDirectoryHandlePromise,Promise<FileSystemDirectoryHandle>,StorageManager_GetDirectory,,,third_party/blink/renderer/modules/file_system_access/storage_manager_native_file_system.idl,
 StorageManager,onquotachange,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/modules/quota/storage_manager.idl,
 StorageManager,persist,operation,(),BooleanPromise,Promise<boolean>,DurableStoragePersist,,,third_party/blink/renderer/modules/quota/storage_manager.idl,
 StorageManager,persisted,operation,(),BooleanPromise,Promise<boolean>,DurableStoragePersisted,,,third_party/blink/renderer/modules/quota/storage_manager.idl,
@@ -7653,7 +7658,7 @@ TimestampTrigger,timestamp,attribute,,UnsignedLongLong,unsigned long long,,,,thi
 Touch,,interface,,,,,,,third_party/blink/renderer/core/input/touch.idl,30
 Touch,clientX,attribute,,Double,double,,,,third_party/blink/renderer/core/input/touch.idl,
 Touch,clientY,attribute,,Double,double,,,,third_party/blink/renderer/core/input/touch.idl,
-Touch,force,attribute,,Float,float,,,,third_party/blink/renderer/core/input/touch.idl,
+Touch,force,attribute,,Float,float,Touch_Force,,Direct,third_party/blink/renderer/core/input/touch.idl,
 Touch,identifier,attribute,,Long,long,,,,third_party/blink/renderer/core/input/touch.idl,
 Touch,pageX,attribute,,Double,double,,,,third_party/blink/renderer/core/input/touch.idl,
 Touch,pageY,attribute,,Double,double,,,,third_party/blink/renderer/core/input/touch.idl,
@@ -9910,6 +9915,9 @@ WebGLActiveInfo,size,attribute,,Long,long,,,,third_party/blink/renderer/modules/
 WebGLActiveInfo,type,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgl/webgl_active_info.idl,
 WebGLBuffer,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl_buffer.idl,30
 WebGLColorBufferFloat,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl_color_buffer_float.idl,30
+WebGLColorBufferFloat,FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgl/webgl_color_buffer_float.idl,32
+WebGLColorBufferFloat,RGBA32F_EXT,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgl/webgl_color_buffer_float.idl,31
+WebGLColorBufferFloat,UNSIGNED_NORMALIZED_EXT,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgl/webgl_color_buffer_float.idl,33
 WebGLCompressedTextureASTC,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl_compressed_texture_astc.idl,10
 WebGLCompressedTextureASTC,COMPRESSED_RGBA_ASTC_10x10_KHR,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgl/webgl_compressed_texture_astc.idl,23
 WebGLCompressedTextureASTC,COMPRESSED_RGBA_ASTC_10x5_KHR,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgl/webgl_compressed_texture_astc.idl,20
@@ -10552,11 +10560,11 @@ WebTransport,close,operation,(WebTransportCloseInfo),Void,void,,,,third_party/bl
 WebTransport,closed,attribute,,WebTransportCloseInfoPromise,Promise<WebTransportCloseInfo>,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,createBidirectionalStream,operation,(),BidirectionalStreamPromise,Promise<BidirectionalStream>,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,createUnidirectionalStream,operation,(),SendStreamPromise,Promise<SendStream>,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
+WebTransport,datagramReadable,attribute,,ReadableStream,ReadableStream,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
+WebTransport,datagramWritable,attribute,,WritableStream,WritableStream,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,incomingBidirectionalStreams,attribute,,ReadableStream,ReadableStream,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,incomingUnidirectionalStreams,attribute,,ReadableStream,ReadableStream,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
-WebTransport,readableDatagrams,attribute,,ReadableStream,ReadableStream,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,ready,attribute,,VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
-WebTransport,writableDatagrams,attribute,,WritableStream,WritableStream,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WheelEvent,,interface,,,,,,,third_party/blink/renderer/core/events/wheel_event.idl,26
 WheelEvent,DOM_DELTA_LINE,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/events/wheel_event.idl,30
 WheelEvent,DOM_DELTA_PAGE,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/events/wheel_event.idl,31
@@ -10795,9 +10803,9 @@ Window,setInterval,operation,"(Function,Long,Any)",Long,long,,,,third_party/blin
 Window,setInterval,operation,"(StringStringContext,Long,Any)",Long,long,,,,third_party/blink/renderer/core/frame/window_or_worker_global_scope.idl,
 Window,setTimeout,operation,"(Function,Long,Any)",Long,long,,,,third_party/blink/renderer/core/frame/window_or_worker_global_scope.idl,
 Window,setTimeout,operation,"(StringStringContext,Long,Any)",Long,long,,,,third_party/blink/renderer/core/frame/window_or_worker_global_scope.idl,
-Window,showDirectoryPicker,operation,(DirectoryPickerOptions),FileSystemDirectoryHandlePromise,Promise<FileSystemDirectoryHandle>,Window_ShowDirectoryPicker,,,third_party/blink/renderer/modules/native_file_system/window_native_file_system.idl,
-Window,showOpenFilePicker,operation,(OpenFilePickerOptions),FileSystemFileHandleSequencePromise,Promise<sequence<FileSystemFileHandle>>,Window_ShowOpenFilePicker,,,third_party/blink/renderer/modules/native_file_system/window_native_file_system.idl,
-Window,showSaveFilePicker,operation,(SaveFilePickerOptions),FileSystemFileHandlePromise,Promise<FileSystemFileHandle>,Window_ShowSaveFilePicker,,,third_party/blink/renderer/modules/native_file_system/window_native_file_system.idl,
+Window,showDirectoryPicker,operation,(DirectoryPickerOptions),FileSystemDirectoryHandlePromise,Promise<FileSystemDirectoryHandle>,Window_ShowDirectoryPicker,,,third_party/blink/renderer/modules/file_system_access/window_native_file_system.idl,
+Window,showOpenFilePicker,operation,(OpenFilePickerOptions),FileSystemFileHandleSequencePromise,Promise<sequence<FileSystemFileHandle>>,Window_ShowOpenFilePicker,,,third_party/blink/renderer/modules/file_system_access/window_native_file_system.idl,
+Window,showSaveFilePicker,operation,(SaveFilePickerOptions),FileSystemFileHandlePromise,Promise<FileSystemFileHandle>,Window_ShowSaveFilePicker,,,third_party/blink/renderer/modules/file_system_access/window_native_file_system.idl,
 Window,speechSynthesis,attribute,,SpeechSynthesis,SpeechSynthesis,Window_SpeechSynthesis,,,third_party/blink/renderer/modules/speech/window_speech_synthesis.idl,
 Window,status,attribute,,String,DOMString,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,statusbar,attribute,,BarProp,BarProp,BarPropStatusbar,,,third_party/blink/renderer/core/frame/window.idl,
