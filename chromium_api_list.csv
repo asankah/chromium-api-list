@@ -448,7 +448,7 @@ BluetoothRemoteGATTCharacteristic,readValue,operation,(),DataViewPromise,Promise
 BluetoothRemoteGATTCharacteristic,service,attribute,,BluetoothRemoteGATTService,BluetoothRemoteGATTService,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
 BluetoothRemoteGATTCharacteristic,startNotifications,operation,(),BluetoothRemoteGATTCharacteristicPromise,Promise<BluetoothRemoteGATTCharacteristic>,WebBluetoothRemoteCharacteristicStartNotifications,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
 BluetoothRemoteGATTCharacteristic,stopNotifications,operation,(),BluetoothRemoteGATTCharacteristicPromise,Promise<BluetoothRemoteGATTCharacteristic>,WebBluetoothRemoteCharacteristicStopNotifications,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
-BluetoothRemoteGATTCharacteristic,uuid,attribute,,String,DOMString,BluetoothRemoteGATTCharacteristic_Uuid,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
+BluetoothRemoteGATTCharacteristic,uuid,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
 BluetoothRemoteGATTCharacteristic,value,attribute,,DataView,DataView,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
 BluetoothRemoteGATTCharacteristic,writeValue,operation,(ArrayBufferOrArrayBufferView),VoidPromise,Promise<void>,WebBluetoothRemoteCharacteristicWriteValue,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
 BluetoothRemoteGATTCharacteristic,writeValueWithResponse,operation,(ArrayBufferOrArrayBufferView),VoidPromise,Promise<void>,WebBluetoothRemoteCharacteristicWriteValueWithResponse,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_characteristic.idl,
@@ -456,7 +456,7 @@ BluetoothRemoteGATTCharacteristic,writeValueWithoutResponse,operation,(ArrayBuff
 BluetoothRemoteGATTDescriptor,,interface,,,,,True,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_descriptor.idl,13
 BluetoothRemoteGATTDescriptor,characteristic,attribute,,BluetoothRemoteGATTCharacteristic,BluetoothRemoteGATTCharacteristic,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_descriptor.idl,
 BluetoothRemoteGATTDescriptor,readValue,operation,(),DataViewPromise,Promise<DataView>,WebBluetoothRemoteDescriptorReadValue,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_descriptor.idl,
-BluetoothRemoteGATTDescriptor,uuid,attribute,,String,DOMString,BluetoothRemoteGATTDescriptor_Uuid,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_descriptor.idl,
+BluetoothRemoteGATTDescriptor,uuid,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_descriptor.idl,
 BluetoothRemoteGATTDescriptor,value,attribute,,DataView,DataView,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_descriptor.idl,
 BluetoothRemoteGATTDescriptor,writeValue,operation,(ArrayBufferOrArrayBufferView),VoidPromise,Promise<void>,WebBluetoothRemoteDescriptorWriteValue,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_descriptor.idl,
 BluetoothRemoteGATTServer,,interface,,,,,True,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_server.idl,13
@@ -471,7 +471,7 @@ BluetoothRemoteGATTService,device,attribute,,BluetoothDevice,BluetoothDevice,,,,
 BluetoothRemoteGATTService,getCharacteristic,operation,(StringOrUnsignedLong),BluetoothRemoteGATTCharacteristicPromise,Promise<BluetoothRemoteGATTCharacteristic>,WebBluetoothRemoteServiceGetCharacteristic,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_service.idl,
 BluetoothRemoteGATTService,getCharacteristics,operation,(StringOrUnsignedLong),BluetoothRemoteGATTCharacteristicSequencePromise,Promise<sequence<BluetoothRemoteGATTCharacteristic>>,WebBluetoothRemoteServiceGetCharacteristics,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_service.idl,
 BluetoothRemoteGATTService,isPrimary,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_service.idl,
-BluetoothRemoteGATTService,uuid,attribute,,String,DOMString,BluetoothRemoteGATTService_Uuid,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_service.idl,
+BluetoothRemoteGATTService,uuid,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_remote_gatt_service.idl,
 BluetoothServiceDataMap,,interface,,,,,True,,third_party/blink/renderer/modules/bluetooth/bluetooth_service_data_map.idl,11
 BluetoothUUID,,interface,,,,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_uuid.idl,10
 BluetoothUUID,canonicalUUID,operation,(UnsignedLongEnforceRange),String,DOMString,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_uuid.idl,
@@ -4250,7 +4250,6 @@ Internals,lengthFromRange,operation,"(Element,Range)",UnsignedLong,unsigned long
 Internals,locationFromRange,operation,"(Element,Range)",UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,loseSharedGraphicsContext3D,operation,(),Boolean,boolean,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,mainThreadScrollingReasons,operation,(Document),String,DOMString,,,,third_party/blink/renderer/core/testing/internals.idl,
-Internals,markGestureScrollRegionDirty,operation,(Document),Void,void,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,markerBackgroundColorForNode,operation,"(Node,String,UnsignedLong)",UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,markerCountForNode,operation,"(Node,String)",UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,markerDescriptionForNode,operation,"(Node,String,UnsignedLong)",String,DOMString,,,,third_party/blink/renderer/core/testing/internals.idl,
