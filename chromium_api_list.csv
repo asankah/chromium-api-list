@@ -415,15 +415,15 @@ BluetoothAdvertisingEvent,serviceData,attribute,,BluetoothServiceDataMap,Bluetoo
 BluetoothAdvertisingEvent,txPower,attribute,,Byte,byte,BluetoothAdvertisingEventTxPower,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_advertising_event.idl,
 BluetoothAdvertisingEvent,uuids,attribute,,StringArray,FrozenArray<UUID>,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_advertising_event.idl,
 BluetoothCharacteristicProperties,,interface,,,,,True,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,11
-BluetoothCharacteristicProperties,authenticatedSignedWrites,attribute,,Boolean,boolean,BCPAuthenticatedSignedWrites,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
-BluetoothCharacteristicProperties,broadcast,attribute,,Boolean,boolean,BCPBroadcast,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
-BluetoothCharacteristicProperties,indicate,attribute,,Boolean,boolean,BCPIndicate,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
-BluetoothCharacteristicProperties,notify,attribute,,Boolean,boolean,BCPNotify,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
-BluetoothCharacteristicProperties,read,attribute,,Boolean,boolean,BCPRead,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
-BluetoothCharacteristicProperties,reliableWrite,attribute,,Boolean,boolean,BCPReliableWrite,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
-BluetoothCharacteristicProperties,writableAuxiliaries,attribute,,Boolean,boolean,BCPWritableAuxiliaries,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
-BluetoothCharacteristicProperties,write,attribute,,Boolean,boolean,BCPWrite,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
-BluetoothCharacteristicProperties,writeWithoutResponse,attribute,,Boolean,boolean,BCPWriteWithoutResponse,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
+BluetoothCharacteristicProperties,authenticatedSignedWrites,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
+BluetoothCharacteristicProperties,broadcast,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
+BluetoothCharacteristicProperties,indicate,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
+BluetoothCharacteristicProperties,notify,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
+BluetoothCharacteristicProperties,read,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
+BluetoothCharacteristicProperties,reliableWrite,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
+BluetoothCharacteristicProperties,writableAuxiliaries,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
+BluetoothCharacteristicProperties,write,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
+BluetoothCharacteristicProperties,writeWithoutResponse,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
 BluetoothDevice,,interface,,,,,True,,third_party/blink/renderer/modules/bluetooth/bluetooth_device.idl,12
 BluetoothDevice,gatt,attribute,,BluetoothRemoteGATTServer,BluetoothRemoteGATTServer,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_device.idl,
 BluetoothDevice,id,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_device.idl,
@@ -5324,9 +5324,6 @@ OrientationSensor,,interface,,,,,True,,third_party/blink/renderer/modules/sensor
 OrientationSensor,populateMatrix,operation,(Float32ArrayOrFloat64ArrayOrDOMMatrix),Void,void,OrientationSensorPopulateMatrix,,,third_party/blink/renderer/modules/sensor/orientation_sensor.idl,
 OrientationSensor,quaternion,attribute,,DoubleArray,FrozenArray<double>,,,,third_party/blink/renderer/modules/sensor/orientation_sensor.idl,
 OriginTrialsTest,,interface,,,,,,,third_party/blink/renderer/core/testing/origin_trials_test.idl,5
-OriginTrialsTest,CONSTANT,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/testing/origin_trials_test.idl,10
-OriginTrialsTest,CONSTANT_PARTIAL,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/testing/origin_trials_test_partial.idl,9
-OriginTrialsTest,UNCONDITIONAL_CONSTANT,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/testing/origin_trials_test.idl,30
 OriginTrialsTest,checkDictionaryMethod,operation,(OriginTrialsTestDictionary),Void,void,,,,third_party/blink/renderer/core/testing/origin_trials_test.idl,
 OriginTrialsTest,deprecationAttribute,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/origin_trials_test.idl,
 OriginTrialsTest,getDictionaryMethod,operation,(),OriginTrialsTestDictionary,OriginTrialsTestDictionary,,,,third_party/blink/renderer/core/testing/origin_trials_test.idl,
@@ -7925,7 +7922,6 @@ VirtualKeyboard,ongeometrychange,attribute,,EventHandlerNonNull,EventHandlerNonN
 VirtualKeyboard,overlaysContent,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/virtualkeyboard/virtual_keyboard.idl,
 VirtualKeyboard,show,operation,(),Void,void,,,,third_party/blink/renderer/modules/virtualkeyboard/virtual_keyboard.idl,
 VirtualKeyboardGeometryChangeEvent,,interface,,,,,,,third_party/blink/renderer/modules/virtualkeyboard/virtual_keyboard_geometry_change_event.idl,12
-VirtualKeyboardGeometryChangeEvent,boundingRect,attribute,,DOMRect,DOMRect,,,,third_party/blink/renderer/modules/virtualkeyboard/virtual_keyboard_geometry_change_event.idl,
 VirtualKeyboardGeometryChangeEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/events/event.idl,
 VisibilityStateEntry,,interface,,,,,,,third_party/blink/renderer/core/timing/visibility_state_entry.idl,6
 VisualViewport,,interface,,,,,,,third_party/blink/renderer/core/frame/visual_viewport.idl,32
