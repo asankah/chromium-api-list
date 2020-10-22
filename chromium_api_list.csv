@@ -399,7 +399,7 @@ BlobEvent,data,attribute,,Blob,Blob,,,,third_party/blink/renderer/modules/mediar
 BlobEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/events/event.idl,
 BlobEvent,timecode,attribute,,Double,double,,,,third_party/blink/renderer/modules/mediarecorder/blob_event.idl,
 Bluetooth,,interface,,,,,True,,third_party/blink/renderer/modules/bluetooth/bluetooth.idl,11
-Bluetooth,getAvailability,operation,(),BooleanPromise,Promise<boolean>,,,,third_party/blink/renderer/modules/bluetooth/bluetooth.idl,
+Bluetooth,getAvailability,operation,(),BooleanPromise,Promise<boolean>,WebBluetoothGetAvailability,,,third_party/blink/renderer/modules/bluetooth/bluetooth.idl,
 Bluetooth,getDevices,operation,(),BluetoothDeviceSequencePromise,Promise<sequence<BluetoothDevice>>,WebBluetoothGetDevices,,,third_party/blink/renderer/modules/bluetooth/bluetooth.idl,
 Bluetooth,onadvertisementreceived,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/modules/bluetooth/bluetooth.idl,
 Bluetooth,requestDevice,operation,(RequestDeviceOptions),BluetoothDevicePromise,Promise<BluetoothDevice>,WebBluetoothRequestDevice,,,third_party/blink/renderer/modules/bluetooth/bluetooth.idl,
@@ -3615,6 +3615,7 @@ InternalRuntimeFlags,cssPseudoWhereEnabled,attribute,,Boolean,boolean,,,,third_p
 InternalRuntimeFlags,cssReducedFontLoadingLayoutInvalidationsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssRevertEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssScrollTimelineEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssScrollbarsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssSnapSizeEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssSupportsSelectorEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssSystemColorComputeToSelfEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3860,6 +3861,7 @@ InternalRuntimeFlags,scrollTimelineEnabled,attribute,,Boolean,boolean,,,,third_p
 InternalRuntimeFlags,scrollTopLeftInteropEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scrollUnificationEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scrollbarGutterEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,scrollbarWidthEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,securePaymentConfirmationDebugEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,securePaymentConfirmationEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sendBeaconThrowForBlobWithNonSimpleTypeEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4784,6 +4786,7 @@ MediaSession,setPositionState,operation,(MediaPositionState),Void,void,MediaSess
 MediaSource,,interface,,,,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,41
 MediaSource,activeSourceBuffers,attribute,,SourceBufferList,SourceBufferList,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,
 MediaSource,addSourceBuffer,operation,(String),SourceBuffer,SourceBuffer,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,
+MediaSource,canConstructInDedicatedWorker,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,
 MediaSource,clearLiveSeekableRange,operation,(),Void,void,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,
 MediaSource,duration,attribute,,UnrestrictedDouble,unrestricted double,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,
 MediaSource,endOfStream,operation,(EndOfStreamError),Void,void,,,,third_party/blink/renderer/modules/mediasource/media_source.idl,
