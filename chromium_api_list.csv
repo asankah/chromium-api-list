@@ -3885,6 +3885,7 @@ InternalRuntimeFlags,strictMimeTypesForWorkersEnabled,attribute,,Boolean,boolean
 InternalRuntimeFlags,subresourceWebBundlesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,surfaceEmbeddingFeaturesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,systemWakeLockEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,tableCellNewPercentsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,testFeatureDependentEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,testFeatureEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,testFeatureImpliedEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5069,8 +5070,8 @@ Navigator,mediaDevices,attribute,,MediaDevices,MediaDevices,,True,,third_party/b
 Navigator,mediaSession,attribute,,MediaSession,MediaSession,,,,third_party/blink/renderer/modules/mediasession/navigator_media_session.idl,
 Navigator,mimeTypes,attribute,,MimeTypeArray,MimeTypeArray,NavigatorMimeTypes,,(True),third_party/blink/renderer/modules/plugins/navigator_plugins.idl,
 Navigator,onLine,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/frame/navigator_on_line.idl,
-Navigator,openTCPSocket,operation,(SocketOptions),VoidPromise,Promise<void>,Navigator_OpenTCPSocket,True,,third_party/blink/renderer/modules/direct_sockets/navigator_socket.idl,
-Navigator,openUDPSocket,operation,(SocketOptions),VoidPromise,Promise<void>,Navigator_OpenUDPSocket,True,,third_party/blink/renderer/modules/direct_sockets/navigator_socket.idl,
+Navigator,openTCPSocket,operation,(SocketOptions),TCPSocketPromise,Promise<TCPSocket>,Navigator_OpenTCPSocket,True,,third_party/blink/renderer/modules/direct_sockets/navigator_socket.idl,
+Navigator,openUDPSocket,operation,(SocketOptions),UDPSocketPromise,Promise<UDPSocket>,Navigator_OpenUDPSocket,True,,third_party/blink/renderer/modules/direct_sockets/navigator_socket.idl,
 Navigator,permissions,attribute,,Permissions,Permissions,,,,third_party/blink/renderer/modules/permissions/navigator_permissions.idl,
 Navigator,platform,attribute,,String,DOMString,NavigatorPlatform,,Direct,third_party/blink/renderer/core/frame/navigator_id.idl,
 Navigator,plugins,attribute,,PluginArray,PluginArray,NavigatorPlugins,,(True),third_party/blink/renderer/modules/plugins/navigator_plugins.idl,
@@ -5081,7 +5082,7 @@ Navigator,registerProtocolHandler,operation,"(String,USVString,String)",Void,voi
 Navigator,requestMIDIAccess,operation,(MIDIOptions),MIDIAccessPromise,Promise<MIDIAccess>,RequestMIDIAccess_ObscuredByFootprinting,,,third_party/blink/renderer/modules/webmidi/navigator_web_midi.idl,
 Navigator,requestMediaKeySystemAccess,operation,"(String,MediaKeySystemConfigurationSequence)",MediaKeySystemAccessPromise,Promise<MediaKeySystemAccess>,,True,,third_party/blink/renderer/modules/encryptedmedia/navigator_request_media_key_system_access.idl,
 Navigator,scheduling,attribute,,Scheduling,Scheduling,,,,third_party/blink/renderer/core/frame/navigator_scheduling.idl,
-Navigator,sendBeacon,operation,"(USVString,ArrayBufferViewOrBlobOrStringOrFormDataOrReadableStream)",Boolean,boolean,SendBeacon,,,third_party/blink/renderer/modules/beacon/navigator_beacon.idl,
+Navigator,sendBeacon,operation,"(USVString,ReadableStreamOrBlobOrArrayBufferOrArrayBufferViewOrFormDataOrURLSearchParamsOrUSVString)",Boolean,boolean,SendBeacon,,,third_party/blink/renderer/modules/beacon/navigator_beacon.idl,
 Navigator,serial,attribute,,Serial,Serial,,,,third_party/blink/renderer/modules/serial/navigator_serial.idl,
 Navigator,serviceWorker,attribute,,ServiceWorkerContainer,ServiceWorkerContainer,,True,,third_party/blink/renderer/modules/service_worker/navigator_service_worker.idl,
 Navigator,setAppBadge,operation,(UnsignedLongLongEnforceRange),VoidPromise,Promise<void>,BadgeSet,,,third_party/blink/renderer/modules/badging/navigator_badge.idl,
@@ -7496,6 +7497,8 @@ SyncEvent,tag,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/
 SyncManager,,interface,,,,,,,third_party/blink/renderer/modules/background_sync/sync_manager.idl,9
 SyncManager,getTags,operation,(),StringSequencePromise,Promise<sequence<DOMString>>,,,,third_party/blink/renderer/modules/background_sync/sync_manager.idl,
 SyncManager,register,operation,(String),VoidPromise,Promise<void>,BackgroundSyncRegister,,,third_party/blink/renderer/modules/background_sync/sync_manager.idl,
+TCPSocket,,interface,,,,,True,,third_party/blink/renderer/modules/direct_sockets/tcp_socket.idl,11
+TCPSocket,close,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/direct_sockets/tcp_socket.idl,
 TaskAttributionTiming,,interface,,,,,,,third_party/blink/renderer/core/timing/task_attribution_timing.idl,7
 TaskAttributionTiming,containerId,attribute,,String,DOMString,,,,third_party/blink/renderer/core/timing/task_attribution_timing.idl,
 TaskAttributionTiming,containerName,attribute,,String,DOMString,,,,third_party/blink/renderer/core/timing/task_attribution_timing.idl,
@@ -7714,6 +7717,8 @@ TypeConversions,testUSVStringOrNull,attribute,,USVString,USVString,,,,third_part
 TypeConversions,testUnsignedLong,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/testing/type_conversions.idl,
 TypeConversions,testUnsignedLongLong,attribute,,UnsignedLongLong,unsigned long long,,,,third_party/blink/renderer/core/testing/type_conversions.idl,
 TypeConversions,testUnsignedShort,attribute,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/testing/type_conversions.idl,
+UDPSocket,,interface,,,,,True,,third_party/blink/renderer/modules/direct_sockets/udp_socket.idl,11
+UDPSocket,close,operation,(),VoidPromise,Promise<void>,,,,third_party/blink/renderer/modules/direct_sockets/udp_socket.idl,
 UIEvent,,interface,,,,,,,third_party/blink/renderer/core/events/ui_event.idl,24
 UIEvent,detail,attribute,,Long,long,,,,third_party/blink/renderer/core/events/ui_event.idl,
 UIEvent,initUIEvent,operation,"(String,Boolean,Boolean,Window,Long)",Void,void,UIEvent_InitUIEvent,,,third_party/blink/renderer/core/events/ui_event.idl,
