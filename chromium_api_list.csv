@@ -2122,8 +2122,9 @@ FontFaceSetLoadEvent,fontfaces,attribute,,FontFaceArray,FrozenArray<FontFace>,,,
 FontFaceSetLoadEvent,isTrusted,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/events/event.idl,
 FontIterator,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_iterator.idl,13
 FontIterator,next,operation,(),AnyPromise,Promise<any>,,,,third_party/blink/renderer/modules/font_access/font_iterator.idl,
-FontManager,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_manager.idl,11
+FontManager,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_manager.idl,10
 FontManager,query,operation,(),Object,object,FontManager_Query,,,third_party/blink/renderer/modules/font_access/font_manager.idl,
+FontManager,showFontChooser,operation,(QueryOptions),FontIteratorPromise,Promise<FontIterator>,,,,third_party/blink/renderer/modules/font_access/font_manager.idl,
 FontMetadata,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_metadata.idl,10
 FontMetadata,blob,operation,(),BlobPromise,Promise<Blob>,FontMetadata_Blob,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontMetadata,family,attribute,,USVString,USVString,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
@@ -3671,6 +3672,7 @@ InternalRuntimeFlags,fileHandlingEnabled,attribute,,Boolean,boolean,,,,third_par
 InternalRuntimeFlags,fileSystemEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,flexAspectRatioEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,focuslessSpatialNavigationEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,fontAccessChooserEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fontAccessEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fontSrcLocalMatchingEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,forceDeferScriptInterventionEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
