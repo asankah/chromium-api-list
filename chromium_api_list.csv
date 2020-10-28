@@ -324,7 +324,7 @@ BackgroundFetchUpdateUIEvent,updateUI,operation,(BackgroundFetchUIOptions),VoidP
 BarProp,,interface,,,,,,,third_party/blink/renderer/core/frame/bar_prop.idl,33
 BarProp,visible,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/frame/bar_prop.idl,
 BarcodeDetector,,interface,,,,,True,,third_party/blink/renderer/modules/shapedetection/barcode_detector.idl,11
-BarcodeDetector,detect,operation,(HTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrBlobOrImageDataOrImageBitmapOrOffscreenCanvas),DetectedBarcodeSequencePromise,Promise<sequence<DetectedBarcode>>,ShapeDetectionAPI,,,third_party/blink/renderer/modules/shapedetection/barcode_detector.idl,
+BarcodeDetector,detect,operation,(HTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrBlobOrImageDataOrImageBitmapOrOffscreenCanvas),DetectedBarcodeSequencePromise,Promise<sequence<DetectedBarcode>>,BarcodeDetectorDetect,,,third_party/blink/renderer/modules/shapedetection/barcode_detector.idl,
 BarcodeDetector,getSupportedFormats,operation,(),BarcodeFormatSequencePromise,Promise<sequence<BarcodeFormat>>,,,,third_party/blink/renderer/modules/shapedetection/barcode_detector.idl,
 BaseAudioContext,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/base_audio_context.idl,19
 BaseAudioContext,audioWorklet,attribute,,AudioWorklet,AudioWorklet,,True,,third_party/blink/renderer/modules/webaudio/base_audio_context.idl,
@@ -784,6 +784,7 @@ CanvasRenderingContext2D,fillText,operation,"(String,UnrestrictedDouble,Unrestri
 CanvasRenderingContext2D,filter,attribute,,String,DOMString,Canvas2DFilter,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,font,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,fontKerning,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
+CanvasRenderingContext2D,fontVariantCaps,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,getContextAttributes,operation,(),CanvasRenderingContext2DSettings,CanvasRenderingContext2DSettings,GetCanvas2DContextAttributes,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,getImageData,operation,"(LongEnforceRange,LongEnforceRange,LongEnforceRange,LongEnforceRange)",ImageData,ImageData,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,getLineDash,operation,(),UnrestrictedDoubleSequence,sequence<unrestricted double>,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
@@ -1978,7 +1979,7 @@ External,,interface,,,,,,,third_party/blink/renderer/core/frame/external.idl,6
 External,AddSearchProvider,operation,(),Void,void,,,,third_party/blink/renderer/core/frame/external.idl,
 External,IsSearchProviderInstalled,operation,(),Void,void,,,,third_party/blink/renderer/core/frame/external.idl,
 FaceDetector,,interface,,,,,True,,third_party/blink/renderer/modules/shapedetection/face_detector.idl,11
-FaceDetector,detect,operation,(HTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrBlobOrImageDataOrImageBitmapOrOffscreenCanvas),DetectedFaceSequencePromise,Promise<sequence<DetectedFace>>,ShapeDetectionAPI,,,third_party/blink/renderer/modules/shapedetection/face_detector.idl,
+FaceDetector,detect,operation,(HTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrBlobOrImageDataOrImageBitmapOrOffscreenCanvas),DetectedFaceSequencePromise,Promise<sequence<DetectedFace>>,FaceDetectorDetect,,,third_party/blink/renderer/modules/shapedetection/face_detector.idl,
 FeaturePolicy,,interface,,,,,,,third_party/blink/renderer/core/feature_policy/feature_policy.idl,9
 FeaturePolicy,allowedFeatures,operation,(),StringSequence,sequence<DOMString>,FeaturePolicyJSAPI,,,third_party/blink/renderer/core/feature_policy/feature_policy.idl,
 FeaturePolicy,allowsFeature,operation,"(String,String)",Boolean,boolean,FeaturePolicyJSAPI,,,third_party/blink/renderer/core/feature_policy/feature_policy.idl,
@@ -5295,6 +5296,7 @@ OffscreenCanvasRenderingContext2D,fillText,operation,"(String,UnrestrictedDouble
 OffscreenCanvasRenderingContext2D,filter,attribute,,String,DOMString,Canvas2DFilter,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,font,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,fontKerning,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
+OffscreenCanvasRenderingContext2D,fontVariantCaps,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,getImageData,operation,"(Long,Long,Long,Long)",ImageData,ImageData,OffscreenCanvasGetImageData,,(True),third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,getLineDash,operation,(),UnrestrictedDoubleSequence,sequence<unrestricted double>,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,getTransform,operation,(),DOMMatrix,DOMMatrix,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
@@ -6141,8 +6143,8 @@ ReadableStream,,interface,,,,,,,third_party/blink/renderer/core/streams/readable
 ReadableStream,cancel,operation,(Any),AnyPromise,Promise<any>,,,,third_party/blink/renderer/core/streams/readable_stream.idl,
 ReadableStream,getReader,operation,(Any),ReadableStreamDefaultReader,ReadableStreamDefaultReader,ReadableStreamGetReader,,,third_party/blink/renderer/core/streams/readable_stream.idl,
 ReadableStream,locked,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/streams/readable_stream.idl,
-ReadableStream,pipeThrough,operation,"(Any,Any)",Any,any,ReadableStreamPipeThrough,,,third_party/blink/renderer/core/streams/readable_stream.idl,
-ReadableStream,pipeTo,operation,"(Any,Any)",AnyPromise,Promise<any>,ReadableStreamPipeTo,,,third_party/blink/renderer/core/streams/readable_stream.idl,
+ReadableStream,pipeThrough,operation,"(Any,StreamPipeOptions)",Any,any,ReadableStreamPipeThrough,,,third_party/blink/renderer/core/streams/readable_stream.idl,
+ReadableStream,pipeTo,operation,"(Any,StreamPipeOptions)",AnyPromise,Promise<any>,ReadableStreamPipeTo,,,third_party/blink/renderer/core/streams/readable_stream.idl,
 ReadableStream,tee,operation,(),Any,any,,,,third_party/blink/renderer/core/streams/readable_stream.idl,
 ReadableStreamDefaultController,,interface,,,,,,,third_party/blink/renderer/core/streams/readable_stream_default_controller.idl,6
 ReadableStreamDefaultController,close,operation,(),Void,void,,,,third_party/blink/renderer/core/streams/readable_stream_default_controller.idl,
@@ -7531,7 +7533,7 @@ TextDecoderStream,ignoreBOM,attribute,,Boolean,boolean,,,,third_party/blink/rend
 TextDecoderStream,readable,attribute,,ReadableStream,ReadableStream,,,,third_party/blink/renderer/modules/encoding/text_decoder_stream.idl,
 TextDecoderStream,writable,attribute,,WritableStream,WritableStream,,,,third_party/blink/renderer/modules/encoding/text_decoder_stream.idl,
 TextDetector,,interface,,,,,True,,third_party/blink/renderer/modules/shapedetection/text_detector.idl,11
-TextDetector,detect,operation,(HTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrBlobOrImageDataOrImageBitmapOrOffscreenCanvas),DetectedTextSequencePromise,Promise<sequence<DetectedText>>,ShapeDetectionAPI,,,third_party/blink/renderer/modules/shapedetection/text_detector.idl,
+TextDetector,detect,operation,(HTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrBlobOrImageDataOrImageBitmapOrOffscreenCanvas),DetectedTextSequencePromise,Promise<sequence<DetectedText>>,TextDetectorDetect,,,third_party/blink/renderer/modules/shapedetection/text_detector.idl,
 TextEncoder,,interface,,,,,,,third_party/blink/renderer/modules/encoding/text_encoder.idl,33
 TextEncoder,encode,operation,(USVString),Uint8Array,Uint8Array,TextEncoderEncode,,,third_party/blink/renderer/modules/encoding/text_encoder.idl,
 TextEncoder,encodeInto,operation,"(USVString,Uint8Array)",TextEncoderEncodeIntoResult,TextEncoderEncodeIntoResult,TextEncoderEncodeInto,,,third_party/blink/renderer/modules/encoding/text_encoder.idl,
