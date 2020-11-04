@@ -5045,7 +5045,7 @@ Navigator,plugins,attribute,,PluginArray,PluginArray,NavigatorPlugins,,(True),th
 Navigator,presentation,attribute,,Presentation,Presentation,,True,,third_party/blink/renderer/modules/presentation/navigator_presentation.idl,
 Navigator,product,attribute,,String,DOMString,,,,third_party/blink/renderer/core/frame/navigator_id.idl,
 Navigator,productSub,attribute,,String,DOMString,NavigatorProductSub,,Direct,third_party/blink/renderer/core/frame/navigator.idl,
-Navigator,registerProtocolHandler,operation,"(String,USVString,String)",Void,void,,True,,third_party/blink/renderer/modules/navigatorcontentutils/navigator_content_utils.idl,
+Navigator,registerProtocolHandler,operation,"(String,USVString)",Void,void,,True,,third_party/blink/renderer/modules/navigatorcontentutils/navigator_content_utils.idl,
 Navigator,requestMIDIAccess,operation,(MIDIOptions),MIDIAccessPromise,Promise<MIDIAccess>,RequestMIDIAccess_ObscuredByFootprinting,,,third_party/blink/renderer/modules/webmidi/navigator_web_midi.idl,
 Navigator,requestMediaKeySystemAccess,operation,"(String,MediaKeySystemConfigurationSequence)",MediaKeySystemAccessPromise,Promise<MediaKeySystemAccess>,,True,,third_party/blink/renderer/modules/encryptedmedia/navigator_request_media_key_system_access.idl,
 Navigator,scheduling,attribute,,Scheduling,Scheduling,,,,third_party/blink/renderer/core/frame/navigator_scheduling.idl,
