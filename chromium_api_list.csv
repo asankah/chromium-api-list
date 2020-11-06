@@ -797,6 +797,7 @@ CanvasRenderingContext2D,strokeText,operation,"(String,UnrestrictedDouble,Unrest
 CanvasRenderingContext2D,textAlign,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,textBaseline,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,textLetterSpacing,attribute,,UnrestrictedDouble,unrestricted double,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
+CanvasRenderingContext2D,textRendering,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,textWordSpacing,attribute,,UnrestrictedDouble,unrestricted double,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,transform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,translate,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
@@ -1094,6 +1095,7 @@ DOMMatrixReadOnly,toJSON,operation,(),Object,object,,,,third_party/blink/rendere
 DOMMatrixReadOnly,transformPoint,operation,(DOMPointInit),DOMPoint,DOMPoint,,,,third_party/blink/renderer/core/geometry/dom_matrix_read_only.idl,
 DOMMatrixReadOnly,translate,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",DOMMatrix,DOMMatrix,,,,third_party/blink/renderer/core/geometry/dom_matrix_read_only.idl,
 DOMParser,,interface,,,,,,,third_party/blink/renderer/core/xml/dom_parser.idl,32
+DOMParser,allowDeclarativeShadowDom,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/xml/dom_parser.idl,
 DOMParser,parseFromString,operation,"(StringStringContext,SupportedType)",Document,Document,,,,third_party/blink/renderer/core/xml/dom_parser.idl,
 DOMPoint,,interface,,,,,,,third_party/blink/renderer/core/geometry/dom_point.idl,10
 DOMPoint,fromPoint,operation,(DOMPointInit),DOMPoint,DOMPoint,,,,third_party/blink/renderer/core/geometry/dom_point.idl,
@@ -1266,6 +1268,7 @@ DictionaryTest,setDerivedDerived,operation,(InternalDictionaryDerivedDerived),Vo
 DigitalGoodsService,,interface,,,,,True,,third_party/blink/renderer/modules/payments/goods/digital_goods_service.idl,9
 DigitalGoodsService,acknowledge,operation,"(String,PurchaseType)",VoidPromise,Promise<void>,DigitalGoodsAcknowledge,,,third_party/blink/renderer/modules/payments/goods/digital_goods_service.idl,
 DigitalGoodsService,getDetails,operation,(StringSequence),ItemDetailsSequencePromise,Promise<sequence<ItemDetails>>,DigitalGoodsGetDetails,,,third_party/blink/renderer/modules/payments/goods/digital_goods_service.idl,
+DigitalGoodsService,listPurchases,operation,(),PurchaseDetailsSequencePromise,Promise<sequence<PurchaseDetails>>,DigitalGoodsListPurchases,,,third_party/blink/renderer/modules/payments/goods/digital_goods_service.idl,
 DirectoryEntry,,interface,,,,,,,third_party/blink/renderer/modules/filesystem/directory_entry.idl,34
 DirectoryEntry,createReader,operation,(),DirectoryReader,DirectoryReader,,,,third_party/blink/renderer/modules/filesystem/directory_entry.idl,
 DirectoryEntry,getDirectory,operation,"(String,FileSystemFlags,EntryCallback,ErrorCallback)",Void,void,,,,third_party/blink/renderer/modules/filesystem/directory_entry.idl,
@@ -1288,6 +1291,7 @@ Document,adoptNode,operation,(Node),Node,Node,,,,third_party/blink/renderer/core
 Document,adoptedStyleSheets,attribute,,CSSStyleSheetArray,FrozenArray<CSSStyleSheet>,AdoptedStyleSheets,,,third_party/blink/renderer/core/dom/document_or_shadow_root.idl,
 Document,alinkColor,attribute,,StringTreatNullAs,[TreatNullAs=EmptyString] DOMString,,,,third_party/blink/renderer/core/dom/document.idl,
 Document,all,attribute,,HTMLAllCollection,HTMLAllCollection,DocumentAll,,,third_party/blink/renderer/core/dom/document.idl,
+Document,allowDeclarativeShadowDom,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/document.idl,
 Document,anchors,attribute,,HTMLCollection,HTMLCollection,Document_Anchors,,,third_party/blink/renderer/core/dom/document.idl,
 Document,append,operation,(NodeOrStringOrTrustedScript),Void,void,,,,third_party/blink/renderer/core/dom/parent_node.idl,
 Document,applets,attribute,,HTMLCollection,HTMLCollection,Document_Applets,,,third_party/blink/renderer/core/dom/document.idl,
@@ -1522,6 +1526,7 @@ Document,xmlEncoding,attribute,,String,DOMString,DocumentXMLEncoding,,,third_par
 Document,xmlStandalone,attribute,,Boolean,boolean,DocumentXMLStandalone,,,third_party/blink/renderer/core/dom/document.idl,
 Document,xmlVersion,attribute,,String,DOMString,DocumentXMLVersion,,,third_party/blink/renderer/core/dom/document.idl,
 DocumentFragment,,interface,,,,,,,third_party/blink/renderer/core/dom/document_fragment.idl,24
+DocumentFragment,allowDeclarativeShadowDom,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/dom/document_fragment.idl,
 DocumentFragment,append,operation,(NodeOrStringOrTrustedScript),Void,void,,,,third_party/blink/renderer/core/dom/parent_node.idl,
 DocumentFragment,childElementCount,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/dom/parent_node.idl,
 DocumentFragment,children,attribute,,HTMLCollection,HTMLCollection,,,,third_party/blink/renderer/core/dom/parent_node.idl,
@@ -3252,7 +3257,7 @@ HTMLVideoElement,,interface,,,,,,,third_party/blink/renderer/core/html/media/htm
 HTMLVideoElement,autoPictureInPicture,attribute,,Boolean,boolean,HTMLVideoElement_AutoPictureInPicture,,,third_party/blink/renderer/modules/picture_in_picture/html_video_element_picture_in_picture.idl,
 HTMLVideoElement,cancelVideoFrameCallback,operation,(Long),Void,void,HTMLVideoElement_CancelVideoFrameCallback,,,third_party/blink/renderer/modules/video_rvfc/html_video_element_request_video_frame_callback.idl,
 HTMLVideoElement,disablePictureInPicture,attribute,,Boolean,boolean,HTMLVideoElement_DisablePictureInPicture,,,third_party/blink/renderer/modules/picture_in_picture/html_video_element_picture_in_picture.idl,
-HTMLVideoElement,getVideoPlaybackQuality,operation,(),VideoPlaybackQuality,VideoPlaybackQuality,,,,third_party/blink/renderer/modules/mediasource/html_video_element_media_source.idl,
+HTMLVideoElement,getVideoPlaybackQuality,operation,(),VideoPlaybackQuality,VideoPlaybackQuality,HTMLVideoElement_GetVideoPlaybackQuality,,,third_party/blink/renderer/modules/mediasource/html_video_element_media_source.idl,
 HTMLVideoElement,height,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/html/media/html_video_element.idl,
 HTMLVideoElement,onenterpictureinpicture,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/modules/picture_in_picture/html_video_element_picture_in_picture.idl,
 HTMLVideoElement,onleavepictureinpicture,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/modules/picture_in_picture/html_video_element_picture_in_picture.idl,
@@ -3547,6 +3552,7 @@ InternalRuntimeFlags,crossOriginIsolationEnabled,attribute,,Boolean,boolean,,,,t
 InternalRuntimeFlags,crossOriginOpenerPolicyReportingEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,css3TextEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssAspectRatioPropertyEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssAtRuleCounterStyleEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssCalcAsIntEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssColorSchemeUARenderingEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContentVisibilityEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3902,6 +3908,7 @@ InternalRuntimeFlags,webBluetoothWatchAdvertisementsEnabled,attribute,,Boolean,b
 InternalRuntimeFlags,webCodecsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webCryptoCurve25519Enabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webHIDEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webIDEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webNFCEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webOTPEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webSchedulerEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3920,7 +3927,6 @@ InternalRuntimeFlags,webXRImageTrackingEnabled,attribute,,Boolean,boolean,,,,thi
 InternalRuntimeFlags,webXRLightEstimationEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webXRMultiGpuEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webXRPlaneDetectionEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,webXRReflectionEstimationEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webXRViewportScaleEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webglDraftExtensionsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webglImageChromiumEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5024,6 +5030,7 @@ Navigator,getUserMedia,operation,"(MediaStreamConstraints,NavigatorUserMediaSucc
 Navigator,gpu,attribute,,GPU,GPU,,,,third_party/blink/renderer/modules/webgpu/navigator_gpu.idl,
 Navigator,hardwareConcurrency,attribute,,UnsignedLongLong,unsigned long long,NavigatorHardwareConcurrency,,Direct,third_party/blink/renderer/core/frame/navigator_concurrent_hardware.idl,
 Navigator,hid,attribute,,HID,HID,,,,third_party/blink/renderer/modules/hid/navigator_hid.idl,
+Navigator,id,attribute,,WebID,WebID,,,,third_party/blink/renderer/modules/webid/navigator_web_id.idl,
 Navigator,ink,attribute,,Ink,Ink,,,,third_party/blink/renderer/modules/delegated_ink/navigator_ink.idl,
 Navigator,javaEnabled,operation,(),Boolean,boolean,Navigator_JavaEnabled,,Direct,third_party/blink/renderer/modules/plugins/navigator_plugins.idl,
 Navigator,keyboard,attribute,,Keyboard,Keyboard,,True,,third_party/blink/renderer/modules/keyboard/navigator_keyboard.idl,
@@ -5306,6 +5313,7 @@ OffscreenCanvasRenderingContext2D,strokeText,operation,"(String,UnrestrictedDoub
 OffscreenCanvasRenderingContext2D,textAlign,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,textBaseline,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,textLetterSpacing,attribute,,UnrestrictedDouble,unrestricted double,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
+OffscreenCanvasRenderingContext2D,textRendering,attribute,,String,DOMString,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,textWordSpacing,attribute,,UnrestrictedDouble,unrestricted double,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,transform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,translate,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,void,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
@@ -6115,7 +6123,7 @@ ReadableStream,getReader,operation,(ReadableStreamGetReaderOptions),ReadableStre
 ReadableStream,locked,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/streams/readable_stream.idl,
 ReadableStream,pipeThrough,operation,"(ReadableWritablePair,StreamPipeOptions)",ReadableStream,ReadableStream,ReadableStreamPipeThrough,,,third_party/blink/renderer/core/streams/readable_stream.idl,
 ReadableStream,pipeTo,operation,"(WritableStream,StreamPipeOptions)",AnyPromise,Promise<any>,ReadableStreamPipeTo,,,third_party/blink/renderer/core/streams/readable_stream.idl,
-ReadableStream,tee,operation,(),Any,any,,,,third_party/blink/renderer/core/streams/readable_stream.idl,
+ReadableStream,tee,operation,(),ReadableStreamSequence,sequence<ReadableStream>,,,,third_party/blink/renderer/core/streams/readable_stream.idl,
 ReadableStreamBYOBReader,,interface,,,,,,,third_party/blink/renderer/core/streams/readable_stream_byob_reader.idl,9
 ReadableStreamBYOBReader,cancel,operation,(Any),VoidPromise,Promise<void>,,,,third_party/blink/renderer/core/streams/readable_stream_byob_reader.idl,
 ReadableStreamBYOBReader,closed,attribute,,VoidPromise,Promise<void>,,,,third_party/blink/renderer/core/streams/readable_stream_byob_reader.idl,
@@ -9471,6 +9479,8 @@ WebGLVideoTexture,SAMPLER_VIDEO_IMAGE,constant,,UnsignedLong,unsigned long,,,,th
 WebGLVideoTexture,TEXTURE_VIDEO_IMAGE,constant,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/modules/webgl/webgl_video_texture.idl,12
 WebGLVideoTexture,releaseVideoImageWEBGL,operation,(UnsignedLong),Boolean,boolean,,,,third_party/blink/renderer/modules/webgl/webgl_video_texture.idl,
 WebGLVideoTexture,shareVideoImageWEBGL,operation,"(UnsignedLong,HTMLVideoElement)",VideoFrameMetadata,VideoFrameMetadata,,,,third_party/blink/renderer/modules/webgl/webgl_video_texture.idl,
+WebID,,interface,,,,,True,,third_party/blink/renderer/modules/webid/web_id.idl,11
+WebID,get,operation,(WebIDRequestOptions),StringPromise,Promise<DOMString>,,,,third_party/blink/renderer/modules/webid/web_id.idl,
 WebSocket,,interface,,,,,,,third_party/blink/renderer/modules/websockets/websocket.idl,40
 WebSocket,CLOSED,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/modules/websockets/websocket.idl,48
 WebSocket,CLOSING,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/modules/websockets/websocket.idl,47
@@ -9892,6 +9902,7 @@ XMLHttpRequest,LOADING,constant,,UnsignedShort,unsigned short,,,,third_party/bli
 XMLHttpRequest,OPENED,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/xmlhttprequest/xml_http_request.idl,53
 XMLHttpRequest,UNSENT,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/xmlhttprequest/xml_http_request.idl,52
 XMLHttpRequest,abort,operation,(),Void,void,,,,third_party/blink/renderer/core/xmlhttprequest/xml_http_request.idl,
+XMLHttpRequest,allowDeclarativeShadowDom,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/xmlhttprequest/xml_http_request.idl,
 XMLHttpRequest,getAllResponseHeaders,operation,(),ByteString,ByteString,,,,third_party/blink/renderer/core/xmlhttprequest/xml_http_request.idl,
 XMLHttpRequest,getResponseHeader,operation,(ByteString),ByteString,ByteString,,,,third_party/blink/renderer/core/xmlhttprequest/xml_http_request.idl,
 XMLHttpRequest,onreadystatechange,attribute,,EventHandlerNonNull,EventHandlerNonNull,,,,third_party/blink/renderer/core/xmlhttprequest/xml_http_request.idl,
