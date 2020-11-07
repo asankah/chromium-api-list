@@ -2508,8 +2508,8 @@ HTMLDialogElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_dia
 HTMLDialogElement,close,operation,(String),Void,void,,,,third_party/blink/renderer/core/html/html_dialog_element.idl,
 HTMLDialogElement,open,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/html/html_dialog_element.idl,
 HTMLDialogElement,returnValue,attribute,,String,DOMString,,,,third_party/blink/renderer/core/html/html_dialog_element.idl,
-HTMLDialogElement,show,operation,(),Void,void,,,,third_party/blink/renderer/core/html/html_dialog_element.idl,
-HTMLDialogElement,showModal,operation,(),Void,void,,,,third_party/blink/renderer/core/html/html_dialog_element.idl,
+HTMLDialogElement,show,operation,(),Void,void,HTMLDialogElement_Show,,,third_party/blink/renderer/core/html/html_dialog_element.idl,
+HTMLDialogElement,showModal,operation,(),Void,void,HTMLDialogElement_ShowModal,,,third_party/blink/renderer/core/html/html_dialog_element.idl,
 HTMLDirectoryElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_directory_element.idl,24
 HTMLDirectoryElement,compact,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/html/html_directory_element.idl,
 HTMLDivElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_div_element.idl,24
@@ -3857,6 +3857,7 @@ InternalRuntimeFlags,subresourceWebBundlesEnabled,attribute,,Boolean,boolean,,,,
 InternalRuntimeFlags,surfaceEmbeddingFeaturesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,systemWakeLockEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,tableCellNewPercentsEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,targetBlankImpliesNoOpenerEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,testFeatureDependentEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,testFeatureEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,testFeatureImpliedEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3874,6 +3875,7 @@ InternalRuntimeFlags,trustTokensAlwaysAllowIssuanceEnabled,attribute,,Boolean,bo
 InternalRuntimeFlags,trustTokensEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,trustedDOMTypesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,trustedTypeBeforePolicyCreationEventEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,trustedTypesUseCodeLikeEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,unclosedFormControlIsInvalidEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,underlineOffsetThicknessEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,unoptimizedImagePoliciesEnabled,attribute,,Boolean,boolean,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -7663,8 +7665,8 @@ TreeWalker,root,attribute,,Node,Node,,,,third_party/blink/renderer/core/dom/tree
 TreeWalker,whatToShow,attribute,,UnsignedLong,unsigned long,,,,third_party/blink/renderer/core/dom/tree_walker.idl,
 TrustedHTML,,interface,,,,,,,third_party/blink/renderer/core/trustedtypes/trusted_html.idl,12
 TrustedHTML,,operation,(),String,DOMString,,,,third_party/blink/renderer/core/trustedtypes/trusted_html.idl,13
-TrustedScript,,interface,,,,,,,third_party/blink/renderer/core/trustedtypes/trusted_script.idl,12
-TrustedScript,,operation,(),String,DOMString,,,,third_party/blink/renderer/core/trustedtypes/trusted_script.idl,13
+TrustedScript,,interface,,,,,,,third_party/blink/renderer/core/trustedtypes/trusted_script.idl,13
+TrustedScript,,operation,(),String,DOMString,,,,third_party/blink/renderer/core/trustedtypes/trusted_script.idl,14
 TrustedScriptURL,,interface,,,,,,,third_party/blink/renderer/core/trustedtypes/trusted_script_url.idl,12
 TrustedScriptURL,,operation,(),String,DOMString,,,,third_party/blink/renderer/core/trustedtypes/trusted_script_url.idl,13
 TrustedTypePolicy,,interface,,,,,,,third_party/blink/renderer/core/trustedtypes/trusted_type_policy.idl,12
@@ -9983,7 +9985,7 @@ XRFrame,getDepthInformation,operation,(XRView),XRDepthInformation,XRDepthInforma
 XRFrame,getHitTestResults,operation,(XRHitTestSource),XRHitTestResultArray,FrozenArray<XRHitTestResult>,,,,third_party/blink/renderer/modules/xr/xr_frame.idl,
 XRFrame,getHitTestResultsForTransientInput,operation,(XRTransientInputHitTestSource),XRTransientInputHitTestResultArray,FrozenArray<XRTransientInputHitTestResult>,,,,third_party/blink/renderer/modules/xr/xr_frame.idl,
 XRFrame,getImageTrackingResults,operation,(),XRImageTrackingResultArray,FrozenArray<XRImageTrackingResult>,,,,third_party/blink/renderer/modules/xr/xr_frame.idl,
-XRFrame,getLightEstimate,operation,(XRLightProbe),XRLightEstimate,XRLightEstimate,,,,third_party/blink/renderer/modules/xr/xr_frame.idl,
+XRFrame,getLightEstimate,operation,(XRLightProbe),XRLightEstimate,XRLightEstimate,XRFrameGetLightEstimate,,,third_party/blink/renderer/modules/xr/xr_frame.idl,
 XRFrame,getPose,operation,"(XRSpace,XRSpace)",XRPose,XRPose,,,,third_party/blink/renderer/modules/xr/xr_frame.idl,
 XRFrame,getViewerPose,operation,(XRReferenceSpace),XRViewerPose,XRViewerPose,,,,third_party/blink/renderer/modules/xr/xr_frame.idl,
 XRFrame,session,attribute,,XRSession,XRSession,,,,third_party/blink/renderer/modules/xr/xr_frame.idl,
@@ -10116,7 +10118,7 @@ XRViewport,x,attribute,,Long,long,,,,third_party/blink/renderer/modules/xr/xr_vi
 XRViewport,y,attribute,,Long,long,,,,third_party/blink/renderer/modules/xr/xr_viewport.idl,
 XRWebGLBinding,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_webgl_binding.idl,10
 XRWebGLBinding,getCameraImage,operation,"(XRFrame,XRView)",WebGLTexture,WebGLTexture,,,,third_party/blink/renderer/modules/xr/xr_webgl_binding.idl,
-XRWebGLBinding,getReflectionCubeMap,operation,(XRLightProbe),WebGLTexture,WebGLTexture,,,,third_party/blink/renderer/modules/xr/xr_webgl_binding.idl,
+XRWebGLBinding,getReflectionCubeMap,operation,(XRLightProbe),WebGLTexture,WebGLTexture,XRWebGLBindingGetReflectionCubeMap,,,third_party/blink/renderer/modules/xr/xr_webgl_binding.idl,
 XRWebGLLayer,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_webgl_layer.idl,10
 XRWebGLLayer,antialias,attribute,,Boolean,boolean,,,,third_party/blink/renderer/modules/xr/xr_webgl_layer.idl,
 XRWebGLLayer,framebuffer,attribute,,WebGLFramebuffer,WebGLFramebuffer,,,,third_party/blink/renderer/modules/xr/xr_webgl_layer.idl,
