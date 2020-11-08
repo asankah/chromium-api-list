@@ -505,6 +505,18 @@ CSSAnimation,,interface,,,,,,,third_party/blink/renderer/core/animation/css/css_
 CSSAnimation,animationName,attribute,,String,DOMString,,,,third_party/blink/renderer/core/animation/css/css_animation.idl,
 CSSConditionRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_condition_rule.idl,9
 CSSConditionRule,conditionText,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_condition_rule.idl,
+CSSCounterStyleRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_counter_style_rule.idl,7
+CSSCounterStyleRule,additiveSymbols,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_counter_style_rule.idl,
+CSSCounterStyleRule,fallback,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_counter_style_rule.idl,
+CSSCounterStyleRule,name,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_counter_style_rule.idl,
+CSSCounterStyleRule,negative,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_counter_style_rule.idl,
+CSSCounterStyleRule,pad,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_counter_style_rule.idl,
+CSSCounterStyleRule,prefix,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_counter_style_rule.idl,
+CSSCounterStyleRule,range,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_counter_style_rule.idl,
+CSSCounterStyleRule,speakAs,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_counter_style_rule.idl,
+CSSCounterStyleRule,suffix,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_counter_style_rule.idl,
+CSSCounterStyleRule,symbols,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_counter_style_rule.idl,
+CSSCounterStyleRule,system,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_counter_style_rule.idl,
 CSSFontFaceRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_font_face_rule.idl,25
 CSSFontFaceRule,style,attribute,,CSSStyleDeclaration,CSSStyleDeclaration,CSSFontFaceRule_Style,,,third_party/blink/renderer/core/css/css_font_face_rule.idl,
 CSSGroupingRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_grouping_rule.idl,9
@@ -584,6 +596,7 @@ CSSRotate,y,attribute,,DoubleOrCSSNumericValue,(double or CSSNumericValue),,,,th
 CSSRotate,z,attribute,,DoubleOrCSSNumericValue,(double or CSSNumericValue),,,,third_party/blink/renderer/core/css/cssom/css_rotate.idl,
 CSSRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_rule.idl,25
 CSSRule,CHARSET_RULE,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/css/css_rule.idl,27
+CSSRule,COUNTER_STYLE_RULE,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/css/css_rule.idl,48
 CSSRule,FONT_FACE_RULE,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/css/css_rule.idl,30
 CSSRule,IMPORT_RULE,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/css/css_rule.idl,28
 CSSRule,KEYFRAMES_RULE,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/css/css_rule.idl,42
@@ -592,7 +605,7 @@ CSSRule,MEDIA_RULE,constant,,UnsignedShort,unsigned short,,,,third_party/blink/r
 CSSRule,NAMESPACE_RULE,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/css/css_rule.idl,34
 CSSRule,PAGE_RULE,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/css/css_rule.idl,31
 CSSRule,STYLE_RULE,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/css/css_rule.idl,26
-CSSRule,SUPPORTS_RULE,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/css/css_rule.idl,47
+CSSRule,SUPPORTS_RULE,constant,,UnsignedShort,unsigned short,,,,third_party/blink/renderer/core/css/css_rule.idl,52
 CSSRule,cssText,attribute,,String,DOMString,,,,third_party/blink/renderer/core/css/css_rule.idl,
 CSSRule,parentRule,attribute,,CSSRule,CSSRule,,,,third_party/blink/renderer/core/css/css_rule.idl,
 CSSRule,parentStyleSheet,attribute,,CSSStyleSheet,CSSStyleSheet,,,,third_party/blink/renderer/core/css/css_rule.idl,
