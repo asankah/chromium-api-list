@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='identifiability.blink_apis',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x10\x62link_apis.proto\x12\x1aidentifiability.blink_apis\"\xe2\x03\n\x08Snapshot\x12\x19\n\x11\x63hromium_revision\x18\x01 \x01(\t\x12=\n\ninterfaces\x18\x02 \x03(\x0b\x32).identifiability.blink_apis.InterfaceLike\x12=\n\nnamespaces\x18\x03 \x03(\x0b\x32).identifiability.blink_apis.InterfaceLike\x12<\n\x0c\x64ictionaries\x18\x04 \x03(\x0b\x32&.identifiability.blink_apis.Dictionary\x12=\n\x0c\x65numerations\x18\x05 \x03(\x0b\x32\'.identifiability.blink_apis.Enumeration\x12\x41\n\x12\x63\x61llback_functions\x18\x06 \x03(\x0b\x32%.identifiability.blink_apis.Operation\x12\x46\n\x13\x63\x61llback_interfaces\x18\x07 \x03(\x0b\x32).identifiability.blink_apis.InterfaceLike\x12\x35\n\x08typedefs\x18\x08 \x03(\x0b\x32#.identifiability.blink_apis.Typedef\"\xaa\x03\n\x12\x45xtendedAttributes\x12\x1d\n\x15\x63ross_origin_isolated\x18\x01 \x01(\x08\x12G\n\x07\x65xposed\x18\x02 \x03(\x0b\x32\x36.identifiability.blink_apis.ExtendedAttributes.Exposed\x12\x0e\n\x06global\x18\x03 \x01(\x08\x12\x13\n\x0bsame_object\x18\x04 \x01(\x08\x12\x16\n\x0esecure_context\x18\x05 \x01(\x08\x12\x41\n\x0chigh_entropy\x18\x06 \x01(\x0e\x32+.identifiability.blink_apis.HighEntropyType\x12\x13\n\x0buse_counter\x18\x07 \x01(\t\x12\x17\n\x0fruntime_enabled\x18\x08 \x01(\t\x12\x1b\n\x13\x63ross_origin_getter\x18\t \x01(\x08\x12\x1b\n\x13\x63ross_origin_setter\x18\n \x01(\x08\x12\x16\n\x0eimplemented_as\x18\x0b \x01(\t\x1a,\n\x07\x45xposed\x12\x11\n\tinterface\x18\x01 \x01(\t\x12\x0e\n\x06member\x18\x02 \x01(\t\"\xb0\x02\n\rInterfaceLike\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x15\n\rinherits_from\x18\x02 \x01(\t\x12K\n\x13\x65xtended_attributes\x18\x03 \x01(\x0b\x32..identifiability.blink_apis.ExtendedAttributes\x12\x39\n\nattributes\x18\x04 \x03(\x0b\x32%.identifiability.blink_apis.Attribute\x12\x39\n\noperations\x18\x05 \x03(\x0b\x32%.identifiability.blink_apis.Operation\x12\x37\n\tconstants\x18\x06 \x03(\x0b\x32$.identifiability.blink_apis.Constant\"\x83\x01\n\x07IDLType\x12\x17\n\x0fidl_type_string\x18\x01 \x01(\t\x12\x12\n\ndepends_on\x18\x02 \x03(\t\x12K\n\x13\x65xtended_attributes\x18\x03 \x01(\x0b\x32..identifiability.blink_apis.ExtendedAttributes\"\x8e\x02\n\nDictionary\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x15\n\rinherits_from\x18\x02 \x01(\t\x12>\n\x07members\x18\x07 \x03(\x0b\x32-.identifiability.blink_apis.Dictionary.Member\x1a\x9a\x01\n\x06Member\x12\x0c\n\x04name\x18\x01 \x01(\t\x12K\n\x13\x65xtended_attributes\x18\x02 \x01(\x0b\x32..identifiability.blink_apis.ExtendedAttributes\x12\x35\n\x08idl_type\x18\x03 \x01(\x0b\x32#.identifiability.blink_apis.IDLType\"\xb3\x02\n\tOperation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12K\n\x13\x65xtended_attributes\x18\x02 \x01(\x0b\x32..identifiability.blink_apis.ExtendedAttributes\x12\x38\n\x0breturn_type\x18\x03 \x01(\x0b\x32#.identifiability.blink_apis.IDLType\x12\x36\n\targuments\x18\x04 \x03(\x0b\x32#.identifiability.blink_apis.IDLType\x12\x0e\n\x06static\x18\t \x01(\x08\x12I\n\x0fspecial_op_type\x18\x05 \x01(\x0e\x32\x30.identifiability.blink_apis.SpecialOperationType\"\xc5\x01\n\tAttribute\x12\x0c\n\x04name\x18\x01 \x01(\t\x12K\n\x13\x65xtended_attributes\x18\x02 \x01(\x0b\x32..identifiability.blink_apis.ExtendedAttributes\x12\x35\n\x08idl_type\x18\x03 \x01(\x0b\x32#.identifiability.blink_apis.IDLType\x12\x11\n\tis_static\x18\x04 \x01(\x08\x12\x13\n\x0bis_readonly\x18\x05 \x01(\x08\"\xab\x01\n\x08\x43onstant\x12\x0c\n\x04name\x18\x01 \x01(\t\x12K\n\x13\x65xtended_attributes\x18\x02 \x01(\x0b\x32..identifiability.blink_apis.ExtendedAttributes\x12\x35\n\x08idl_type\x18\x03 \x01(\x0b\x32#.identifiability.blink_apis.IDLType\x12\r\n\x05value\x18\x04 \x01(\t\"+\n\x0b\x45numeration\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06values\x18\x02 \x03(\t\"N\n\x07Typedef\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x35\n\x08idl_type\x18\x02 \x01(\x0b\x32#.identifiability.blink_apis.IDLType*\x80\x01\n\x0fHighEntropyType\x12\x1c\n\x18HIGH_ENTROPY_UNSPECIFIED\x10\x00\x12\x17\n\x13HIGH_ENTROPY_BENIGN\x10\x01\x12\x1d\n\x19HIGH_ENTROPY_UNCLASSIFIED\x10\x02\x12\x17\n\x13HIGH_ENTROPY_DIRECT\x10\x03*|\n\x14SpecialOperationType\x12\x1a\n\x16SPECIAL_OP_UNSPECIFIED\x10\x00\x12\x15\n\x11SPECIAL_OP_GETTER\x10\x01\x12\x15\n\x11SPECIAL_OP_SETTER\x10\x02\x12\x1a\n\x16SPECIAL_OP_STRINGIFIER\x10\x03\x62\x06proto3')
+  serialized_pb=_b('\n\x10\x62link_apis.proto\x12\x1aidentifiability.blink_apis\"\xe2\x03\n\x08Snapshot\x12\x19\n\x11\x63hromium_revision\x18\x01 \x01(\t\x12=\n\ninterfaces\x18\x02 \x03(\x0b\x32).identifiability.blink_apis.InterfaceLike\x12=\n\nnamespaces\x18\x03 \x03(\x0b\x32).identifiability.blink_apis.InterfaceLike\x12<\n\x0c\x64ictionaries\x18\x04 \x03(\x0b\x32&.identifiability.blink_apis.Dictionary\x12=\n\x0c\x65numerations\x18\x05 \x03(\x0b\x32\'.identifiability.blink_apis.Enumeration\x12\x41\n\x12\x63\x61llback_functions\x18\x06 \x03(\x0b\x32%.identifiability.blink_apis.Operation\x12\x46\n\x13\x63\x61llback_interfaces\x18\x07 \x03(\x0b\x32).identifiability.blink_apis.InterfaceLike\x12\x35\n\x08typedefs\x18\x08 \x03(\x0b\x32#.identifiability.blink_apis.Typedef\"\xaa\x03\n\x12\x45xtendedAttributes\x12\x1d\n\x15\x63ross_origin_isolated\x18\x01 \x01(\x08\x12G\n\x07\x65xposed\x18\x02 \x03(\x0b\x32\x36.identifiability.blink_apis.ExtendedAttributes.Exposed\x12\x0e\n\x06global\x18\x03 \x01(\x08\x12\x13\n\x0bsame_object\x18\x04 \x01(\x08\x12\x16\n\x0esecure_context\x18\x05 \x01(\x08\x12\x41\n\x0chigh_entropy\x18\x06 \x01(\x0e\x32+.identifiability.blink_apis.HighEntropyType\x12\x13\n\x0buse_counter\x18\x07 \x01(\t\x12\x17\n\x0fruntime_enabled\x18\x08 \x01(\t\x12\x1b\n\x13\x63ross_origin_getter\x18\t \x01(\x08\x12\x1b\n\x13\x63ross_origin_setter\x18\n \x01(\x08\x12\x16\n\x0eimplemented_as\x18\x0b \x01(\t\x1a,\n\x07\x45xposed\x12\x11\n\tinterface\x18\x01 \x01(\t\x12\x0e\n\x06member\x18\x02 \x01(\t\"\xf5\x02\n\rInterfaceLike\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x15\n\rinherits_from\x18\x02 \x01(\t\x12K\n\x13\x65xtended_attributes\x18\x03 \x01(\x0b\x32..identifiability.blink_apis.ExtendedAttributes\x12\x39\n\nattributes\x18\x04 \x03(\x0b\x32%.identifiability.blink_apis.Attribute\x12\x39\n\noperations\x18\x05 \x03(\x0b\x32%.identifiability.blink_apis.Operation\x12\x37\n\tconstants\x18\x06 \x03(\x0b\x32$.identifiability.blink_apis.Constant\x12\x43\n\x0fsource_location\x18\x1e \x01(\x0b\x32*.identifiability.blink_apis.SourceLocation\"\x83\x01\n\x07IDLType\x12\x17\n\x0fidl_type_string\x18\x01 \x01(\t\x12\x12\n\ndepends_on\x18\x02 \x03(\t\x12K\n\x13\x65xtended_attributes\x18\x03 \x01(\x0b\x32..identifiability.blink_apis.ExtendedAttributes\"\x98\x03\n\nDictionary\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x15\n\rinherits_from\x18\x02 \x01(\t\x12>\n\x07members\x18\x07 \x03(\x0b\x32-.identifiability.blink_apis.Dictionary.Member\x12\x43\n\x0fsource_location\x18\x1e \x01(\x0b\x32*.identifiability.blink_apis.SourceLocation\x1a\xdf\x01\n\x06Member\x12\x0c\n\x04name\x18\x01 \x01(\t\x12K\n\x13\x65xtended_attributes\x18\x02 \x01(\x0b\x32..identifiability.blink_apis.ExtendedAttributes\x12\x35\n\x08idl_type\x18\x03 \x01(\x0b\x32#.identifiability.blink_apis.IDLType\x12\x43\n\x0fsource_location\x18\x1e \x01(\x0b\x32*.identifiability.blink_apis.SourceLocation\"\xf8\x02\n\tOperation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12K\n\x13\x65xtended_attributes\x18\x02 \x01(\x0b\x32..identifiability.blink_apis.ExtendedAttributes\x12\x38\n\x0breturn_type\x18\x03 \x01(\x0b\x32#.identifiability.blink_apis.IDLType\x12\x36\n\targuments\x18\x04 \x03(\x0b\x32#.identifiability.blink_apis.IDLType\x12\x0e\n\x06static\x18\t \x01(\x08\x12I\n\x0fspecial_op_type\x18\x05 \x01(\x0e\x32\x30.identifiability.blink_apis.SpecialOperationType\x12\x43\n\x0fsource_location\x18\x1e \x01(\x0b\x32*.identifiability.blink_apis.SourceLocation\"\x8a\x02\n\tAttribute\x12\x0c\n\x04name\x18\x01 \x01(\t\x12K\n\x13\x65xtended_attributes\x18\x02 \x01(\x0b\x32..identifiability.blink_apis.ExtendedAttributes\x12\x35\n\x08idl_type\x18\x03 \x01(\x0b\x32#.identifiability.blink_apis.IDLType\x12\x11\n\tis_static\x18\x04 \x01(\x08\x12\x13\n\x0bis_readonly\x18\x05 \x01(\x08\x12\x43\n\x0fsource_location\x18\x1e \x01(\x0b\x32*.identifiability.blink_apis.SourceLocation\"\xf0\x01\n\x08\x43onstant\x12\x0c\n\x04name\x18\x01 \x01(\t\x12K\n\x13\x65xtended_attributes\x18\x02 \x01(\x0b\x32..identifiability.blink_apis.ExtendedAttributes\x12\x35\n\x08idl_type\x18\x03 \x01(\x0b\x32#.identifiability.blink_apis.IDLType\x12\r\n\x05value\x18\x04 \x01(\t\x12\x43\n\x0fsource_location\x18\x1e \x01(\x0b\x32*.identifiability.blink_apis.SourceLocation\"p\n\x0b\x45numeration\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06values\x18\x02 \x03(\t\x12\x43\n\x0fsource_location\x18\x1e \x01(\x0b\x32*.identifiability.blink_apis.SourceLocation\"\x93\x01\n\x07Typedef\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x35\n\x08idl_type\x18\x02 \x01(\x0b\x32#.identifiability.blink_apis.IDLType\x12\x43\n\x0fsource_location\x18\x1e \x01(\x0b\x32*.identifiability.blink_apis.SourceLocation\"0\n\x0eSourceLocation\x12\x10\n\x08\x66ilename\x18\x01 \x01(\t\x12\x0c\n\x04line\x18\x02 \x01(\x05*\x80\x01\n\x0fHighEntropyType\x12\x1c\n\x18HIGH_ENTROPY_UNSPECIFIED\x10\x00\x12\x17\n\x13HIGH_ENTROPY_BENIGN\x10\x01\x12\x1d\n\x19HIGH_ENTROPY_UNCLASSIFIED\x10\x02\x12\x17\n\x13HIGH_ENTROPY_DIRECT\x10\x03*|\n\x14SpecialOperationType\x12\x1a\n\x16SPECIAL_OP_UNSPECIFIED\x10\x00\x12\x15\n\x11SPECIAL_OP_GETTER\x10\x01\x12\x15\n\x11SPECIAL_OP_SETTER\x10\x02\x12\x1a\n\x16SPECIAL_OP_STRINGIFIER\x10\x03\x62\x06proto3')
 )
 
 _HIGHENTROPYTYPE = _descriptor.EnumDescriptor(
@@ -49,8 +49,8 @@ _HIGHENTROPYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2486,
-  serialized_end=2614,
+  serialized_start=3089,
+  serialized_end=3217,
 )
 _sym_db.RegisterEnumDescriptor(_HIGHENTROPYTYPE)
 
@@ -80,8 +80,8 @@ _SPECIALOPERATIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2616,
-  serialized_end=2740,
+  serialized_start=3219,
+  serialized_end=3343,
 )
 _sym_db.RegisterEnumDescriptor(_SPECIALOPERATIONTYPE)
 
@@ -364,6 +364,13 @@ _INTERFACELIKE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='source_location', full_name='identifiability.blink_apis.InterfaceLike.source_location', index=6,
+      number=30, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -377,7 +384,7 @@ _INTERFACELIKE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=963,
-  serialized_end=1267,
+  serialized_end=1336,
 )
 
 
@@ -421,8 +428,8 @@ _IDLTYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1270,
-  serialized_end=1401,
+  serialized_start=1339,
+  serialized_end=1470,
 )
 
 
@@ -454,6 +461,13 @@ _DICTIONARY_MEMBER = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='source_location', full_name='identifiability.blink_apis.Dictionary.Member.source_location', index=3,
+      number=30, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -466,8 +480,8 @@ _DICTIONARY_MEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1520,
-  serialized_end=1674,
+  serialized_start=1658,
+  serialized_end=1881,
 )
 
 _DICTIONARY = _descriptor.Descriptor(
@@ -498,6 +512,13 @@ _DICTIONARY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='source_location', full_name='identifiability.blink_apis.Dictionary.source_location', index=3,
+      number=30, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -510,8 +531,8 @@ _DICTIONARY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1404,
-  serialized_end=1674,
+  serialized_start=1473,
+  serialized_end=1881,
 )
 
 
@@ -564,6 +585,13 @@ _OPERATION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='source_location', full_name='identifiability.blink_apis.Operation.source_location', index=6,
+      number=30, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -576,8 +604,8 @@ _OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1677,
-  serialized_end=1984,
+  serialized_start=1884,
+  serialized_end=2260,
 )
 
 
@@ -623,6 +651,13 @@ _ATTRIBUTE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='source_location', full_name='identifiability.blink_apis.Attribute.source_location', index=5,
+      number=30, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -635,8 +670,8 @@ _ATTRIBUTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1987,
-  serialized_end=2184,
+  serialized_start=2263,
+  serialized_end=2529,
 )
 
 
@@ -675,6 +710,13 @@ _CONSTANT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='source_location', full_name='identifiability.blink_apis.Constant.source_location', index=4,
+      number=30, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -687,8 +729,8 @@ _CONSTANT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2187,
-  serialized_end=2358,
+  serialized_start=2532,
+  serialized_end=2772,
 )
 
 
@@ -713,6 +755,13 @@ _ENUMERATION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='source_location', full_name='identifiability.blink_apis.Enumeration.source_location', index=2,
+      number=30, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -725,8 +774,8 @@ _ENUMERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2360,
-  serialized_end=2403,
+  serialized_start=2774,
+  serialized_end=2886,
 )
 
 
@@ -751,6 +800,13 @@ _TYPEDEF = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='source_location', full_name='identifiability.blink_apis.Typedef.source_location', index=2,
+      number=30, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -763,8 +819,46 @@ _TYPEDEF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2405,
-  serialized_end=2483,
+  serialized_start=2889,
+  serialized_end=3036,
+)
+
+
+_SOURCELOCATION = _descriptor.Descriptor(
+  name='SourceLocation',
+  full_name='identifiability.blink_apis.SourceLocation',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='filename', full_name='identifiability.blink_apis.SourceLocation.filename', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='line', full_name='identifiability.blink_apis.SourceLocation.line', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3038,
+  serialized_end=3086,
 )
 
 _SNAPSHOT.fields_by_name['interfaces'].message_type = _INTERFACELIKE
@@ -781,20 +875,28 @@ _INTERFACELIKE.fields_by_name['extended_attributes'].message_type = _EXTENDEDATT
 _INTERFACELIKE.fields_by_name['attributes'].message_type = _ATTRIBUTE
 _INTERFACELIKE.fields_by_name['operations'].message_type = _OPERATION
 _INTERFACELIKE.fields_by_name['constants'].message_type = _CONSTANT
+_INTERFACELIKE.fields_by_name['source_location'].message_type = _SOURCELOCATION
 _IDLTYPE.fields_by_name['extended_attributes'].message_type = _EXTENDEDATTRIBUTES
 _DICTIONARY_MEMBER.fields_by_name['extended_attributes'].message_type = _EXTENDEDATTRIBUTES
 _DICTIONARY_MEMBER.fields_by_name['idl_type'].message_type = _IDLTYPE
+_DICTIONARY_MEMBER.fields_by_name['source_location'].message_type = _SOURCELOCATION
 _DICTIONARY_MEMBER.containing_type = _DICTIONARY
 _DICTIONARY.fields_by_name['members'].message_type = _DICTIONARY_MEMBER
+_DICTIONARY.fields_by_name['source_location'].message_type = _SOURCELOCATION
 _OPERATION.fields_by_name['extended_attributes'].message_type = _EXTENDEDATTRIBUTES
 _OPERATION.fields_by_name['return_type'].message_type = _IDLTYPE
 _OPERATION.fields_by_name['arguments'].message_type = _IDLTYPE
 _OPERATION.fields_by_name['special_op_type'].enum_type = _SPECIALOPERATIONTYPE
+_OPERATION.fields_by_name['source_location'].message_type = _SOURCELOCATION
 _ATTRIBUTE.fields_by_name['extended_attributes'].message_type = _EXTENDEDATTRIBUTES
 _ATTRIBUTE.fields_by_name['idl_type'].message_type = _IDLTYPE
+_ATTRIBUTE.fields_by_name['source_location'].message_type = _SOURCELOCATION
 _CONSTANT.fields_by_name['extended_attributes'].message_type = _EXTENDEDATTRIBUTES
 _CONSTANT.fields_by_name['idl_type'].message_type = _IDLTYPE
+_CONSTANT.fields_by_name['source_location'].message_type = _SOURCELOCATION
+_ENUMERATION.fields_by_name['source_location'].message_type = _SOURCELOCATION
 _TYPEDEF.fields_by_name['idl_type'].message_type = _IDLTYPE
+_TYPEDEF.fields_by_name['source_location'].message_type = _SOURCELOCATION
 DESCRIPTOR.message_types_by_name['Snapshot'] = _SNAPSHOT
 DESCRIPTOR.message_types_by_name['ExtendedAttributes'] = _EXTENDEDATTRIBUTES
 DESCRIPTOR.message_types_by_name['InterfaceLike'] = _INTERFACELIKE
@@ -805,6 +907,7 @@ DESCRIPTOR.message_types_by_name['Attribute'] = _ATTRIBUTE
 DESCRIPTOR.message_types_by_name['Constant'] = _CONSTANT
 DESCRIPTOR.message_types_by_name['Enumeration'] = _ENUMERATION
 DESCRIPTOR.message_types_by_name['Typedef'] = _TYPEDEF
+DESCRIPTOR.message_types_by_name['SourceLocation'] = _SOURCELOCATION
 DESCRIPTOR.enum_types_by_name['HighEntropyType'] = _HIGHENTROPYTYPE
 DESCRIPTOR.enum_types_by_name['SpecialOperationType'] = _SPECIALOPERATIONTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -894,6 +997,13 @@ Typedef = _reflection.GeneratedProtocolMessageType('Typedef', (_message.Message,
   # @@protoc_insertion_point(class_scope:identifiability.blink_apis.Typedef)
   })
 _sym_db.RegisterMessage(Typedef)
+
+SourceLocation = _reflection.GeneratedProtocolMessageType('SourceLocation', (_message.Message,), {
+  'DESCRIPTOR' : _SOURCELOCATION,
+  '__module__' : 'blink_apis_pb2'
+  # @@protoc_insertion_point(class_scope:identifiability.blink_apis.SourceLocation)
+  })
+_sym_db.RegisterMessage(SourceLocation)
 
 
 # @@protoc_insertion_point(module_scope)

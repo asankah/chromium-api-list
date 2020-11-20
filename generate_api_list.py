@@ -19,12 +19,13 @@ from subprocess import check_call, check_output
 from pathlib import Path
 from google.protobuf.text_format import Parse
 
-from blink_apis_pb2 import Snapshot, ExtendedAttributes, HighEntropyType, IDLType
+from blink_apis_pb2 import Snapshot, ExtendedAttributes, HighEntropyType, \
+    IDLType, SourceLocation
 
 import logging
 import sys
 from csv import DictWriter
-from typing import Dict
+from typing import Dict, List
 
 API_LIST_BUILD_TARGET = 'blink_apis'
 API_LIST_FILE = 'blink_apis.textpb'
@@ -51,6 +52,63 @@ def GetIdlType(idl_type: IDLType, d: Dict[str, str]) -> Dict[str, str]:
     return d
 
 
+def GetSourceLocation(source_location: SourceLocation,
+                      d: Dict[str, str]) -> Dict[str, str]:
+    if source_location.filename:
+        d['source_file'] = source_location.filename
+    if source_location.line and source_location.line > 0:
+        d['source_line'] = str(source_location.line)
+
+
+def ProtobufToCanonicalList(snapshot: Snapshot) -> Dict[str, str]:
+    l: List[Dict[str, str]] = []
+
+    for interface in snapshot.interfaces:
+        d = {'interface': interface.name, 'entity_type': 'interface'}
+        GetExtendedAttributes(interface.extended_attributes, d)
+        GetSourceLocation(interface.source_location, d)
+        l.append(d)
+
+        for attr in interface.attributes:
+            d = {
+                'interface': interface.name,
+                'name': attr.name,
+                'entity_type': 'attribute'
+            }
+            GetExtendedAttributes(attr.extended_attributes, d)
+            GetIdlType(attr.idl_type, d)
+            GetSourceLocation(attr.source_location, d)
+            l.append(d)
+
+        for op in interface.operations:
+            d = {
+                'interface': interface.name,
+                'name': op.name,
+                'entity_type': 'operation'
+            }
+            GetExtendedAttributes(op.extended_attributes, d)
+            GetIdlType(op.return_type, d)
+            GetSourceLocation(op.source_location, d)
+            d['arguments'] = '(' + ','.join(
+                [t.idl_type_string for t in op.arguments]) + ')'
+            l.append(d)
+
+        for c in interface.constants:
+            d = {
+                'interface': interface.name,
+                'name': c.name,
+                'entity_type': 'constant'
+            }
+            GetIdlType(c.idl_type, d)
+            GetSourceLocation(c.source_location, d)
+            l.append(d)
+
+    def KeyFunc(d: Dict[str, str]):
+        return d.get('interface', '') + ':' + d.get('name', '')
+
+    return sorted(l, key=KeyFunc)
+
+
 def WriteSnapshotAsCsv(snapshot: Snapshot, csv_path: Path):
     with csv_path.open('w', encoding='utf-8') as f:
         fields = [
@@ -60,41 +118,7 @@ def WriteSnapshotAsCsv(snapshot: Snapshot, csv_path: Path):
         ]
         writer = DictWriter(f, fieldnames=fields)
         writer.writeheader()
-        for interface in snapshot.interfaces:
-            d = {'interface': interface.name, 'entity_type': 'interface'}
-            GetExtendedAttributes(interface.extended_attributes, d)
-            writer.writerow(d)
-
-            for attr in interface.attributes:
-                d = {
-                    'interface': interface.name,
-                    'name': attr.name,
-                    'entity_type': 'attribute'
-                }
-                GetExtendedAttributes(attr.extended_attributes, d)
-                GetIdlType(attr.idl_type, d)
-                writer.writerow(d)
-
-            for op in interface.operations:
-                d = {
-                    'interface': interface.name,
-                    'name': op.name,
-                    'entity_type': 'operation'
-                }
-                GetExtendedAttributes(op.extended_attributes, d)
-                GetIdlType(op.return_type, d)
-                d['arguments'] = '(' + ','.join(
-                    [t.idl_type_string for t in op.arguments]) + ')'
-                writer.writerow(d)
-
-            for c in interface.constants:
-                d = {
-                    'interface': interface.name,
-                    'name': c.name,
-                    'entity_type': 'constant'
-                }
-                GetIdlType(c.idl_type, d)
-                writer.writerow(d)
+        writer.writerows(ProtobufToCanonicalList(snapshot))
 
 
 def Main():
