@@ -17,13 +17,84 @@
 from argparse import ArgumentParser
 from subprocess import check_call, check_output
 from pathlib import Path
+from google.protobuf.text_format import Parse
+
+from blink_apis_pb2 import Snapshot, ExtendedAttributes, HighEntropyType, IDLType
 
 import logging
 import sys
+from csv import DictWriter
+from typing import Dict
 
-API_LIST_BUILD_TARGET = 'generate_high_entropy_list'
-API_LIST_FILE = 'high_entropy_list.csv'
-API_LIST_TARGET_FILE = 'chromium_api_list.csv'
+API_LIST_BUILD_TARGET = 'blink_apis'
+API_LIST_FILE = 'blink_apis.textpb'
+API_LIST_TARGET_CSV_FILE = 'chromium_api_list.csv'
+
+
+def GetExtendedAttributes(exts: ExtendedAttributes,
+                          d: Dict[str, str]) -> Dict[str, str]:
+    if exts.secure_context:
+        d['secure_context'] = 'True'
+    if exts.high_entropy == HighEntropyType.HIGH_ENTROPY_UNCLASSIFIED:
+        d['high_entropy'] = '(True)'
+    elif exts.high_entropy == HighEntropyType.HIGH_ENTROPY_DIRECT:
+        d['high_entropy'] = 'Direct'
+    if exts.use_counter:
+        d['use_counter'] = exts.use_counter
+    if exts.secure_context:
+        d['secure_context'] = 'True'
+    return d
+
+
+def GetIdlType(idl_type: IDLType, d: Dict[str, str]) -> Dict[str, str]:
+    d['idl_type'] = idl_type.idl_type_string
+    return d
+
+
+def WriteSnapshotAsCsv(snapshot: Snapshot, csv_path: Path):
+    with csv_path.open('w', encoding='utf-8') as f:
+        fields = [
+            'interface', 'name', 'entity_type', 'arguments', 'idl_type',
+            'syntactic_form', 'use_counter', 'secure_context', 'high_entropy',
+            'source_file', 'source_line'
+        ]
+        writer = DictWriter(f, fieldnames=fields)
+        writer.writeheader()
+        for interface in snapshot.interfaces:
+            d = {'interface': interface.name, 'entity_type': 'interface'}
+            GetExtendedAttributes(interface.extended_attributes, d)
+            writer.writerow(d)
+
+            for attr in interface.attributes:
+                d = {
+                    'interface': interface.name,
+                    'name': attr.name,
+                    'entity_type': 'attribute'
+                }
+                GetExtendedAttributes(attr.extended_attributes, d)
+                GetIdlType(attr.idl_type, d)
+                writer.writerow(d)
+
+            for op in interface.operations:
+                d = {
+                    'interface': interface.name,
+                    'name': op.name,
+                    'entity_type': 'operation'
+                }
+                GetExtendedAttributes(op.extended_attributes, d)
+                GetIdlType(op.return_type, d)
+                d['arguments'] = '(' + ','.join(
+                    [t.idl_type_string for t in op.arguments]) + ')'
+                writer.writerow(d)
+
+            for c in interface.constants:
+                d = {
+                    'interface': interface.name,
+                    'name': c.name,
+                    'entity_type': 'constant'
+                }
+                GetIdlType(c.idl_type, d)
+                writer.writerow(d)
 
 
 def Main():
@@ -70,17 +141,16 @@ def Main():
         logging.critical('Unexpected file type for {}'.format(api_list_file))
         sys.exit(4)
 
-    target_file = args.target_path.joinpath(API_LIST_TARGET_FILE)
+    target_file = args.target_path.joinpath(API_LIST_TARGET_CSV_FILE)
     with api_list_file.open('r') as f:
-        unordered_content = f.readlines()
-        contents = [unordered_content[0]] + sorted(unordered_content[1:])
-        with target_file.open('w') as w:
-            w.writelines(contents)
+        snapshot = Snapshot()
+        Parse(f.read(), snapshot)
+        WriteSnapshotAsCsv(snapshot, target_file)
 
     if args.commit:
-        commit_hash = str(
-            check_output(['git', 'rev-parse', 'HEAD'],
-                         cwd=args.build_path), encoding='utf-8').strip()
+        commit_hash = str(check_output(['git', 'rev-parse', 'HEAD'],
+                                       cwd=args.build_path),
+                          encoding='utf-8').strip()
         commit_position = str(check_output(
             ['git', 'footers', '--position', 'HEAD'],
             cwd=args.build_path.parent.parent),
@@ -95,9 +165,11 @@ def Main():
             logging.error(
                 'There is more than one changed file in the repository. ' +
                 'Can\'t commit changes.')
-        elif git_status[0].split() != ['M', API_LIST_TARGET_FILE]:
+        elif git_status[0].split() != ['M', API_LIST_TARGET_CSV_FILE]:
             logging.error(
-                f'Unexpected changes found in the repository: "{git_status[0]}"')
+                f'Unexpected changes found in the repository:"{git_status[0]}"'
+                '. Those changes should be committed separately from the ones '
+                'introduced by this tool')
         else:
             commit_message = f'''Blink API list update from {commit_position!s}
 
@@ -108,7 +180,7 @@ list was generated.
 '''
             check_call([
                 'git', 'commit', '-m', commit_message, '--',
-                API_LIST_TARGET_FILE
+                API_LIST_TARGET_CSV_FILE
             ],
                        cwd=args.target_path)
 
