@@ -24,6 +24,7 @@ from blink_apis_pb2 import Snapshot, ExtendedAttributes, HighEntropyType, \
 
 import logging
 import sys
+import shutil
 from csv import DictWriter
 from typing import Dict, List
 
@@ -171,6 +172,8 @@ def Main():
         Parse(f.read(), snapshot)
         WriteSnapshotAsCsv(snapshot, target_file)
 
+    shutil.copy(api_list_file, args.target_path)
+
     if args.commit:
         commit_hash = str(check_output(['git', 'rev-parse', 'HEAD'],
                                        cwd=args.build_path),
@@ -185,11 +188,9 @@ def Main():
                          encoding='utf-8').splitlines()
         if len(git_status) == 0:
             logging.info('No change to API list')
-        elif len(git_status) != 1:
-            logging.error(
-                'There is more than one changed file in the repository. ' +
-                'Can\'t commit changes.')
-        elif git_status[0].split() != ['M', API_LIST_TARGET_CSV_FILE]:
+        elif git_status[1].split() != [
+                'M', API_LIST_TARGET_CSV_FILE
+        ] or git_status[0].split() != ['M', API_LIST_FILE]:
             logging.error(
                 f'Unexpected changes found in the repository:"{git_status[0]}"'
                 '. Those changes should be committed separately from the ones '
