@@ -18,9 +18,11 @@ from argparse import ArgumentParser
 from subprocess import check_call, check_output
 from pathlib import Path
 from google.protobuf.text_format import Parse
+from google.protobuf.descriptor import FieldDescriptor
+from google.protobuf.message import Message
 
 from blink_apis_pb2 import Snapshot, ExtendedAttributes, HighEntropyType, \
-    IDLType, SourceLocation
+    IDLType, SourceLocation, InterfaceLike, Dictionary, Enumeration, Operation, Typedef
 
 import logging
 import sys
@@ -110,6 +112,30 @@ def ProtobufToCanonicalList(snapshot: Snapshot) -> Dict[str, str]:
     return sorted(l, key=KeyFunc)
 
 
+def CanonicalizeSnapshot(snapshot: Snapshot):
+    def NameOrSelf(message: Message):
+        return message.name
+
+    def Canonicalize(message: Message):
+        for (fd, v) in message.ListFields():
+            if fd.label != fd.LABEL_REPEATED:
+                continue
+            # Order of arguments is fixed.
+            if fd.name == 'arguments':
+                continue
+            for item in v:
+                if isinstance(item, Message):
+                    Canonicalize(item)
+            if len(v) == 0:
+                continue
+            if isinstance(v[0], Message):
+                v.sort(key=NameOrSelf)
+            else:
+                v.sort()
+
+    Canonicalize(snapshot)
+
+
 def WriteSnapshotAsCsv(snapshot: Snapshot, csv_path: Path):
     with csv_path.open('w', encoding='utf-8') as f:
         fields = [
@@ -170,6 +196,7 @@ def Main():
     with api_list_file.open('r') as f:
         snapshot = Snapshot()
         Parse(f.read(), snapshot)
+        CanonicalizeSnapshot(snapshot)
         WriteSnapshotAsCsv(snapshot, target_file)
 
     shutil.copy(api_list_file, args.target_path)
