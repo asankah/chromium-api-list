@@ -17,10 +17,8 @@
 from argparse import ArgumentParser
 from subprocess import check_call, check_output
 from pathlib import Path
-from google.protobuf.text_format import Parse
-from google.protobuf.descriptor import FieldDescriptor
+from google.protobuf.text_format import Parse, MessageToString
 from google.protobuf.message import Message
-
 from blink_apis_pb2 import Snapshot, ExtendedAttributes, HighEntropyType, \
     IDLType, SourceLocation, InterfaceLike, Dictionary, Enumeration, Operation, Typedef
 
@@ -192,37 +190,46 @@ def Main():
         logging.critical('Unexpected file type for {}'.format(api_list_file))
         sys.exit(4)
 
+    commit_hash = str(check_output(['git', 'rev-parse', 'HEAD'],
+                                   cwd=args.build_path),
+                      encoding='utf-8').strip()
+    commit_position = str(check_output(
+        ['git', 'footers', '--position', 'HEAD'],
+        cwd=args.build_path.parent.parent),
+                          encoding='utf-8').strip()
+
     target_file = args.target_path.joinpath(API_LIST_TARGET_CSV_FILE)
     with api_list_file.open('r') as f:
         snapshot = Snapshot()
         Parse(f.read(), snapshot)
-        CanonicalizeSnapshot(snapshot)
-        WriteSnapshotAsCsv(snapshot, target_file)
 
-    shutil.copy(api_list_file, args.target_path)
+    if not snapshot.chromium_revision:
+        snapshot.chromium_revision = commit_hash
+    CanonicalizeSnapshot(snapshot)
+    WriteSnapshotAsCsv(snapshot, target_file)
+
+    with args.target_path.joinpath(API_LIST_FILE).open('w') as f:
+        f.write(MessageToString(snapshot, as_utf8=True, indent=2))
 
     if args.commit:
-        commit_hash = str(check_output(['git', 'rev-parse', 'HEAD'],
-                                       cwd=args.build_path),
-                          encoding='utf-8').strip()
-        commit_position = str(check_output(
-            ['git', 'footers', '--position', 'HEAD'],
-            cwd=args.build_path.parent.parent),
-                              encoding='utf-8').strip()
-
         git_status = str(check_output(['git', 'status', '--porcelain=v1'],
                                       cwd=args.target_path),
                          encoding='utf-8').splitlines()
+        should_commit = True
+
         if len(git_status) == 0:
             logging.info('No change to API list')
-        elif git_status[1].split() != [
-                'M', API_LIST_TARGET_CSV_FILE
-        ] or git_status[0].split() != ['M', API_LIST_FILE]:
-            logging.error(
-                f'Unexpected changes found in the repository:"{git_status[0]}"'
-                '. Those changes should be committed separately from the ones '
-                'introduced by this tool')
-        else:
+            should_commit = False
+
+        for s in git_status:
+            if s.split()[1] not in [API_LIST_FILE, API_LIST_TARGET_CSV_FILE]:
+                logging.error(
+                    f'Unexpected changes found in the repository:"{s}"'
+                    '. Those changes should be committed separately from the '
+                    'ones introduced by this tool')
+                should_commit = False
+                break
+        if should_commit:
             commit_message = f'''Blink API list update from {commit_position!s}
 
 Source Chromium revision is https://crrev.com/{commit_hash!s}
@@ -232,7 +239,7 @@ list was generated.
 '''
             check_call([
                 'git', 'commit', '-m', commit_message, '--',
-                API_LIST_TARGET_CSV_FILE
+                API_LIST_TARGET_CSV_FILE, API_LIST_FILE
             ],
                        cwd=args.target_path)
 
