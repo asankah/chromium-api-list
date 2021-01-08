@@ -932,11 +932,11 @@ ContentIndexEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/co
 ConvolverNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/convolver_node.idl,30
 ConvolverNode,buffer,attribute,,AudioBufferOrNull,,,,,third_party/blink/renderer/modules/webaudio/convolver_node.idl,
 ConvolverNode,normalize,attribute,,Boolean,,,,,third_party/blink/renderer/modules/webaudio/convolver_node.idl,
-CookieChangeEvent,,interface,,,,,True,,third_party/blink/renderer/modules/cookie_store/cookie_change_event.idl,15
+CookieChangeEvent,,interface,,,,,True,,third_party/blink/renderer/modules/cookie_store/cookie_change_event.idl,14
 CookieChangeEvent,changed,attribute,,CookieListItemArray,,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/cookie_change_event.idl,
 CookieChangeEvent,deleted,attribute,,CookieListItemArray,,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/cookie_change_event.idl,
 CookieChangeEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
-CookieStore,,interface,,,,,True,,third_party/blink/renderer/modules/cookie_store/cookie_store.idl,11
+CookieStore,,interface,,,,,True,,third_party/blink/renderer/modules/cookie_store/cookie_store.idl,10
 CookieStore,delete,operation,(USVString),VoidPromise,,V8CookieStore_Delete_Method,,,third_party/blink/renderer/modules/cookie_store/cookie_store.idl,
 CookieStore,delete,operation,(CookieStoreDeleteOptions),VoidPromise,,V8CookieStore_Delete_Method,,,third_party/blink/renderer/modules/cookie_store/cookie_store.idl,
 CookieStore,get,operation,(USVString),CookieListItemOrNullPromise,,V8CookieStore_Get_Method,,,third_party/blink/renderer/modules/cookie_store/cookie_store.idl,
@@ -1951,7 +1951,7 @@ EventTarget,,interface,,,,,,,third_party/blink/renderer/core/dom/events/event_ta
 EventTarget,addEventListener,operation,"(String,EventListenerOrNull,AddEventListenerOptionsOrBoolean)",Void,,,,,third_party/blink/renderer/core/dom/events/event_target.idl,
 EventTarget,dispatchEvent,operation,(Event),Boolean,,,,,third_party/blink/renderer/core/dom/events/event_target.idl,
 EventTarget,removeEventListener,operation,"(String,EventListenerOrNull,EventListenerOptionsOrBoolean)",Void,,,,,third_party/blink/renderer/core/dom/events/event_target.idl,
-ExtendableCookieChangeEvent,,interface,,,,,,,third_party/blink/renderer/modules/cookie_store/extendable_cookie_change_event.idl,13
+ExtendableCookieChangeEvent,,interface,,,,,,,third_party/blink/renderer/modules/cookie_store/extendable_cookie_change_event.idl,12
 ExtendableCookieChangeEvent,changed,attribute,,CookieListItemArray,,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/extendable_cookie_change_event.idl,
 ExtendableCookieChangeEvent,deleted,attribute,,CookieListItemArray,,CookieStoreAPI,,,third_party/blink/renderer/modules/cookie_store/extendable_cookie_change_event.idl,
 ExtendableCookieChangeEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
@@ -3560,8 +3560,6 @@ InternalRuntimeFlags,contextMenuEnabled,attribute,,Boolean,,,,,third_party/blink
 InternalRuntimeFlags,conversionMeasurementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,conversionMeasurementInfraSupportEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cookieDeprecationMessagesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cookieStoreDocumentEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cookieStoreWorkerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cookiesWithoutSameSiteMustBeSecureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cooperativeSchedulingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,corsRFC1918Enabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4018,6 +4016,7 @@ InternalSettingsGenerated,setAriaModalPrunesAXTree,operation,(Boolean),Void,,,,,
 InternalSettingsGenerated,setAvailableHoverTypes,operation,(Long),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setAvailablePointerTypes,operation,(Long),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setBarrelButtonForDragEnabled,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
+InternalSettingsGenerated,setBypassCSP,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setCaretBrowsingEnabled,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setCookieEnabled,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setDNSPrefetchingEnabled,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
@@ -4120,7 +4119,9 @@ InternalSettingsGenerated,setStrictPowerfulFeatureRestrictions,operation,(Boolea
 InternalSettingsGenerated,setStrictlyBlockBlockableMixedContent,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setSupportsMultipleWindows,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setSyncXHRInDocumentsEnabled,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
+InternalSettingsGenerated,setTargetBlankImpliesNoOpenerEnabledWillBeRemoved,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setTextAreasAreResizable,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
+InternalSettingsGenerated,setTextAutosizingEnabled,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setTextTrackBackgroundColor,operation,(String),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setTextTrackFontFamily,operation,(String),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setTextTrackFontStyle,operation,(String),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
@@ -7927,6 +7928,7 @@ VideoDecoder,configure,operation,(VideoDecoderConfig),Void,,,,,third_party/blink
 VideoDecoder,decode,operation,(EncodedVideoChunk),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,decodeQueueSize,attribute,,Long,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,flush,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
+VideoDecoder,isConfigSupported,operation,(VideoDecoderConfig),BooleanPromise,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,reset,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,state,attribute,,CodecState,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoEncoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,11
