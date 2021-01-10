@@ -9760,7 +9760,7 @@ Window,onwebkitanimationiteration,attribute,,EventHandlerNonNullOrNull,,,,,third
 Window,onwebkitanimationstart,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Window,onwebkittransitionend,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Window,onwheel,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
-Window,open,operation,"(USVString,String,String)",WindowOrNull,,,,,third_party/blink/renderer/core/frame/window.idl,
+Window,open,operation,"(USVString,String,String,ImpressionParams)",WindowOrNull,,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,openDatabase,operation,"(String,String,String,UnsignedLong,DatabaseCallbackOrNull)",Database,,OpenWebDatabase,,,third_party/blink/renderer/modules/webdatabase/window_web_database.idl,
 Window,opener,attribute,,Window,,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,orientation,attribute,,Long,,WindowOrientation,,Direct,third_party/blink/renderer/core/frame/window.idl,
