@@ -199,10 +199,19 @@ AudioDecoder,configure,operation,(AudioDecoderConfig),Void,,,,,third_party/blink
 AudioDecoder,decode,operation,(EncodedAudioChunk),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
 AudioDecoder,decodeQueueSize,attribute,,Long,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
 AudioDecoder,flush,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
+AudioDecoder,isConfigSupported,operation,(AudioDecoderConfig),BooleanPromise,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
 AudioDecoder,reset,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
 AudioDecoder,state,attribute,,CodecState,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
 AudioDestinationNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/audio_destination_node.idl,28
 AudioDestinationNode,maxChannelCount,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webaudio/audio_destination_node.idl,
+AudioEncoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,11
+AudioEncoder,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
+AudioEncoder,configure,operation,(AudioEncoderConfig),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
+AudioEncoder,encode,operation,(AudioFrame),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
+AudioEncoder,encodeQueueSize,attribute,,Long,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
+AudioEncoder,flush,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
+AudioEncoder,reset,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
+AudioEncoder,state,attribute,,CodecState,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioFrame,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,9
 AudioFrame,buffer,attribute,,AudioBuffer,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,
 AudioFrame,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,
@@ -4766,6 +4775,7 @@ MediaQueryListEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/
 MediaQueryListEvent,matches,attribute,,Boolean,,,,,third_party/blink/renderer/core/css/media_query_list_event.idl,
 MediaQueryListEvent,media,attribute,,String,,,,,third_party/blink/renderer/core/css/media_query_list_event.idl,
 MediaRecorder,,interface,,,,,,,third_party/blink/renderer/modules/mediarecorder/media_recorder.idl,12
+MediaRecorder,audioBitrateMode,attribute,,BitrateMode,,,,,third_party/blink/renderer/modules/mediarecorder/media_recorder.idl,
 MediaRecorder,audioBitsPerSecond,attribute,,UnsignedLong,,MediaRecorder_AudioBitsPerSecond,,Direct,third_party/blink/renderer/modules/mediarecorder/media_recorder.idl,
 MediaRecorder,isTypeSupported,operation,(String),Boolean,,,,,third_party/blink/renderer/modules/mediarecorder/media_recorder.idl,
 MediaRecorder,mimeType,attribute,,String,,MediaRecorder_MimeType,,Direct,third_party/blink/renderer/modules/mediarecorder/media_recorder.idl,
@@ -5598,7 +5608,7 @@ Performance,getEntriesByName,operation,"(String,String)",PerformanceEntrySequenc
 Performance,getEntriesByType,operation,(String),PerformanceEntrySequence,,PerformanceTimeline,,,third_party/blink/renderer/core/timing/performance.idl,
 Performance,mark,operation,"(String,PerformanceMarkOptions)",PerformanceMark,,UserTiming,,,third_party/blink/renderer/core/timing/performance.idl,
 Performance,measure,operation,"(String,StringOrPerformanceMeasureOptions,String)",PerformanceMeasure,,UserTiming,,,third_party/blink/renderer/core/timing/performance.idl,
-Performance,measureMemory,operation,(),MemoryMeasurementPromise,,MeasureMemory,,,third_party/blink/renderer/core/timing/performance.idl,
+Performance,measureUserAgentSpecificMemory,operation,(),MemoryMeasurementPromise,,MeasureMemory,,,third_party/blink/renderer/core/timing/performance.idl,
 Performance,memory,attribute,,MemoryInfo,,V8Performance_Memory_AttributeGetter,,,third_party/blink/renderer/core/timing/performance.idl,
 Performance,navigation,attribute,,PerformanceNavigation,,V8Performance_Navigation_AttributeGetter,,,third_party/blink/renderer/core/timing/performance.idl,
 Performance,now,operation,(),Double,,,,,third_party/blink/renderer/core/timing/performance.idl,
