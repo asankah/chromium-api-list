@@ -2125,7 +2125,7 @@ FontFaceSetLoadEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer
 FontIterator,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_iterator.idl,13
 FontIterator,next,operation,(),AnyPromise,,,,,third_party/blink/renderer/modules/font_access/font_iterator.idl,
 FontManager,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_manager.idl,10
-FontManager,query,operation,(),Object,,V8FontManager_Query_Method,,,third_party/blink/renderer/modules/font_access/font_manager.idl,
+FontManager,query,operation,(QueryOptions),Object,,V8FontManager_Query_Method,,,third_party/blink/renderer/modules/font_access/font_manager.idl,
 FontManager,showFontChooser,operation,(QueryOptions),FontMetadataSequencePromise,,,,,third_party/blink/renderer/modules/font_access/font_manager.idl,
 FontMetadata,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_metadata.idl,10
 FontMetadata,blob,operation,(),BlobPromise,,V8FontMetadata_Blob_Method,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
@@ -2912,6 +2912,7 @@ HTMLLinkElement,rel,attribute,,String,,,,,third_party/blink/renderer/core/html/h
 HTMLLinkElement,relList,attribute,,DOMTokenList,,,,,third_party/blink/renderer/core/html/html_link_element.idl,
 HTMLLinkElement,resources,attribute,,DOMTokenList,,,,,third_party/blink/renderer/core/html/html_link_element.idl,
 HTMLLinkElement,rev,attribute,,String,,,,,third_party/blink/renderer/core/html/html_link_element.idl,
+HTMLLinkElement,scopes,attribute,,DOMTokenList,,,,,third_party/blink/renderer/core/html/html_link_element.idl,
 HTMLLinkElement,sheet,attribute,,StyleSheetOrNull,,,,,third_party/blink/renderer/core/html/html_link_element.idl,
 HTMLLinkElement,sizes,attribute,,DOMTokenList,,,,,third_party/blink/renderer/core/html/html_link_element.idl,
 HTMLLinkElement,target,attribute,,String,,,,,third_party/blink/renderer/core/html/html_link_element.idl,
@@ -3713,7 +3714,6 @@ InternalRuntimeFlags,layoutNGBlockFragmentationEnabled,attribute,,Boolean,,,,,th
 InternalRuntimeFlags,layoutNGEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGFieldsetEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGForControlsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,layoutNGFragmentItemEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGFragmentTraversalEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGFullPositionForPointEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGGridEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3851,6 +3851,7 @@ InternalRuntimeFlags,rtcAudioJitterBufferRtxHandlingEnabled,attribute,,Boolean,,
 InternalRuntimeFlags,rtcIceTransportExtensionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,rtcInsertableStreamsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,rtcQuicTransportEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,rtcRtpHeaderExtensionControlEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,rtcRtpTransceiverStopEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,rtcStatsRelativePacketArrivalDelayEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,rtcSvcScalabilityModeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -6094,10 +6095,13 @@ RTCRtpSender,transport,attribute,,RTCDtlsTransportOrNull,,,,,third_party/blink/r
 RTCRtpTransceiver,,interface,,,,,,,third_party/blink/renderer/modules/peerconnection/rtc_rtp_transceiver.idl,16
 RTCRtpTransceiver,currentDirection,attribute,,RTCRtpTransceiverDirectionOrNull,,,,,third_party/blink/renderer/modules/peerconnection/rtc_rtp_transceiver.idl,
 RTCRtpTransceiver,direction,attribute,,RTCRtpTransceiverDirection,,V8RTCRtpTransceiver_Direction_AttributeGetter,,,third_party/blink/renderer/modules/peerconnection/rtc_rtp_transceiver.idl,
+RTCRtpTransceiver,headerExtensionsNegotiated,attribute,,RTCRtpHeaderExtensionCapabilityArray,,,,,third_party/blink/renderer/modules/peerconnection/rtc_rtp_transceiver.idl,
+RTCRtpTransceiver,headerExtensionsToOffer,attribute,,RTCRtpHeaderExtensionCapabilityArray,,,,,third_party/blink/renderer/modules/peerconnection/rtc_rtp_transceiver.idl,
 RTCRtpTransceiver,mid,attribute,,StringOrNull,,,,,third_party/blink/renderer/modules/peerconnection/rtc_rtp_transceiver.idl,
 RTCRtpTransceiver,receiver,attribute,,RTCRtpReceiver,,,,,third_party/blink/renderer/modules/peerconnection/rtc_rtp_transceiver.idl,
 RTCRtpTransceiver,sender,attribute,,RTCRtpSender,,,,,third_party/blink/renderer/modules/peerconnection/rtc_rtp_transceiver.idl,
 RTCRtpTransceiver,setCodecPreferences,operation,(RTCRtpCodecCapabilitySequence),Void,,,,,third_party/blink/renderer/modules/peerconnection/rtc_rtp_transceiver.idl,
+RTCRtpTransceiver,setOfferedRtpHeaderExtensions,operation,(RTCRtpHeaderExtensionCapabilitySequence),Void,,,,,third_party/blink/renderer/modules/peerconnection/rtc_rtp_transceiver.idl,
 RTCRtpTransceiver,stop,operation,(),Void,,V8RTCRtpTransceiver_Stop_Method,,,third_party/blink/renderer/modules/peerconnection/rtc_rtp_transceiver.idl,
 RTCRtpTransceiver,stopped,attribute,,Boolean,,V8RTCRtpTransceiver_Stopped_AttributeGetter,,,third_party/blink/renderer/modules/peerconnection/rtc_rtp_transceiver.idl,
 RTCSctpTransport,,interface,,,,,,,third_party/blink/renderer/modules/peerconnection/rtc_sctp_transport.idl,16
