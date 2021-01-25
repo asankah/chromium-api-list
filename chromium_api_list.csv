@@ -5104,7 +5104,7 @@ Navigator,getUserMedia,operation,"(MediaStreamConstraints,NavigatorUserMediaSucc
 Navigator,gpu,attribute,,GPU,,,,,third_party/blink/renderer/modules/webgpu/navigator_gpu.idl,
 Navigator,hardwareConcurrency,attribute,,UnsignedLongLong,,NavigatorHardwareConcurrency,,Direct,third_party/blink/renderer/core/frame/navigator_concurrent_hardware.idl,
 Navigator,hid,attribute,,HID,,,,,third_party/blink/renderer/modules/hid/navigator_hid.idl,
-Navigator,id,attribute,,WebID,,,,,third_party/blink/renderer/modules/webid/navigator_web_id.idl,
+Navigator,id,attribute,,WebId,,,,,third_party/blink/renderer/modules/webid/navigator_web_id.idl,
 Navigator,ink,attribute,,Ink,,,,,third_party/blink/renderer/modules/delegated_ink/navigator_ink.idl,
 Navigator,javaEnabled,operation,(),Boolean,,V8Navigator_JavaEnabled_Method,,Direct,third_party/blink/renderer/modules/plugins/navigator_plugins.idl,
 Navigator,keyboard,attribute,,Keyboard,,,True,,third_party/blink/renderer/modules/keyboard/navigator_keyboard.idl,
@@ -9563,9 +9563,9 @@ WebGLVideoTexture,shareVideoImageWEBGL,operation,"(UnsignedLong,HTMLVideoElement
 WebGLWebCodecsVideoFrame,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl_webcodecs_video_frame.idl,10
 WebGLWebCodecsVideoFrame,importVideoFrame,operation,(VideoFrame),WebGLWebCodecsVideoFrameHandle,,,,,third_party/blink/renderer/modules/webgl/webgl_webcodecs_video_frame.idl,
 WebGLWebCodecsVideoFrame,releaseVideoFrame,operation,(WebGLWebCodecsVideoFrameHandle),Boolean,,,,,third_party/blink/renderer/modules/webgl/webgl_webcodecs_video_frame.idl,
-WebID,,interface,,,,,True,,third_party/blink/renderer/modules/webid/web_id.idl,11
-WebID,get,operation,(WebIDRequestOptions),StringPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
-WebID,provide,operation,(String),VoidPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
+WebId,,interface,,,,,True,,third_party/blink/renderer/modules/webid/web_id.idl,11
+WebId,get,operation,(WebIdRequestOptions),StringPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
+WebId,provide,operation,(String),VoidPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
 WebSocket,,interface,,,,,,,third_party/blink/renderer/modules/websockets/websocket.idl,40
 WebSocket,CLOSED,constant,,UnsignedShort,,,,,third_party/blink/renderer/modules/websockets/websocket.idl,48
 WebSocket,CLOSING,constant,,UnsignedShort,,,,,third_party/blink/renderer/modules/websockets/websocket.idl,47
@@ -9796,6 +9796,7 @@ Window,onwebkitanimationstart,attribute,,EventHandlerNonNullOrNull,,,,,third_par
 Window,onwebkittransitionend,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Window,onwheel,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Window,open,operation,"(USVString,String,String,ImpressionParams)",WindowOrNull,,,,,third_party/blink/renderer/core/frame/window.idl,
+Window,open,operation,"(USVString,String,String,Boolean)",WindowOrNull,,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,openDatabase,operation,"(String,String,String,UnsignedLong,DatabaseCallbackOrNull)",Database,,OpenWebDatabase,,,third_party/blink/renderer/modules/webdatabase/window_web_database.idl,
 Window,opener,attribute,,Window,,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,orientation,attribute,,Long,,WindowOrientation,,Direct,third_party/blink/renderer/core/frame/window.idl,
