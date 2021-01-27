@@ -2145,6 +2145,7 @@ FontMetadata,blob,operation,(),BlobPromise,,V8FontMetadata_Blob_Method,,,third_p
 FontMetadata,family,attribute,,USVString,,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontMetadata,fullName,attribute,,USVString,,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontMetadata,postscriptName,attribute,,USVString,,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
+FontMetadata,style,attribute,,USVString,,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontTableMap,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_table_map.idl,10
 FormData,,interface,,,,,,,third_party/blink/renderer/core/html/forms/form_data.idl,37
 FormData,append,operation,"(USVString,USVString)",Void,,,,,third_party/blink/renderer/core/html/forms/form_data.idl,
@@ -3666,6 +3667,7 @@ InternalRuntimeFlags,displayCapturePermissionPolicyEnabled,attribute,,Boolean,,,
 InternalRuntimeFlags,displayCutoutAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,documentCookieEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,documentDomainEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,documentPolicyDocumentDomainEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,documentPolicyEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,documentPolicyNegotiationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,documentPolicySyncXHREnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3721,7 +3723,6 @@ InternalRuntimeFlags,idbPutAllEnabled,attribute,,Boolean,,,,,third_party/blink/r
 InternalRuntimeFlags,idbRelaxedDurabilityEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,idleDetectionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,ignoreCrossOriginWindowWhenNamedAccessOnWindowEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,imageOrientationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,implicitRootScrollerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,importMapsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,inertAttributeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
