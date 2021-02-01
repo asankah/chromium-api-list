@@ -825,7 +825,7 @@ CanvasRenderingContext2D,scale,operation,"(UnrestrictedDouble,UnrestrictedDouble
 CanvasRenderingContext2D,scrollPathIntoView,operation,(Path2D),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,setLineDash,operation,(UnrestrictedDoubleSequence),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,setTransform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
-CanvasRenderingContext2D,setTransform,operation,(DOMMatrix2DInit),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
+CanvasRenderingContext2D,setTransform,operation,(DOMMatrixInit),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,shadowBlur,attribute,,UnrestrictedDouble,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,shadowColor,attribute,,String,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,shadowOffsetX,attribute,,UnrestrictedDouble,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
@@ -1760,6 +1760,7 @@ Element,closest,operation,(String),ElementOrNull,,,,,third_party/blink/renderer/
 Element,computedName,attribute,,StringOrNull,,,,,third_party/blink/renderer/core/dom/element.idl,
 Element,computedRole,attribute,,StringOrNull,,,,,third_party/blink/renderer/core/dom/element.idl,
 Element,computedStyleMap,operation,(),StylePropertyMapReadOnly,,CSSTypedOMStylePropertyMap,,,third_party/blink/renderer/core/css/cssom/element_computed_style_map.idl,
+Element,editContext,attribute,,EditContextOrNull,,,,,third_party/blink/renderer/core/dom/element.idl,
 Element,elementTiming,attribute,,String,,,,,third_party/blink/renderer/core/dom/element.idl,
 Element,firstElementChild,attribute,,ElementOrNull,,,,,third_party/blink/renderer/core/dom/parent_node.idl,
 Element,getAnimations,operation,(GetAnimationsOptions),AnimationSequence,,,,,third_party/blink/renderer/core/animation/animatable.idl,
@@ -3781,6 +3782,7 @@ InternalRuntimeFlags,mediaSourceStableEnabled,attribute,,Boolean,,,,,third_party
 InternalRuntimeFlags,mediaStreamInsertableStreamsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,middleClickAutoscrollEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,mobileLayoutThemeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,modalCloseWatcherEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,moduleServiceWorkerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,moduleSharedWorkerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,mojoJSEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3860,7 +3862,6 @@ InternalRuntimeFlags,rawClipboardEnabled,attribute,,Boolean,,,,,third_party/blin
 InternalRuntimeFlags,remotePlaybackBackendEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,remotePlaybackEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,requestVideoFrameCallbackEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,resizeObserverUpdatesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,restrictAutomaticLazyFrameLoadingToDataSaverEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,restrictAutomaticLazyImageLoadingToDataSaverEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,restrictGamepadAccessEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4924,6 +4925,11 @@ MimeTypeArray,,interface,,,,,,,third_party/blink/renderer/modules/plugins/mime_t
 MimeTypeArray,item,operation,(UnsignedLong),MimeTypeOrNull,,,,,third_party/blink/renderer/modules/plugins/mime_type_array.idl,
 MimeTypeArray,length,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/plugins/mime_type_array.idl,
 MimeTypeArray,namedItem,operation,(String),MimeTypeOrNull,,,,,third_party/blink/renderer/modules/plugins/mime_type_array.idl,
+ModalCloseWatcher,,interface,,,,,,,third_party/blink/renderer/modules/modalclosewatcher/modal_close_watcher.idl,8
+ModalCloseWatcher,destroy,operation,(),Void,,,,,third_party/blink/renderer/modules/modalclosewatcher/modal_close_watcher.idl,
+ModalCloseWatcher,onbeforeclose,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/modalclosewatcher/modal_close_watcher.idl,
+ModalCloseWatcher,onclose,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/modalclosewatcher/modal_close_watcher.idl,
+ModalCloseWatcher,signalClosed,operation,(),Void,,,,,third_party/blink/renderer/modules/modalclosewatcher/modal_close_watcher.idl,
 Mojo,,interface,,,,,,,third_party/blink/renderer/core/mojo/mojo.idl,25
 Mojo,RESULT_ABORTED,constant,,UnsignedLong,,,,,third_party/blink/renderer/core/mojo/mojo.idl,36
 Mojo,RESULT_ALREADY_EXISTS,constant,,UnsignedLong,,,,,third_party/blink/renderer/core/mojo/mojo.idl,32
@@ -5374,7 +5380,7 @@ OffscreenCanvasRenderingContext2D,save,operation,(),Void,,,,,third_party/blink/r
 OffscreenCanvasRenderingContext2D,scale,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,setLineDash,operation,(UnrestrictedDoubleSequence),Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,setTransform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
-OffscreenCanvasRenderingContext2D,setTransform,operation,(DOMMatrix2DInit),Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
+OffscreenCanvasRenderingContext2D,setTransform,operation,(DOMMatrixInit),Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,shadowBlur,attribute,,UnrestrictedDouble,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,shadowColor,attribute,,String,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,shadowOffsetX,attribute,,UnrestrictedDouble,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
@@ -5501,7 +5507,7 @@ PaintRenderingContext2D,save,operation,(),Void,,,,,third_party/blink/renderer/mo
 PaintRenderingContext2D,scale,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,setLineDash,operation,(UnrestrictedDoubleSequence),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,setTransform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
-PaintRenderingContext2D,setTransform,operation,(DOMMatrix2DInit),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
+PaintRenderingContext2D,setTransform,operation,(DOMMatrixInit),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,shadowBlur,attribute,,UnrestrictedDouble,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,shadowColor,attribute,,String,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,shadowOffsetX,attribute,,UnrestrictedDouble,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
@@ -6285,7 +6291,7 @@ ResizeObserverEntry,contentBoxSize,attribute,,ResizeObserverSizeArray,,,,,third_
 ResizeObserverEntry,contentRect,attribute,,DOMRectReadOnly,,,,,third_party/blink/renderer/core/resize_observer/resize_observer_entry.idl,
 ResizeObserverEntry,devicePixelContentBoxSize,attribute,,ResizeObserverSizeArray,,,,,third_party/blink/renderer/core/resize_observer/resize_observer_entry.idl,
 ResizeObserverEntry,target,attribute,,Element,,,,,third_party/blink/renderer/core/resize_observer/resize_observer_entry.idl,
-ResizeObserverSize,,interface,,,,,,,third_party/blink/renderer/core/resize_observer/resize_observer_size.idl,10
+ResizeObserverSize,,interface,,,,,,,third_party/blink/renderer/core/resize_observer/resize_observer_size.idl,9
 ResizeObserverSize,blockSize,attribute,,UnrestrictedDouble,,,,,third_party/blink/renderer/core/resize_observer/resize_observer_size.idl,
 ResizeObserverSize,inlineSize,attribute,,UnrestrictedDouble,,,,,third_party/blink/renderer/core/resize_observer/resize_observer_size.idl,
 ResourceProgressEvent,,interface,,,,,,,third_party/blink/renderer/core/events/resource_progress_event.idl,35
