@@ -1415,7 +1415,7 @@ Document,images,attribute,,HTMLCollection,,V8Document_Images_AttributeGetter,,,t
 Document,implementation,attribute,,DOMImplementation,,,,,third_party/blink/renderer/core/dom/document.idl,
 Document,importNode,operation,"(Node,Boolean)",Node,,,,,third_party/blink/renderer/core/dom/document.idl,
 Document,inputEncoding,attribute,,String,,,,,third_party/blink/renderer/core/dom/document.idl,
-Document,interestCohort,operation,(),StringPromise,,InterestCohortAPI_interestCohort_Method,,,third_party/blink/renderer/core/dom/document.idl,
+Document,interestCohort,operation,(),StringPromise,,InterestCohortAPI_interestCohort_Method,True,,third_party/blink/renderer/core/dom/document.idl,
 Document,lastElementChild,attribute,,ElementOrNull,,,,,third_party/blink/renderer/core/dom/parent_node.idl,
 Document,lastModified,attribute,,String,,,,,third_party/blink/renderer/core/dom/document.idl,
 Document,linkColor,attribute,,String,,,,,third_party/blink/renderer/core/dom/document.idl,
@@ -2389,6 +2389,7 @@ GeolocationPositionError,POSITION_UNAVAILABLE,constant,,UnsignedShort,,,,,third_
 GeolocationPositionError,TIMEOUT,constant,,UnsignedShort,,,,,third_party/blink/renderer/modules/geolocation/geolocation_position_error.idl,34
 GeolocationPositionError,code,attribute,,UnsignedShort,,,,,third_party/blink/renderer/modules/geolocation/geolocation_position_error.idl,
 GeolocationPositionError,message,attribute,,String,,,,,third_party/blink/renderer/modules/geolocation/geolocation_position_error.idl,
+GravitySensor,,interface,,,,,True,,third_party/blink/renderer/modules/sensor/gravity_sensor.idl,11
 Gyroscope,,interface,,,,,True,,third_party/blink/renderer/modules/sensor/gyroscope.idl,11
 Gyroscope,x,attribute,,UnrestrictedDoubleOrNull,,,,,third_party/blink/renderer/modules/sensor/gyroscope.idl,
 Gyroscope,y,attribute,,UnrestrictedDoubleOrNull,,,,,third_party/blink/renderer/modules/sensor/gyroscope.idl,
@@ -3329,6 +3330,19 @@ HTMLVideoElement,webkitExitFullScreen,operation,(),Void,,,,,third_party/blink/re
 HTMLVideoElement,webkitExitFullscreen,operation,(),Void,,,,,third_party/blink/renderer/core/html/media/html_video_element.idl,
 HTMLVideoElement,webkitSupportsFullscreen,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/media/html_video_element.idl,
 HTMLVideoElement,width,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/html/media/html_video_element.idl,
+HandwritingDrawing,,interface,,,,,True,,third_party/blink/renderer/modules/handwriting/handwriting_drawing.idl,10
+HandwritingDrawing,addStroke,operation,(HandwritingStroke),Void,,,,,third_party/blink/renderer/modules/handwriting/handwriting_drawing.idl,
+HandwritingDrawing,clear,operation,(),Void,,,,,third_party/blink/renderer/modules/handwriting/handwriting_drawing.idl,
+HandwritingDrawing,getPrediction,operation,(),HandwritingPredictionSequencePromise,,,,,third_party/blink/renderer/modules/handwriting/handwriting_drawing.idl,
+HandwritingDrawing,getStrokes,operation,(),HandwritingStrokeSequence,,,,,third_party/blink/renderer/modules/handwriting/handwriting_drawing.idl,
+HandwritingDrawing,removeStroke,operation,(HandwritingStroke),Void,,,,,third_party/blink/renderer/modules/handwriting/handwriting_drawing.idl,
+HandwritingRecognizer,,interface,,,,,True,,third_party/blink/renderer/modules/handwriting/handwriting_recognizer.idl,10
+HandwritingRecognizer,finish,operation,(),Void,,,,,third_party/blink/renderer/modules/handwriting/handwriting_recognizer.idl,
+HandwritingRecognizer,startDrawing,operation,(HandwritingHints),HandwritingDrawing,,,,,third_party/blink/renderer/modules/handwriting/handwriting_recognizer.idl,
+HandwritingStroke,,interface,,,,,True,,third_party/blink/renderer/modules/handwriting/handwriting_stroke.idl,11
+HandwritingStroke,addPoint,operation,(HandwritingPoint),Void,,,,,third_party/blink/renderer/modules/handwriting/handwriting_stroke.idl,
+HandwritingStroke,clear,operation,(),Void,,,,,third_party/blink/renderer/modules/handwriting/handwriting_stroke.idl,
+HandwritingStroke,getPoints,operation,(),HandwritingPointSequence,,,,,third_party/blink/renderer/modules/handwriting/handwriting_stroke.idl,
 HashChangeEvent,,interface,,,,,,,third_party/blink/renderer/core/events/hash_change_event.idl,25
 HashChangeEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 HashChangeEvent,newURL,attribute,,String,,,,,third_party/blink/renderer/core/events/hash_change_event.idl,
@@ -3712,7 +3726,9 @@ InternalRuntimeFlags,freezeFramesOnVisibilityEnabled,attribute,,Boolean,,,,,thir
 InternalRuntimeFlags,gamepadButtonAxisEventsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,getCurrentBrowsingContextMediaEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,getDisplayMediaEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,gravitySensorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,groupEffectEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,handwritingRecognitionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,hrefTranslateEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,htmlImportsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,htmlPopupElementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5093,6 +5109,7 @@ Navigator,clipboard,attribute,,Clipboard,,,True,,third_party/blink/renderer/modu
 Navigator,connection,attribute,,NetworkInformation,,NetInfo,,,third_party/blink/renderer/modules/netinfo/navigator_network_information.idl,
 Navigator,contacts,attribute,,ContactsManager,,,True,,third_party/blink/renderer/modules/contacts_picker/navigator_contacts.idl,
 Navigator,cookieEnabled,attribute,,Boolean,,NavigatorCookieEnabled,,Direct,third_party/blink/renderer/core/frame/navigator_cookies.idl,
+Navigator,createHandwritingRecognizer,operation,(HandwritingModelConstraint),HandwritingRecognizerPromise,,,,,third_party/blink/renderer/modules/handwriting/navigator_handwriting_recognition_service.idl,
 Navigator,credentials,attribute,,CredentialsContainer,,,True,,third_party/blink/renderer/modules/credentialmanager/navigator_credentials.idl,
 Navigator,device,attribute,,DeviceService,,,,,third_party/blink/renderer/modules/device/navigator_device.idl,
 Navigator,deviceMemory,attribute,,Float,,NavigatorDeviceMemory,True,Direct,third_party/blink/renderer/core/frame/navigator_device_memory.idl,
@@ -5127,6 +5144,7 @@ Navigator,plugins,attribute,,PluginArray,,NavigatorPlugins,,(True),third_party/b
 Navigator,presentation,attribute,,Presentation,,,True,,third_party/blink/renderer/modules/presentation/navigator_presentation.idl,
 Navigator,product,attribute,,String,,,,,third_party/blink/renderer/core/frame/navigator_id.idl,
 Navigator,productSub,attribute,,String,,NavigatorProductSub,,Direct,third_party/blink/renderer/core/frame/navigator.idl,
+Navigator,queryHandwritingRecognizerSupport,operation,(HandwritingFeatureQuery),HandwritingFeatureQueryResultPromise,,,,,third_party/blink/renderer/modules/handwriting/navigator_handwriting_recognition_service.idl,
 Navigator,registerProtocolHandler,operation,"(String,USVString)",Void,,,True,,third_party/blink/renderer/modules/navigatorcontentutils/navigator_content_utils.idl,
 Navigator,requestMIDIAccess,operation,(MIDIOptions),MIDIAccessPromise,,RequestMIDIAccess_ObscuredByFootprinting,,,third_party/blink/renderer/modules/webmidi/navigator_web_midi.idl,
 Navigator,requestMediaKeySystemAccess,operation,"(String,MediaKeySystemConfigurationSequence)",MediaKeySystemAccessPromise,,,True,,third_party/blink/renderer/modules/encryptedmedia/navigator_request_media_key_system_access.idl,
