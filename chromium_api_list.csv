@@ -822,6 +822,7 @@ CanvasRenderingContext2D,rotate,operation,(UnrestrictedDouble),Void,,,,,third_pa
 CanvasRenderingContext2D,roundRect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,DoubleOrDOMPointSequence)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 CanvasRenderingContext2D,save,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,scale,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
+CanvasRenderingContext2D,scale,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,scrollPathIntoView,operation,(Path2D),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,setLineDash,operation,(UnrestrictedDoubleSequence),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,setTransform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
@@ -843,7 +844,7 @@ CanvasRenderingContext2D,textWordSpacing,attribute,,UnrestrictedDouble,,,,,third
 CanvasRenderingContext2D,transform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,transform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,translate,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
-CanvasRenderingContext2D,translate3d,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
+CanvasRenderingContext2D,translate,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 ChannelMergerNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/channel_merger_node.idl,32
 ChannelSplitterNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/channel_splitter_node.idl,29
 CharacterData,,interface,,,,,,,third_party/blink/renderer/core/dom/character_data.idl,23
@@ -2244,6 +2245,7 @@ GPUDevice,createSampler,operation,(GPUSamplerDescriptor),GPUSampler,,,,,third_pa
 GPUDevice,createShaderModule,operation,(GPUShaderModuleDescriptor),GPUShaderModule,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createTexture,operation,(GPUTextureDescriptor),GPUTexture,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,defaultQueue,attribute,,GPUQueue,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
+GPUDevice,experimentalImportTexture,operation,"(HTMLVideoElement,UnsignedLong)",GPUTexture,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,extensions,attribute,,GPUExtensionNameArray,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,lost,attribute,,GPUDeviceLostInfoPromise,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,onuncapturederror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
@@ -3974,6 +3976,7 @@ InternalRuntimeFlags,webAppWindowControlsOverlayEnabled,attribute,,Boolean,,,,,t
 InternalRuntimeFlags,webAssemblySimdEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAssemblyThreadsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAuthEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webAuthenticationConditionalUIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAuthenticationGetAssertionFeaturePolicyEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAuthenticationLargeBlobExtensionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAuthenticationResidentKeyRequirementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4010,6 +4013,7 @@ InternalRuntimeFlags,webcodecsEnabled,attribute,,Boolean,,,,,third_party/blink/r
 InternalRuntimeFlags,webglDraftExtensionsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webglImageChromiumEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webgpuEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webgpuImportTextureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,websocketStreamEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,wheelEventRegionsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,windowPlacementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4058,6 +4062,7 @@ InternalSettingsGenerated,setAccessibilityPasswordValuesEnabled,operation,(Boole
 InternalSettingsGenerated,setAllowCustomScrollbarInMainFrame,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setAllowFileAccessFromFileURLs,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setAllowGeolocationOnInsecureOrigins,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
+InternalSettingsGenerated,setAllowNonEmptyNavigatorPlugins,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setAllowRunningOfInsecureContent,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setAllowScriptsToCloseWindows,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setAllowUniversalAccessFromFileURLs,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
@@ -5397,6 +5402,7 @@ OffscreenCanvasRenderingContext2D,rotate,operation,(UnrestrictedDouble),Void,,,,
 OffscreenCanvasRenderingContext2D,roundRect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,DoubleOrDOMPointSequence)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 OffscreenCanvasRenderingContext2D,save,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,scale,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
+OffscreenCanvasRenderingContext2D,scale,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,setLineDash,operation,(UnrestrictedDoubleSequence),Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,setTransform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,setTransform,operation,(DOMMatrixInit),Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
@@ -5417,7 +5423,7 @@ OffscreenCanvasRenderingContext2D,textWordSpacing,attribute,,UnrestrictedDouble,
 OffscreenCanvasRenderingContext2D,transform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,transform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,translate,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
-OffscreenCanvasRenderingContext2D,translate3d,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
+OffscreenCanvasRenderingContext2D,translate,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OrientationSensor,,interface,,,,,True,,third_party/blink/renderer/modules/sensor/orientation_sensor.idl,13
 OrientationSensor,populateMatrix,operation,(Float32ArrayOrFloat64ArrayOrDOMMatrix),Void,,OrientationSensorPopulateMatrix,,,third_party/blink/renderer/modules/sensor/orientation_sensor.idl,
 OrientationSensor,quaternion,attribute,,DoubleArrayOrNull,,,,,third_party/blink/renderer/modules/sensor/orientation_sensor.idl,
@@ -5526,6 +5532,7 @@ PaintRenderingContext2D,rotate,operation,(UnrestrictedDouble),Void,,,,,third_par
 PaintRenderingContext2D,roundRect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,DoubleOrDOMPointSequence)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 PaintRenderingContext2D,save,operation,(),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,scale,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
+PaintRenderingContext2D,scale,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,setLineDash,operation,(UnrestrictedDoubleSequence),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,setTransform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,setTransform,operation,(DOMMatrixInit),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
@@ -5540,7 +5547,7 @@ PaintRenderingContext2D,strokeStyle,attribute,,StringOrCanvasGradientOrCanvasPat
 PaintRenderingContext2D,transform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,transform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,translate,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
-PaintRenderingContext2D,translate3d,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
+PaintRenderingContext2D,translate,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintSize,,interface,,,,,,,third_party/blink/renderer/modules/csspaint/paint_size.idl,9
 PaintSize,height,attribute,,Double,,,,,third_party/blink/renderer/modules/csspaint/paint_size.idl,
 PaintSize,width,attribute,,Double,,,,,third_party/blink/renderer/modules/csspaint/paint_size.idl,
@@ -7776,10 +7783,13 @@ TreeWalker,root,attribute,,Node,,,,,third_party/blink/renderer/core/dom/tree_wal
 TreeWalker,whatToShow,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/dom/tree_walker.idl,
 TrustedHTML,,interface,,,,,,,third_party/blink/renderer/core/trustedtypes/trusted_html.idl,12
 TrustedHTML,,operation,(),String,,,,,third_party/blink/renderer/core/trustedtypes/trusted_html.idl,13
+TrustedHTML,toJSON,operation,(),String,,,,,third_party/blink/renderer/core/trustedtypes/trusted_html.idl,
 TrustedScript,,interface,,,,,,,third_party/blink/renderer/core/trustedtypes/trusted_script.idl,13
 TrustedScript,,operation,(),String,,,,,third_party/blink/renderer/core/trustedtypes/trusted_script.idl,14
+TrustedScript,toJSON,operation,(),String,,,,,third_party/blink/renderer/core/trustedtypes/trusted_script.idl,
 TrustedScriptURL,,interface,,,,,,,third_party/blink/renderer/core/trustedtypes/trusted_script_url.idl,12
 TrustedScriptURL,,operation,(),String,,,,,third_party/blink/renderer/core/trustedtypes/trusted_script_url.idl,13
+TrustedScriptURL,toJSON,operation,(),USVString,,,,,third_party/blink/renderer/core/trustedtypes/trusted_script_url.idl,
 TrustedTypePolicy,,interface,,,,,,,third_party/blink/renderer/core/trustedtypes/trusted_type_policy.idl,12
 TrustedTypePolicy,createHTML,operation,"(String,AnyVariadic)",TrustedHTML,,,,,third_party/blink/renderer/core/trustedtypes/trusted_type_policy.idl,
 TrustedTypePolicy,createScript,operation,"(String,AnyVariadic)",TrustedScript,,,,,third_party/blink/renderer/core/trustedtypes/trusted_type_policy.idl,
