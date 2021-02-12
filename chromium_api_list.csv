@@ -893,6 +893,9 @@ CloseEvent,reason,attribute,,String,,,,,third_party/blink/renderer/modules/webso
 CloseEvent,wasClean,attribute,,Boolean,,,,,third_party/blink/renderer/modules/websockets/close_event.idl,
 ColorPagePopupController,,interface,,,,,,,third_party/blink/renderer/core/page/color_page_popup_controller.idl,11
 ColorPagePopupController,openEyeDropper,operation,(),Void,,,,,third_party/blink/renderer/core/page/color_page_popup_controller.idl,
+ColorSelectEvent,,interface,,,,,,,third_party/blink/renderer/modules/eyedropper/color_select_event.idl,8
+ColorSelectEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
+ColorSelectEvent,value,attribute,,String,,,,,third_party/blink/renderer/modules/eyedropper/color_select_event.idl,
 Comment,,interface,,,,,,,third_party/blink/renderer/core/dom/comment.idl,24
 CompositionEvent,,interface,,,,,,,third_party/blink/renderer/core/events/composition_event.idl,30
 CompositionEvent,data,attribute,,String,,,,,third_party/blink/renderer/core/events/composition_event.idl,
@@ -1997,6 +2000,12 @@ ExtendableMessageEvent,source,attribute,,ClientOrServiceWorkerOrMessagePortOrNul
 External,,interface,,,,,,,third_party/blink/renderer/core/frame/external.idl,6
 External,AddSearchProvider,operation,(),Void,,,,,third_party/blink/renderer/core/frame/external.idl,
 External,IsSearchProviderInstalled,operation,(),Void,,,,,third_party/blink/renderer/core/frame/external.idl,
+EyeDropper,,interface,,,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,8
+EyeDropper,close,operation,(),Void,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,
+EyeDropper,onclose,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,
+EyeDropper,oncolorselect,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,
+EyeDropper,open,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,
+EyeDropper,opened,attribute,,Boolean,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,
 FaceDetector,,interface,,,,,True,,third_party/blink/renderer/modules/shapedetection/face_detector.idl,11
 FaceDetector,detect,operation,(HTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrBlobOrImageDataOrImageBitmapOrOffscreenCanvas),DetectedFaceSequencePromise,,FaceDetectorDetect,,,third_party/blink/renderer/modules/shapedetection/face_detector.idl,
 FeaturePolicy,,interface,,,,,,,third_party/blink/renderer/core/feature_policy/feature_policy.idl,9
@@ -3704,6 +3713,7 @@ InternalRuntimeFlags,experimentalJSProfilerEnabled,attribute,,Boolean,,,,,third_
 InternalRuntimeFlags,experimentalPoliciesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,extendedTextMetricsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,extraWebGLVideoTextureMetadataEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,eyeDropperAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,faceDetectorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,featurePolicyForClientHintsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,featurePolicyReportingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3973,6 +3983,7 @@ InternalRuntimeFlags,webAnimationsSVGEnabled,attribute,,Boolean,,,,,third_party/
 InternalRuntimeFlags,webAppLinkCapturingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppManifestDisplayOverrideEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppWindowControlsOverlayEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webAssemblyExceptionsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAssemblySimdEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAssemblyThreadsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAuthEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -6068,8 +6079,8 @@ RTCLegacyStatsReport,stat,operation,(String),String,,,,,third_party/blink/render
 RTCLegacyStatsReport,timestamp,attribute,,Object,,V8RTCLegacyStatsReport_Timestamp_AttributeGetter,,,third_party/blink/renderer/modules/peerconnection/rtc_legacy_stats_report.idl,
 RTCLegacyStatsReport,type,attribute,,String,,,,,third_party/blink/renderer/modules/peerconnection/rtc_legacy_stats_report.idl,
 RTCPeerConnection,,interface,,,,,,,third_party/blink/renderer/modules/peerconnection/rtc_peer_connection.idl,70
-RTCPeerConnection,addIceCandidate,operation,(RTCIceCandidateInitOrRTCIceCandidate),VoidPromise,,RTCPeerConnectionAddIceCandidatePromise,,,third_party/blink/renderer/modules/peerconnection/rtc_peer_connection.idl,
-RTCPeerConnection,addIceCandidate,operation,"(RTCIceCandidateInitOrRTCIceCandidate,VoidFunction,RTCPeerConnectionErrorCallback)",VoidPromise,,RTCPeerConnectionAddIceCandidateLegacy,,,third_party/blink/renderer/modules/peerconnection/rtc_peer_connection.idl,
+RTCPeerConnection,addIceCandidate,operation,(RTCIceCandidateInit),VoidPromise,,RTCPeerConnectionAddIceCandidatePromise,,,third_party/blink/renderer/modules/peerconnection/rtc_peer_connection.idl,
+RTCPeerConnection,addIceCandidate,operation,"(RTCIceCandidateInit,VoidFunction,RTCPeerConnectionErrorCallback)",VoidPromise,,RTCPeerConnectionAddIceCandidateLegacy,,,third_party/blink/renderer/modules/peerconnection/rtc_peer_connection.idl,
 RTCPeerConnection,addStream,operation,"(MediaStream,Any)",Void,,V8RTCPeerConnection_AddStream_Method,,,third_party/blink/renderer/modules/peerconnection/rtc_peer_connection.idl,
 RTCPeerConnection,addTrack,operation,"(MediaStreamTrack,MediaStreamVariadic)",RTCRtpSender,,V8RTCPeerConnection_AddTrack_Method,,,third_party/blink/renderer/modules/peerconnection/rtc_peer_connection.idl,
 RTCPeerConnection,addTransceiver,operation,"(MediaStreamTrackOrString,RTCRtpTransceiverInit)",RTCRtpTransceiver,,V8RTCPeerConnection_AddTransceiver_Method,,,third_party/blink/renderer/modules/peerconnection/rtc_peer_connection.idl,
