@@ -2179,7 +2179,8 @@ GCObservation,wasCollected,attribute,,Boolean,,,,,third_party/blink/renderer/cor
 GPU,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,26
 GPU,requestAdapter,operation,(GPURequestAdapterOptions),GPUAdapterOrNullPromise,,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,
 GPUAdapter,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,16
-GPUAdapter,extensions,attribute,,GPUExtensionNameArray,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
+GPUAdapter,extensions,attribute,,GPUFeatureNameArray,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
+GPUAdapter,features,attribute,,GPUFeatureNameArray,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,name,attribute,,String,,GPUAdapter_Name,,Direct,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,requestDevice,operation,(GPUDeviceDescriptor),GPUDevicePromise,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUBindGroup,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_bind_group.idl,9
@@ -2263,7 +2264,8 @@ GPUDevice,createShaderModule,operation,(GPUShaderModuleDescriptor),GPUShaderModu
 GPUDevice,createTexture,operation,(GPUTextureDescriptor),GPUTexture,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,defaultQueue,attribute,,GPUQueue,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,experimentalImportTexture,operation,"(HTMLVideoElement,UnsignedLong)",GPUTexture,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
-GPUDevice,extensions,attribute,,GPUExtensionNameArray,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
+GPUDevice,extensions,attribute,,GPUFeatureNameArray,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
+GPUDevice,features,attribute,,GPUFeatureNameArray,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,label,attribute,,USVStringOrNull,,,,,third_party/blink/renderer/modules/webgpu/gpu_object_base.idl,
 GPUDevice,lost,attribute,,GPUDeviceLostInfoPromise,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,onuncapturederror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
@@ -2313,10 +2315,12 @@ GPURenderBundleEncoder,setIndexBuffer,operation,"(GPUBuffer,GPUIndexFormat,Unsig
 GPURenderBundleEncoder,setPipeline,operation,(GPURenderPipeline),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_encoder_base.idl,
 GPURenderBundleEncoder,setVertexBuffer,operation,"(UnsignedLong,GPUBuffer,UnsignedLongLong,UnsignedLongLong)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_encoder_base.idl,
 GPURenderPassEncoder,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_pass_encoder.idl,9
+GPURenderPassEncoder,beginOcclusionQuery,operation,(UnsignedLong),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_pass_encoder.idl,
 GPURenderPassEncoder,draw,operation,"(UnsignedLong,UnsignedLong,UnsignedLong,UnsignedLong)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_encoder_base.idl,
 GPURenderPassEncoder,drawIndexed,operation,"(UnsignedLong,UnsignedLong,UnsignedLong,Long,UnsignedLong)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_encoder_base.idl,
 GPURenderPassEncoder,drawIndexedIndirect,operation,"(GPUBuffer,UnsignedLongLong)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_encoder_base.idl,
 GPURenderPassEncoder,drawIndirect,operation,"(GPUBuffer,UnsignedLongLong)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_encoder_base.idl,
+GPURenderPassEncoder,endOcclusionQuery,operation,(),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_pass_encoder.idl,
 GPURenderPassEncoder,endPass,operation,(),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_pass_encoder.idl,
 GPURenderPassEncoder,executeBundles,operation,(GPURenderBundleSequence),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_pass_encoder.idl,
 GPURenderPassEncoder,insertDebugMarker,operation,(USVString),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_programmable_pass_encoder.idl,
@@ -3790,7 +3794,6 @@ InternalRuntimeFlags,langAttributeAwareFormControlUIEnabled,attribute,,Boolean,,
 InternalRuntimeFlags,langClientHintHeaderEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGBlockFragmentationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,layoutNGFieldsetEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGFragmentTraversalEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGFullPositionForPointEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGGridEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4794,7 +4797,7 @@ MediaDevices,getDisplayMedia,operation,(MediaStreamConstraints),MediaStreamPromi
 MediaDevices,getSupportedConstraints,operation,(),MediaTrackSupportedConstraints,,,,,third_party/blink/renderer/modules/mediastream/media_devices.idl,
 MediaDevices,getUserMedia,operation,(MediaStreamConstraints),MediaStreamPromise,,GetUserMediaPromise,,(True),third_party/blink/renderer/modules/mediastream/media_devices.idl,
 MediaDevices,ondevicechange,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/mediastream/media_devices.idl,
-MediaElementAudioSourceNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/media_element_audio_source_node.idl,29
+MediaElementAudioSourceNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/media_element_audio_source_node.idl,30
 MediaElementAudioSourceNode,mediaElement,attribute,,HTMLMediaElement,,,,,third_party/blink/renderer/modules/webaudio/media_element_audio_source_node.idl,
 MediaEncryptedEvent,,interface,,,,,,,third_party/blink/renderer/modules/encryptedmedia/media_encrypted_event.idl,30
 MediaEncryptedEvent,initData,attribute,,ArrayBufferOrNull,,,,,third_party/blink/renderer/modules/encryptedmedia/media_encrypted_event.idl,
