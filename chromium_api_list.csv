@@ -2583,13 +2583,13 @@ DeviceOrientationEvent,alpha,attribute,,DoubleOrNull,,,,,third_party/blink/rende
 DeviceOrientationEvent,beta,attribute,,DoubleOrNull,,,,,third_party/blink/renderer/modules/device_orientation/device_orientation_event.idl,
 DeviceOrientationEvent,gamma,attribute,,DoubleOrNull,,,,,third_party/blink/renderer/modules/device_orientation/device_orientation_event.idl,
 DeviceOrientationEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
-DeviceService,,interface,,,,,True,,third_party/blink/renderer/modules/device/device_service.idl,10
-DeviceService,getAnnotatedAssetId,operation,(),StringPromise,,,,,third_party/blink/renderer/modules/device/device_service.idl,
-DeviceService,getAnnotatedLocation,operation,(),StringPromise,,,,,third_party/blink/renderer/modules/device/device_service.idl,
-DeviceService,getDirectoryId,operation,(),StringPromise,,,,,third_party/blink/renderer/modules/device/device_service.idl,
-DeviceService,getManagedConfiguration,operation,(StringSequence),ObjectPromise,,,,,third_party/blink/renderer/modules/device/device_service.idl,
-DeviceService,getSerialNumber,operation,(),StringPromise,,,,,third_party/blink/renderer/modules/device/device_service.idl,
-DeviceService,onmanagedconfigurationchange,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/device/device_service.idl,
+DeviceService,,interface,,,,,True,,third_party/blink/renderer/modules/managed_device/device_service.idl,10
+DeviceService,getAnnotatedAssetId,operation,(),StringPromise,,,,,third_party/blink/renderer/modules/managed_device/device_service.idl,
+DeviceService,getAnnotatedLocation,operation,(),StringPromise,,,,,third_party/blink/renderer/modules/managed_device/device_service.idl,
+DeviceService,getDirectoryId,operation,(),StringPromise,,,,,third_party/blink/renderer/modules/managed_device/device_service.idl,
+DeviceService,getManagedConfiguration,operation,(StringSequence),ObjectPromise,,,,,third_party/blink/renderer/modules/managed_device/device_service.idl,
+DeviceService,getSerialNumber,operation,(),StringPromise,,,,,third_party/blink/renderer/modules/managed_device/device_service.idl,
+DeviceService,onmanagedconfigurationchange,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/managed_device/device_service.idl,
 DictionaryTest,,interface,,,,,,,third_party/blink/renderer/core/testing/dictionary_test.idl,5
 DictionaryTest,get,operation,(),InternalDictionary,,,,,third_party/blink/renderer/core/testing/dictionary_test.idl,
 DictionaryTest,getDerived,operation,(),InternalDictionaryDerived,,,,,third_party/blink/renderer/core/testing/dictionary_test.idl,
@@ -2615,7 +2615,7 @@ DirectoryReader,,interface,,,,,,,third_party/blink/renderer/modules/filesystem/d
 DirectoryReader,readEntries,operation,"(EntriesCallback,ErrorCallbackOrNull)",Void,,DeprecatedFileSystemRead,,,third_party/blink/renderer/modules/filesystem/directory_reader.idl,
 DirectoryReaderSync,,interface,,,,,,,third_party/blink/renderer/modules/filesystem/directory_reader_sync.idl,34
 DirectoryReaderSync,readEntries,operation,(),EntrySyncSequence,,,,,third_party/blink/renderer/modules/filesystem/directory_reader_sync.idl,
-Document,,interface,,,,,,,third_party/blink/renderer/core/dom/document.idl,38
+Document,,interface,,,,,,,third_party/blink/renderer/core/dom/document.idl,37
 Document,URL,attribute,,USVString,,,,,third_party/blink/renderer/core/dom/document.idl,
 Document,activeElement,attribute,,ElementOrNull,,,,,third_party/blink/renderer/core/dom/document_or_shadow_root.idl,
 Document,addressSpace,attribute,,AddressSpace,,,,,third_party/blink/renderer/core/dom/document.idl,
@@ -2880,8 +2880,8 @@ DocumentPolicyViolationReportBody,sourceFile,attribute,,StringOrNull,,,,,third_p
 DocumentPolicyViolationReportBody,toJSON,operation,(),Object,,,,,third_party/blink/renderer/core/frame/document_policy_violation_report_body.idl,
 DocumentTimeline,,interface,,,,,,,third_party/blink/renderer/core/animation/document_timeline.idl,10
 DocumentTransition,,interface,,,,,,,third_party/blink/renderer/core/document_transition/document_transition.idl,11
-DocumentTransition,prepare,operation,(DocumentTransitionInit),VoidPromise,,,,,third_party/blink/renderer/core/document_transition/document_transition.idl,
-DocumentTransition,start,operation,(),VoidPromise,,,,,third_party/blink/renderer/core/document_transition/document_transition.idl,
+DocumentTransition,prepare,operation,(DocumentTransitionPrepareOptions),VoidPromise,,,,,third_party/blink/renderer/core/document_transition/document_transition.idl,
+DocumentTransition,start,operation,(DocumentTransitionStartOptions),VoidPromise,,,,,third_party/blink/renderer/core/document_transition/document_transition.idl,
 DocumentType,,interface,,,,,,,third_party/blink/renderer/core/dom/document_type.idl,24
 DocumentType,after,operation,(NodeOrStringOrTrustedScriptVariadic),Void,,,,,third_party/blink/renderer/core/dom/child_node.idl,
 DocumentType,before,operation,(NodeOrStringOrTrustedScriptVariadic),Void,,,,,third_party/blink/renderer/core/dom/child_node.idl,
@@ -5023,7 +5023,6 @@ InternalRuntimeFlags,eyeDropperAPIEnabled,attribute,,Boolean,,,,,third_party/bli
 InternalRuntimeFlags,faceDetectorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,featurePolicyForClientHintsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,featurePolicyReportingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,featurePolicyVibrateFeatureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fetchUploadStreamingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileHandlingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileSystemAccessAPIExperimentalEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5581,6 +5580,7 @@ Internals,firstChildInFlatTree,operation,(Node),Node,,,,,third_party/blink/rende
 Internals,forceCompositingUpdate,operation,(Document),Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,forceFullRepaint,operation,(Document),Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,forceImageReload,operation,(Element),Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
+Internals,forceLoseCanvasContext,operation,"(HTMLCanvasElement,String)",Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,forceReload,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,forceStaleStateForMediaElement,operation,"(HTMLMediaElement,Long)",Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,formControlStateOfHistoryItem,operation,(),StringSequence,,,,,third_party/blink/renderer/core/testing/internals.idl,
@@ -6438,7 +6438,6 @@ Navigator,contacts,attribute,,ContactsManager,,,True,,third_party/blink/renderer
 Navigator,cookieEnabled,attribute,,Boolean,,NavigatorCookieEnabled,,Direct,third_party/blink/renderer/core/frame/navigator_cookies.idl,
 Navigator,createHandwritingRecognizer,operation,(HandwritingModelConstraint),HandwritingRecognizerPromise,,,,,third_party/blink/renderer/modules/handwriting/navigator_handwriting_recognition_service.idl,
 Navigator,credentials,attribute,,CredentialsContainer,,,True,,third_party/blink/renderer/modules/credentialmanager/navigator_credentials.idl,
-Navigator,device,attribute,,DeviceService,,,,,third_party/blink/renderer/modules/device/navigator_device.idl,
 Navigator,deviceMemory,attribute,,Float,,NavigatorDeviceMemory,True,Direct,third_party/blink/renderer/core/frame/navigator_device_memory.idl,
 Navigator,doNotTrack,attribute,,StringOrNull,,NavigatorDoNotTrack,,Direct,third_party/blink/renderer/modules/donottrack/navigator_do_not_track.idl,
 Navigator,fonts,attribute,,FontManager,,,,,third_party/blink/renderer/modules/font_access/navigator_fonts.idl,
@@ -6457,6 +6456,7 @@ Navigator,keyboard,attribute,,Keyboard,,,True,,third_party/blink/renderer/module
 Navigator,language,attribute,,String,,NavigatorLanguage,,Direct,third_party/blink/renderer/core/frame/navigator_language.idl,
 Navigator,languages,attribute,,StringArray,,NavigatorLanguages,,Direct,third_party/blink/renderer/core/frame/navigator_language.idl,
 Navigator,locks,attribute,,LockManager,,,,,third_party/blink/renderer/modules/locks/navigator_locks.idl,
+Navigator,managed,attribute,,DeviceService,,,,,third_party/blink/renderer/modules/managed_device/navigator_managed.idl,
 Navigator,maxTouchPoints,attribute,,Long,,NavigatorMaxTouchPoints,,Direct,third_party/blink/renderer/core/events/navigator_events.idl,
 Navigator,mediaCapabilities,attribute,,MediaCapabilities,,,,,third_party/blink/renderer/modules/media_capabilities/navigator_media_capabilities.idl,
 Navigator,mediaDevices,attribute,,MediaDevices,,,True,,third_party/blink/renderer/modules/mediastream/navigator_user_media.idl,
