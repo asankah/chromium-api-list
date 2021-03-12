@@ -437,7 +437,7 @@ BluetoothAdvertisingEvent,name,attribute,,StringOrNull,,BluetoothAdvertisingEven
 BluetoothAdvertisingEvent,rssi,attribute,,ByteOrNull,,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_advertising_event.idl,
 BluetoothAdvertisingEvent,serviceData,attribute,,BluetoothServiceDataMap,,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_advertising_event.idl,
 BluetoothAdvertisingEvent,txPower,attribute,,ByteOrNull,,BluetoothAdvertisingEventTxPower,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_advertising_event.idl,
-BluetoothAdvertisingEvent,uuids,attribute,,StringArray,,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_advertising_event.idl,
+BluetoothAdvertisingEvent,uuids,attribute,,StringOrUnsignedLongArray,,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_advertising_event.idl,
 BluetoothCharacteristicProperties,,interface,,,,,True,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,11
 BluetoothCharacteristicProperties,authenticatedSignedWrites,attribute,,Boolean,,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
 BluetoothCharacteristicProperties,broadcast,attribute,,Boolean,,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
@@ -4670,6 +4670,10 @@ Headers,delete,operation,(ByteString),Void,,,,,third_party/blink/renderer/core/f
 Headers,get,operation,(ByteString),ByteStringOrNull,,,,,third_party/blink/renderer/core/fetch/headers.idl,
 Headers,has,operation,(ByteString),Boolean,,,,,third_party/blink/renderer/core/fetch/headers.idl,
 Headers,set,operation,"(ByteString,ByteString)",Void,,,,,third_party/blink/renderer/core/fetch/headers.idl,
+Highlight,,interface,,,,,,,third_party/blink/renderer/core/highlight/highlight.idl,8
+Highlight,name,attribute,,String,,,,,third_party/blink/renderer/core/highlight/highlight.idl,
+Highlight,priority,attribute,,Long,,,,,third_party/blink/renderer/core/highlight/highlight.idl,
+HighlightRegistry,,interface,,,,,,,third_party/blink/renderer/core/highlight/highlight_registry.idl,8
 History,,interface,,,,,,,third_party/blink/renderer/core/frame/history.idl,32
 History,back,operation,(),Void,,,,,third_party/blink/renderer/core/frame/history.idl,
 History,forward,operation,(),Void,,,,,third_party/blink/renderer/core/frame/history.idl,
@@ -5045,6 +5049,7 @@ InternalRuntimeFlags,getDisplayMediaEnabled,attribute,,Boolean,,,,,third_party/b
 InternalRuntimeFlags,gravitySensorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,groupEffectEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,handwritingRecognitionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,highlightAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,hrefTranslateEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,htmlPopupElementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,htmlSelectMenuElementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5235,6 +5240,7 @@ InternalRuntimeFlags,signedExchangePrefetchCacheForNavigationsEnabled,attribute,
 InternalRuntimeFlags,signedExchangeSubresourcePrefetchEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,skipAdEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,skipTouchEventFilterEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,speculationRulesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,srcsetMaxDensityEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,stableBlinkFeaturesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,storageAccessAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
