@@ -983,6 +983,8 @@ CSSStyleDeclaration,WebkitUserDrag,attribute,,String,,,,,third_party/blink/rende
 CSSStyleDeclaration,WebkitUserModify,attribute,,String,,,,,third_party/blink/renderer/core/css/css_style_declaration_attributes.idl,
 CSSStyleDeclaration,WebkitUserSelect,attribute,,String,,,,,third_party/blink/renderer/core/css/css_style_declaration_attributes.idl,
 CSSStyleDeclaration,WebkitWritingMode,attribute,,String,,,,,third_party/blink/renderer/core/css/css_style_declaration_attributes.idl,
+CSSStyleDeclaration,accent-color,attribute,,String,,,,,third_party/blink/renderer/core/css/css_style_declaration_attributes.idl,
+CSSStyleDeclaration,accentColor,attribute,,String,,,,,third_party/blink/renderer/core/css/css_style_declaration_attributes.idl,
 CSSStyleDeclaration,additive-symbols,attribute,,String,,,,,third_party/blink/renderer/core/css/css_style_declaration_attributes.idl,
 CSSStyleDeclaration,additiveSymbols,attribute,,String,,,,,third_party/blink/renderer/core/css/css_style_declaration_attributes.idl,
 CSSStyleDeclaration,advance-override,attribute,,String,,,,,third_party/blink/renderer/core/css/css_style_declaration_attributes.idl,
@@ -4934,6 +4936,7 @@ InternalRuntimeFlags,corsRFC1918Enabled,attribute,,Boolean,,,,,third_party/blink
 InternalRuntimeFlags,crossOriginIsolationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,crossOriginOpenerPolicyReportingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,css3TextEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssAccentColorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssAspectRatioInterpolationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssAspectRatioPropertyEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssAtRuleCounterStyleEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -7264,7 +7267,7 @@ PushManager,supportedContentEncodings,attribute,,StringArray,,V8PushManager_Supp
 PushMessageData,,interface,,,,,,,third_party/blink/renderer/modules/push_messaging/push_message_data.idl,9
 PushMessageData,arrayBuffer,operation,(),ArrayBuffer,,,,,third_party/blink/renderer/modules/push_messaging/push_message_data.idl,
 PushMessageData,blob,operation,(),Blob,,,,,third_party/blink/renderer/modules/push_messaging/push_message_data.idl,
-PushMessageData,json,operation,(),Object,,,,,third_party/blink/renderer/modules/push_messaging/push_message_data.idl,
+PushMessageData,json,operation,(),Any,,,,,third_party/blink/renderer/modules/push_messaging/push_message_data.idl,
 PushMessageData,text,operation,(),USVString,,,,,third_party/blink/renderer/modules/push_messaging/push_message_data.idl,
 PushSubscription,,interface,,,,,,,third_party/blink/renderer/modules/push_messaging/push_subscription.idl,15
 PushSubscription,endpoint,attribute,,USVString,,,,,third_party/blink/renderer/modules/push_messaging/push_subscription.idl,
