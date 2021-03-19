@@ -149,6 +149,7 @@ AppHistoryNavigateEvent,formData,attribute,,FormDataOrNull,,,,,third_party/blink
 AppHistoryNavigateEvent,hashChange,attribute,,Boolean,,,,,third_party/blink/renderer/core/app_history/app_history_navigate_event.idl,
 AppHistoryNavigateEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 AppHistoryNavigateEvent,respondWith,operation,(AnyPromise),Void,,,,,third_party/blink/renderer/core/app_history/app_history_navigate_event.idl,
+AppHistoryNavigateEvent,userInitiated,attribute,,Boolean,,,,,third_party/blink/renderer/core/app_history/app_history_navigate_event.idl,
 ApplicationCache,,interface,,,,,True,,third_party/blink/renderer/core/loader/appcache/application_cache.idl,33
 ApplicationCache,CHECKING,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/loader/appcache/application_cache.idl,37
 ApplicationCache,DOWNLOADING,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/loader/appcache/application_cache.idl,38
@@ -4929,7 +4930,6 @@ InternalRuntimeFlags,contentIndexEnabled,attribute,,Boolean,,,,,third_party/blin
 InternalRuntimeFlags,contextMenuEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,conversionMeasurementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,conversionMeasurementInfraSupportEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cookieDeprecationMessagesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cookiesWithoutSameSiteMustBeSecureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cooperativeSchedulingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,corsRFC1918Enabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5036,6 +5036,7 @@ InternalRuntimeFlags,fileHandlingEnabled,attribute,,Boolean,,,,,third_party/blin
 InternalRuntimeFlags,fileSystemAccessAPIExperimentalEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileSystemAccessEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileSystemEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,fledgeInterestGroupsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,focuslessSpatialNavigationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fontAccessEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fontAccessPersistentEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
