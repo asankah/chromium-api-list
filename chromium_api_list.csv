@@ -2014,6 +2014,7 @@ CanMakePaymentEvent,topOrigin,attribute,,USVString,,,,,third_party/blink/rendere
 CanvasCaptureMediaStreamTrack,,interface,,,,,,,third_party/blink/renderer/modules/mediacapturefromelement/canvas_capture_media_stream_track.idl,8
 CanvasCaptureMediaStreamTrack,canvas,attribute,,HTMLCanvasElement,,,,,third_party/blink/renderer/modules/mediacapturefromelement/canvas_capture_media_stream_track.idl,
 CanvasCaptureMediaStreamTrack,requestFrame,operation,(),Void,,,,,third_party/blink/renderer/modules/mediacapturefromelement/canvas_capture_media_stream_track.idl,
+CanvasFilter,,interface,,,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_filter.idl,7
 CanvasFormattedText,,interface,,,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_formatted_text.idl,8
 CanvasFormattedText,appendRun,operation,(CanvasFormattedTextRun),CanvasFormattedTextRun,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_formatted_text.idl,
 CanvasFormattedText,deleteRun,operation,(UnsignedLong),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_formatted_text.idl,
@@ -2060,7 +2061,7 @@ CanvasRenderingContext2D,fillFormattedText,operation,"(CanvasFormattedText,Doubl
 CanvasRenderingContext2D,fillRect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,fillStyle,attribute,,StringOrCanvasGradientOrCanvasPattern,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,fillText,operation,"(String,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
-CanvasRenderingContext2D,filter,attribute,,StringOrObjectOrNull,,Canvas2DFilter,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
+CanvasRenderingContext2D,filter,attribute,,StringOrCanvasFilterOrNull,,Canvas2DFilter,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,font,attribute,,String,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,fontKerning,attribute,,String,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,fontStretch,attribute,,String,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
@@ -2590,6 +2591,7 @@ DeviceService,,interface,,,,,True,,third_party/blink/renderer/modules/managed_de
 DeviceService,getAnnotatedAssetId,operation,(),StringPromise,,,,,third_party/blink/renderer/modules/managed_device/device_service.idl,
 DeviceService,getAnnotatedLocation,operation,(),StringPromise,,,,,third_party/blink/renderer/modules/managed_device/device_service.idl,
 DeviceService,getDirectoryId,operation,(),StringPromise,,,,,third_party/blink/renderer/modules/managed_device/device_service.idl,
+DeviceService,getHostname,operation,(),StringPromise,,,,,third_party/blink/renderer/modules/managed_device/device_service.idl,
 DeviceService,getManagedConfiguration,operation,(StringSequence),ObjectPromise,,,,,third_party/blink/renderer/modules/managed_device/device_service.idl,
 DeviceService,getSerialNumber,operation,(),StringPromise,,,,,third_party/blink/renderer/modules/managed_device/device_service.idl,
 DeviceService,onmanagedconfigurationchange,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/managed_device/device_service.idl,
@@ -4920,7 +4922,6 @@ InternalRuntimeFlags,compositeBGColorAnimationEnabled,attribute,,Boolean,,,,,thi
 InternalRuntimeFlags,compositeRelativeKeyframesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,compositeSVGEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,compositedSelectionUpdateEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,compositingOptimizationsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,computePressureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,computedAccessibilityInfoEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,consolidatedMovementXYEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -6697,7 +6698,7 @@ OffscreenCanvasRenderingContext2D,fill,operation,"(Path2D,CanvasFillRule)",Void,
 OffscreenCanvasRenderingContext2D,fillRect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,fillStyle,attribute,,StringOrCanvasGradientOrCanvasPattern,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,fillText,operation,"(String,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
-OffscreenCanvasRenderingContext2D,filter,attribute,,StringOrObject,,Canvas2DFilter,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
+OffscreenCanvasRenderingContext2D,filter,attribute,,StringOrCanvasFilterOrNull,,Canvas2DFilter,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,font,attribute,,String,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,fontKerning,attribute,,String,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,fontStretch,attribute,,String,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
@@ -6840,7 +6841,7 @@ PaintRenderingContext2D,fill,operation,(CanvasFillRule),Void,,,,,third_party/bli
 PaintRenderingContext2D,fill,operation,"(Path2D,CanvasFillRule)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,fillRect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,fillStyle,attribute,,StringOrCanvasGradientOrCanvasPattern,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
-PaintRenderingContext2D,filter,attribute,,StringOrObject,,Canvas2DFilter,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
+PaintRenderingContext2D,filter,attribute,,StringOrCanvasFilterOrNull,,Canvas2DFilter,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,getLineDash,operation,(),UnrestrictedDoubleSequence,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,getTransform,operation,(),DOMMatrix,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,globalAlpha,attribute,,UnrestrictedDouble,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
@@ -11488,7 +11489,7 @@ XRAnchorSet,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_anchor
 XRBoundedReferenceSpace,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_bounded_reference_space.idl,11
 XRBoundedReferenceSpace,boundsGeometry,attribute,,DOMPointReadOnlyArray,,,,,third_party/blink/renderer/modules/xr/xr_bounded_reference_space.idl,
 XRCPUDepthInformation,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_cpu_depth_information.idl,9
-XRCPUDepthInformation,data,attribute,,DataView,,XRCPUDepthInformationDataAttribute,,,third_party/blink/renderer/modules/xr/xr_cpu_depth_information.idl,
+XRCPUDepthInformation,data,attribute,,ArrayBuffer,,XRCPUDepthInformationDataAttribute,,,third_party/blink/renderer/modules/xr/xr_cpu_depth_information.idl,
 XRCPUDepthInformation,getDepthInMeters,operation,"(Float,Float)",Float,,XRCPUDepthInformationGetDepth,,,third_party/blink/renderer/modules/xr/xr_cpu_depth_information.idl,
 XRDOMOverlayState,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_dom_overlay_state.idl,15
 XRDOMOverlayState,type,attribute,,XRDOMOverlayType,,,,,third_party/blink/renderer/modules/xr/xr_dom_overlay_state.idl,
