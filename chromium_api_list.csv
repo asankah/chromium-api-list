@@ -5225,7 +5225,6 @@ InternalRuntimeFlags,rtcUnifiedPlanByDefaultEnabled,attribute,,Boolean,,,,,third
 InternalRuntimeFlags,rtcUnifiedPlanEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sameSiteByDefaultCookiesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sanitizerAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,screenWakeLockEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scriptedSpeechRecognitionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scriptedSpeechSynthesisEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scrollCustomizationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5251,6 +5250,7 @@ InternalRuntimeFlags,signedExchangeSubresourcePrefetchEnabled,attribute,,Boolean
 InternalRuntimeFlags,skipAdEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,skipTouchEventFilterEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,speculationRulesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,speculationRulesPrefetchProxyEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,srcsetMaxDensityEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,stableBlinkFeaturesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,storageAccessAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -9221,8 +9221,9 @@ URL,search,attribute,,USVString,,,,,third_party/blink/renderer/core/url/url.idl,
 URL,searchParams,attribute,,URLSearchParams,,,,,third_party/blink/renderer/core/url/url.idl,
 URL,toJSON,operation,(),USVString,,,,,third_party/blink/renderer/core/url/url.idl,
 URL,username,attribute,,USVString,,,,,third_party/blink/renderer/core/url/url.idl,
-URLPattern,,interface,,,,,True,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,12
-URLPattern,exec,operation,(USVStringOrURLPatternInit),URLPatternResult,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
+URLPattern,,interface,,,,,True,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,10
+URLPattern,exec,operation,(URLPatternInit),URLPatternResult,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
+URLPattern,exec,operation,"(USVString,USVString)",URLPatternResult,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,hash,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,hostname,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,password,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
@@ -9230,7 +9231,8 @@ URLPattern,pathname,attribute,,USVString,,,,,third_party/blink/renderer/modules/
 URLPattern,port,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,protocol,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,search,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
-URLPattern,test,operation,(USVStringOrURLPatternInit),Boolean,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
+URLPattern,test,operation,(URLPatternInit),Boolean,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
+URLPattern,test,operation,"(USVString,USVString)",Boolean,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,username,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLSearchParams,,interface,,,,,,,third_party/blink/renderer/core/url/url_search_params.idl,9
 URLSearchParams,,operation,(),String,,,,,third_party/blink/renderer/core/url/url_search_params.idl,21
