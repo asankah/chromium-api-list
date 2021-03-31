@@ -144,6 +144,8 @@ AnimationWorkletGlobalScope,registerAnimator,operation,"(String,AnimatorConstruc
 AppHistory,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history.idl,9
 AppHistory,current,attribute,,AppHistoryEntry,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigate,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
+AppHistory,onnavigateerror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
+AppHistory,onnavigatesuccess,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistoryEntry,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,9
 AppHistoryEntry,sameDocument,attribute,,Boolean,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryEntry,url,attribute,,USVString,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
@@ -5108,7 +5110,6 @@ InternalRuntimeFlags,lazyImageLoadingEnabled,attribute,,Boolean,,,,,third_party/
 InternalRuntimeFlags,lazyImageVisibleLoadTimeMetricsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,lazyInitializeMediaControlsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,legacyWindowsDWriteFontFallbackEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,linkDisabledNewSpecBehaviorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,manualSlottingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,mathmlCoreEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,measureMemoryEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5313,11 +5314,12 @@ InternalRuntimeFlags,webAnimationsAPIEnabled,attribute,,Boolean,,,,,third_party/
 InternalRuntimeFlags,webAnimationsSVGEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppLinkCapturingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppWindowControlsOverlayEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webAppsLockScreenEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webAssemblyCSPEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAssemblyExceptionsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAssemblySimdEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAuthEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAuthenticationConditionalUIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,webAuthenticationGetAssertionFeaturePolicyEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAuthenticationLargeBlobExtensionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAuthenticationResidentKeyRequirementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webBluetoothEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5943,6 +5945,11 @@ LockManager,,interface,,,,,True,,third_party/blink/renderer/modules/locks/lock_m
 LockManager,query,operation,(),LockManagerSnapshotPromise,,V8LockManager_Query_Method,,,third_party/blink/renderer/modules/locks/lock_manager.idl,
 LockManager,request,operation,"(String,LockGrantedCallback)",LockPromise,,V8LockManager_Request_Method,,,third_party/blink/renderer/modules/locks/lock_manager.idl,
 LockManager,request,operation,"(String,LockOptions,LockGrantedCallback)",LockPromise,,V8LockManager_Request_Method,,,third_party/blink/renderer/modules/locks/lock_manager.idl,
+LockScreenData,,interface,,,,,True,,third_party/blink/renderer/modules/lock_screen/lock_screen_data.idl,9
+LockScreenData,deleteData,operation,(String),VoidPromise,,,,,third_party/blink/renderer/modules/lock_screen/lock_screen_data.idl,
+LockScreenData,getData,operation,(String),StringPromise,,,,,third_party/blink/renderer/modules/lock_screen/lock_screen_data.idl,
+LockScreenData,getKeys,operation,(),StringSequencePromise,,,,,third_party/blink/renderer/modules/lock_screen/lock_screen_data.idl,
+LockScreenData,setData,operation,"(String,String)",VoidPromise,,,,,third_party/blink/renderer/modules/lock_screen/lock_screen_data.idl,
 MIDIAccess,,interface,,,,,True,,third_party/blink/renderer/modules/webmidi/midi_access.idl,37
 MIDIAccess,inputs,attribute,,MIDIInputMap,,,,,third_party/blink/renderer/modules/webmidi/midi_access.idl,
 MIDIAccess,onstatechange,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/webmidi/midi_access.idl,
@@ -9232,9 +9239,8 @@ URL,search,attribute,,USVString,,,,,third_party/blink/renderer/core/url/url.idl,
 URL,searchParams,attribute,,URLSearchParams,,,,,third_party/blink/renderer/core/url/url.idl,
 URL,toJSON,operation,(),USVString,,,,,third_party/blink/renderer/core/url/url.idl,
 URL,username,attribute,,USVString,,,,,third_party/blink/renderer/core/url/url.idl,
-URLPattern,,interface,,,,,True,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,10
-URLPattern,exec,operation,(URLPatternInit),URLPatternResult,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
-URLPattern,exec,operation,"(USVString,USVString)",URLPatternResult,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
+URLPattern,,interface,,,,,True,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,12
+URLPattern,exec,operation,"(USVStringOrURLPatternInit,USVString)",URLPatternResult,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,hash,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,hostname,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,password,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
@@ -9242,8 +9248,7 @@ URLPattern,pathname,attribute,,USVString,,,,,third_party/blink/renderer/modules/
 URLPattern,port,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,protocol,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,search,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
-URLPattern,test,operation,(URLPatternInit),Boolean,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
-URLPattern,test,operation,"(USVString,USVString)",Boolean,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
+URLPattern,test,operation,"(USVStringOrURLPatternInit,USVString)",Boolean,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,username,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLSearchParams,,interface,,,,,,,third_party/blink/renderer/core/url/url_search_params.idl,9
 URLSearchParams,,operation,(),String,,,,,third_party/blink/renderer/core/url/url_search_params.idl,21
@@ -11093,6 +11098,7 @@ Window,frames,attribute,,Window,,,,,third_party/blink/renderer/core/frame/window
 Window,getComputedAccessibleNode,operation,(Element),ComputedAccessibleNodePromise,,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,getComputedStyle,operation,"(Element,StringOrNull)",CSSStyleDeclaration,,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,getDigitalGoodsService,operation,(String),DigitalGoodsServiceOrNullPromise,,DigitalGoodsGetDigitalGoodsService,,,third_party/blink/renderer/modules/payments/goods/dom_window_digital_goods.idl,
+Window,getLockScreenData,operation,(),LockScreenDataPromise,,,,,third_party/blink/renderer/modules/lock_screen/dom_window_lock_screen.idl,
 Window,getScreens,operation,(),ScreensPromise,,V8Window_GetScreens_Method,,,third_party/blink/renderer/modules/screen_enumeration/window_screens.idl,
 Window,getScreensDeprecated,operation,(),ScreenSequencePromise,,,,,third_party/blink/renderer/modules/screen_enumeration/screen_enumeration.idl,
 Window,getSelection,operation,(),SelectionOrNull,,,,,third_party/blink/renderer/core/frame/window.idl,
