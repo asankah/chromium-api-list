@@ -147,6 +147,8 @@ AppHistory,onnavigate,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink
 AppHistory,onnavigateerror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigatesuccess,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistoryEntry,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,9
+AppHistoryEntry,id,attribute,,String,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
+AppHistoryEntry,key,attribute,,String,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryEntry,sameDocument,attribute,,Boolean,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryEntry,url,attribute,,USVString,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryNavigateEvent,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history_navigate_event.idl,9
@@ -6252,7 +6254,7 @@ MediaStreamTrackEvent,track,attribute,,MediaStreamTrack,,,,,third_party/blink/re
 MediaStreamTrackGenerator,,interface,,,,,,,third_party/blink/renderer/modules/mediastream/media_stream_track_generator.idl,11
 MediaStreamTrackGenerator,readableControl,attribute,,ReadableStream,,,,,third_party/blink/renderer/modules/mediastream/media_stream_track_generator.idl,
 MediaStreamTrackGenerator,writable,attribute,,WritableStream,,,,,third_party/blink/renderer/modules/mediastream/media_stream_track_generator.idl,
-MediaStreamTrackProcessor,,interface,,,,,,,third_party/blink/renderer/modules/mediastream/media_stream_track_processor.idl,12
+MediaStreamTrackProcessor,,interface,,,,,,,third_party/blink/renderer/modules/mediastream/media_stream_track_processor.idl,11
 MediaStreamTrackProcessor,readable,attribute,,ReadableStream,,,,,third_party/blink/renderer/modules/mediastream/media_stream_track_processor.idl,
 MediaStreamTrackProcessor,writableControl,attribute,,WritableStream,,,,,third_party/blink/renderer/modules/mediastream/media_stream_track_processor.idl,
 MemoryInfo,,interface,,,,,,,third_party/blink/renderer/core/timing/memory_info.idl,36
@@ -9001,6 +9003,9 @@ TaskAttributionTiming,containerType,attribute,,String,,,,,third_party/blink/rend
 TaskAttributionTiming,toJSON,operation,(),Object,,,,,third_party/blink/renderer/core/timing/task_attribution_timing.idl,
 TaskController,,interface,,,,TaskControllerConstructor,,,third_party/blink/renderer/modules/scheduler/task_controller.idl,13
 TaskController,setPriority,operation,(TaskPriority),Void,,TaskControllerSetPriority,,,third_party/blink/renderer/modules/scheduler/task_controller.idl,
+TaskPriorityChangeEvent,,interface,,,,,,,third_party/blink/renderer/modules/scheduler/task_priority_change_event.idl,9
+TaskPriorityChangeEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
+TaskPriorityChangeEvent,previousPriority,attribute,,TaskPriority,,,,,third_party/blink/renderer/modules/scheduler/task_priority_change_event.idl,
 TaskSignal,,interface,,,,,,,third_party/blink/renderer/modules/scheduler/task_signal.idl,12
 TaskSignal,onprioritychange,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/scheduler/task_signal.idl,
 TaskSignal,priority,attribute,,TaskPriority,,TaskSignalPriority,,,third_party/blink/renderer/modules/scheduler/task_signal.idl,
