@@ -233,6 +233,7 @@ AudioEncoder,configure,operation,(AudioEncoderConfig),Void,,,,,third_party/blink
 AudioEncoder,encode,operation,(AudioFrame),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioEncoder,encodeQueueSize,attribute,,Long,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioEncoder,flush,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
+AudioEncoder,isConfigSupported,operation,(AudioEncoderConfig),AudioEncoderSupportPromise,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioEncoder,reset,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioEncoder,state,attribute,,CodecState,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioFrame,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,9
@@ -3511,6 +3512,13 @@ GPUCommandEncoder,popDebugGroup,operation,(),Void,,,,,third_party/blink/renderer
 GPUCommandEncoder,pushDebugGroup,operation,(USVString),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,
 GPUCommandEncoder,resolveQuerySet,operation,"(GPUQuerySet,UnsignedLong,UnsignedLong,GPUBuffer,UnsignedLongLong)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,
 GPUCommandEncoder,writeTimestamp,operation,"(GPUQuerySet,UnsignedLong)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,
+GPUCompilationInfo,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_info.idl,9
+GPUCompilationInfo,messages,attribute,,GPUCompilationMessageArray,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_info.idl,
+GPUCompilationMessage,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_message.idl,15
+GPUCompilationMessage,lineNum,attribute,,UnsignedLongLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_message.idl,
+GPUCompilationMessage,linePos,attribute,,UnsignedLongLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_message.idl,
+GPUCompilationMessage,message,attribute,,String,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_message.idl,
+GPUCompilationMessage,type,attribute,,GPUCompilationMessageType,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_message.idl,
 GPUComputePassEncoder,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_compute_pass_encoder.idl,9
 GPUComputePassEncoder,dispatch,operation,"(UnsignedLong,UnsignedLong,UnsignedLong)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_compute_pass_encoder.idl,
 GPUComputePassEncoder,dispatchIndirect,operation,"(GPUBuffer,UnsignedLongLong)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_compute_pass_encoder.idl,
@@ -3628,6 +3636,7 @@ GPURenderPipeline,label,attribute,,USVStringOrNull,,,,,third_party/blink/rendere
 GPUSampler,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_sampler.idl,9
 GPUSampler,label,attribute,,USVStringOrNull,,,,,third_party/blink/renderer/modules/webgpu/gpu_object_base.idl,
 GPUShaderModule,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_shader_module.idl,9
+GPUShaderModule,compilationInfo,operation,(),GPUCompilationInfoPromise,,,,,third_party/blink/renderer/modules/webgpu/gpu_shader_module.idl,
 GPUShaderModule,label,attribute,,USVStringOrNull,,,,,third_party/blink/renderer/modules/webgpu/gpu_object_base.idl,
 GPUShaderStage,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_shader_stage.idl,10
 GPUShaderStage,COMPUTE,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_shader_stage.idl,13
@@ -5218,7 +5227,6 @@ InternalRuntimeFlags,requestVideoFrameCallbackEnabled,attribute,,Boolean,,,,,thi
 InternalRuntimeFlags,restrictAutomaticLazyFrameLoadingToDataSaverEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,restrictAutomaticLazyImageLoadingToDataSaverEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,restrictGamepadAccessEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,rtcAdaptivePtimeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,rtcAudioJitterBufferMaxPacketsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,rtcAudioJitterBufferRtxHandlingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,rtcExtendDeadlineForPlanBRemovalEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5331,6 +5339,7 @@ InternalRuntimeFlags,webOTPAssertionFeaturePolicyEnabled,attribute,,Boolean,,,,,
 InternalRuntimeFlags,webOTPEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webSchedulerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webShareEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webTransportEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webUSBEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webUSBOnDedicatedWorkersEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webVTTRegionsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -9418,6 +9427,7 @@ VideoEncoder,configure,operation,(VideoEncoderConfig),Void,,,,,third_party/blink
 VideoEncoder,encode,operation,"(VideoFrame,VideoEncoderEncodeOptions)",Void,,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,encodeQueueSize,attribute,,Long,,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,flush,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
+VideoEncoder,isConfigSupported,operation,(VideoEncoderConfig),VideoEncoderSupportPromise,,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,reset,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,state,attribute,,CodecState,,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoFrame,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,11
