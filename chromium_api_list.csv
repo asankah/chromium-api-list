@@ -143,6 +143,7 @@ AnimationWorkletGlobalScope,,interface,,,,,,,third_party/blink/renderer/modules/
 AnimationWorkletGlobalScope,registerAnimator,operation,"(String,AnimatorConstructor)",Void,,AnimationWorkletRegisterAnimator,,,third_party/blink/renderer/modules/animationworklet/animation_worklet_global_scope.idl,
 AppHistory,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history.idl,9
 AppHistory,current,attribute,,AppHistoryEntry,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
+AppHistory,entries,operation,(),AppHistoryEntrySequence,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigate,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigateerror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigatesuccess,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
@@ -537,6 +538,8 @@ CSPViolationReportBody,statusCode,attribute,,UnsignedShort,,,,,third_party/blink
 CSPViolationReportBody,toJSON,operation,(),Object,,,,,third_party/blink/renderer/core/frame/csp/csp_violation_report_body.idl,
 CSSAnimation,,interface,,,,,,,third_party/blink/renderer/core/animation/css/css_animation.idl,8
 CSSAnimation,animationName,attribute,,String,,,,,third_party/blink/renderer/core/animation/css/css_animation.idl,
+CSSColorValue,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_color_value.idl,11
+CSSColorValue,toRGB,operation,(),CSSRGB,,,,,third_party/blink/renderer/core/css/cssom/css_color_value.idl,
 CSSConditionRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_condition_rule.idl,9
 CSSConditionRule,conditionText,attribute,,String,,,,,third_party/blink/renderer/core/css/css_condition_rule.idl,
 CSSContainerRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_container_rule.idl,8
@@ -624,6 +627,11 @@ CSSPropertyRule,inherits,attribute,,Boolean,,,,,third_party/blink/renderer/core/
 CSSPropertyRule,initialValue,attribute,,StringOrNull,,,,,third_party/blink/renderer/core/css/css_property_rule.idl,
 CSSPropertyRule,name,attribute,,String,,,,,third_party/blink/renderer/core/css/css_property_rule.idl,
 CSSPropertyRule,syntax,attribute,,String,,,,,third_party/blink/renderer/core/css/css_property_rule.idl,
+CSSRGB,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_rgb.idl,10
+CSSRGB,alpha,attribute,,DoubleOrCSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_rgb.idl,
+CSSRGB,b,attribute,,DoubleOrCSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_rgb.idl,
+CSSRGB,g,attribute,,DoubleOrCSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_rgb.idl,
+CSSRGB,r,attribute,,DoubleOrCSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_rgb.idl,
 CSSRotate,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_rotate.idl,10
 CSSRotate,angle,attribute,,CSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_rotate.idl,
 CSSRotate,x,attribute,,DoubleOrCSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_rotate.idl,
@@ -2192,9 +2200,9 @@ GCObservation,,interface,,,,,,,third_party/blink/renderer/core/testing/gc_observ
 GCObservation,wasCollected,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/gc_observation.idl,
 GPU,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,26
 GPU,requestAdapter,operation,(GPURequestAdapterOptions),GPUAdapterOrNullPromise,,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,
-GPUAdapter,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,17
+GPUAdapter,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,9
 GPUAdapter,extensions,attribute,,GPUFeatureNameArray,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
-GPUAdapter,features,attribute,,GPUFeatureNameArray,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
+GPUAdapter,features,attribute,,GPUSupportedFeatures,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,name,attribute,,String,,GPUAdapter_Name,,Direct,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,requestDevice,operation,(GPUDeviceDescriptor),GPUDevicePromise,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUBindGroup,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_bind_group.idl,9
@@ -2288,7 +2296,7 @@ GPUDevice,createTexture,operation,(GPUTextureDescriptor),GPUTexture,,,,,third_pa
 GPUDevice,defaultQueue,attribute,,GPUQueue,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,experimentalImportTexture,operation,"(HTMLVideoElement,UnsignedLong)",GPUTexture,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,extensions,attribute,,GPUFeatureNameArray,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
-GPUDevice,features,attribute,,GPUFeatureNameArray,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
+GPUDevice,features,attribute,,GPUSupportedFeatures,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,label,attribute,,USVStringOrNull,,,,,third_party/blink/renderer/modules/webgpu/gpu_object_base.idl,
 GPUDevice,lost,attribute,,GPUDeviceLostInfoPromise,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,onuncapturederror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
@@ -2374,6 +2382,7 @@ GPUShaderStage,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_sh
 GPUShaderStage,COMPUTE,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_shader_stage.idl,13
 GPUShaderStage,FRAGMENT,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_shader_stage.idl,12
 GPUShaderStage,VERTEX,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_shader_stage.idl,11
+GPUSupportedFeatures,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_supported_features.idl,17
 GPUSwapChain,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_swap_chain.idl,9
 GPUSwapChain,getCurrentTexture,operation,(),GPUTexture,,,,,third_party/blink/renderer/modules/webgpu/gpu_swap_chain.idl,
 GPUSwapChain,label,attribute,,USVStringOrNull,,,,,third_party/blink/renderer/modules/webgpu/gpu_object_base.idl,
@@ -3066,7 +3075,7 @@ HTMLMediaElement,remote,attribute,,RemotePlayback,,V8HTMLMediaElement_Remote_Att
 HTMLMediaElement,seekable,attribute,,TimeRanges,,,,,third_party/blink/renderer/core/html/media/html_media_element.idl,
 HTMLMediaElement,seeking,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/media/html_media_element.idl,
 HTMLMediaElement,setMediaKeys,operation,(MediaKeysOrNull),VoidPromise,,,True,,third_party/blink/renderer/modules/encryptedmedia/html_media_element_encrypted_media.idl,
-HTMLMediaElement,setSinkId,operation,(String),VoidPromise,,,,,third_party/blink/renderer/modules/audio_output_devices/html_media_element_audio_output_device.idl,
+HTMLMediaElement,setSinkId,operation,(String),VoidPromise,,HTMLMediaElementSetSinkId,,,third_party/blink/renderer/modules/audio_output_devices/html_media_element_audio_output_device.idl,
 HTMLMediaElement,sinkId,attribute,,String,,,,,third_party/blink/renderer/modules/audio_output_devices/html_media_element_audio_output_device.idl,
 HTMLMediaElement,src,attribute,,USVString,,,,,third_party/blink/renderer/core/html/media/html_media_element.idl,
 HTMLMediaElement,srcObject,attribute,,MediaStreamOrNull,,V8HTMLMediaElement_SrcObject_AttributeGetter,,,third_party/blink/renderer/modules/srcobject/html_media_element_src_object.idl,
@@ -3700,6 +3709,7 @@ InternalRuntimeFlags,cssCalcAsIntEnabled,attribute,,Boolean,,,,,third_party/blin
 InternalRuntimeFlags,cssCalcInfinityAndNaNEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssCaseSensitiveSelectorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssColorSchemeUARenderingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssColorTypedOMEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContainSize1DEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContainerQueriesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContentVisibilityEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -8166,6 +8176,7 @@ VideoFrame,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_f
 VideoFrame,clone,operation,(),VideoFrame,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedHeight,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
+VideoFrame,codedRegion,attribute,,VideoRegion,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedWidth,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,createImageBitmap,operation,(ImageBitmapOptions),ImageBitmapPromise,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,cropHeight,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
@@ -8179,6 +8190,7 @@ VideoFrame,duration,attribute,,UnsignedLongLongOrNull,,,,,third_party/blink/rend
 VideoFrame,format,attribute,,VideoPixelFormatOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,planes,attribute,,PlaneArrayOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,timestamp,attribute,,UnsignedLongLongOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
+VideoFrame,visibleRegion,attribute,,VideoRegion,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoPlaybackQuality,,interface,,,,,,,third_party/blink/renderer/modules/mediasource/video_playback_quality.idl,33
 VideoPlaybackQuality,corruptedVideoFrames,attribute,,UnsignedLong,,V8VideoPlaybackQuality_CorruptedVideoFrames_AttributeGetter,,,third_party/blink/renderer/modules/mediasource/video_playback_quality.idl,
 VideoPlaybackQuality,creationTime,attribute,,Double,,,,,third_party/blink/renderer/modules/mediasource/video_playback_quality.idl,
