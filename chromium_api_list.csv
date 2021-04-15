@@ -143,7 +143,6 @@ AnimationWorkletGlobalScope,,interface,,,,,,,third_party/blink/renderer/modules/
 AnimationWorkletGlobalScope,registerAnimator,operation,"(String,AnimatorConstructor)",Void,,AnimationWorkletRegisterAnimator,,,third_party/blink/renderer/modules/animationworklet/animation_worklet_global_scope.idl,
 AppHistory,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history.idl,9
 AppHistory,current,attribute,,AppHistoryEntry,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
-AppHistory,entries,operation,(),AppHistoryEntrySequence,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigate,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigateerror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigatesuccess,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
@@ -1032,6 +1031,7 @@ CredentialsContainer,preventSilentAccess,operation,(),VoidPromise,,CredentialMan
 CredentialsContainer,store,operation,(Credential),CredentialPromise,,CredentialManagerStore,,,third_party/blink/renderer/modules/credentialmanager/credentials_container.idl,
 Crypto,,interface,,,,,,,third_party/blink/renderer/modules/crypto/crypto.idl,33
 Crypto,getRandomValues,operation,(ArrayBufferView),ArrayBufferView,,CryptoGetRandomValues,,,third_party/blink/renderer/modules/crypto/crypto.idl,
+Crypto,randomUUID,operation,(),String,,,,,third_party/blink/renderer/modules/crypto/crypto.idl,
 Crypto,subtle,attribute,,SubtleCrypto,,,True,,third_party/blink/renderer/modules/crypto/crypto.idl,
 CryptoKey,,interface,,,,,True,,third_party/blink/renderer/modules/crypto/crypto_key.idl,36
 CryptoKey,algorithm,attribute,,Object,,,,,third_party/blink/renderer/modules/crypto/crypto_key.idl,
@@ -3577,9 +3577,11 @@ ImageCapture,grabFrame,operation,(),ImageBitmapPromise,,,,,third_party/blink/ren
 ImageCapture,takePhoto,operation,(PhotoSettings),BlobPromise,,,,,third_party/blink/renderer/modules/imagecapture/image_capture.idl,
 ImageCapture,track,attribute,,MediaStreamTrack,,,,,third_party/blink/renderer/modules/imagecapture/image_capture.idl,
 ImageData,,interface,,,,,,,third_party/blink/renderer/core/html/canvas/image_data.idl,37
+ImageData,colorSpace,attribute,,CanvasColorSpace,,,,,third_party/blink/renderer/core/html/canvas/image_data.idl,
 ImageData,data,attribute,,Uint8ClampedArrayOrUint16ArrayOrFloat32Array,,,,,third_party/blink/renderer/core/html/canvas/image_data.idl,
 ImageData,getSettings,operation,(),ImageDataSettings,,,,,third_party/blink/renderer/core/html/canvas/image_data.idl,
 ImageData,height,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/html/canvas/image_data.idl,
+ImageData,storageFormat,attribute,,ImageDataStorageFormat,,,,,third_party/blink/renderer/core/html/canvas/image_data.idl,
 ImageData,width,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/html/canvas/image_data.idl,
 ImageDecoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,13
 ImageDecoder,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
@@ -3906,6 +3908,7 @@ InternalRuntimeFlags,notificationTriggersEnabled,attribute,,Boolean,,,,,third_pa
 InternalRuntimeFlags,notificationsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,offMainThreadCSSPaintEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,offscreenCanvasCommitEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,offsetParentNewSpecBehaviorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,onDeviceChangeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,orientationEventEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,originIsolationHeaderEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4002,6 +4005,7 @@ InternalRuntimeFlags,serviceWorkerClientLifecycleStateEnabled,attribute,,Boolean
 InternalRuntimeFlags,serviceWorkerFetchEventWorkerTimingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sharedArrayBufferEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sharedArrayBufferOnDesktopEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,sharedArrayBufferUnrestrictedAccessAllowedEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sharedWorkerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,signatureBasedIntegrityEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,signedExchangePrefetchCacheForNavigationsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4028,6 +4032,7 @@ InternalRuntimeFlags,textDetectorEnabled,attribute,,Boolean,,,,,third_party/blin
 InternalRuntimeFlags,textFragmentColorChangeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,textFragmentIdentifiersEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,thirdPartyOriginTrialsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,throttleDisplayNoneAndVisibilityHiddenCrossOriginIframesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,timeZoneChangeEventEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,timerThrottlingForBackgroundTabsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,timerThrottlingForHiddenFramesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4046,6 +4051,7 @@ InternalRuntimeFlags,unrestrictedSharedArrayBufferEnabled,attribute,,Boolean,,,,
 InternalRuntimeFlags,urlPatternEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,userActivationSameOriginVisibilityEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,userAgentClientHintEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,uuidEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,v8IdleTasksEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,videoAutoFullscreenEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,videoFullscreenOrientationLockEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4480,6 +4486,7 @@ Internals,selectedTextForClipboard,operation,(),String,,,,,third_party/blink/ren
 Internals,selectionBounds,operation,(),DOMRect,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,sequenceTest,operation,(),SequenceTest,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,serializeObject,operation,(Any),ArrayBuffer,,,,,third_party/blink/renderer/core/testing/internals.idl,
+Internals,setAllowPerChunkTransferring,operation,(ReadableStream),Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,setAutofilled,operation,"(Element,Boolean)",Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,setAutofilledValue,operation,"(Element,String)",Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,setBrowserControlsShownRatio,operation,"(Float,Float)",Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
@@ -8178,12 +8185,10 @@ VideoFrame,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcod
 VideoFrame,codedHeight,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedRegion,attribute,,VideoRegion,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedWidth,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
-VideoFrame,createImageBitmap,operation,(ImageBitmapOptions),ImageBitmapPromise,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,cropHeight,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,cropLeft,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,cropTop,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,cropWidth,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
-VideoFrame,destroy,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,displayHeight,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,displayWidth,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,duration,attribute,,UnsignedLongLongOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
@@ -10277,6 +10282,9 @@ XRBoundedReferenceSpace,boundsGeometry,attribute,,DOMPointReadOnlyArray,,,,,thir
 XRCPUDepthInformation,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_cpu_depth_information.idl,9
 XRCPUDepthInformation,data,attribute,,ArrayBuffer,,XRCPUDepthInformationDataAttribute,,,third_party/blink/renderer/modules/xr/xr_cpu_depth_information.idl,
 XRCPUDepthInformation,getDepthInMeters,operation,"(Float,Float)",Float,,XRCPUDepthInformationGetDepth,,,third_party/blink/renderer/modules/xr/xr_cpu_depth_information.idl,
+XRCamera,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_camera.idl,9
+XRCamera,height,attribute,,Long,,,,,third_party/blink/renderer/modules/xr/xr_camera.idl,
+XRCamera,width,attribute,,Long,,,,,third_party/blink/renderer/modules/xr/xr_camera.idl,
 XRDOMOverlayState,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_dom_overlay_state.idl,15
 XRDOMOverlayState,type,attribute,,XRDOMOverlayType,,,,,third_party/blink/renderer/modules/xr/xr_dom_overlay_state.idl,
 XRDepthInformation,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_depth_information.idl,9
@@ -10417,6 +10425,7 @@ XRTransientInputHitTestResult,results,attribute,,XRHitTestResultArray,,,,,third_
 XRTransientInputHitTestSource,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_transient_input_hit_test_source.idl,6
 XRTransientInputHitTestSource,cancel,operation,(),Void,,,,,third_party/blink/renderer/modules/xr/xr_transient_input_hit_test_source.idl,
 XRView,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_view.idl,16
+XRView,camera,attribute,,XRCameraOrNull,,,,,third_party/blink/renderer/modules/xr/xr_view.idl,
 XRView,eye,attribute,,XREye,,,,,third_party/blink/renderer/modules/xr/xr_view.idl,
 XRView,isFirstPersonObserver,attribute,,Boolean,,,,,third_party/blink/renderer/modules/xr/xr_view.idl,
 XRView,projectionMatrix,attribute,,Float32Array,,,,,third_party/blink/renderer/modules/xr/xr_view.idl,
@@ -10424,7 +10433,6 @@ XRView,recommendedViewportScale,attribute,,DoubleOrNull,,,,,third_party/blink/re
 XRView,requestViewportScale,operation,(DoubleOrNull),Void,,,,,third_party/blink/renderer/modules/xr/xr_view.idl,
 XRView,transform,attribute,,XRRigidTransform,,,,,third_party/blink/renderer/modules/xr/xr_view.idl,
 XRViewerPose,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_viewer_pose.idl,10
-XRViewerPose,cameraViews,attribute,,XRViewArray,,,,,third_party/blink/renderer/modules/xr/xr_viewer_pose.idl,
 XRViewerPose,views,attribute,,XRViewArray,,,,,third_party/blink/renderer/modules/xr/xr_viewer_pose.idl,
 XRViewport,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_viewport.idl,10
 XRViewport,height,attribute,,Long,,,,,third_party/blink/renderer/modules/xr/xr_viewport.idl,
@@ -10432,7 +10440,7 @@ XRViewport,width,attribute,,Long,,,,,third_party/blink/renderer/modules/xr/xr_vi
 XRViewport,x,attribute,,Long,,,,,third_party/blink/renderer/modules/xr/xr_viewport.idl,
 XRViewport,y,attribute,,Long,,,,,third_party/blink/renderer/modules/xr/xr_viewport.idl,
 XRWebGLBinding,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_webgl_binding.idl,9
-XRWebGLBinding,getCameraImage,operation,"(XRFrame,XRView)",WebGLTextureOrNull,,,,,third_party/blink/renderer/modules/xr/xr_webgl_binding.idl,
+XRWebGLBinding,getCameraImage,operation,(XRCamera),WebGLTextureOrNull,,,,,third_party/blink/renderer/modules/xr/xr_webgl_binding.idl,
 XRWebGLBinding,getDepthInformation,operation,(XRView),XRWebGLDepthInformationOrNull,,XRWebGLBindingGetDepthInformation,,,third_party/blink/renderer/modules/xr/xr_webgl_binding.idl,
 XRWebGLBinding,getReflectionCubeMap,operation,(XRLightProbe),WebGLTextureOrNull,,XRWebGLBindingGetReflectionCubeMap,,,third_party/blink/renderer/modules/xr/xr_webgl_binding.idl,
 XRWebGLDepthInformation,,interface,,,,,True,,third_party/blink/renderer/modules/xr/xr_webgl_depth_information.idl,9
