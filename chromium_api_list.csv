@@ -143,6 +143,7 @@ AnimationWorkletGlobalScope,,interface,,,,,,,third_party/blink/renderer/modules/
 AnimationWorkletGlobalScope,registerAnimator,operation,"(String,AnimatorConstructor)",Void,,AnimationWorkletRegisterAnimator,,,third_party/blink/renderer/modules/animationworklet/animation_worklet_global_scope.idl,
 AppHistory,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history.idl,9
 AppHistory,current,attribute,,AppHistoryEntry,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
+AppHistory,entries,operation,(),AppHistoryEntrySequence,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigate,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigateerror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigatesuccess,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
@@ -538,6 +539,7 @@ CSPViolationReportBody,toJSON,operation,(),Object,,,,,third_party/blink/renderer
 CSSAnimation,,interface,,,,,,,third_party/blink/renderer/core/animation/css/css_animation.idl,8
 CSSAnimation,animationName,attribute,,String,,,,,third_party/blink/renderer/core/animation/css/css_animation.idl,
 CSSColorValue,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_color_value.idl,11
+CSSColorValue,toHSL,operation,(),CSSHSL,,,,,third_party/blink/renderer/core/css/cssom/css_color_value.idl,
 CSSColorValue,toRGB,operation,(),CSSRGB,,,,,third_party/blink/renderer/core/css/cssom/css_color_value.idl,
 CSSConditionRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_condition_rule.idl,9
 CSSConditionRule,conditionText,attribute,,String,,,,,third_party/blink/renderer/core/css/css_condition_rule.idl,
@@ -560,6 +562,11 @@ CSSGroupingRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_groupin
 CSSGroupingRule,cssRules,attribute,,CSSRuleList,,,,,third_party/blink/renderer/core/css/css_grouping_rule.idl,
 CSSGroupingRule,deleteRule,operation,(UnsignedLong),Void,,,,,third_party/blink/renderer/core/css/css_grouping_rule.idl,
 CSSGroupingRule,insertRule,operation,"(String,UnsignedLong)",UnsignedLong,,,,,third_party/blink/renderer/core/css/css_grouping_rule.idl,
+CSSHSL,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_hsl.idl,10
+CSSHSL,alpha,attribute,,DoubleOrCSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_hsl.idl,
+CSSHSL,h,attribute,,CSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_hsl.idl,
+CSSHSL,l,attribute,,DoubleOrCSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_hsl.idl,
+CSSHSL,s,attribute,,DoubleOrCSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_hsl.idl,
 CSSImageValue,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_image_value.idl,11
 CSSImportRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_import_rule.idl,25
 CSSImportRule,href,attribute,,String,,,,,third_party/blink/renderer/core/css/css_import_rule.idl,
