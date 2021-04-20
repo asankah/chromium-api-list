@@ -3188,6 +3188,7 @@ HTMLParamElement,valueType,attribute,,String,,,,,third_party/blink/renderer/core
 HTMLPictureElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_picture_element.idl,9
 HTMLPopupElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_popup_element.idl,7
 HTMLPopupElement,hide,operation,(),Void,,V8HTMLPopupElement_Hide_Method,,,third_party/blink/renderer/core/html/html_popup_element.idl,
+HTMLPopupElement,initiallyOpen,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/html_popup_element.idl,
 HTMLPopupElement,open,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/html_popup_element.idl,
 HTMLPopupElement,show,operation,(),Void,,V8HTMLPopupElement_Show_Method,,,third_party/blink/renderer/core/html/html_popup_element.idl,
 HTMLPortalElement,,interface,,,,,,,third_party/blink/renderer/core/html/portal/html_portal_element.idl,8
@@ -3748,6 +3749,7 @@ InternalRuntimeFlags,cssPaintAPIArgumentsEnabled,attribute,,Boolean,,,,,third_pa
 InternalRuntimeFlags,cssPictureInPictureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssPseudoDirEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssPseudoIsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssPseudoPlayingPausedEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssPseudoWhereEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssScrollTimelineEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssScrollbarsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -9784,6 +9786,7 @@ WebGLWebCodecsVideoFrame,importVideoFrame,operation,(VideoFrame),WebGLWebCodecsV
 WebGLWebCodecsVideoFrame,releaseVideoFrame,operation,(WebGLWebCodecsVideoFrameHandle),Boolean,,,,,third_party/blink/renderer/modules/webgl/webgl_webcodecs_video_frame.idl,
 WebId,,interface,,,,,True,,third_party/blink/renderer/modules/webid/web_id.idl,11
 WebId,get,operation,(WebIdRequestOptions),StringPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
+WebId,logout,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
 WebId,provide,operation,(String),VoidPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
 WebSocket,,interface,,,,,,,third_party/blink/renderer/modules/websockets/websocket.idl,40
 WebSocket,CLOSED,constant,,UnsignedShort,,,,,third_party/blink/renderer/modules/websockets/websocket.idl,48
