@@ -2526,6 +2526,7 @@ HTMLAnchorElement,ping,attribute,,USVString,,,,,third_party/blink/renderer/core/
 HTMLAnchorElement,port,attribute,,USVString,,,,,third_party/blink/renderer/core/html/html_hyperlink_element_utils.idl,
 HTMLAnchorElement,protocol,attribute,,USVString,,,,,third_party/blink/renderer/core/html/html_hyperlink_element_utils.idl,
 HTMLAnchorElement,referrerPolicy,attribute,,String,,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
+HTMLAnchorElement,registerAttributionSource,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
 HTMLAnchorElement,rel,attribute,,String,,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
 HTMLAnchorElement,relList,attribute,,DOMTokenList,,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
 HTMLAnchorElement,reportingOrigin,attribute,,USVString,,,,,third_party/blink/renderer/core/html/html_anchor_element.idl,
@@ -3187,6 +3188,7 @@ HTMLParamElement,value,attribute,,String,,,,,third_party/blink/renderer/core/htm
 HTMLParamElement,valueType,attribute,,String,,,,,third_party/blink/renderer/core/html/html_param_element.idl,
 HTMLPictureElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_picture_element.idl,9
 HTMLPopupElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_popup_element.idl,7
+HTMLPopupElement,anchor,attribute,,Element,,,,,third_party/blink/renderer/core/html/html_popup_element.idl,
 HTMLPopupElement,hide,operation,(),Void,,V8HTMLPopupElement_Hide_Method,,,third_party/blink/renderer/core/html/html_popup_element.idl,
 HTMLPopupElement,initiallyOpen,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/html_popup_element.idl,
 HTMLPopupElement,open,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/html_popup_element.idl,
