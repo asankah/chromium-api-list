@@ -3598,7 +3598,6 @@ ImageDecoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/image
 ImageDecoder,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
 ImageDecoder,complete,attribute,,Boolean,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
 ImageDecoder,decode,operation,(ImageDecodeOptions),ImageDecodeResultPromise,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
-ImageDecoder,decodeMetadata,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
 ImageDecoder,isTypeSupported,operation,(String),BooleanPromise,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
 ImageDecoder,reset,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
 ImageDecoder,tracks,attribute,,ImageTrackList,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
@@ -3611,6 +3610,7 @@ ImageTrack,selected,attribute,,Boolean,,,,,third_party/blink/renderer/modules/we
 ImageTrackList,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/image_track_list.idl,10
 ImageTrackList,,operation,(UnsignedLong),ImageTrack,,,,,third_party/blink/renderer/modules/webcodecs/image_track_list.idl,
 ImageTrackList,length,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/image_track_list.idl,
+ImageTrackList,ready,attribute,,VoidPromise,,,,,third_party/blink/renderer/modules/webcodecs/image_track_list.idl,
 ImageTrackList,selectedIndex,attribute,,Long,,,,,third_party/blink/renderer/modules/webcodecs/image_track_list.idl,
 ImageTrackList,selectedTrack,attribute,,ImageTrackOrNull,,,,,third_party/blink/renderer/modules/webcodecs/image_track_list.idl,
 Ink,,interface,,,,,,,third_party/blink/renderer/modules/delegated_ink/ink.idl,14
@@ -3974,7 +3974,6 @@ InternalRuntimeFlags,presentationEnabled,attribute,,Boolean,,,,,third_party/blin
 InternalRuntimeFlags,priorityHintsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,pushMessagingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,pushMessagingSubscriptionChangeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,quicTransportEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,quotaChangeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,rawClipboardEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,remotePlaybackBackendEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -6086,16 +6085,6 @@ PushSubscriptionChangeEvent,oldSubscription,attribute,,PushSubscriptionOrNull,,,
 PushSubscriptionOptions,,interface,,,,,,,third_party/blink/renderer/modules/push_messaging/push_subscription_options.idl,10
 PushSubscriptionOptions,applicationServerKey,attribute,,ArrayBufferOrNull,,,,,third_party/blink/renderer/modules/push_messaging/push_subscription_options.idl,
 PushSubscriptionOptions,userVisibleOnly,attribute,,Boolean,,,,,third_party/blink/renderer/modules/push_messaging/push_subscription_options.idl,
-QuicTransport,,interface,,,,,,,third_party/blink/renderer/modules/webtransport/quic_transport.idl,10
-QuicTransport,close,operation,(WebTransportCloseInfo),Void,,,,,third_party/blink/renderer/modules/webtransport/quic_transport.idl,
-QuicTransport,closed,attribute,,WebTransportCloseInfoPromise,,,,,third_party/blink/renderer/modules/webtransport/quic_transport.idl,
-QuicTransport,createBidirectionalStream,operation,(),BidirectionalStreamPromise,,,,,third_party/blink/renderer/modules/webtransport/quic_transport.idl,
-QuicTransport,createSendStream,operation,(),SendStreamPromise,,,,,third_party/blink/renderer/modules/webtransport/quic_transport.idl,
-QuicTransport,ready,attribute,,VoidPromise,,,,,third_party/blink/renderer/modules/webtransport/quic_transport.idl,
-QuicTransport,receiveBidirectionalStreams,operation,(),ReadableStream,,,,,third_party/blink/renderer/modules/webtransport/quic_transport.idl,
-QuicTransport,receiveDatagrams,operation,(),ReadableStream,,,,,third_party/blink/renderer/modules/webtransport/quic_transport.idl,
-QuicTransport,receiveStreams,operation,(),ReadableStream,,,,,third_party/blink/renderer/modules/webtransport/quic_transport.idl,
-QuicTransport,sendDatagrams,operation,(),WritableStream,,,,,third_party/blink/renderer/modules/webtransport/quic_transport.idl,
 RTCCertificate,,interface,,,,,,,third_party/blink/renderer/modules/peerconnection/rtc_certificate.idl,33
 RTCCertificate,expires,attribute,,UnsignedLongLong,,,,,third_party/blink/renderer/modules/peerconnection/rtc_certificate.idl,
 RTCCertificate,getFingerprints,operation,(),RTCDtlsFingerprintSequence,,,,,third_party/blink/renderer/modules/peerconnection/rtc_certificate.idl,
@@ -7381,11 +7370,9 @@ ScrollState,positionY,attribute,,Long,,,,,third_party/blink/renderer/core/page/s
 ScrollState,velocityX,attribute,,Double,,,,,third_party/blink/renderer/core/page/scrolling/scroll_state.idl,
 ScrollState,velocityY,attribute,,Double,,,,,third_party/blink/renderer/core/page/scrolling/scroll_state.idl,
 ScrollTimeline,,interface,,,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,12
-ScrollTimeline,endScrollOffset,attribute,,CSSNumericValueOrStringOrCSSKeywordValueOrScrollTimelineElementBasedOffset,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 ScrollTimeline,orientation,attribute,,ScrollDirection,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 ScrollTimeline,scrollOffsets,attribute,,CSSNumericValueOrStringOrCSSKeywordValueOrScrollTimelineElementBasedOffsetArray,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 ScrollTimeline,scrollSource,attribute,,ElementOrNull,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
-ScrollTimeline,startScrollOffset,attribute,,CSSNumericValueOrStringOrCSSKeywordValueOrScrollTimelineElementBasedOffset,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 ScrollTimeline,timeRange,attribute,,DoubleOrScrollTimelineAutoKeyword,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 SecurityPolicyViolationEvent,,interface,,,,,,,third_party/blink/renderer/core/events/security_policy_violation_event.idl,34
 SecurityPolicyViolationEvent,blockedURI,attribute,,String,,V8SecurityPolicyViolationEvent_BlockedURI_AttributeGetter,,,third_party/blink/renderer/core/events/security_policy_violation_event.idl,
