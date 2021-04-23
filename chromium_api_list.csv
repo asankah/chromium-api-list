@@ -144,6 +144,8 @@ AnimationWorkletGlobalScope,registerAnimator,operation,"(String,AnimatorConstruc
 AppHistory,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history.idl,9
 AppHistory,current,attribute,,AppHistoryEntry,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,entries,operation,(),AppHistoryEntrySequence,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
+AppHistory,navigate,operation,"(USVString,AppHistoryNavigateOptions)",VoidPromise,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
+AppHistory,navigate,operation,(AppHistoryNavigateOptions),VoidPromise,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigate,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigateerror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigatesuccess,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
@@ -156,6 +158,7 @@ AppHistoryNavigateEvent,,interface,,,,,,,third_party/blink/renderer/core/app_his
 AppHistoryNavigateEvent,canRespond,attribute,,Boolean,,,,,third_party/blink/renderer/core/app_history/app_history_navigate_event.idl,
 AppHistoryNavigateEvent,formData,attribute,,FormDataOrNull,,,,,third_party/blink/renderer/core/app_history/app_history_navigate_event.idl,
 AppHistoryNavigateEvent,hashChange,attribute,,Boolean,,,,,third_party/blink/renderer/core/app_history/app_history_navigate_event.idl,
+AppHistoryNavigateEvent,info,attribute,,Any,,,,,third_party/blink/renderer/core/app_history/app_history_navigate_event.idl,
 AppHistoryNavigateEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 AppHistoryNavigateEvent,respondWith,operation,(AnyPromise),Void,,,,,third_party/blink/renderer/core/app_history/app_history_navigate_event.idl,
 AppHistoryNavigateEvent,userInitiated,attribute,,Boolean,,,,,third_party/blink/renderer/core/app_history/app_history_navigate_event.idl,
@@ -1718,9 +1721,7 @@ EXTsRGB,SRGB8_ALPHA8_EXT,constant,,UnsignedLong,,,,,third_party/blink/renderer/m
 EXTsRGB,SRGB_ALPHA_EXT,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgl/ext_srgb.idl,12
 EXTsRGB,SRGB_EXT,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgl/ext_srgb.idl,11
 EditContext,,interface,,,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,13
-EditContext,blur,operation,(),Void,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,
 EditContext,enterKeyHint,attribute,,EditContextEnterKeyHint,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,
-EditContext,focus,operation,(),Void,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,
 EditContext,inputMode,attribute,,EditContextInputMode,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,
 EditContext,inputPanelPolicy,attribute,,EditContextInputPanelPolicy,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,
 EditContext,oncompositionend,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,
@@ -3688,7 +3689,6 @@ InternalRuntimeFlags,capabilityDelegationEnabled,attribute,,Boolean,,,,,third_pa
 InternalRuntimeFlags,capabilityDelegationPaymentRequestEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,captureTimeInCsrcEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clickPointerEventEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,clickPointerEventIntegerCoordinatesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clickRetargettingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clipboardSvgEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,colrv1FontsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -8179,10 +8179,11 @@ VideoEncoder,isConfigSupported,operation,(VideoEncoderConfig),VideoEncoderSuppor
 VideoEncoder,reset,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,state,attribute,,CodecState,,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoFrame,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,11
+VideoFrame,allocationSize,operation,(VideoFrameReadIntoOptions),UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,clone,operation,(),VideoFrame,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedHeight,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
-VideoFrame,codedRegion,attribute,,VideoRegion,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
+VideoFrame,codedRegion,attribute,,VideoFrameRegion,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedWidth,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,cropHeight,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,cropLeft,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
@@ -8193,8 +8194,9 @@ VideoFrame,displayWidth,attribute,,UnsignedLong,,,,,third_party/blink/renderer/m
 VideoFrame,duration,attribute,,UnsignedLongLongOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,format,attribute,,VideoPixelFormatOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,planes,attribute,,PlaneArrayOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
+VideoFrame,readInto,operation,"(ArrayBufferOrArrayBufferView,VideoFrameReadIntoOptions)",PlaneLayoutSequencePromise,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,timestamp,attribute,,UnsignedLongLongOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
-VideoFrame,visibleRegion,attribute,,VideoRegion,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
+VideoFrame,visibleRegion,attribute,,VideoFrameRegion,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoPlaybackQuality,,interface,,,,,,,third_party/blink/renderer/modules/mediasource/video_playback_quality.idl,33
 VideoPlaybackQuality,corruptedVideoFrames,attribute,,UnsignedLong,,V8VideoPlaybackQuality_CorruptedVideoFrames_AttributeGetter,,,third_party/blink/renderer/modules/mediasource/video_playback_quality.idl,
 VideoPlaybackQuality,creationTime,attribute,,Double,,,,,third_party/blink/renderer/modules/mediasource/video_playback_quality.idl,
@@ -9775,7 +9777,7 @@ WebGLWebCodecsVideoFrame,importVideoFrame,operation,(VideoFrame),WebGLWebCodecsV
 WebGLWebCodecsVideoFrame,releaseVideoFrame,operation,(WebGLWebCodecsVideoFrameHandle),Boolean,,,,,third_party/blink/renderer/modules/webgl/webgl_webcodecs_video_frame.idl,
 WebId,,interface,,,,,True,,third_party/blink/renderer/modules/webid/web_id.idl,11
 WebId,get,operation,(WebIdRequestOptions),StringPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
-WebId,logout,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
+WebId,logout,operation,(USVStringSequence),VoidPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
 WebId,provide,operation,(String),VoidPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
 WebSocket,,interface,,,,,,,third_party/blink/renderer/modules/websockets/websocket.idl,40
 WebSocket,CLOSED,constant,,UnsignedShort,,,,,third_party/blink/renderer/modules/websockets/websocket.idl,48
