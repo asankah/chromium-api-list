@@ -242,8 +242,9 @@ AudioEncoder,reset,operation,(),Void,,,,,third_party/blink/renderer/modules/webc
 AudioEncoder,state,attribute,,CodecState,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioFrame,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,9
 AudioFrame,buffer,attribute,,AudioBuffer,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,
+AudioFrame,clone,operation,(),VideoFrame,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,
 AudioFrame,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,
-AudioFrame,timestamp,attribute,,UnsignedLongLong,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,
+AudioFrame,timestamp,attribute,,LongLong,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,
 AudioListener,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/audio_listener.idl,31
 AudioListener,forwardX,attribute,,AudioParam,,,,,third_party/blink/renderer/modules/webaudio/audio_listener.idl,
 AudioListener,forwardY,attribute,,AudioParam,,,,,third_party/blink/renderer/modules/webaudio/audio_listener.idl,
@@ -1944,12 +1945,12 @@ ElementInternals,validity,attribute,,ValidityState,,,,,third_party/blink/rendere
 ElementInternals,willValidate,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/custom/element_internals.idl,
 EncodedAudioChunk,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/encoded_audio_chunk.idl,13
 EncodedAudioChunk,data,attribute,,ArrayBuffer,,,,,third_party/blink/renderer/modules/webcodecs/encoded_audio_chunk.idl,
-EncodedAudioChunk,timestamp,attribute,,UnsignedLongLong,,,,,third_party/blink/renderer/modules/webcodecs/encoded_audio_chunk.idl,
+EncodedAudioChunk,timestamp,attribute,,LongLong,,,,,third_party/blink/renderer/modules/webcodecs/encoded_audio_chunk.idl,
 EncodedAudioChunk,type,attribute,,EncodedAudioChunkType,,,,,third_party/blink/renderer/modules/webcodecs/encoded_audio_chunk.idl,
 EncodedVideoChunk,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/encoded_video_chunk.idl,13
 EncodedVideoChunk,data,attribute,,ArrayBuffer,,,,,third_party/blink/renderer/modules/webcodecs/encoded_video_chunk.idl,
 EncodedVideoChunk,duration,attribute,,UnsignedLongLongOrNull,,,,,third_party/blink/renderer/modules/webcodecs/encoded_video_chunk.idl,
-EncodedVideoChunk,timestamp,attribute,,UnsignedLongLong,,,,,third_party/blink/renderer/modules/webcodecs/encoded_video_chunk.idl,
+EncodedVideoChunk,timestamp,attribute,,LongLong,,,,,third_party/blink/renderer/modules/webcodecs/encoded_video_chunk.idl,
 EncodedVideoChunk,type,attribute,,EncodedVideoChunkType,,,,,third_party/blink/renderer/modules/webcodecs/encoded_video_chunk.idl,
 Entry,,interface,,,,,,,third_party/blink/renderer/modules/filesystem/entry.idl,34
 Entry,copyTo,operation,"(DirectoryEntry,StringOrNull,EntryCallbackOrNull,ErrorCallbackOrNull)",Void,,,,,third_party/blink/renderer/modules/filesystem/entry.idl,
@@ -3859,6 +3860,7 @@ InternalRuntimeFlags,layoutNGEnabled,attribute,,Boolean,,,,,third_party/blink/re
 InternalRuntimeFlags,layoutNGFragmentTraversalEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGFullPositionForPointEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGGridEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,layoutNGLayoutOverflowRecalcEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGPrintingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGReplacedEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGTableEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4032,7 +4034,6 @@ InternalRuntimeFlags,storageBucketsEnabled,attribute,,Boolean,,,,,third_party/bl
 InternalRuntimeFlags,storageFoundationAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,strictMimeTypesForWorkersEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,subresourceWebBundlesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,surfaceEmbeddingFeaturesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,svgTextNGEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,systemWakeLockEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,targetBlankImpliesNoOpenerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4042,6 +4043,7 @@ InternalRuntimeFlags,testFeatureImpliedEnabled,attribute,,Boolean,,,,,third_part
 InternalRuntimeFlags,textDetectorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,textFragmentColorChangeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,textFragmentIdentifiersEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,textFragmentTapOpensContextMenuEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,thirdPartyOriginTrialsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,throttleDisplayNoneAndVisibilityHiddenCrossOriginIframesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,timeZoneChangeEventEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5461,13 +5463,13 @@ OfflineAudioContext,oncomplete,attribute,,EventHandlerNonNullOrNull,,,,,third_pa
 OfflineAudioContext,resume,operation,(),VoidPromise,,OfflineAudioContextResume,,,third_party/blink/renderer/modules/webaudio/offline_audio_context.idl,
 OfflineAudioContext,startRendering,operation,(),AudioBufferPromise,,OfflineAudioContextStartRendering,,,third_party/blink/renderer/modules/webaudio/offline_audio_context.idl,
 OfflineAudioContext,suspend,operation,(Double),VoidPromise,,OfflineAudioContextSuspend,,,third_party/blink/renderer/modules/webaudio/offline_audio_context.idl,
-OffscreenCanvas,,interface,,,,,,,third_party/blink/renderer/core/offscreencanvas/offscreen_canvas.idl,11
+OffscreenCanvas,,interface,,,,,,,third_party/blink/renderer/core/offscreencanvas/offscreen_canvas.idl,10
 OffscreenCanvas,convertToBlob,operation,(ImageEncodeOptions),BlobPromise,,OffscreenCanvasConvertToBlob,,(True),third_party/blink/renderer/core/offscreencanvas/offscreen_canvas.idl,
 OffscreenCanvas,getContext,operation,"(OffscreenRenderingContextType,CanvasContextCreationAttributesModule)",OffscreenCanvasRenderingContext2DOrWebGLRenderingContextOrWebGL2RenderingContextOrImageBitmapRenderingContextOrGPUCanvasContextOrNull,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas/offscreen_canvas_module.idl,
 OffscreenCanvas,height,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/offscreencanvas/offscreen_canvas.idl,
 OffscreenCanvas,transferToImageBitmap,operation,(),ImageBitmap,,OffscreenCanvasTransferToImageBitmap,,(True),third_party/blink/renderer/core/offscreencanvas/offscreen_canvas.idl,
 OffscreenCanvas,width,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/offscreencanvas/offscreen_canvas.idl,
-OffscreenCanvasRenderingContext2D,,interface,,,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,10
+OffscreenCanvasRenderingContext2D,,interface,,,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,9
 OffscreenCanvasRenderingContext2D,arc,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,Boolean)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 OffscreenCanvasRenderingContext2D,arcTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 OffscreenCanvasRenderingContext2D,beginPath,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
@@ -8195,7 +8197,7 @@ VideoFrame,duration,attribute,,UnsignedLongLongOrNull,,,,,third_party/blink/rend
 VideoFrame,format,attribute,,VideoPixelFormatOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,planes,attribute,,PlaneArrayOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,readInto,operation,"(ArrayBufferOrArrayBufferView,VideoFrameReadIntoOptions)",PlaneLayoutSequencePromise,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
-VideoFrame,timestamp,attribute,,UnsignedLongLongOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
+VideoFrame,timestamp,attribute,,LongLongOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,visibleRegion,attribute,,VideoFrameRegion,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoPlaybackQuality,,interface,,,,,,,third_party/blink/renderer/modules/mediasource/video_playback_quality.idl,33
 VideoPlaybackQuality,corruptedVideoFrames,attribute,,UnsignedLong,,V8VideoPlaybackQuality_CorruptedVideoFrames_AttributeGetter,,,third_party/blink/renderer/modules/mediasource/video_playback_quality.idl,
