@@ -2188,12 +2188,15 @@ FontFaceSetLoadEvent,fontfaces,attribute,,FontFaceArray,,,,,third_party/blink/re
 FontFaceSetLoadEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 FontManager,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_manager.idl,10
 FontManager,query,operation,(QueryOptions),FontMetadataSequencePromise,,V8FontManager_Query_Method,,,third_party/blink/renderer/modules/font_access/font_manager.idl,
-FontMetadata,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_metadata.idl,10
+FontMetadata,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_metadata.idl,11
 FontMetadata,blob,operation,(),BlobPromise,,V8FontMetadata_Blob_Method,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontMetadata,family,attribute,,USVString,,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontMetadata,fullName,attribute,,USVString,,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
+FontMetadata,italic,attribute,,Boolean,,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontMetadata,postscriptName,attribute,,USVString,,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
+FontMetadata,stretch,attribute,,Float,,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontMetadata,style,attribute,,USVString,,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
+FontMetadata,weight,attribute,,Float,,,,,third_party/blink/renderer/modules/font_access/font_metadata.idl,
 FontTableMap,,interface,,,,,True,,third_party/blink/renderer/modules/font_access/font_table_map.idl,10
 FormData,,interface,,,,,,,third_party/blink/renderer/core/html/forms/form_data.idl,37
 FormData,append,operation,"(USVString,USVString)",Void,,,,,third_party/blink/renderer/core/html/forms/form_data.idl,
@@ -2267,9 +2270,11 @@ GPUCommandEncoder,writeTimestamp,operation,"(GPUQuerySet,UnsignedLong)",Void,,,,
 GPUCompilationInfo,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_info.idl,9
 GPUCompilationInfo,messages,attribute,,GPUCompilationMessageArray,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_info.idl,
 GPUCompilationMessage,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_message.idl,15
+GPUCompilationMessage,length,attribute,,UnsignedLongLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_message.idl,
 GPUCompilationMessage,lineNum,attribute,,UnsignedLongLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_message.idl,
 GPUCompilationMessage,linePos,attribute,,UnsignedLongLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_message.idl,
 GPUCompilationMessage,message,attribute,,String,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_message.idl,
+GPUCompilationMessage,offset,attribute,,UnsignedLongLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_message.idl,
 GPUCompilationMessage,type,attribute,,GPUCompilationMessageType,,,,,third_party/blink/renderer/modules/webgpu/gpu_compilation_message.idl,
 GPUComputePassEncoder,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_compute_pass_encoder.idl,9
 GPUComputePassEncoder,dispatch,operation,"(UnsignedLong,UnsignedLong,UnsignedLong)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_compute_pass_encoder.idl,
@@ -3602,6 +3607,7 @@ ImageData,width,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/html
 ImageDecoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,13
 ImageDecoder,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
 ImageDecoder,complete,attribute,,Boolean,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
+ImageDecoder,completed,attribute,,VoidPromise,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
 ImageDecoder,decode,operation,(ImageDecodeOptions),ImageDecodeResultPromise,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
 ImageDecoder,isTypeSupported,operation,(String),BooleanPromise,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
 ImageDecoder,reset,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
@@ -4022,6 +4028,7 @@ InternalRuntimeFlags,serviceWorkerFetchEventWorkerTimingEnabled,attribute,,Boole
 InternalRuntimeFlags,sharedArrayBufferEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sharedArrayBufferOnDesktopEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sharedArrayBufferUnrestrictedAccessAllowedEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,sharedAutofillEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sharedWorkerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,signatureBasedIntegrityEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,signedExchangePrefetchCacheForNavigationsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4081,6 +4088,7 @@ InternalRuntimeFlags,wakeLockEnabled,attribute,,Boolean,,,,,third_party/blink/re
 InternalRuntimeFlags,webAnimationsAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAnimationsSVGEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppLinkCapturingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webAppUrlHandlingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppWindowControlsOverlayEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppsLockScreenEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAssemblyCSPEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4103,6 +4111,7 @@ InternalRuntimeFlags,webOTPAssertionFeaturePolicyEnabled,attribute,,Boolean,,,,,
 InternalRuntimeFlags,webOTPEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webSchedulerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webShareEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webTransportCustomCertificatesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webTransportEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webUSBEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webUSBOnDedicatedWorkersEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -10016,7 +10025,6 @@ Window,onwebkitanimationstart,attribute,,EventHandlerNonNullOrNull,,,,,third_par
 Window,onwebkittransitionend,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Window,onwheel,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Window,open,operation,"(USVString,String,String)",WindowOrNull,,,,,third_party/blink/renderer/core/frame/window.idl,
-Window,open,operation,"(USVString,String,String,Boolean)",WindowOrNull,,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,openDatabase,operation,"(String,String,String,UnsignedLong,DatabaseCallbackOrNull)",Database,,OpenWebDatabase,,,third_party/blink/renderer/modules/webdatabase/window_web_database.idl,
 Window,opener,attribute,,Window,,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,orientation,attribute,,Long,,WindowOrientation,,Direct,third_party/blink/renderer/core/frame/window.idl,
