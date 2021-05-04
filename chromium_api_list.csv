@@ -2797,6 +2797,8 @@ HTMLEmbedElement,name,attribute,,String,,,,,third_party/blink/renderer/core/html
 HTMLEmbedElement,src,attribute,,USVString,,,,,third_party/blink/renderer/core/html/html_embed_element.idl,
 HTMLEmbedElement,type,attribute,,String,,,,,third_party/blink/renderer/core/html/html_embed_element.idl,
 HTMLEmbedElement,width,attribute,,String,,,,,third_party/blink/renderer/core/html/html_embed_element.idl,
+HTMLFencedFrameElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_fenced_frame_element.idl,8
+HTMLFencedFrameElement,src,attribute,,USVString,,,,,third_party/blink/renderer/core/html/html_fenced_frame_element.idl,
 HTMLFieldSetElement,,interface,,,,,,,third_party/blink/renderer/core/html/forms/html_field_set_element.idl,24
 HTMLFieldSetElement,checkValidity,operation,(),Boolean,,,,,third_party/blink/renderer/core/html/forms/html_field_set_element.idl,
 HTMLFieldSetElement,disabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/forms/html_field_set_element.idl,
@@ -3759,6 +3761,7 @@ InternalRuntimeFlags,cssOffsetPathRayEnabled,attribute,,Boolean,,,,,third_party/
 InternalRuntimeFlags,cssOffsetPositionAnchorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssPaintAPIArgumentsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssPictureInPictureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssPositionStickyStaticScrollPositionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssPseudoDirEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssPseudoIsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssPseudoPlayingPausedEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3820,6 +3823,7 @@ InternalRuntimeFlags,faceDetectorEnabled,attribute,,Boolean,,,,,third_party/blin
 InternalRuntimeFlags,fakeNoAllocDirectCallForTestingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,featurePolicyForClientHintsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,featurePolicyReportingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,fencedFramesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fetchUploadStreamingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileHandlingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileSystemAccessAPIExperimentalEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
