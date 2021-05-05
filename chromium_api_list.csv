@@ -3265,7 +3265,7 @@ HTMLSelectElement,willValidate,attribute,,Boolean,,,,,third_party/blink/renderer
 HTMLSelectMenuElement,,interface,,,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,6
 HTMLSelectMenuElement,value,attribute,,String,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
 HTMLSlotElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_slot_element.idl,31
-HTMLSlotElement,assign,operation,(NodeSequence),Void,,,,,third_party/blink/renderer/core/html/html_slot_element.idl,
+HTMLSlotElement,assign,operation,(NodeVariadic),Void,,,,,third_party/blink/renderer/core/html/html_slot_element.idl,
 HTMLSlotElement,assignedElements,operation,(AssignedNodesOptions),ElementSequence,,,,,third_party/blink/renderer/core/html/html_slot_element.idl,
 HTMLSlotElement,assignedNodes,operation,(AssignedNodesOptions),NodeSequence,,,,,third_party/blink/renderer/core/html/html_slot_element.idl,
 HTMLSlotElement,name,attribute,,String,,,,,third_party/blink/renderer/core/html/html_slot_element.idl,
@@ -3432,12 +3432,12 @@ HTMLVideoElement,width,attribute,,UnsignedLong,,,,,third_party/blink/renderer/co
 HandwritingDrawing,,interface,,,,,True,,third_party/blink/renderer/modules/handwriting/handwriting_drawing.idl,10
 HandwritingDrawing,addStroke,operation,(HandwritingStroke),Void,,,,,third_party/blink/renderer/modules/handwriting/handwriting_drawing.idl,
 HandwritingDrawing,clear,operation,(),Void,,,,,third_party/blink/renderer/modules/handwriting/handwriting_drawing.idl,
-HandwritingDrawing,getPrediction,operation,(),HandwritingPredictionSequencePromise,,,,,third_party/blink/renderer/modules/handwriting/handwriting_drawing.idl,
+HandwritingDrawing,getPrediction,operation,(),HandwritingPredictionSequencePromise,,HandwritingRecognitionGetPrediction,,,third_party/blink/renderer/modules/handwriting/handwriting_drawing.idl,
 HandwritingDrawing,getStrokes,operation,(),HandwritingStrokeSequence,,,,,third_party/blink/renderer/modules/handwriting/handwriting_drawing.idl,
 HandwritingDrawing,removeStroke,operation,(HandwritingStroke),Void,,,,,third_party/blink/renderer/modules/handwriting/handwriting_drawing.idl,
 HandwritingRecognizer,,interface,,,,,True,,third_party/blink/renderer/modules/handwriting/handwriting_recognizer.idl,10
 HandwritingRecognizer,finish,operation,(),Void,,,,,third_party/blink/renderer/modules/handwriting/handwriting_recognizer.idl,
-HandwritingRecognizer,startDrawing,operation,(HandwritingHints),HandwritingDrawing,,,,,third_party/blink/renderer/modules/handwriting/handwriting_recognizer.idl,
+HandwritingRecognizer,startDrawing,operation,(HandwritingHints),HandwritingDrawing,,HandwritingRecognitionStartDrawing,,,third_party/blink/renderer/modules/handwriting/handwriting_recognizer.idl,
 HandwritingStroke,,interface,,,,,True,,third_party/blink/renderer/modules/handwriting/handwriting_stroke.idl,11
 HandwritingStroke,addPoint,operation,(HandwritingPoint),Void,,,,,third_party/blink/renderer/modules/handwriting/handwriting_stroke.idl,
 HandwritingStroke,clear,operation,(),Void,,,,,third_party/blink/renderer/modules/handwriting/handwriting_stroke.idl,
@@ -5251,7 +5251,7 @@ Navigator,clipboard,attribute,,Clipboard,,,True,,third_party/blink/renderer/modu
 Navigator,connection,attribute,,NetworkInformation,,NetInfo,,,third_party/blink/renderer/modules/netinfo/navigator_network_information.idl,
 Navigator,contacts,attribute,,ContactsManager,,,True,,third_party/blink/renderer/modules/contacts_picker/navigator_contacts.idl,
 Navigator,cookieEnabled,attribute,,Boolean,,NavigatorCookieEnabled,,Direct,third_party/blink/renderer/core/frame/navigator_cookies.idl,
-Navigator,createHandwritingRecognizer,operation,(HandwritingModelConstraint),HandwritingRecognizerPromise,,,,,third_party/blink/renderer/modules/handwriting/navigator_handwriting_recognition_service.idl,
+Navigator,createHandwritingRecognizer,operation,(HandwritingModelConstraint),HandwritingRecognizerPromise,,HandwritingRecognitionCreateRecognizer,,,third_party/blink/renderer/modules/handwriting/navigator_handwriting_recognition_service.idl,
 Navigator,credentials,attribute,,CredentialsContainer,,,True,,third_party/blink/renderer/modules/credentialmanager/navigator_credentials.idl,
 Navigator,deviceMemory,attribute,,Float,,NavigatorDeviceMemory,True,Direct,third_party/blink/renderer/core/frame/navigator_device_memory.idl,
 Navigator,doNotTrack,attribute,,StringOrNull,,NavigatorDoNotTrack,,Direct,third_party/blink/renderer/modules/donottrack/navigator_do_not_track.idl,
@@ -5288,7 +5288,7 @@ Navigator,plugins,attribute,,PluginArray,,NavigatorPlugins,,(True),third_party/b
 Navigator,presentation,attribute,,Presentation,,,True,,third_party/blink/renderer/modules/presentation/navigator_presentation.idl,
 Navigator,product,attribute,,String,,,,,third_party/blink/renderer/core/frame/navigator_id.idl,
 Navigator,productSub,attribute,,String,,NavigatorProductSub,,Direct,third_party/blink/renderer/core/frame/navigator.idl,
-Navigator,queryHandwritingRecognizerSupport,operation,(HandwritingFeatureQuery),HandwritingFeatureQueryResultPromise,,,,,third_party/blink/renderer/modules/handwriting/navigator_handwriting_recognition_service.idl,
+Navigator,queryHandwritingRecognizerSupport,operation,(HandwritingFeatureQuery),HandwritingFeatureQueryResultPromise,,HandwritingRecognitionQuerySupport,,,third_party/blink/renderer/modules/handwriting/navigator_handwriting_recognition_service.idl,
 Navigator,registerProtocolHandler,operation,"(String,USVString)",Void,,,True,,third_party/blink/renderer/modules/navigatorcontentutils/navigator_content_utils.idl,
 Navigator,requestMIDIAccess,operation,(MIDIOptions),MIDIAccessPromise,,RequestMIDIAccess_ObscuredByFootprinting,,,third_party/blink/renderer/modules/webmidi/navigator_web_midi.idl,
 Navigator,requestMediaKeySystemAccess,operation,"(String,MediaKeySystemConfigurationSequence)",MediaKeySystemAccessPromise,,,True,,third_party/blink/renderer/modules/encryptedmedia/navigator_request_media_key_system_access.idl,
