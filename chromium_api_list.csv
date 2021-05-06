@@ -632,7 +632,7 @@ CSSPerspective,length,attribute,,CSSNumericValue,,,,,third_party/blink/renderer/
 CSSPositionValue,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_position_value.idl,10
 CSSPositionValue,x,attribute,,CSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_position_value.idl,
 CSSPositionValue,y,attribute,,CSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_position_value.idl,
-CSSPropertyRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_property_rule.idl,8
+CSSPropertyRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_property_rule.idl,7
 CSSPropertyRule,inherits,attribute,,Boolean,,,,,third_party/blink/renderer/core/css/css_property_rule.idl,
 CSSPropertyRule,initialValue,attribute,,StringOrNull,,,,,third_party/blink/renderer/core/css/css_property_rule.idl,
 CSSPropertyRule,name,attribute,,String,,,,,third_party/blink/renderer/core/css/css_property_rule.idl,
@@ -947,6 +947,9 @@ CompositionEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/cor
 CompressionStream,,interface,,,,,,,third_party/blink/renderer/modules/compression/compression_stream.idl,3
 CompressionStream,readable,attribute,,ReadableStream,,,,,third_party/blink/renderer/modules/compression/compression_stream.idl,
 CompressionStream,writable,attribute,,WritableStream,,,,,third_party/blink/renderer/modules/compression/compression_stream.idl,
+ComputePressureObserver,,interface,,,,,True,,third_party/blink/renderer/modules/compute_pressure/compute_pressure_observer.idl,10
+ComputePressureObserver,observe,operation,(),VoidPromise,,ComputePressureObserver_Observe,,,third_party/blink/renderer/modules/compute_pressure/compute_pressure_observer.idl,
+ComputePressureObserver,stop,operation,(),Void,,ComputePressureObserver_Stop,,,third_party/blink/renderer/modules/compute_pressure/compute_pressure_observer.idl,
 ComputedAccessibleNode,,interface,,,,,,,third_party/blink/renderer/core/aom/computed_accessible_node.idl,11
 ComputedAccessibleNode,atomic,attribute,,BooleanOrNull,,,,,third_party/blink/renderer/core/aom/computed_accessible_node.idl,
 ComputedAccessibleNode,autocomplete,attribute,,StringOrNull,,,,,third_party/blink/renderer/core/aom/computed_accessible_node.idl,
@@ -3763,16 +3766,13 @@ InternalRuntimeFlags,cssPaintAPIArgumentsEnabled,attribute,,Boolean,,,,,third_pa
 InternalRuntimeFlags,cssPictureInPictureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssPositionStickyStaticScrollPositionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssPseudoDirEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cssPseudoIsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssPseudoPlayingPausedEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cssPseudoWhereEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssScrollTimelineEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssScrollbarsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssSnapSizeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssSpellingGrammarErrorsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssSystemColorComputeToSelfEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssTargetTextPseudoElementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cssVariables2AtPropertyEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssVariables2ImageValuesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssVariables2TransformValuesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cullRectUpdateEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3886,7 +3886,6 @@ InternalRuntimeFlags,lazyInitializeMediaControlsEnabled,attribute,,Boolean,,,,,t
 InternalRuntimeFlags,legacyWindowsDWriteFontFallbackEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,managedConfigurationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,managedInterfaceEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,manualSlottingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,mathmlCoreEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,measureMemoryEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,mediaCapabilitiesDynamicRangeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4104,6 +4103,7 @@ InternalRuntimeFlags,webAuthenticationLargeBlobExtensionEnabled,attribute,,Boole
 InternalRuntimeFlags,webAuthenticationResidentKeyRequirementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webBluetoothEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webBluetoothGetDevicesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webBluetoothManufacturerDataFilterEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webBluetoothRemoteCharacteristicNewWriteValueEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webBluetoothScanningEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webBluetoothWatchAdvertisementsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -7320,6 +7320,8 @@ SVGViewElement,preserveAspectRatio,attribute,,SVGAnimatedPreserveAspectRatio,,SV
 SVGViewElement,viewBox,attribute,,SVGAnimatedRect,,SVG1DOMFitToViewBox,,,third_party/blink/renderer/core/svg/svg_fit_to_view_box.idl,
 SVGViewElement,zoomAndPan,attribute,,UnsignedShort,,SVG1DOMZoomAndPan,,,third_party/blink/renderer/core/svg/svg_zoom_and_pan.idl,
 Sanitizer,,interface,,,,,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,13
+Sanitizer,config,operation,(),SanitizerConfig,,SanitizerAPIGetConfig,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
+Sanitizer,defaultConfig,operation,(),SanitizerConfig,,SanitizerAPIGetDefaultConfig,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Sanitizer,sanitize,operation,(StringOrTrustedHTMLOrDocumentFragmentOrDocument),DocumentFragment,,SanitizerAPIToFragment,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Sanitizer,sanitizeToString,operation,(StringOrDocumentFragmentOrDocument),String,,SanitizerAPIToString,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Scheduler,,interface,,,,,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,11
