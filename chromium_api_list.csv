@@ -150,6 +150,7 @@ AppHistory,onnavigate,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink
 AppHistory,onnavigateerror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigatesuccess,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistoryEntry,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,9
+AppHistoryEntry,getState,operation,(),Any,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryEntry,id,attribute,,String,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryEntry,key,attribute,,String,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryEntry,sameDocument,attribute,,Boolean,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
@@ -7766,7 +7767,7 @@ SyncEvent,tag,attribute,,String,,,,,third_party/blink/renderer/modules/backgroun
 SyncManager,,interface,,,,,,,third_party/blink/renderer/modules/background_sync/sync_manager.idl,9
 SyncManager,getTags,operation,(),StringSequencePromise,,,,,third_party/blink/renderer/modules/background_sync/sync_manager.idl,
 SyncManager,register,operation,(String),VoidPromise,,BackgroundSyncRegister,,,third_party/blink/renderer/modules/background_sync/sync_manager.idl,
-TCPSocket,,interface,,,,,True,,third_party/blink/renderer/modules/direct_sockets/tcp_socket.idl,11
+TCPSocket,,interface,,,,,,,third_party/blink/renderer/modules/direct_sockets/tcp_socket.idl,11
 TCPSocket,close,operation,(),VoidPromise,,V8TCPSocket_Close_Method,,,third_party/blink/renderer/modules/direct_sockets/tcp_socket.idl,
 TCPSocket,readable,attribute,,ReadableStream,,V8TCPSocket_Readable_AttributeGetter,,,third_party/blink/renderer/modules/direct_sockets/tcp_socket.idl,
 TCPSocket,remoteAddress,attribute,,String,,V8TCPSocket_RemoteAddress_AttributeGetter,,,third_party/blink/renderer/modules/direct_sockets/tcp_socket.idl,
@@ -7995,7 +7996,7 @@ TypeConversions,testUSVStringOrNull,attribute,,USVStringOrNull,,,,,third_party/b
 TypeConversions,testUnsignedLong,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/testing/type_conversions.idl,
 TypeConversions,testUnsignedLongLong,attribute,,UnsignedLongLong,,,,,third_party/blink/renderer/core/testing/type_conversions.idl,
 TypeConversions,testUnsignedShort,attribute,,UnsignedShort,,,,,third_party/blink/renderer/core/testing/type_conversions.idl,
-UDPSocket,,interface,,,,,True,,third_party/blink/renderer/modules/direct_sockets/udp_socket.idl,11
+UDPSocket,,interface,,,,,,,third_party/blink/renderer/modules/direct_sockets/udp_socket.idl,11
 UDPSocket,close,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/direct_sockets/udp_socket.idl,
 UIEvent,,interface,,,,,,,third_party/blink/renderer/core/events/ui_event.idl,24
 UIEvent,detail,attribute,,Long,,,,,third_party/blink/renderer/core/events/ui_event.idl,
