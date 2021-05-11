@@ -3708,6 +3708,7 @@ InternalRuntimeFlags,clipboardSvgEnabled,attribute,,Boolean,,,,,third_party/blin
 InternalRuntimeFlags,colrv1FontsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,compositeAfterPaintEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,compositeBGColorAnimationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,compositeClipPathAnimationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,compositeRelativeKeyframesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,compositeSVGEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,compositedSelectionUpdateEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -7366,7 +7367,8 @@ ScreenOrientation,type,attribute,,String,,ScreenOrientationType,,Direct,third_pa
 ScreenOrientation,unlock,operation,(),Void,,ScreenOrientationUnlock,,,third_party/blink/renderer/modules/screen_orientation/screen_orientation.idl,
 Screens,,interface,,,,,True,,third_party/blink/renderer/modules/screen_enumeration/screens.idl,11
 Screens,currentScreen,attribute,,ScreenAdvanced,,,,,third_party/blink/renderer/modules/screen_enumeration/screens.idl,
-Screens,onchange,attribute,,EventHandlerNonNullOrNull,,V8Screens_Onchange_AttributeGetter,,(True),third_party/blink/renderer/modules/screen_enumeration/screens.idl,
+Screens,oncurrentscreenchange,attribute,,EventHandlerNonNullOrNull,,V8Screens_Oncurrentscreenchange_AttributeGetter,,(True),third_party/blink/renderer/modules/screen_enumeration/screens.idl,
+Screens,onscreenschange,attribute,,EventHandlerNonNullOrNull,,V8Screens_Onscreenschange_AttributeGetter,,(True),third_party/blink/renderer/modules/screen_enumeration/screens.idl,
 Screens,screens,attribute,,ScreenAdvancedArray,,,,,third_party/blink/renderer/modules/screen_enumeration/screens.idl,
 ScriptProcessorNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/script_processor_node.idl,31
 ScriptProcessorNode,bufferSize,attribute,,Long,,,,,third_party/blink/renderer/modules/webaudio/script_processor_node.idl,
