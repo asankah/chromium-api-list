@@ -1044,7 +1044,7 @@ CredentialsContainer,preventSilentAccess,operation,(),VoidPromise,,CredentialMan
 CredentialsContainer,store,operation,(Credential),CredentialPromise,,CredentialManagerStore,,,third_party/blink/renderer/modules/credentialmanager/credentials_container.idl,
 Crypto,,interface,,,,,,,third_party/blink/renderer/modules/crypto/crypto.idl,33
 Crypto,getRandomValues,operation,(ArrayBufferView),ArrayBufferView,,CryptoGetRandomValues,,,third_party/blink/renderer/modules/crypto/crypto.idl,
-Crypto,randomUUID,operation,(),String,,,,,third_party/blink/renderer/modules/crypto/crypto.idl,
+Crypto,randomUUID,operation,(),String,,,True,,third_party/blink/renderer/modules/crypto/crypto.idl,
 Crypto,subtle,attribute,,SubtleCrypto,,,True,,third_party/blink/renderer/modules/crypto/crypto.idl,
 CryptoKey,,interface,,,,,True,,third_party/blink/renderer/modules/crypto/crypto_key.idl,36
 CryptoKey,algorithm,attribute,,Object,,,,,third_party/blink/renderer/modules/crypto/crypto_key.idl,
