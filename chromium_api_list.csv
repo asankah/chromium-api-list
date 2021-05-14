@@ -152,6 +152,7 @@ AppHistory,onnavigatesuccess,attribute,,EventHandlerNonNullOrNull,,,,,third_part
 AppHistoryEntry,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,9
 AppHistoryEntry,getState,operation,(),Any,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryEntry,id,attribute,,String,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
+AppHistoryEntry,index,attribute,,LongLong,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryEntry,key,attribute,,String,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryEntry,sameDocument,attribute,,Boolean,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryEntry,url,attribute,,USVString,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
@@ -221,6 +222,11 @@ AudioContext,createMediaStreamSource,operation,(MediaStream),MediaStreamAudioSou
 AudioContext,getOutputTimestamp,operation,(),AudioTimestamp,,AudioContextGetOutputTimestamp,,,third_party/blink/renderer/modules/webaudio/audio_context.idl,
 AudioContext,resume,operation,(),VoidPromise,,AudioContextResume,,,third_party/blink/renderer/modules/webaudio/audio_context.idl,
 AudioContext,suspend,operation,(),VoidPromise,,AudioContextSuspend,,,third_party/blink/renderer/modules/webaudio/audio_context.idl,
+AudioData,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,9
+AudioData,buffer,attribute,,AudioBuffer,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
+AudioData,clone,operation,(),AudioData,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
+AudioData,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
+AudioData,timestamp,attribute,,LongLong,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
 AudioDecoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,11
 AudioDecoder,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
 AudioDecoder,configure,operation,(AudioDecoderConfig),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
@@ -235,17 +241,12 @@ AudioDestinationNode,maxChannelCount,attribute,,UnsignedLong,,,,,third_party/bli
 AudioEncoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,11
 AudioEncoder,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioEncoder,configure,operation,(AudioEncoderConfig),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
-AudioEncoder,encode,operation,(AudioFrame),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
+AudioEncoder,encode,operation,(AudioData),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioEncoder,encodeQueueSize,attribute,,Long,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioEncoder,flush,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioEncoder,isConfigSupported,operation,(AudioEncoderConfig),AudioEncoderSupportPromise,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioEncoder,reset,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioEncoder,state,attribute,,CodecState,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
-AudioFrame,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,9
-AudioFrame,buffer,attribute,,AudioBuffer,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,
-AudioFrame,clone,operation,(),AudioFrame,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,
-AudioFrame,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,
-AudioFrame,timestamp,attribute,,LongLong,,,,,third_party/blink/renderer/modules/webcodecs/audio_frame.idl,
 AudioListener,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/audio_listener.idl,31
 AudioListener,forwardX,attribute,,AudioParam,,,,,third_party/blink/renderer/modules/webaudio/audio_listener.idl,
 AudioListener,forwardY,attribute,,AudioParam,,,,,third_party/blink/renderer/modules/webaudio/audio_listener.idl,
@@ -2302,8 +2303,6 @@ GPUDevice,createComputePipeline,operation,(GPUComputePipelineDescriptor),GPUComp
 GPUDevice,createComputePipelineAsync,operation,(GPUComputePipelineDescriptor),GPUComputePipelineOrNullPromise,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createPipelineLayout,operation,(GPUPipelineLayoutDescriptor),GPUPipelineLayout,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createQuerySet,operation,(GPUQuerySetDescriptor),GPUQuerySet,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
-GPUDevice,createReadyComputePipeline,operation,(GPUComputePipelineDescriptor),GPUComputePipelineOrNullPromise,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
-GPUDevice,createReadyRenderPipeline,operation,(GPURenderPipelineDescriptor),GPURenderPipelineOrNullPromise,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createRenderBundleEncoder,operation,(GPURenderBundleEncoderDescriptor),GPURenderBundleEncoder,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createRenderPipeline,operation,(GPURenderPipelineDescriptor),GPURenderPipeline,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createRenderPipelineAsync,operation,(GPURenderPipelineDescriptor),GPURenderPipelineOrNullPromise,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
@@ -3660,7 +3659,6 @@ InternalRuntimeFlags,appHistoryEnabled,attribute,,Boolean,,,,,third_party/blink/
 InternalRuntimeFlags,ariaTouchPassthroughEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,audioOutputDevicesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,audioVideoTracksEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,audioWorkletRealtimeThreadEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,autoLazyLoadOnReloadsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,autoPictureInPictureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,automaticLazyFrameLoadingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
