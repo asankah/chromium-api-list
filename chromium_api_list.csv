@@ -3690,6 +3690,7 @@ InternalRuntimeFlags,canvasHitRegionEnabled,attribute,,Boolean,,,,,third_party/b
 InternalRuntimeFlags,canvasImageSmoothingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,capabilityDelegationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,capabilityDelegationPaymentRequestEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,captureHandleEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,captureTimeInCsrcEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clickPointerEventEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clickRetargettingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4872,6 +4873,7 @@ MediaDevices,getDisplayMedia,operation,(MediaStreamConstraints),MediaStreamPromi
 MediaDevices,getSupportedConstraints,operation,(),MediaTrackSupportedConstraints,,,,,third_party/blink/renderer/modules/mediastream/media_devices.idl,
 MediaDevices,getUserMedia,operation,(MediaStreamConstraints),MediaStreamPromise,,GetUserMediaPromise,,(True),third_party/blink/renderer/modules/mediastream/media_devices.idl,
 MediaDevices,ondevicechange,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/mediastream/media_devices.idl,
+MediaDevices,setCaptureHandleConfig,operation,(CaptureHandleConfig),Void,,,,,third_party/blink/renderer/modules/mediastream/media_devices.idl,
 MediaElementAudioSourceNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/media_element_audio_source_node.idl,30
 MediaElementAudioSourceNode,mediaElement,attribute,,HTMLMediaElement,,,,,third_party/blink/renderer/modules/webaudio/media_element_audio_source_node.idl,
 MediaEncryptedEvent,,interface,,,,,,,third_party/blink/renderer/modules/encryptedmedia/media_encrypted_event.idl,30
