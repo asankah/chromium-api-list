@@ -887,6 +887,9 @@ CanvasRenderingContext2D,transform,operation,"(UnrestrictedDouble,UnrestrictedDo
 CanvasRenderingContext2D,transform,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,translate,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,translate,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
+CaptureHandleChangeEvent,,interface,,,,,,,third_party/blink/renderer/modules/mediastream/capture_handle_change_event.idl,9
+CaptureHandleChangeEvent,captureHandle,attribute,,CaptureHandle,,,,,third_party/blink/renderer/modules/mediastream/capture_handle_change_event.idl,
+CaptureHandleChangeEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 ChannelMergerNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/channel_merger_node.idl,32
 ChannelSplitterNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/channel_splitter_node.idl,29
 CharacterData,,interface,,,,,,,third_party/blink/renderer/core/dom/character_data.idl,23
@@ -5017,6 +5020,7 @@ MediaStreamTrack,id,attribute,,String,,,,,third_party/blink/renderer/modules/med
 MediaStreamTrack,kind,attribute,,String,,,,,third_party/blink/renderer/modules/mediastream/media_stream_track.idl,
 MediaStreamTrack,label,attribute,,String,,,,,third_party/blink/renderer/modules/mediastream/media_stream_track.idl,
 MediaStreamTrack,muted,attribute,,Boolean,,,,,third_party/blink/renderer/modules/mediastream/media_stream_track.idl,
+MediaStreamTrack,oncapturehandlechange,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/mediastream/media_stream_track.idl,
 MediaStreamTrack,onended,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/mediastream/media_stream_track.idl,
 MediaStreamTrack,onmute,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/mediastream/media_stream_track.idl,
 MediaStreamTrack,onunmute,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/mediastream/media_stream_track.idl,
@@ -8002,7 +8006,7 @@ UIEvent,sourceCapabilities,attribute,,InputDeviceCapabilitiesOrNull,,,,,third_pa
 UIEvent,view,attribute,,WindowOrNull,,,,,third_party/blink/renderer/core/events/ui_event.idl,
 UIEvent,which,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/events/ui_event.idl,
 URL,,interface,,,,,,,third_party/blink/renderer/core/url/url.idl,33
-URL,,operation,(),String,,,,,third_party/blink/renderer/core/url/url.idl,35
+URL,,operation,(),String,,,,,third_party/blink/renderer/core/url/url.idl,36
 URL,createObjectURL,operation,(Blob),String,,,,,third_party/blink/renderer/core/fileapi/url_file_api.idl,
 URL,createObjectURL,operation,(MediaSource),String,,,,,third_party/blink/renderer/modules/mediasource/url_media_source.idl,
 URL,hash,attribute,,USVString,,,,,third_party/blink/renderer/core/url/url.idl,
