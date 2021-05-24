@@ -3665,7 +3665,6 @@ InternalRuntimeFlags,audioOutputDevicesEnabled,attribute,,Boolean,,,,,third_part
 InternalRuntimeFlags,audioVideoTracksEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,autoLazyLoadOnReloadsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,autoPictureInPictureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,autofillShadowDOMEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,automaticLazyFrameLoadingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,automaticLazyImageLoadingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,automationControlledEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3731,7 +3730,6 @@ InternalRuntimeFlags,cssAtRuleCounterStyleInShadowDOMEnabled,attribute,,Boolean,
 InternalRuntimeFlags,cssCalcAsIntEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssCalcInfinityAndNaNEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssCaseSensitiveSelectorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cssColorSchemeUARenderingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssColorTypedOMEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContainSize1DEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContainerQueriesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4330,8 +4328,8 @@ InternalSettingsGenerated,setWideViewportQuirkEnabled,operation,(Boolean),Void,,
 Internals,,interface,,,,,,,third_party/blink/renderer/core/testing/internals.idl,29
 Internals,,operation,(UnsignedLong),Long,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,DisableIntersectionObserverThrottleDelay,operation,(),Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
-Internals,LAYER_TREE_INCLUDES_DETAILED_INVALIDATIONS,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/testing/internals.idl,194
-Internals,LAYER_TREE_INCLUDES_INVALIDATIONS,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/testing/internals.idl,193
+Internals,LAYER_TREE_INCLUDES_DETAILED_INVALIDATIONS,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/testing/internals.idl,193
+Internals,LAYER_TREE_INCLUDES_INVALIDATIONS,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/testing/internals.idl,192
 Internals,LifecycleUpdateCount,operation,(),UnsignedLong,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,absoluteCaretBounds,operation,(),DOMRectReadOnly,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,activeMarkerCountForNode,operation,(Text),UnsignedLong,,,,,third_party/blink/renderer/core/testing/internals.idl,
@@ -4420,7 +4418,6 @@ Internals,isActivated,operation,(),Boolean,,,,,third_party/blink/renderer/core/t
 Internals,isAnimatedCSSPropertyUseCounted,operation,"(Document,String)",Boolean,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,isCSSPropertyUseCounted,operation,"(Document,String)",Boolean,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,isCompositedAnimation,operation,(Animation),Boolean,,,,,third_party/blink/renderer/core/testing/internals.idl,
-Internals,isFormControlsRefreshEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,isInCanvasFontCache,operation,"(Document,String)",Boolean,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,isLoading,operation,(String),Boolean,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,isLoadingFromMemoryCache,operation,(String),Boolean,,,,,third_party/blink/renderer/core/testing/internals.idl,
