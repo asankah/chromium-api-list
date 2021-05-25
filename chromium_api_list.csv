@@ -651,7 +651,7 @@ CSSRotate,y,attribute,,DoubleOrCSSNumericValue,,,,,third_party/blink/renderer/co
 CSSRotate,z,attribute,,DoubleOrCSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_rotate.idl,
 CSSRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_rule.idl,25
 CSSRule,CHARSET_RULE,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/css/css_rule.idl,27
-CSSRule,COUNTER_STYLE_RULE,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/css/css_rule.idl,48
+CSSRule,COUNTER_STYLE_RULE,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/css/css_rule.idl,47
 CSSRule,FONT_FACE_RULE,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/css/css_rule.idl,30
 CSSRule,IMPORT_RULE,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/css/css_rule.idl,28
 CSSRule,KEYFRAMES_RULE,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/css/css_rule.idl,42
@@ -660,7 +660,7 @@ CSSRule,MEDIA_RULE,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/c
 CSSRule,NAMESPACE_RULE,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/css/css_rule.idl,34
 CSSRule,PAGE_RULE,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/css/css_rule.idl,31
 CSSRule,STYLE_RULE,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/css/css_rule.idl,26
-CSSRule,SUPPORTS_RULE,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/css/css_rule.idl,52
+CSSRule,SUPPORTS_RULE,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/css/css_rule.idl,51
 CSSRule,cssText,attribute,,String,,,,,third_party/blink/renderer/core/css/css_rule.idl,
 CSSRule,parentRule,attribute,,CSSRuleOrNull,,,,,third_party/blink/renderer/core/css/css_rule.idl,
 CSSRule,parentStyleSheet,attribute,,CSSStyleSheetOrNull,,,,,third_party/blink/renderer/core/css/css_rule.idl,
@@ -3722,9 +3722,6 @@ InternalRuntimeFlags,crossOriginIsolationEnabled,attribute,,Boolean,,,,,third_pa
 InternalRuntimeFlags,crossOriginOpenerPolicyReportingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,css3TextEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssAccentColorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cssAspectRatioInterpolationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cssAspectRatioPropertyEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cssAtRuleCounterStyleEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssAtRuleCounterStyleImageSymbolsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssAtRuleCounterStyleInShadowDOMEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssCalcAsIntEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3737,9 +3734,7 @@ InternalRuntimeFlags,cssContentVisibilityEnabled,attribute,,Boolean,,,,,third_pa
 InternalRuntimeFlags,cssContentVisibilityHiddenMatchableEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFocusVisibleEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFoldablesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cssFontFaceAdvanceOverrideEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFontFaceSizeAdjustEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cssFontMetricsOverrideEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFontSizeAdjustEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssHexAlphaColorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssIndependentTransformPropertiesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
