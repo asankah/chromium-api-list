@@ -3779,6 +3779,7 @@ InternalRuntimeFlags,cssPaintAPIArgumentsEnabled,attribute,,Boolean,,,,,third_pa
 InternalRuntimeFlags,cssPictureInPictureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssPositionStickyStaticScrollPositionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssPseudoDirEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssPseudoHasEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssPseudoPlayingPausedEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssScrollTimelineEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssScrollbarsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5886,6 +5887,7 @@ PerformanceNavigation,redirectCount,attribute,,UnsignedShort,,,,,third_party/bli
 PerformanceNavigation,toJSON,operation,(),Object,,,,,third_party/blink/renderer/core/timing/performance_navigation.idl,
 PerformanceNavigation,type,attribute,,UnsignedShort,,,,,third_party/blink/renderer/core/timing/performance_navigation.idl,
 PerformanceNavigationTiming,,interface,,,,,,,third_party/blink/renderer/core/timing/performance_navigation_timing.idl,15
+PerformanceNavigationTiming,activationStart,attribute,,Double,,,,,third_party/blink/renderer/core/timing/performance_navigation_timing_activation_start.idl,
 PerformanceNavigationTiming,domComplete,attribute,,Double,,,,,third_party/blink/renderer/core/timing/performance_navigation_timing.idl,
 PerformanceNavigationTiming,domContentLoadedEventEnd,attribute,,Double,,,,,third_party/blink/renderer/core/timing/performance_navigation_timing.idl,
 PerformanceNavigationTiming,domContentLoadedEventStart,attribute,,Double,,,,,third_party/blink/renderer/core/timing/performance_navigation_timing.idl,
