@@ -1434,7 +1434,7 @@ Document,designMode,attribute,,String,,DocumentDesignMode,,,third_party/blink/re
 Document,dir,attribute,,String,,,,,third_party/blink/renderer/core/dom/document.idl,
 Document,doctype,attribute,,DocumentTypeOrNull,,,,,third_party/blink/renderer/core/dom/document.idl,
 Document,documentElement,attribute,,ElementOrNull,,,,,third_party/blink/renderer/core/dom/document.idl,
-Document,documentTransition,attribute,,DocumentTransition,,,,,third_party/blink/renderer/core/document_transition/document_transition_supplement.idl,
+Document,documentTransition,attribute,,DocumentTransition,,DocumentTransition,,,third_party/blink/renderer/core/document_transition/document_transition_supplement.idl,
 Document,documentURI,attribute,,USVStringOrNull,,,,,third_party/blink/renderer/core/dom/document.idl,
 Document,domain,attribute,,USVString,,,,,third_party/blink/renderer/core/dom/document.idl,
 Document,elementFromPoint,operation,"(Double,Double)",ElementOrNull,,V8Document_ElementFromPoint_Method,,,third_party/blink/renderer/core/dom/document_or_shadow_root.idl,
