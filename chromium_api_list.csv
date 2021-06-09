@@ -11,6 +11,7 @@ AbortPaymentEvent,,interface,,,,,,,third_party/blink/renderer/modules/payments/a
 AbortPaymentEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 AbortPaymentEvent,respondWith,operation,(BooleanPromise),Void,,,,,third_party/blink/renderer/modules/payments/abort_payment_event.idl,
 AbortSignal,,interface,,,,,,,third_party/blink/renderer/core/dom/abort_signal.idl,9
+AbortSignal,abort,operation,(),AbortSignal,,V8AbortSignal_Abort_Method,,,third_party/blink/renderer/core/dom/abort_signal.idl,
 AbortSignal,aborted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/abort_signal.idl,
 AbortSignal,onabort,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/abort_signal.idl,
 AbsoluteOrientationSensor,,interface,,,,,True,,third_party/blink/renderer/modules/sensor/absolute_orientation_sensor.idl,10
@@ -792,7 +793,7 @@ CanvasGradient,,interface,,,,,,,third_party/blink/renderer/modules/canvas/canvas
 CanvasGradient,addColorStop,operation,"(Double,String)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_gradient.idl,
 CanvasPattern,,interface,,,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_pattern.idl,30
 CanvasPattern,setTransform,operation,(DOMMatrix2DInit),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_pattern.idl,
-CanvasRenderingContext2D,,interface,,,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,49
+CanvasRenderingContext2D,,interface,,,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,52
 CanvasRenderingContext2D,addHitRegion,operation,(HitRegionOptions),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,arc,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,Boolean)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 CanvasRenderingContext2D,arcTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
@@ -888,7 +889,7 @@ CanvasRenderingContext2D,transform,operation,"(UnrestrictedDouble,UnrestrictedDo
 CanvasRenderingContext2D,translate,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,translate,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CaptureHandleChangeEvent,,interface,,,,,,,third_party/blink/renderer/modules/mediastream/capture_handle_change_event.idl,9
-CaptureHandleChangeEvent,captureHandle,attribute,,CaptureHandle,,,,,third_party/blink/renderer/modules/mediastream/capture_handle_change_event.idl,
+CaptureHandleChangeEvent,captureHandle,operation,(),CaptureHandle,,,,,third_party/blink/renderer/modules/mediastream/capture_handle_change_event.idl,
 CaptureHandleChangeEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 ChannelMergerNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/channel_merger_node.idl,32
 ChannelSplitterNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/channel_splitter_node.idl,29
@@ -2226,6 +2227,7 @@ GPU,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,25
 GPU,requestAdapter,operation,(GPURequestAdapterOptions),GPUAdapterOrNullPromise,,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,
 GPUAdapter,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,9
 GPUAdapter,features,attribute,,GPUSupportedFeatures,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
+GPUAdapter,isSoftware,attribute,,Boolean,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,limits,attribute,,GPUSupportedLimits,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,name,attribute,,String,,GPUAdapter_Name,,Direct,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,requestDevice,operation,(GPUDeviceDescriptor),GPUDevicePromise,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
@@ -2250,8 +2252,11 @@ GPUBufferUsage,QUERY_RESOLVE,constant,,UnsignedLong,,,,,third_party/blink/render
 GPUBufferUsage,STORAGE,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,18
 GPUBufferUsage,UNIFORM,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,17
 GPUBufferUsage,VERTEX,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,16
-GPUCanvasContext,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,9
+GPUCanvasContext,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,10
+GPUCanvasContext,configure,operation,(GPUSwapChainDescriptor),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
 GPUCanvasContext,configureSwapChain,operation,(GPUSwapChainDescriptor),GPUSwapChain,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
+GPUCanvasContext,getCurrentTexture,operation,(),GPUTexture,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
+GPUCanvasContext,getPreferredFormat,operation,(GPUAdapter),GPUTextureFormat,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
 GPUCanvasContext,getSwapChainPreferredFormat,operation,(GPUAdapter),GPUTextureFormat,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
 GPUColorWrite,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_color_write.idl,10
 GPUColorWrite,ALL,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_color_write.idl,15
@@ -2915,7 +2920,6 @@ HTMLIFrameElement,allowPaymentRequest,attribute,,Boolean,,,,,third_party/blink/r
 HTMLIFrameElement,contentDocument,attribute,,DocumentOrNull,,,,,third_party/blink/renderer/core/html/html_iframe_element.idl,
 HTMLIFrameElement,contentWindow,attribute,,WindowOrNull,,,,,third_party/blink/renderer/core/html/html_iframe_element.idl,
 HTMLIFrameElement,csp,attribute,,String,,,,,third_party/blink/renderer/core/html/html_iframe_element.idl,
-HTMLIFrameElement,disallowDocumentAccess,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/html_iframe_element.idl,
 HTMLIFrameElement,featurePolicy,attribute,,FeaturePolicy,,,,,third_party/blink/renderer/core/html/html_iframe_element.idl,
 HTMLIFrameElement,frameBorder,attribute,,String,,,,,third_party/blink/renderer/core/html/html_iframe_element.idl,
 HTMLIFrameElement,getSVGDocument,operation,(),DocumentOrNull,,,,,third_party/blink/renderer/core/html/html_iframe_element.idl,
@@ -3610,7 +3614,7 @@ ImageBitmap,,interface,,,,,,,third_party/blink/renderer/core/imagebitmap/image_b
 ImageBitmap,close,operation,(),Void,,,,,third_party/blink/renderer/core/imagebitmap/image_bitmap.idl,
 ImageBitmap,height,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/imagebitmap/image_bitmap.idl,
 ImageBitmap,width,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/imagebitmap/image_bitmap.idl,
-ImageBitmapRenderingContext,,interface,,,,,,,third_party/blink/renderer/modules/canvas/imagebitmap/image_bitmap_rendering_context.idl,9
+ImageBitmapRenderingContext,,interface,,,,,,,third_party/blink/renderer/modules/canvas/imagebitmap/image_bitmap_rendering_context.idl,10
 ImageBitmapRenderingContext,canvas,attribute,,HTMLCanvasElementOrOffscreenCanvas,,,,,third_party/blink/renderer/modules/canvas/imagebitmap/image_bitmap_rendering_context.idl,
 ImageBitmapRenderingContext,transferFromImageBitmap,operation,(ImageBitmapOrNull),Void,,,,,third_party/blink/renderer/modules/canvas/imagebitmap/image_bitmap_rendering_context.idl,
 ImageCapture,,interface,,,,,,,third_party/blink/renderer/modules/imagecapture/image_capture.idl,10
@@ -3690,12 +3694,14 @@ InternalRuntimeFlags,audioOutputDevicesEnabled,attribute,,Boolean,,,,,third_part
 InternalRuntimeFlags,audioVideoTracksEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,autoLazyLoadOnReloadsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,autoPictureInPictureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,autofillShadowDOMEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,automaticLazyFrameLoadingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,automaticLazyImageLoadingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,automationControlledEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,autoplayIgnoresWebAudioEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,backForwardCacheEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,backForwardCacheExperimentHTTPHeaderEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,backfaceVisibilityInteropEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,backgroundFetchEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,backgroundVideoTrackOptimizationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,badgingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3753,6 +3759,7 @@ InternalRuntimeFlags,cssCalcInfinityAndNaNEnabled,attribute,,Boolean,,,,,third_p
 InternalRuntimeFlags,cssCaseSensitiveSelectorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssColorTypedOMEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContainSize1DEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssContainedBodyPropagationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContainerQueriesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContentVisibilityEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContentVisibilityHiddenMatchableEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3808,7 +3815,6 @@ InternalRuntimeFlags,directSocketsEnabled,attribute,,Boolean,,,,,third_party/bli
 InternalRuntimeFlags,disableDifferentOriginSubframeDialogSuppressionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,disableHardwareNoiseSuppressionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,disableLayerSquashingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,disallowDocumentAccessEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,displayCapturePermissionPolicyEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,displayCutoutAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,documentCookieEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4038,6 +4044,7 @@ InternalRuntimeFlags,scrollTopLeftInteropEnabled,attribute,,Boolean,,,,,third_pa
 InternalRuntimeFlags,scrollUnificationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scrollbarGutterEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scrollbarWidthEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,securePaymentConfirmationAPIV2Enabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,securePaymentConfirmationDebugEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,securePaymentConfirmationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sendBeaconThrowForBlobWithNonSimpleTypeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5503,7 +5510,7 @@ OffscreenCanvas,getContext,operation,"(OffscreenRenderingContextType,CanvasConte
 OffscreenCanvas,height,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/offscreencanvas/offscreen_canvas.idl,
 OffscreenCanvas,transferToImageBitmap,operation,(),ImageBitmap,,OffscreenCanvasTransferToImageBitmap,,(True),third_party/blink/renderer/core/offscreencanvas/offscreen_canvas.idl,
 OffscreenCanvas,width,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/offscreencanvas/offscreen_canvas.idl,
-OffscreenCanvasRenderingContext2D,,interface,,,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,9
+OffscreenCanvasRenderingContext2D,,interface,,,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,10
 OffscreenCanvasRenderingContext2D,arc,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,Boolean)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 OffscreenCanvasRenderingContext2D,arcTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 OffscreenCanvasRenderingContext2D,beginPath,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
@@ -8284,7 +8291,7 @@ WakeLockSentinel,type,attribute,,WakeLockType,,,,,third_party/blink/renderer/mod
 WaveShaperNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/wave_shaper_node.idl,35
 WaveShaperNode,curve,attribute,,Float32ArrayOrNull,,,,,third_party/blink/renderer/modules/webaudio/wave_shaper_node.idl,
 WaveShaperNode,oversample,attribute,,OverSampleType,,,,,third_party/blink/renderer/modules/webaudio/wave_shaper_node.idl,
-WebGL2RenderingContext,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl2_rendering_context.idl,10
+WebGL2RenderingContext,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl2_rendering_context.idl,11
 WebGL2RenderingContext,ACTIVE_ATTRIBUTES,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.idl,271
 WebGL2RenderingContext,ACTIVE_TEXTURE,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.idl,365
 WebGL2RenderingContext,ACTIVE_UNIFORMS,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.idl,270
@@ -9308,17 +9315,17 @@ WebGLLoseContext,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl
 WebGLLoseContext,loseContext,operation,(),Void,,,,,third_party/blink/renderer/modules/webgl/webgl_lose_context.idl,
 WebGLLoseContext,restoreContext,operation,(),Void,,,,,third_party/blink/renderer/modules/webgl/webgl_lose_context.idl,
 WebGLMultiDraw,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl_multi_draw.idl,8
-WebGLMultiDraw,multiDrawArraysInstancedWEBGL,operation,"(UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,Long)",Void,,,,,third_party/blink/renderer/modules/webgl/webgl_multi_draw.idl,
-WebGLMultiDraw,multiDrawArraysWEBGL,operation,"(UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,Long)",Void,,,,,third_party/blink/renderer/modules/webgl/webgl_multi_draw.idl,
-WebGLMultiDraw,multiDrawElementsInstancedWEBGL,operation,"(UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,Long)",Void,,,,,third_party/blink/renderer/modules/webgl/webgl_multi_draw.idl,
-WebGLMultiDraw,multiDrawElementsWEBGL,operation,"(UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,Long)",Void,,,,,third_party/blink/renderer/modules/webgl/webgl_multi_draw.idl,
+WebGLMultiDraw,multiDrawArraysInstancedWEBGL,operation,"(UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,Long)",Void,,,,,third_party/blink/renderer/modules/webgl/webgl_multi_draw.idl,
+WebGLMultiDraw,multiDrawArraysWEBGL,operation,"(UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,Long)",Void,,,,,third_party/blink/renderer/modules/webgl/webgl_multi_draw.idl,
+WebGLMultiDraw,multiDrawElementsInstancedWEBGL,operation,"(UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,Long)",Void,,,,,third_party/blink/renderer/modules/webgl/webgl_multi_draw.idl,
+WebGLMultiDraw,multiDrawElementsWEBGL,operation,"(UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,Long)",Void,,,,,third_party/blink/renderer/modules/webgl/webgl_multi_draw.idl,
 WebGLMultiDrawInstancedBaseVertexBaseInstance,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl_multi_draw_instanced_base_vertex_base_instance.idl,8
-WebGLMultiDrawInstancedBaseVertexBaseInstance,multiDrawArraysInstancedBaseInstanceWEBGL,operation,"(UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,Uint32ArrayOrUnsignedLongSequence,UnsignedLong,Long)",Void,,,,,third_party/blink/renderer/modules/webgl/webgl_multi_draw_instanced_base_vertex_base_instance.idl,
-WebGLMultiDrawInstancedBaseVertexBaseInstance,multiDrawElementsInstancedBaseVertexBaseInstanceWEBGL,operation,"(UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,Int32ArrayOrLongSequence,UnsignedLong,Uint32ArrayOrUnsignedLongSequence,UnsignedLong,Long)",Void,,,,,third_party/blink/renderer/modules/webgl/webgl_multi_draw_instanced_base_vertex_base_instance.idl,
+WebGLMultiDrawInstancedBaseVertexBaseInstance,multiDrawArraysInstancedBaseInstanceWEBGL,operation,"(UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,Uint32ArrayAllowSharedOrUnsignedLongSequence,UnsignedLong,Long)",Void,,,,,third_party/blink/renderer/modules/webgl/webgl_multi_draw_instanced_base_vertex_base_instance.idl,
+WebGLMultiDrawInstancedBaseVertexBaseInstance,multiDrawElementsInstancedBaseVertexBaseInstanceWEBGL,operation,"(UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,Int32ArrayAllowSharedOrLongSequence,UnsignedLong,Uint32ArrayAllowSharedOrUnsignedLongSequence,UnsignedLong,Long)",Void,,,,,third_party/blink/renderer/modules/webgl/webgl_multi_draw_instanced_base_vertex_base_instance.idl,
 WebGLProgram,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl_program.idl,30
 WebGLQuery,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl_query.idl,9
 WebGLRenderbuffer,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl_renderbuffer.idl,30
-WebGLRenderingContext,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl_rendering_context.idl,31
+WebGLRenderingContext,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl_rendering_context.idl,32
 WebGLRenderingContext,ACTIVE_ATTRIBUTES,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.idl,271
 WebGLRenderingContext,ACTIVE_TEXTURE,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.idl,365
 WebGLRenderingContext,ACTIVE_UNIFORMS,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.idl,270
@@ -9849,6 +9856,7 @@ WebTransport,createBidirectionalStream,operation,(),BidirectionalStreamPromise,,
 WebTransport,createUnidirectionalStream,operation,(),SendStreamPromise,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,datagramReadable,attribute,,ReadableStream,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,datagramWritable,attribute,,WritableStream,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
+WebTransport,datagrams,attribute,,DatagramDuplexStream,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,incomingBidirectionalStreams,attribute,,ReadableStream,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,incomingUnidirectionalStreams,attribute,,ReadableStream,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,ready,attribute,,VoidPromise,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
