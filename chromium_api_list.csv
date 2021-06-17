@@ -1975,11 +1975,13 @@ ElementInternals,validationMessage,attribute,,String,,,,,third_party/blink/rende
 ElementInternals,validity,attribute,,ValidityState,,,,,third_party/blink/renderer/core/html/custom/element_internals.idl,
 ElementInternals,willValidate,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/custom/element_internals.idl,
 EncodedAudioChunk,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/encoded_audio_chunk.idl,13
-EncodedAudioChunk,data,attribute,,ArrayBuffer,,,,,third_party/blink/renderer/modules/webcodecs/encoded_audio_chunk.idl,
+EncodedAudioChunk,byteLength,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/encoded_audio_chunk.idl,
+EncodedAudioChunk,copyTo,operation,(ArrayBufferOrArrayBufferView),Void,,,,,third_party/blink/renderer/modules/webcodecs/encoded_audio_chunk.idl,
 EncodedAudioChunk,timestamp,attribute,,LongLong,,,,,third_party/blink/renderer/modules/webcodecs/encoded_audio_chunk.idl,
 EncodedAudioChunk,type,attribute,,EncodedAudioChunkType,,,,,third_party/blink/renderer/modules/webcodecs/encoded_audio_chunk.idl,
 EncodedVideoChunk,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/encoded_video_chunk.idl,13
-EncodedVideoChunk,data,attribute,,ArrayBuffer,,,,,third_party/blink/renderer/modules/webcodecs/encoded_video_chunk.idl,
+EncodedVideoChunk,byteLength,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/encoded_video_chunk.idl,
+EncodedVideoChunk,copyTo,operation,(ArrayBufferOrArrayBufferView),Void,,,,,third_party/blink/renderer/modules/webcodecs/encoded_video_chunk.idl,
 EncodedVideoChunk,duration,attribute,,UnsignedLongLongOrNull,,,,,third_party/blink/renderer/modules/webcodecs/encoded_video_chunk.idl,
 EncodedVideoChunk,timestamp,attribute,,LongLong,,,,,third_party/blink/renderer/modules/webcodecs/encoded_video_chunk.idl,
 EncodedVideoChunk,type,attribute,,EncodedVideoChunkType,,,,,third_party/blink/renderer/modules/webcodecs/encoded_video_chunk.idl,
@@ -3712,6 +3714,7 @@ InternalRuntimeFlags,appHistoryEnabled,attribute,,Boolean,,,,,third_party/blink/
 InternalRuntimeFlags,ariaTouchPassthroughEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,audioOutputDevicesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,audioVideoTracksEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,autoExpandDetailsElementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,autoLazyLoadOnReloadsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,autoPictureInPictureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,autofillShadowDOMEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3854,6 +3857,7 @@ InternalRuntimeFlags,editingNGEnabled,attribute,,Boolean,,,,,third_party/blink/r
 InternalRuntimeFlags,encryptedMediaSessionClosedReasonEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,enterKeyHintAttributeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,eventTimingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,exceptionMetaDataForDevToolsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,execCommandInJavaScriptEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,expensiveBackgroundTimerThrottlingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,experimentalContentSecurityPolicyFeaturesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -9844,7 +9848,7 @@ WebGLVideoTexture,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webg
 WebGLVideoTexture,SAMPLER_VIDEO_IMAGE,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgl/webgl_video_texture.idl,13
 WebGLVideoTexture,TEXTURE_VIDEO_IMAGE,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgl/webgl_video_texture.idl,12
 WebGLVideoTexture,releaseVideoImageWEBGL,operation,(UnsignedLong),Boolean,,,,,third_party/blink/renderer/modules/webgl/webgl_video_texture.idl,
-WebGLVideoTexture,shareVideoImageWEBGL,operation,"(UnsignedLong,HTMLVideoElement)",VideoFrameMetadata,,,,,third_party/blink/renderer/modules/webgl/webgl_video_texture.idl,
+WebGLVideoTexture,shareVideoImageWEBGL,operation,"(UnsignedLong,HTMLVideoElement)",VideoFrameMetadataOrNull,,,,,third_party/blink/renderer/modules/webgl/webgl_video_texture.idl,
 WebGLWebCodecsVideoFrame,,interface,,,,,,,third_party/blink/renderer/modules/webgl/webgl_webcodecs_video_frame.idl,10
 WebGLWebCodecsVideoFrame,importVideoFrame,operation,(VideoFrame),WebGLWebCodecsVideoFrameHandle,,,,,third_party/blink/renderer/modules/webgl/webgl_webcodecs_video_frame.idl,
 WebGLWebCodecsVideoFrame,releaseVideoFrame,operation,(WebGLWebCodecsVideoFrameHandle),Boolean,,,,,third_party/blink/renderer/modules/webgl/webgl_webcodecs_video_frame.idl,
