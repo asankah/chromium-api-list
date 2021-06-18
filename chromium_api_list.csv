@@ -3875,6 +3875,7 @@ InternalRuntimeFlags,featurePolicyReportingEnabled,attribute,,Boolean,,,,,third_
 InternalRuntimeFlags,fencedFramesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fetchUploadStreamingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileHandlingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,fileHandlingIconsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileSystemAccessAPIExperimentalEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileSystemAccessEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileSystemEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5383,6 +5384,7 @@ NavigatorUAData,,interface,,,,,,,third_party/blink/renderer/core/frame/navigator
 NavigatorUAData,brands,attribute,,NavigatorUABrandVersionArray,,,,,third_party/blink/renderer/core/frame/navigator_ua_data.idl,
 NavigatorUAData,getHighEntropyValues,operation,(StringSequence),UADataValuesPromise,,,,,third_party/blink/renderer/core/frame/navigator_ua_data.idl,
 NavigatorUAData,mobile,attribute,,Boolean,,,,,third_party/blink/renderer/core/frame/navigator_ua_data.idl,
+NavigatorUAData,toJSON,operation,(),Object,,,,,third_party/blink/renderer/core/frame/navigator_ua_data.idl,
 NetworkInformation,,interface,,,,,,,third_party/blink/renderer/modules/netinfo/network_information.idl,31
 NetworkInformation,downlink,attribute,,UnrestrictedDouble,,NetInfoDownlink,,,third_party/blink/renderer/modules/netinfo/network_information.idl,
 NetworkInformation,downlinkMax,attribute,,UnrestrictedDouble,,NetInfoDownlinkMax,,,third_party/blink/renderer/modules/netinfo/network_information.idl,
@@ -8081,7 +8083,7 @@ URL,search,attribute,,USVString,,,,,third_party/blink/renderer/core/url/url.idl,
 URL,searchParams,attribute,,URLSearchParams,,,,,third_party/blink/renderer/core/url/url.idl,
 URL,toJSON,operation,(),USVString,,,,,third_party/blink/renderer/core/url/url.idl,
 URL,username,attribute,,USVString,,,,,third_party/blink/renderer/core/url/url.idl,
-URLPattern,,interface,,,,,True,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,12
+URLPattern,,interface,,,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,11
 URLPattern,exec,operation,"(USVStringOrURLPatternInit,USVString)",URLPatternResultOrNull,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,hash,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,hostname,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
