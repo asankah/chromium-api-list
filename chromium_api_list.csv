@@ -3155,6 +3155,7 @@ HTMLMenuElement,compact,attribute,,Boolean,,,,,third_party/blink/renderer/core/h
 HTMLMetaElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_meta_element.idl,24
 HTMLMetaElement,content,attribute,,String,,,,,third_party/blink/renderer/core/html/html_meta_element.idl,
 HTMLMetaElement,httpEquiv,attribute,,String,,,,,third_party/blink/renderer/core/html/html_meta_element.idl,
+HTMLMetaElement,media,attribute,,String,,MediaMetaThemeColor,,,third_party/blink/renderer/core/html/html_meta_element.idl,
 HTMLMetaElement,name,attribute,,String,,,,,third_party/blink/renderer/core/html/html_meta_element.idl,
 HTMLMetaElement,scheme,attribute,,String,,,,,third_party/blink/renderer/core/html/html_meta_element.idl,
 HTMLMeterElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_meter_element.idl,24
@@ -3952,6 +3953,7 @@ InternalRuntimeFlags,mediaDocumentDownloadButtonEnabled,attribute,,Boolean,,,,,t
 InternalRuntimeFlags,mediaElementVolumeGreaterThanOneEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,mediaEngagementBypassAutoplayPoliciesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,mediaLatencyHintEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,mediaMetaThemeColorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,mediaPreservesPitchEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,mediaQueryNavigationControlsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,mediaSessionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
