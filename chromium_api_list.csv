@@ -2364,7 +2364,7 @@ GPUQuerySet,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_query
 GPUQuerySet,destroy,operation,(),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_query_set.idl,
 GPUQuerySet,label,attribute,,USVStringOrNull,,,,,third_party/blink/renderer/modules/webgpu/gpu_object_base.idl,
 GPUQueue,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_queue.idl,9
-GPUQueue,copyExternalImageToTexture,operation,"(GPUImageCopyExternalImage,GPUImageCopyTexture,UnsignedLongEnforceRangeSequenceOrGPUExtent3DDict)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_queue.idl,
+GPUQueue,copyExternalImageToTexture,operation,"(GPUImageCopyExternalImage,GPUImageCopyTextureTagged,UnsignedLongEnforceRangeSequenceOrGPUExtent3DDict)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_queue.idl,
 GPUQueue,copyImageBitmapToTexture,operation,"(GPUImageCopyImageBitmap,GPUImageCopyTexture,UnsignedLongEnforceRangeSequenceOrGPUExtent3DDict)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_queue.idl,
 GPUQueue,label,attribute,,USVStringOrNull,,,,,third_party/blink/renderer/modules/webgpu/gpu_object_base.idl,
 GPUQueue,onSubmittedWorkDone,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/webgpu/gpu_queue.idl,
@@ -3763,7 +3763,6 @@ InternalRuntimeFlags,compositeAfterPaintEnabled,attribute,,Boolean,,,,,third_par
 InternalRuntimeFlags,compositeBGColorAnimationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,compositeClipPathAnimationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,compositeRelativeKeyframesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,compositeSVGEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,compositedSelectionUpdateEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,computePressureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,computedAccessibilityInfoEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
