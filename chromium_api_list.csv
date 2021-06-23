@@ -809,6 +809,7 @@ CanvasRenderingContext2D,,interface,,,,,,,third_party/blink/renderer/modules/can
 CanvasRenderingContext2D,addHitRegion,operation,(HitRegionOptions),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,arc,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,Boolean)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 CanvasRenderingContext2D,arcTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
+CanvasRenderingContext2D,beginLayer,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,beginPath,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,bezierCurveTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 CanvasRenderingContext2D,canvas,attribute,,HTMLCanvasElement,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
@@ -831,6 +832,7 @@ CanvasRenderingContext2D,drawImage,operation,"(CSSImageValueOrHTMLImageElementOr
 CanvasRenderingContext2D,drawImage,operation,"(CSSImageValueOrHTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrImageBitmapOrOffscreenCanvasOrVideoFrame,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,drawImage,operation,"(CSSImageValueOrHTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrImageBitmapOrOffscreenCanvasOrVideoFrame,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,ellipse,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,Boolean)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
+CanvasRenderingContext2D,endLayer,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,fill,operation,(CanvasFillRule),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,fill,operation,"(Path2D,CanvasFillRule)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,fillFormattedText,operation,"(CanvasFormattedText,Double,Double,Double)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
@@ -2354,6 +2356,8 @@ GPUDevice,pushErrorScope,operation,(GPUErrorFilter),Void,,,,,third_party/blink/r
 GPUDevice,queue,attribute,,GPUQueue,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDeviceLostInfo,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_device_lost_info.idl,9
 GPUDeviceLostInfo,message,attribute,,String,,,,,third_party/blink/renderer/modules/webgpu/gpu_device_lost_info.idl,
+GPUExternalTexture,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_external_texture.idl,9
+GPUExternalTexture,label,attribute,,USVStringOrNull,,,,,third_party/blink/renderer/modules/webgpu/gpu_object_base.idl,
 GPUMapMode,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_map_mode.idl,10
 GPUMapMode,READ,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_map_mode.idl,11
 GPUMapMode,WRITE,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_map_mode.idl,12
@@ -4143,6 +4147,7 @@ InternalRuntimeFlags,wakeLockEnabled,attribute,,Boolean,,,,,third_party/blink/re
 InternalRuntimeFlags,webAnimationsAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAnimationsSVGEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppLinkCapturingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webAppManifestIdEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppTabStripEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppUrlHandlingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppWindowControlsOverlayEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4299,6 +4304,7 @@ InternalSettingsGenerated,setLazyImageLoadingDistanceThresholdPxOffline,operatio
 InternalSettingsGenerated,setLazyImageLoadingDistanceThresholdPxSlow2G,operation,(Long),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setLazyImageLoadingDistanceThresholdPxUnknown,operation,(Long),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setLazyLoadEnabled,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
+InternalSettingsGenerated,setLitePageSubresourceRedirectOrigin,operation,(String),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setLoadWithOverviewMode,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setLoadsImagesAutomatically,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setLocalStorageEnabled,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
@@ -5384,6 +5390,7 @@ NavigatorUAData,,interface,,,,,,,third_party/blink/renderer/core/frame/navigator
 NavigatorUAData,brands,attribute,,NavigatorUABrandVersionArray,,,,,third_party/blink/renderer/core/frame/navigator_ua_data.idl,
 NavigatorUAData,getHighEntropyValues,operation,(StringSequence),UADataValuesPromise,,,,,third_party/blink/renderer/core/frame/navigator_ua_data.idl,
 NavigatorUAData,mobile,attribute,,Boolean,,,,,third_party/blink/renderer/core/frame/navigator_ua_data.idl,
+NavigatorUAData,platform,attribute,,String,,,,,third_party/blink/renderer/core/frame/navigator_ua_data.idl,
 NavigatorUAData,toJSON,operation,(),Object,,,,,third_party/blink/renderer/core/frame/navigator_ua_data.idl,
 NetworkInformation,,interface,,,,,,,third_party/blink/renderer/modules/netinfo/network_information.idl,31
 NetworkInformation,downlink,attribute,,UnrestrictedDouble,,NetInfoDownlink,,,third_party/blink/renderer/modules/netinfo/network_information.idl,
@@ -5543,6 +5550,7 @@ OffscreenCanvas,width,attribute,,UnsignedLong,,,,,third_party/blink/renderer/cor
 OffscreenCanvasRenderingContext2D,,interface,,,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,10
 OffscreenCanvasRenderingContext2D,arc,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,Boolean)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 OffscreenCanvasRenderingContext2D,arcTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
+OffscreenCanvasRenderingContext2D,beginLayer,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,beginPath,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,bezierCurveTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 OffscreenCanvasRenderingContext2D,canvas,attribute,,OffscreenCanvas,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
@@ -5563,6 +5571,7 @@ OffscreenCanvasRenderingContext2D,drawImage,operation,"(CSSImageValueOrHTMLImage
 OffscreenCanvasRenderingContext2D,drawImage,operation,"(CSSImageValueOrHTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrImageBitmapOrOffscreenCanvasOrVideoFrame,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,drawImage,operation,"(CSSImageValueOrHTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrImageBitmapOrOffscreenCanvasOrVideoFrame,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,ellipse,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,Boolean)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
+OffscreenCanvasRenderingContext2D,endLayer,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,fill,operation,(CanvasFillRule),Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,fill,operation,"(Path2D,CanvasFillRule)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
 OffscreenCanvasRenderingContext2D,fillRect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/offscreencanvas2d/offscreen_canvas_rendering_context_2d.idl,
@@ -5694,6 +5703,7 @@ PageTransitionEvent,persisted,attribute,,Boolean,,,,,third_party/blink/renderer/
 PaintRenderingContext2D,,interface,,,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,9
 PaintRenderingContext2D,arc,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,Boolean)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 PaintRenderingContext2D,arcTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
+PaintRenderingContext2D,beginLayer,operation,(),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,beginPath,operation,(),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,bezierCurveTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 PaintRenderingContext2D,clearRect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
@@ -5707,6 +5717,7 @@ PaintRenderingContext2D,drawImage,operation,"(CSSImageValueOrHTMLImageElementOrS
 PaintRenderingContext2D,drawImage,operation,"(CSSImageValueOrHTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrImageBitmapOrOffscreenCanvasOrVideoFrame,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,drawImage,operation,"(CSSImageValueOrHTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrImageBitmapOrOffscreenCanvasOrVideoFrame,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,ellipse,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,Boolean)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
+PaintRenderingContext2D,endLayer,operation,(),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,fill,operation,(CanvasFillRule),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,fill,operation,"(Path2D,CanvasFillRule)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,fillRect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
