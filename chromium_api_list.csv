@@ -2159,6 +2159,7 @@ FileSystemHandle,isSameEntry,operation,(FileSystemHandle),BooleanPromise,,V8File
 FileSystemHandle,kind,attribute,,FileSystemHandleKind,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
 FileSystemHandle,name,attribute,,USVString,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
 FileSystemHandle,queryPermission,operation,(FileSystemHandlePermissionDescriptor),PermissionStatePromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
+FileSystemHandle,remove,operation,(FileSystemRemoveOptions),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
 FileSystemHandle,requestPermission,operation,(FileSystemHandlePermissionDescriptor),PermissionStatePromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
 FileSystemWritableFileStream,,interface,,,,,True,,third_party/blink/renderer/modules/file_system_access/file_system_writable_file_stream.idl,10
 FileSystemWritableFileStream,seek,operation,(UnsignedLongLong),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_writable_file_stream.idl,
@@ -8272,7 +8273,7 @@ VideoFrame,allocationSize,operation,(VideoFrameCopyToOptions),UnsignedLong,,,,,t
 VideoFrame,clone,operation,(),VideoFrame,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedHeight,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
-VideoFrame,codedRect,attribute,,VideoFrameRect,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
+VideoFrame,codedRect,attribute,,DOMRectReadOnly,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedRegion,attribute,,VideoFrameRect,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedWidth,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,copyTo,operation,"(ArrayBufferOrArrayBufferView,VideoFrameCopyToOptions)",PlaneLayoutSequencePromise,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
@@ -8286,7 +8287,7 @@ VideoFrame,duration,attribute,,UnsignedLongLongOrNull,,,,,third_party/blink/rend
 VideoFrame,format,attribute,,VideoPixelFormatOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,planes,attribute,,PlaneArrayOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,timestamp,attribute,,LongLongOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
-VideoFrame,visibleRect,attribute,,VideoFrameRect,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
+VideoFrame,visibleRect,attribute,,DOMRectReadOnly,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,visibleRegion,attribute,,VideoFrameRect,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoPlaybackQuality,,interface,,,,,,,third_party/blink/renderer/modules/mediasource/video_playback_quality.idl,33
 VideoPlaybackQuality,corruptedVideoFrames,attribute,,UnsignedLong,,V8VideoPlaybackQuality_CorruptedVideoFrames_AttributeGetter,,,third_party/blink/renderer/modules/mediasource/video_playback_quality.idl,
