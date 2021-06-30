@@ -2152,6 +2152,7 @@ FileSystemDirectoryHandle,values,operation,(),FileSystemDirectoryIterator,,,,,th
 FileSystemDirectoryIterator,,interface,,,,,,,third_party/blink/renderer/modules/file_system_access/file_system_directory_iterator.idl,12
 FileSystemDirectoryIterator,next,operation,(),AnyPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_directory_iterator.idl,
 FileSystemFileHandle,,interface,,,,,True,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,11
+FileSystemFileHandle,createSyncAccessHandle,operation,(),FileSystemSyncAccessHandlePromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
 FileSystemFileHandle,createWritable,operation,(FileSystemCreateWritableOptions),FileSystemWritableFileStreamPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
 FileSystemFileHandle,getFile,operation,(),FilePromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
 FileSystemHandle,,interface,,,,,True,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,17
@@ -2161,6 +2162,7 @@ FileSystemHandle,name,attribute,,USVString,,,,,third_party/blink/renderer/module
 FileSystemHandle,queryPermission,operation,(FileSystemHandlePermissionDescriptor),PermissionStatePromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
 FileSystemHandle,remove,operation,(FileSystemRemoveOptions),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
 FileSystemHandle,requestPermission,operation,(FileSystemHandlePermissionDescriptor),PermissionStatePromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
+FileSystemSyncAccessHandle,,interface,,,,,True,,third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.idl,12
 FileSystemWritableFileStream,,interface,,,,,True,,third_party/blink/renderer/modules/file_system_access/file_system_writable_file_stream.idl,10
 FileSystemWritableFileStream,seek,operation,(UnsignedLongLong),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_writable_file_stream.idl,
 FileSystemWritableFileStream,truncate,operation,(UnsignedLongLong),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_writable_file_stream.idl,
@@ -3788,10 +3790,12 @@ InternalRuntimeFlags,cssAtRuleCounterStyleInShadowDOMEnabled,attribute,,Boolean,
 InternalRuntimeFlags,cssCalcAsIntEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssCalcInfinityAndNaNEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssCaseSensitiveSelectorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssColorSchemeOnlyEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssColorTypedOMEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContainSize1DEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContainedBodyPropagationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContainerQueriesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssContainerRelativeUnitsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContentVisibilityEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContentVisibilityHiddenMatchableEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssEnumeratedCustomPropertiesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3881,6 +3885,7 @@ InternalRuntimeFlags,fetchUploadStreamingEnabled,attribute,,Boolean,,,,,third_pa
 InternalRuntimeFlags,fileHandlingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileHandlingIconsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileSystemAccessAPIExperimentalEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,fileSystemAccessAccessHandleEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileSystemAccessEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fileSystemEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,fledgeInterestGroupAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4118,7 +4123,6 @@ InternalRuntimeFlags,thirdPartyOriginTrialsEnabled,attribute,,Boolean,,,,,third_
 InternalRuntimeFlags,throttleDisplayNoneAndVisibilityHiddenCrossOriginIframesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,timeZoneChangeEventEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,timerThrottlingForBackgroundTabsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,timerThrottlingForHiddenFramesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,touchEventFeatureDetectionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,transferableStreamsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,transformInteropEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
