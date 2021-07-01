@@ -947,7 +947,6 @@ ClipboardEvent,clipboardData,attribute,,DataTransferOrNull,,,,,third_party/blink
 ClipboardEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 ClipboardItem,,interface,,,,,,,third_party/blink/renderer/modules/clipboard/clipboard_item.idl,9
 ClipboardItem,getType,operation,(String),BlobPromise,,,,,third_party/blink/renderer/modules/clipboard/clipboard_item.idl,
-ClipboardItem,raw,attribute,,Boolean,,,,,third_party/blink/renderer/modules/clipboard/clipboard_item.idl,
 ClipboardItem,types,attribute,,StringArray,,,,,third_party/blink/renderer/modules/clipboard/clipboard_item.idl,
 CloseEvent,,interface,,,,,,,third_party/blink/renderer/modules/websockets/close_event.idl,35
 CloseEvent,code,attribute,,UnsignedShort,,,,,third_party/blink/renderer/modules/websockets/close_event.idl,
@@ -3507,7 +3506,6 @@ Headers,get,operation,(ByteString),ByteStringOrNull,,,,,third_party/blink/render
 Headers,has,operation,(ByteString),Boolean,,,,,third_party/blink/renderer/core/fetch/headers.idl,
 Headers,set,operation,"(ByteString,ByteString)",Void,,,,,third_party/blink/renderer/core/fetch/headers.idl,
 Highlight,,interface,,,,,,,third_party/blink/renderer/core/highlight/highlight.idl,8
-Highlight,name,attribute,,String,,,,,third_party/blink/renderer/core/highlight/highlight.idl,
 Highlight,priority,attribute,,Long,,,,,third_party/blink/renderer/core/highlight/highlight.idl,
 HighlightRegistry,,interface,,,,,,,third_party/blink/renderer/core/highlight/highlight_registry.idl,8
 History,,interface,,,,,,,third_party/blink/renderer/core/frame/history.idl,32
@@ -3762,6 +3760,7 @@ InternalRuntimeFlags,captureTimeInCsrcEnabled,attribute,,Boolean,,,,,third_party
 InternalRuntimeFlags,clickPointerEventEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clickRetargettingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clipboardCustomFormatsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,clipboardReadPngEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clipboardSvgEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clsScrollAnchoringEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,colrv1FontsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5899,7 +5898,6 @@ Performance,memory,attribute,,MemoryInfo,,V8Performance_Memory_AttributeGetter,,
 Performance,navigation,attribute,,PerformanceNavigation,,V8Performance_Navigation_AttributeGetter,,,third_party/blink/renderer/core/timing/performance.idl,
 Performance,now,operation,(),Double,,,,,third_party/blink/renderer/core/timing/performance.idl,
 Performance,onresourcetimingbufferfull,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/timing/performance.idl,
-Performance,profile,operation,(ProfilerInitOptions),ProfilerPromise,,JSSelfProfiling,,,third_party/blink/renderer/core/timing/performance.idl,
 Performance,setResourceTimingBufferSize,operation,(UnsignedLong),Void,,,,,third_party/blink/renderer/core/timing/performance.idl,
 Performance,timeOrigin,attribute,,Double,,,,,third_party/blink/renderer/core/timing/performance.idl,
 Performance,timing,attribute,,PerformanceTiming,,V8Performance_Timing_AttributeGetter,,,third_party/blink/renderer/core/timing/performance.idl,
