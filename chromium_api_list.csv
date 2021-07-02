@@ -7713,7 +7713,7 @@ SpeechRecognitionResult,length,attribute,,UnsignedLong,,,,,third_party/blink/ren
 SpeechRecognitionResultList,,interface,,,,,,,third_party/blink/renderer/modules/speech/speech_recognition_result_list.idl,30
 SpeechRecognitionResultList,item,operation,(UnsignedLong),SpeechRecognitionResult,,,,,third_party/blink/renderer/modules/speech/speech_recognition_result_list.idl,
 SpeechRecognitionResultList,length,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/speech/speech_recognition_result_list.idl,
-SpeechSynthesis,,interface,,,,,,,third_party/blink/renderer/modules/speech/speech_synthesis.idl,30
+SpeechSynthesis,,interface,,,,,,,third_party/blink/renderer/modules/speech/speech_synthesis.idl,31
 SpeechSynthesis,cancel,operation,(),Void,,,,,third_party/blink/renderer/modules/speech/speech_synthesis.idl,
 SpeechSynthesis,getVoices,operation,(),SpeechSynthesisVoiceSequence,,,,,third_party/blink/renderer/modules/speech/speech_synthesis.idl,
 SpeechSynthesis,onvoiceschanged,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/speech/speech_synthesis.idl,
@@ -7747,7 +7747,7 @@ SpeechSynthesisUtterance,rate,attribute,,Float,,,,,third_party/blink/renderer/mo
 SpeechSynthesisUtterance,text,attribute,,String,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_utterance.idl,
 SpeechSynthesisUtterance,voice,attribute,,SpeechSynthesisVoiceOrNull,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_utterance.idl,
 SpeechSynthesisUtterance,volume,attribute,,Float,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_utterance.idl,
-SpeechSynthesisVoice,,interface,,,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_voice.idl,30
+SpeechSynthesisVoice,,interface,,,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_voice.idl,31
 SpeechSynthesisVoice,default,attribute,,Boolean,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_voice.idl,
 SpeechSynthesisVoice,lang,attribute,,String,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_voice.idl,
 SpeechSynthesisVoice,localService,attribute,,Boolean,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_voice.idl,
