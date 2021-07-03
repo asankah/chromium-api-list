@@ -7395,7 +7395,7 @@ Sanitizer,config,operation,(),SanitizerConfig,,SanitizerAPIGetConfig,,,third_par
 Sanitizer,defaultConfig,operation,(),SanitizerConfig,,SanitizerAPIGetDefaultConfig,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Sanitizer,sanitize,operation,(StringOrTrustedHTMLOrDocumentFragmentOrDocument),DocumentFragment,,SanitizerAPIToFragment,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Sanitizer,sanitizeToString,operation,(StringOrDocumentFragmentOrDocument),String,,SanitizerAPIToString,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
-Scheduler,,interface,,,,,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,11
+Scheduler,,interface,,,,,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,13
 Scheduler,currentTaskSignal,attribute,,TaskSignal,,SchedulerCurrentTaskSignal,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,
 Scheduler,postTask,operation,"(SchedulerPostTaskCallback,SchedulerPostTaskOptions)",AnyPromise,,SchedulerPostTask,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,
 Scheduling,,interface,,,,,,,third_party/blink/renderer/core/frame/scheduling.idl,9
@@ -7713,7 +7713,7 @@ SpeechRecognitionResult,length,attribute,,UnsignedLong,,,,,third_party/blink/ren
 SpeechRecognitionResultList,,interface,,,,,,,third_party/blink/renderer/modules/speech/speech_recognition_result_list.idl,30
 SpeechRecognitionResultList,item,operation,(UnsignedLong),SpeechRecognitionResult,,,,,third_party/blink/renderer/modules/speech/speech_recognition_result_list.idl,
 SpeechRecognitionResultList,length,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/speech/speech_recognition_result_list.idl,
-SpeechSynthesis,,interface,,,,,,,third_party/blink/renderer/modules/speech/speech_synthesis.idl,31
+SpeechSynthesis,,interface,,,,,,,third_party/blink/renderer/modules/speech/speech_synthesis.idl,30
 SpeechSynthesis,cancel,operation,(),Void,,,,,third_party/blink/renderer/modules/speech/speech_synthesis.idl,
 SpeechSynthesis,getVoices,operation,(),SpeechSynthesisVoiceSequence,,,,,third_party/blink/renderer/modules/speech/speech_synthesis.idl,
 SpeechSynthesis,onvoiceschanged,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/speech/speech_synthesis.idl,
@@ -7747,7 +7747,7 @@ SpeechSynthesisUtterance,rate,attribute,,Float,,,,,third_party/blink/renderer/mo
 SpeechSynthesisUtterance,text,attribute,,String,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_utterance.idl,
 SpeechSynthesisUtterance,voice,attribute,,SpeechSynthesisVoiceOrNull,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_utterance.idl,
 SpeechSynthesisUtterance,volume,attribute,,Float,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_utterance.idl,
-SpeechSynthesisVoice,,interface,,,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_voice.idl,31
+SpeechSynthesisVoice,,interface,,,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_voice.idl,30
 SpeechSynthesisVoice,default,attribute,,Boolean,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_voice.idl,
 SpeechSynthesisVoice,lang,attribute,,String,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_voice.idl,
 SpeechSynthesisVoice,localService,attribute,,Boolean,,,,,third_party/blink/renderer/modules/speech/speech_synthesis_voice.idl,
@@ -7854,12 +7854,12 @@ TaskAttributionTiming,containerName,attribute,,String,,,,,third_party/blink/rend
 TaskAttributionTiming,containerSrc,attribute,,String,,,,,third_party/blink/renderer/core/timing/task_attribution_timing.idl,
 TaskAttributionTiming,containerType,attribute,,String,,,,,third_party/blink/renderer/core/timing/task_attribution_timing.idl,
 TaskAttributionTiming,toJSON,operation,(),Object,,,,,third_party/blink/renderer/core/timing/task_attribution_timing.idl,
-TaskController,,interface,,,,TaskControllerConstructor,,,third_party/blink/renderer/modules/scheduler/task_controller.idl,13
+TaskController,,interface,,,,TaskControllerConstructor,,,third_party/blink/renderer/modules/scheduler/task_controller.idl,11
 TaskController,setPriority,operation,(TaskPriority),Void,,TaskControllerSetPriority,,,third_party/blink/renderer/modules/scheduler/task_controller.idl,
 TaskPriorityChangeEvent,,interface,,,,,,,third_party/blink/renderer/modules/scheduler/task_priority_change_event.idl,9
 TaskPriorityChangeEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 TaskPriorityChangeEvent,previousPriority,attribute,,TaskPriority,,,,,third_party/blink/renderer/modules/scheduler/task_priority_change_event.idl,
-TaskSignal,,interface,,,,,,,third_party/blink/renderer/modules/scheduler/task_signal.idl,12
+TaskSignal,,interface,,,,,,,third_party/blink/renderer/modules/scheduler/task_signal.idl,10
 TaskSignal,onprioritychange,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/scheduler/task_signal.idl,
 TaskSignal,priority,attribute,,TaskPriority,,TaskSignalPriority,,,third_party/blink/renderer/modules/scheduler/task_signal.idl,
 TestReportBody,,interface,,,,,,,third_party/blink/renderer/core/frame/test_report_body.idl,9
