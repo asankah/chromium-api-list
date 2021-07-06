@@ -4452,6 +4452,7 @@ Internals,forceCompositingUpdate,operation,(Document),Void,,,,,third_party/blink
 Internals,forceFullRepaint,operation,(Document),Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,forceImageReload,operation,(Element),Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,forceLoseCanvasContext,operation,"(HTMLCanvasElement,String)",Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
+Internals,forceLoseCanvasContext,operation,"(OffscreenCanvas,String)",Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,forceReload,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,forceStaleStateForMediaElement,operation,"(HTMLMediaElement,Long)",Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,formControlStateOfHistoryItem,operation,(),StringSequence,,,,,third_party/blink/renderer/core/testing/internals.idl,
