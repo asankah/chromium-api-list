@@ -4050,6 +4050,7 @@ InternalRuntimeFlags,prefixedVideoFullscreenEnabled,attribute,,Boolean,,,,,third
 InternalRuntimeFlags,prerender2Enabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,presentationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,priorityHintsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,privateNetworkAccessNonSecureContextsAllowedEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,pushMessagingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,pushMessagingSubscriptionChangeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,quotaChangeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4075,6 +4076,7 @@ InternalRuntimeFlags,rtcUnifiedPlanByDefaultEnabled,attribute,,Boolean,,,,,third
 InternalRuntimeFlags,rtcUnifiedPlanEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sameSiteByDefaultCookiesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sanitizerAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,schedulerCurrentTaskSignalEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scriptedSpeechRecognitionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scriptedSpeechSynthesisEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scrollCustomizationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -7395,10 +7397,11 @@ SVGViewElement,SVG_ZOOMANDPAN_UNKNOWN,constant,,UnsignedShort,,,,,third_party/bl
 SVGViewElement,preserveAspectRatio,attribute,,SVGAnimatedPreserveAspectRatio,,SVG1DOMFitToViewBox,,,third_party/blink/renderer/core/svg/svg_fit_to_view_box.idl,
 SVGViewElement,viewBox,attribute,,SVGAnimatedRect,,SVG1DOMFitToViewBox,,,third_party/blink/renderer/core/svg/svg_fit_to_view_box.idl,
 SVGViewElement,zoomAndPan,attribute,,UnsignedShort,,SVG1DOMZoomAndPan,,,third_party/blink/renderer/core/svg/svg_zoom_and_pan.idl,
-Sanitizer,,interface,,,,,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,13
+Sanitizer,,interface,,,,,True,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,13
 Sanitizer,config,operation,(),SanitizerConfig,,SanitizerAPIGetConfig,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Sanitizer,defaultConfig,operation,(),SanitizerConfig,,SanitizerAPIGetDefaultConfig,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
-Sanitizer,sanitize,operation,(StringOrTrustedHTMLOrDocumentFragmentOrDocument),DocumentFragment,,SanitizerAPIToFragment,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
+Sanitizer,sanitize,operation,(StringOrDocumentFragmentOrDocument),DocumentFragment,,SanitizerAPIToFragment,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
+Sanitizer,sanitizeFor,operation,"(String,String)",ElementOrNull,,SanitizerAPISanitizeFor,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Sanitizer,sanitizeToString,operation,(StringOrDocumentFragmentOrDocument),String,,SanitizerAPIToString,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Scheduler,,interface,,,,,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,13
 Scheduler,currentTaskSignal,attribute,,TaskSignal,,SchedulerCurrentTaskSignal,,,third_party/blink/renderer/modules/scheduler/scheduler.idl,
@@ -10297,7 +10300,7 @@ WritableStream,abort,operation,(Any),VoidPromise,,,,,third_party/blink/renderer/
 WritableStream,close,operation,(),VoidPromise,,,,,third_party/blink/renderer/core/streams/writable_stream.idl,
 WritableStream,getWriter,operation,(),WritableStreamDefaultWriter,,,,,third_party/blink/renderer/core/streams/writable_stream.idl,
 WritableStream,locked,attribute,,Boolean,,,,,third_party/blink/renderer/core/streams/writable_stream.idl,
-WritableStreamDefaultController,,interface,,,,,,,third_party/blink/renderer/core/streams/writable_stream_default_controller.idl,8
+WritableStreamDefaultController,,interface,,,,,,,third_party/blink/renderer/core/streams/writable_stream_default_controller.idl,9
 WritableStreamDefaultController,error,operation,(Any),Void,,,,,third_party/blink/renderer/core/streams/writable_stream_default_controller.idl,
 WritableStreamDefaultWriter,,interface,,,,,,,third_party/blink/renderer/core/streams/writable_stream_default_writer.idl,10
 WritableStreamDefaultWriter,abort,operation,(Any),VoidPromise,,,,,third_party/blink/renderer/core/streams/writable_stream_default_writer.idl,
