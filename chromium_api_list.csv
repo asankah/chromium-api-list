@@ -8264,6 +8264,12 @@ ValidityState,tooShort,attribute,,Boolean,,,,,third_party/blink/renderer/core/ht
 ValidityState,typeMismatch,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/forms/validity_state.idl,
 ValidityState,valid,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/forms/validity_state.idl,
 ValidityState,valueMissing,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/forms/validity_state.idl,
+VideoColorSpace,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_color_space.idl,10
+VideoColorSpace,fullRange,attribute,,BooleanOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_color_space.idl,
+VideoColorSpace,matrix,attribute,,VideoMatrixCoefficientsOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_color_space.idl,
+VideoColorSpace,primaries,attribute,,VideoColorPrimariesOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_color_space.idl,
+VideoColorSpace,toJSON,operation,(),VideoColorSpaceInit,,,,,third_party/blink/renderer/modules/webcodecs/video_color_space.idl,
+VideoColorSpace,transfer,attribute,,VideoTransferCharacteristicsOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_color_space.idl,
 VideoDecoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,18
 VideoDecoder,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,configure,operation,(VideoDecoderConfig),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
