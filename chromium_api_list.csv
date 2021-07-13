@@ -236,9 +236,15 @@ AudioContext,getOutputTimestamp,operation,(),AudioTimestamp,,AudioContextGetOutp
 AudioContext,resume,operation,(),VoidPromise,,AudioContextResume,,,third_party/blink/renderer/modules/webaudio/audio_context.idl,
 AudioContext,suspend,operation,(),VoidPromise,,AudioContextSuspend,,,third_party/blink/renderer/modules/webaudio/audio_context.idl,
 AudioData,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,9
-AudioData,buffer,attribute,,AudioBuffer,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
+AudioData,allocationSize,operation,(AudioDataCopyToOptions),UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
 AudioData,clone,operation,(),AudioData,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
 AudioData,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
+AudioData,copyTo,operation,"(ArrayBufferOrArrayBufferView,AudioDataCopyToOptions)",Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
+AudioData,duration,attribute,,UnsignedLongLong,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
+AudioData,format,attribute,,AudioSampleFormat,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
+AudioData,numberOfChannels,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
+AudioData,numberOfFrames,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
+AudioData,sampleRate,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
 AudioData,timestamp,attribute,,LongLong,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
 AudioDecoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,11
 AudioDecoder,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
@@ -1768,7 +1774,7 @@ EditContext,updateLayout,operation,"(DOMRect,DOMRect)",Void,,,,,third_party/blin
 EditContext,updateSelection,operation,"(UnsignedLong,UnsignedLong)",Void,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,
 EditContext,updateText,operation,"(UnsignedLong,UnsignedLong,String)",Void,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,
 Element,,interface,,,,,,,third_party/blink/renderer/core/dom/element.idl,31
-Element,SetSanitizedHTML,operation,"(String,Sanitizer)",Void,,SanitizerAPIElementSetSanitized,,,third_party/blink/renderer/modules/sanitizer_api/element_sanitizer.idl,
+Element,SetHTML,operation,"(String,Sanitizer)",Void,,SanitizerAPIElementSetSanitized,,,third_party/blink/renderer/modules/sanitizer_api/element_sanitizer.idl,
 Element,accessibleNode,attribute,,AccessibleNodeOrNull,,,,,third_party/blink/renderer/core/dom/element.idl,
 Element,after,operation,(NodeOrStringOrTrustedScriptVariadic),Void,,,,,third_party/blink/renderer/core/dom/child_node.idl,
 Element,animate,operation,"(ObjectOrNull,UnrestrictedDoubleOrKeyframeAnimationOptions)",Animation,,V8Element_Animate_Method,,,third_party/blink/renderer/core/animation/animatable.idl,
@@ -2278,6 +2284,7 @@ GPUBufferUsage,STORAGE,constant,,UnsignedLong,,,,,third_party/blink/renderer/mod
 GPUBufferUsage,UNIFORM,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,17
 GPUBufferUsage,VERTEX,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,16
 GPUCanvasContext,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,10
+GPUCanvasContext,canvas,attribute,,HTMLCanvasElementOrOffscreenCanvas,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
 GPUCanvasContext,configure,operation,(GPUSwapChainDescriptor),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
 GPUCanvasContext,configureSwapChain,operation,(GPUSwapChainDescriptor),GPUSwapChain,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
 GPUCanvasContext,getCurrentTexture,operation,(),GPUTexture,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
@@ -3781,6 +3788,7 @@ InternalRuntimeFlags,contactsManagerExtraPropertiesEnabled,attribute,,Boolean,,,
 InternalRuntimeFlags,contentIndexEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,contextMenuEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,conversionMeasurementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,conversionMeasurementEventSourcesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cookiesWithoutSameSiteMustBeSecureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cooperativeSchedulingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,corsRFC1918Enabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -7402,8 +7410,8 @@ SVGViewElement,preserveAspectRatio,attribute,,SVGAnimatedPreserveAspectRatio,,SV
 SVGViewElement,viewBox,attribute,,SVGAnimatedRect,,SVG1DOMFitToViewBox,,,third_party/blink/renderer/core/svg/svg_fit_to_view_box.idl,
 SVGViewElement,zoomAndPan,attribute,,UnsignedShort,,SVG1DOMZoomAndPan,,,third_party/blink/renderer/core/svg/svg_zoom_and_pan.idl,
 Sanitizer,,interface,,,,,True,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,13
-Sanitizer,config,operation,(),SanitizerConfig,,SanitizerAPIGetConfig,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
-Sanitizer,defaultConfig,operation,(),SanitizerConfig,,SanitizerAPIGetDefaultConfig,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
+Sanitizer,getConfiguration,operation,(),SanitizerConfig,,SanitizerAPIGetConfig,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
+Sanitizer,getDefaultConfiguration,operation,(),SanitizerConfig,,SanitizerAPIGetDefaultConfig,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Sanitizer,sanitize,operation,(StringOrDocumentFragmentOrDocument),DocumentFragment,,SanitizerAPIToFragment,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Sanitizer,sanitizeFor,operation,"(String,String)",ElementOrNull,,SanitizerAPISanitizeFor,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
 Sanitizer,sanitizeToString,operation,(StringOrDocumentFragmentOrDocument),String,,SanitizerAPIToString,,,third_party/blink/renderer/modules/sanitizer_api/sanitizer.idl,
@@ -8111,7 +8119,7 @@ URL,searchParams,attribute,,URLSearchParams,,,,,third_party/blink/renderer/core/
 URL,toJSON,operation,(),USVString,,,,,third_party/blink/renderer/core/url/url.idl,
 URL,username,attribute,,USVString,,,,,third_party/blink/renderer/core/url/url.idl,
 URLPattern,,interface,,,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,11
-URLPattern,exec,operation,"(USVStringOrURLPatternInit,USVString)",URLPatternResultOrNull,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
+URLPattern,exec,operation,"(USVStringOrURLPatternInit,USVString)",URLPatternResultOrNull,,V8URLPattern_Exec_Method,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,hash,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,hostname,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,password,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
@@ -8119,7 +8127,7 @@ URLPattern,pathname,attribute,,USVString,,,,,third_party/blink/renderer/modules/
 URLPattern,port,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,protocol,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,search,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
-URLPattern,test,operation,"(USVStringOrURLPatternInit,USVString)",Boolean,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
+URLPattern,test,operation,"(USVStringOrURLPatternInit,USVString)",Boolean,,V8URLPattern_Test_Method,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLPattern,username,attribute,,USVString,,,,,third_party/blink/renderer/modules/url_pattern/url_pattern.idl,
 URLSearchParams,,interface,,,,,,,third_party/blink/renderer/core/url/url_search_params.idl,9
 URLSearchParams,,operation,(),String,,,,,third_party/blink/renderer/core/url/url_search_params.idl,21
@@ -8293,9 +8301,10 @@ VideoFrame,allocationSize,operation,(VideoFrameCopyToOptions),UnsignedLong,,,,,t
 VideoFrame,clone,operation,(),VideoFrame,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedHeight,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
-VideoFrame,codedRect,attribute,,DOMRectReadOnly,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
+VideoFrame,codedRect,attribute,,DOMRectReadOnlyOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedRegion,attribute,,VideoFrameRect,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,codedWidth,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
+VideoFrame,colorSpace,attribute,,VideoColorSpaceOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,copyTo,operation,"(ArrayBufferOrArrayBufferView,VideoFrameCopyToOptions)",PlaneLayoutSequencePromise,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,cropHeight,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,cropLeft,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
@@ -8307,7 +8316,7 @@ VideoFrame,duration,attribute,,UnsignedLongLongOrNull,,,,,third_party/blink/rend
 VideoFrame,format,attribute,,VideoPixelFormatOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,planes,attribute,,PlaneArrayOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,timestamp,attribute,,LongLongOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
-VideoFrame,visibleRect,attribute,,DOMRectReadOnly,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
+VideoFrame,visibleRect,attribute,,DOMRectReadOnlyOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoFrame,visibleRegion,attribute,,VideoFrameRect,,,,,third_party/blink/renderer/modules/webcodecs/video_frame.idl,
 VideoPlaybackQuality,,interface,,,,,,,third_party/blink/renderer/modules/mediasource/video_playback_quality.idl,33
 VideoPlaybackQuality,corruptedVideoFrames,attribute,,UnsignedLong,,V8VideoPlaybackQuality_CorruptedVideoFrames_AttributeGetter,,,third_party/blink/renderer/modules/mediasource/video_playback_quality.idl,
