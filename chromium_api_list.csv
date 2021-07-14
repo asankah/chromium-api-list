@@ -1774,7 +1774,6 @@ EditContext,updateLayout,operation,"(DOMRect,DOMRect)",Void,,,,,third_party/blin
 EditContext,updateSelection,operation,"(UnsignedLong,UnsignedLong)",Void,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,
 EditContext,updateText,operation,"(UnsignedLong,UnsignedLong,String)",Void,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,
 Element,,interface,,,,,,,third_party/blink/renderer/core/dom/element.idl,31
-Element,SetHTML,operation,"(String,Sanitizer)",Void,,SanitizerAPIElementSetSanitized,,,third_party/blink/renderer/modules/sanitizer_api/element_sanitizer.idl,
 Element,accessibleNode,attribute,,AccessibleNodeOrNull,,,,,third_party/blink/renderer/core/dom/element.idl,
 Element,after,operation,(NodeOrStringOrTrustedScriptVariadic),Void,,,,,third_party/blink/renderer/core/dom/child_node.idl,
 Element,animate,operation,"(ObjectOrNull,UnrestrictedDoubleOrKeyframeAnimationOptions)",Animation,,V8Element_Animate_Method,,,third_party/blink/renderer/core/animation/animatable.idl,
@@ -1914,6 +1913,7 @@ Element,setAttribute,operation,"(String,StringOrTrustedHTMLOrTrustedScriptOrTrus
 Element,setAttributeNS,operation,"(StringOrNull,String,StringOrTrustedHTMLOrTrustedScriptOrTrustedScriptURL)",Void,,,,,third_party/blink/renderer/core/dom/element.idl,
 Element,setAttributeNode,operation,(Attr),AttrOrNull,,,,,third_party/blink/renderer/core/dom/element.idl,
 Element,setAttributeNodeNS,operation,(Attr),AttrOrNull,,,,,third_party/blink/renderer/core/dom/element.idl,
+Element,setHTML,operation,"(String,Sanitizer)",Void,,SanitizerAPIElementSetSanitized,,,third_party/blink/renderer/modules/sanitizer_api/element_sanitizer.idl,
 Element,setPointerCapture,operation,(Long),Void,,,,,third_party/blink/renderer/core/dom/element.idl,
 Element,shadowRoot,attribute,,ShadowRootOrNull,,,,,third_party/blink/renderer/core/dom/element.idl,
 Element,slot,attribute,,String,,,,,third_party/blink/renderer/core/dom/element.idl,
