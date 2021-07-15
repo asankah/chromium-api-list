@@ -2285,8 +2285,8 @@ GPUBufferUsage,UNIFORM,constant,,UnsignedLong,,,,,third_party/blink/renderer/mod
 GPUBufferUsage,VERTEX,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_buffer_usage.idl,16
 GPUCanvasContext,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,10
 GPUCanvasContext,canvas,attribute,,HTMLCanvasElementOrOffscreenCanvas,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
-GPUCanvasContext,configure,operation,(GPUSwapChainDescriptor),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
-GPUCanvasContext,configureSwapChain,operation,(GPUSwapChainDescriptor),GPUSwapChain,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
+GPUCanvasContext,configure,operation,(GPUCanvasConfiguration),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
+GPUCanvasContext,configureSwapChain,operation,(GPUCanvasConfiguration),GPUSwapChain,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
 GPUCanvasContext,getCurrentTexture,operation,(),GPUTexture,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
 GPUCanvasContext,getPreferredFormat,operation,(GPUAdapter),GPUTextureFormat,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
 GPUCanvasContext,getSwapChainPreferredFormat,operation,(GPUAdapter),GPUTextureFormat,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
@@ -5394,7 +5394,7 @@ Navigator,vendor,attribute,,String,,NavigatorVendor,,Direct,third_party/blink/re
 Navigator,vendorSub,attribute,,String,,NavigatorVendorSub,,Direct,third_party/blink/renderer/core/frame/navigator.idl,
 Navigator,vibrate,operation,(UnsignedLong),Boolean,,,,,third_party/blink/renderer/modules/vibration/navigator_vibration.idl,
 Navigator,vibrate,operation,(UnsignedLongSequence),Boolean,,,,,third_party/blink/renderer/modules/vibration/navigator_vibration.idl,
-Navigator,virtualKeyboard,attribute,,VirtualKeyboard,,,,,third_party/blink/renderer/modules/virtualkeyboard/navigator_virtual_keyboard.idl,
+Navigator,virtualKeyboard,attribute,,VirtualKeyboard,,,True,,third_party/blink/renderer/modules/virtualkeyboard/navigator_virtual_keyboard.idl,
 Navigator,wakeLock,attribute,,WakeLock,,,,,third_party/blink/renderer/modules/wake_lock/navigator_wake_lock.idl,
 Navigator,webdriver,attribute,,Boolean,,,,,third_party/blink/renderer/core/frame/navigator_automation_information.idl,
 Navigator,webkitGetUserMedia,operation,"(MediaStreamConstraints,NavigatorUserMediaSuccessCallback,NavigatorUserMediaErrorCallback)",Void,,GetUserMediaPrefixed,True,(True),third_party/blink/renderer/modules/mediastream/navigator_media_stream.idl,
@@ -7425,18 +7425,11 @@ Screen,availWidth,attribute,,Long,,V8Screen_AvailWidth_AttributeGetter,,Direct,t
 Screen,colorDepth,attribute,,UnsignedLong,,V8Screen_ColorDepth_AttributeGetter,,Direct,third_party/blink/renderer/core/frame/screen.idl,
 Screen,dispatchEvent,operation,(Event),Boolean,,,,,third_party/blink/renderer/core/frame/screen.idl,
 Screen,height,attribute,,Long,,V8Screen_Height_AttributeGetter,,Direct,third_party/blink/renderer/core/frame/screen.idl,
-Screen,id,attribute,,String,,WindowScreenId,,Direct,third_party/blink/renderer/core/frame/screen.idl,
-Screen,internal,attribute,,Boolean,,WindowScreenInternal,,Direct,third_party/blink/renderer/core/frame/screen.idl,
 Screen,isExtended,attribute,,Boolean,,WindowScreenIsExtended,True,Direct,third_party/blink/renderer/core/frame/screen.idl,
-Screen,left,attribute,,Long,,WindowScreenLeft,,Direct,third_party/blink/renderer/core/frame/screen.idl,
 Screen,onchange,attribute,,EventHandlerNonNullOrNull,,WindowScreenChange,True,(True),third_party/blink/renderer/core/frame/screen.idl,
 Screen,orientation,attribute,,ScreenOrientation,,,,,third_party/blink/renderer/modules/screen_orientation/screen_screen_orientation.idl,
 Screen,pixelDepth,attribute,,UnsignedLong,,V8Screen_PixelDepth_AttributeGetter,,(True),third_party/blink/renderer/core/frame/screen.idl,
-Screen,primary,attribute,,Boolean,,WindowScreenPrimary,,Direct,third_party/blink/renderer/core/frame/screen.idl,
 Screen,removeEventListener,operation,"(String,EventListenerOrNull,EventListenerOptionsOrBoolean)",Void,,,,,third_party/blink/renderer/core/frame/screen.idl,
-Screen,scaleFactor,attribute,,Float,,,,,third_party/blink/renderer/core/frame/screen.idl,
-Screen,top,attribute,,Long,,WindowScreenTop,,Direct,third_party/blink/renderer/core/frame/screen.idl,
-Screen,touchSupport,attribute,,Boolean,,WindowScreenTouchSupport,,Direct,third_party/blink/renderer/core/frame/screen.idl,
 Screen,width,attribute,,Long,,V8Screen_Width_AttributeGetter,,Direct,third_party/blink/renderer/core/frame/screen.idl,
 ScreenAdvanced,,interface,,,,,True,,third_party/blink/renderer/modules/screen_enumeration/screen_advanced.idl,11
 ScreenAdvanced,devicePixelRatio,attribute,,Float,,V8ScreenAdvanced_DevicePixelRatio_AttributeGetter,,Direct,third_party/blink/renderer/modules/screen_enumeration/screen_advanced.idl,
@@ -8326,7 +8319,7 @@ VideoTrackList,onaddtrack,attribute,,EventHandlerNonNullOrNull,,,,,third_party/b
 VideoTrackList,onchange,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/html/track/video_track_list.idl,
 VideoTrackList,onremovetrack,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/html/track/video_track_list.idl,
 VideoTrackList,selectedIndex,attribute,,Long,,,,,third_party/blink/renderer/core/html/track/video_track_list.idl,
-VirtualKeyboard,,interface,,,,,,,third_party/blink/renderer/modules/virtualkeyboard/virtual_keyboard.idl,12
+VirtualKeyboard,,interface,,,,,True,,third_party/blink/renderer/modules/virtualkeyboard/virtual_keyboard.idl,13
 VirtualKeyboard,boundingRect,attribute,,DOMRect,,,,,third_party/blink/renderer/modules/virtualkeyboard/virtual_keyboard.idl,
 VirtualKeyboard,hide,operation,(),Void,,,,,third_party/blink/renderer/modules/virtualkeyboard/virtual_keyboard.idl,
 VirtualKeyboard,ongeometrychange,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/virtualkeyboard/virtual_keyboard.idl,
