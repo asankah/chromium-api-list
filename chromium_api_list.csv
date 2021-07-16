@@ -961,9 +961,6 @@ CloseEvent,reason,attribute,,String,,,,,third_party/blink/renderer/modules/webso
 CloseEvent,wasClean,attribute,,Boolean,,,,,third_party/blink/renderer/modules/websockets/close_event.idl,
 ColorPagePopupController,,interface,,,,,,,third_party/blink/renderer/core/page/color_page_popup_controller.idl,11
 ColorPagePopupController,openEyeDropper,operation,(),Void,,,,,third_party/blink/renderer/core/page/color_page_popup_controller.idl,
-ColorSelectEvent,,interface,,,,,,,third_party/blink/renderer/modules/eyedropper/color_select_event.idl,8
-ColorSelectEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
-ColorSelectEvent,value,attribute,,String,,,,,third_party/blink/renderer/modules/eyedropper/color_select_event.idl,
 Comment,,interface,,,,,,,third_party/blink/renderer/core/dom/comment.idl,24
 CompositionEvent,,interface,,,,,,,third_party/blink/renderer/core/events/composition_event.idl,30
 CompositionEvent,data,attribute,,String,,,,,third_party/blink/renderer/core/events/composition_event.idl,
@@ -2082,11 +2079,7 @@ External,,interface,,,,,,,third_party/blink/renderer/core/frame/external.idl,6
 External,AddSearchProvider,operation,(),Void,,,,,third_party/blink/renderer/core/frame/external.idl,
 External,IsSearchProviderInstalled,operation,(),Void,,,,,third_party/blink/renderer/core/frame/external.idl,
 EyeDropper,,interface,,,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,8
-EyeDropper,close,operation,(),Void,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,
-EyeDropper,onclose,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,
-EyeDropper,oncolorselect,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,
-EyeDropper,open,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,
-EyeDropper,opened,attribute,,Boolean,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,
+EyeDropper,open,operation,(),ColorSelectionResultPromise,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,
 FaceDetector,,interface,,,,,True,,third_party/blink/renderer/modules/shapedetection/face_detector.idl,11
 FaceDetector,detect,operation,(HTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrBlobOrImageDataOrImageBitmapOrOffscreenCanvasOrVideoFrame),DetectedFaceSequencePromise,,FaceDetectorDetect,,,third_party/blink/renderer/modules/shapedetection/face_detector.idl,
 FeaturePolicy,,interface,,,,,,,third_party/blink/renderer/core/permissions_policy/feature_policy.idl,9
