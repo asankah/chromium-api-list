@@ -3680,8 +3680,8 @@ ImageTrackList,length,attribute,,UnsignedLong,,,,,third_party/blink/renderer/mod
 ImageTrackList,ready,attribute,,VoidPromise,,,,,third_party/blink/renderer/modules/webcodecs/image_track_list.idl,
 ImageTrackList,selectedIndex,attribute,,Long,,,,,third_party/blink/renderer/modules/webcodecs/image_track_list.idl,
 ImageTrackList,selectedTrack,attribute,,ImageTrackOrNull,,,,,third_party/blink/renderer/modules/webcodecs/image_track_list.idl,
-Ink,,interface,,,,,,,third_party/blink/renderer/modules/delegated_ink/ink.idl,14
-Ink,requestPresenter,operation,"(PresenterType,ElementOrNull)",DelegatedInkTrailPresenterPromise,,,,,third_party/blink/renderer/modules/delegated_ink/ink.idl,
+Ink,,interface,,,,,,,third_party/blink/renderer/modules/delegated_ink/ink.idl,10
+Ink,requestPresenter,operation,(InkPresenterParam),DelegatedInkTrailPresenterPromise,,,,,third_party/blink/renderer/modules/delegated_ink/ink.idl,
 InputDeviceCapabilities,,interface,,,,,,,third_party/blink/renderer/core/input/input_device_capabilities.idl,16
 InputDeviceCapabilities,firesTouchEvents,attribute,,Boolean,,V8InputDeviceCapabilities_FiresTouchEvents_AttributeGetter,,Direct,third_party/blink/renderer/core/input/input_device_capabilities.idl,
 InputDeviceInfo,,interface,,,,,,,third_party/blink/renderer/modules/mediastream/input_device_info.idl,8
@@ -3848,6 +3848,7 @@ InternalRuntimeFlags,delayAsyncScriptExecutionUntilFinishedParsingEnabled,attrib
 InternalRuntimeFlags,delayAsyncScriptExecutionUntilFirstPaintOrFinishedParsingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,delegatedInkTrailsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,desktopCaptureDisableLocalEchoControlEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,desktopPWAsSubAppsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,deviceAttributesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,devicePostureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,dialogFocusNewSpecBehaviorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5378,6 +5379,7 @@ Navigator,setAppBadge,operation,(UnsignedLongLong),VoidPromise,,BadgeSet,,,third
 Navigator,share,operation,(ShareData),VoidPromise,,WebShareShare,True,,third_party/blink/renderer/modules/webshare/navigator_share.idl,
 Navigator,storage,attribute,,StorageManager,,,True,,third_party/blink/renderer/modules/quota/navigator_storage_quota.idl,
 Navigator,storageBuckets,attribute,,StorageBucketManager,,,,,third_party/blink/renderer/modules/buckets/navigator_storage_buckets.idl,
+Navigator,subApps,attribute,,SubApps,,,,,third_party/blink/renderer/modules/subapps/navigator_sub_apps.idl,
 Navigator,unregisterProtocolHandler,operation,"(String,USVString)",Void,,,True,,third_party/blink/renderer/modules/navigatorcontentutils/navigator_content_utils.idl,
 Navigator,usb,attribute,,USB,,,,,third_party/blink/renderer/modules/webusb/navigator_usb.idl,
 Navigator,userActivation,attribute,,UserActivation,,,,,third_party/blink/renderer/core/frame/navigator_user_activation.idl,
@@ -7820,6 +7822,8 @@ StyleSheetList,,interface,,,,,,,third_party/blink/renderer/core/css/style_sheet_
 StyleSheetList,,operation,(String),CSSStyleSheet,,,,,third_party/blink/renderer/core/css/style_sheet_list.idl,
 StyleSheetList,item,operation,(UnsignedLong),StyleSheetOrNull,,V8StyleSheetList_Item_Method,,,third_party/blink/renderer/core/css/style_sheet_list.idl,
 StyleSheetList,length,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/css/style_sheet_list.idl,
+SubApps,,interface,,,,,True,,third_party/blink/renderer/modules/subapps/sub_apps.idl,14
+SubApps,add,operation,(String),SubAppsErrorPromise,,,,,third_party/blink/renderer/modules/subapps/sub_apps.idl,
 SubmitEvent,,interface,,,,,,,third_party/blink/renderer/core/html/forms/submit_event.idl,9
 SubmitEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 SubmitEvent,submitter,attribute,,HTMLElementOrNull,,,,,third_party/blink/renderer/core/html/forms/submit_event.idl,
