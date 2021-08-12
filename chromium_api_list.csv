@@ -4433,8 +4433,8 @@ InternalSettingsGenerated,setWideViewportQuirkEnabled,operation,(Boolean),Void,,
 Internals,,interface,,,,,,,third_party/blink/renderer/core/testing/internals.idl,29
 Internals,,operation,(UnsignedLong),Long,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,DisableIntersectionObserverThrottleDelay,operation,(),Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
-Internals,LAYER_TREE_INCLUDES_DETAILED_INVALIDATIONS,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/testing/internals.idl,193
-Internals,LAYER_TREE_INCLUDES_INVALIDATIONS,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/testing/internals.idl,192
+Internals,LAYER_TREE_INCLUDES_DETAILED_INVALIDATIONS,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/testing/internals.idl,194
+Internals,LAYER_TREE_INCLUDES_INVALIDATIONS,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/testing/internals.idl,193
 Internals,LifecycleUpdateCount,operation,(),UnsignedLong,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,absoluteCaretBounds,operation,(),DOMRectReadOnly,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,activeMarkerCountForNode,operation,(Text),UnsignedLong,,,,,third_party/blink/renderer/core/testing/internals.idl,
@@ -4543,6 +4543,7 @@ Internals,lastChildInFlatTree,operation,(Node),Node,,,,,third_party/blink/render
 Internals,lastSpellCheckProcessedSequence,operation,(Document),Long,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,lastSpellCheckRequestSequence,operation,(Document),Long,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,layerTreeAsText,operation,"(Document,UnsignedShort)",String,,,,,third_party/blink/renderer/core/testing/internals.idl,
+Internals,layoutCountForTesting,operation,(),UnsignedLong,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,length,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,lengthFromRange,operation,"(Element,Range)",UnsignedLong,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,locationFromRange,operation,"(Element,Range)",UnsignedLong,,,,,third_party/blink/renderer/core/testing/internals.idl,
