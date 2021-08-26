@@ -3345,7 +3345,7 @@ HTMLSelectMenuElement,,interface,,,,,,,third_party/blink/renderer/core/html/form
 HTMLSelectMenuElement,open,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
 HTMLSelectMenuElement,value,attribute,,String,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
 HTMLSlotElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_slot_element.idl,31
-HTMLSlotElement,assign,operation,(NodeVariadic),Void,,,,,third_party/blink/renderer/core/html/html_slot_element.idl,
+HTMLSlotElement,assign,operation,(ElementOrTextVariadic),Void,,,,,third_party/blink/renderer/core/html/html_slot_element.idl,
 HTMLSlotElement,assignedElements,operation,(AssignedNodesOptions),ElementSequence,,,,,third_party/blink/renderer/core/html/html_slot_element.idl,
 HTMLSlotElement,assignedNodes,operation,(AssignedNodesOptions),NodeSequence,,,,,third_party/blink/renderer/core/html/html_slot_element.idl,
 HTMLSlotElement,name,attribute,,String,,,,,third_party/blink/renderer/core/html/html_slot_element.idl,
@@ -3964,6 +3964,7 @@ InternalRuntimeFlags,langClientHintHeaderEnabled,attribute,,Boolean,,,,,third_pa
 InternalRuntimeFlags,layoutNGBlockFragmentationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGBlockInInlineEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,layoutNGFlexFragmentationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGFragmentTraversalEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGFullPositionForPointEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGGridEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -9950,6 +9951,9 @@ WebTransport,incomingBidirectionalStreams,attribute,,ReadableStream,,,,,third_pa
 WebTransport,incomingUnidirectionalStreams,attribute,,ReadableStream,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,ready,attribute,,VoidPromise,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,setDatagramWritableQueueExpirationDuration,operation,(Double),Void,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
+WebTransportError,,interface,,,,,True,,third_party/blink/renderer/modules/webtransport/web_transport_error.idl,18
+WebTransportError,applicationProtocolCode,attribute,,OctetOrNull,,,,,third_party/blink/renderer/modules/webtransport/web_transport_error.idl,
+WebTransportError,source,attribute,,WebTransportErrorSource,,,,,third_party/blink/renderer/modules/webtransport/web_transport_error.idl,
 WheelEvent,,interface,,,,,,,third_party/blink/renderer/core/events/wheel_event.idl,26
 WheelEvent,DOM_DELTA_LINE,constant,,UnsignedLong,,,,,third_party/blink/renderer/core/events/wheel_event.idl,30
 WheelEvent,DOM_DELTA_PAGE,constant,,UnsignedLong,,,,,third_party/blink/renderer/core/events/wheel_event.idl,31
