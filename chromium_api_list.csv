@@ -252,7 +252,7 @@ AudioData,numberOfChannels,attribute,,UnsignedLong,,,,,third_party/blink/rendere
 AudioData,numberOfFrames,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
 AudioData,sampleRate,attribute,,Float,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
 AudioData,timestamp,attribute,,LongLong,,,,,third_party/blink/renderer/modules/webcodecs/audio_data.idl,
-AudioDecoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,11
+AudioDecoder,,interface,,,,,True,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,12
 AudioDecoder,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
 AudioDecoder,configure,operation,(AudioDecoderConfig),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
 AudioDecoder,decode,operation,(EncodedAudioChunk),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
@@ -263,7 +263,7 @@ AudioDecoder,reset,operation,(),Void,,,,,third_party/blink/renderer/modules/webc
 AudioDecoder,state,attribute,,CodecState,,,,,third_party/blink/renderer/modules/webcodecs/audio_decoder.idl,
 AudioDestinationNode,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/audio_destination_node.idl,28
 AudioDestinationNode,maxChannelCount,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webaudio/audio_destination_node.idl,
-AudioEncoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,11
+AudioEncoder,,interface,,,,,True,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,12
 AudioEncoder,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioEncoder,configure,operation,(AudioEncoderConfig),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
 AudioEncoder,encode,operation,(AudioData),Void,,,,,third_party/blink/renderer/modules/webcodecs/audio_encoder.idl,
@@ -3685,7 +3685,7 @@ ImageData,getSettings,operation,(),ImageDataSettings,,,,,third_party/blink/rende
 ImageData,height,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/html/canvas/image_data.idl,
 ImageData,storageFormat,attribute,,ImageDataStorageFormat,,,,,third_party/blink/renderer/core/html/canvas/image_data.idl,
 ImageData,width,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/html/canvas/image_data.idl,
-ImageDecoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,13
+ImageDecoder,,interface,,,,,True,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,14
 ImageDecoder,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
 ImageDecoder,complete,attribute,,Boolean,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
 ImageDecoder,completed,attribute,,VoidPromise,,,,,third_party/blink/renderer/modules/webcodecs/image_decoder.idl,
@@ -3956,7 +3956,6 @@ InternalRuntimeFlags,installedAppEnabled,attribute,,Boolean,,,,,third_party/blin
 InternalRuntimeFlags,interestCohortAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,interestCohortFeaturePolicyEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,intersectionObserverDocumentScrollingElementRootEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,isolatedCodeCacheEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,keyboardAccessibleTooltipEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,keyboardFocusableScrollersEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,langAttributeAwareFormControlUIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4118,8 +4117,6 @@ InternalRuntimeFlags,scrollTopLeftInteropEnabled,attribute,,Boolean,,,,,third_pa
 InternalRuntimeFlags,scrollUnificationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scrollbarGutterEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scrollbarWidthEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,securePaymentConfirmationAPIV3Enabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,securePaymentConfirmationCredentialEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,securePaymentConfirmationDebugEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,securePaymentConfirmationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sendBeaconThrowForBlobWithNonSimpleTypeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5872,7 +5869,6 @@ PaymentAddress,recipient,attribute,,String,,,,,third_party/blink/renderer/module
 PaymentAddress,region,attribute,,String,,,,,third_party/blink/renderer/modules/payments/payment_address.idl,
 PaymentAddress,sortingCode,attribute,,String,,,,,third_party/blink/renderer/modules/payments/payment_address.idl,
 PaymentAddress,toJSON,operation,(),Object,,,,,third_party/blink/renderer/modules/payments/payment_address.idl,
-PaymentCredential,,interface,,,,,True,,third_party/blink/renderer/modules/credentialmanager/payment_credential.idl,11
 PaymentInstruments,,interface,,,,,,,third_party/blink/renderer/modules/payments/payment_instruments.idl,10
 PaymentInstruments,clear,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/payments/payment_instruments.idl,
 PaymentInstruments,delete,operation,(String),BooleanPromise,,,,,third_party/blink/renderer/modules/payments/payment_instruments.idl,
@@ -8299,7 +8295,7 @@ VideoColorSpace,matrix,attribute,,VideoMatrixCoefficientsOrNull,,,,,third_party/
 VideoColorSpace,primaries,attribute,,VideoColorPrimariesOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_color_space.idl,
 VideoColorSpace,toJSON,operation,(),VideoColorSpaceInit,,,,,third_party/blink/renderer/modules/webcodecs/video_color_space.idl,
 VideoColorSpace,transfer,attribute,,VideoTransferCharacteristicsOrNull,,,,,third_party/blink/renderer/modules/webcodecs/video_color_space.idl,
-VideoDecoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,18
+VideoDecoder,,interface,,,,,True,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,19
 VideoDecoder,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,configure,operation,(VideoDecoderConfig),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,decode,operation,(EncodedVideoChunk),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
@@ -8308,7 +8304,7 @@ VideoDecoder,flush,operation,(),VoidPromise,,,,,third_party/blink/renderer/modul
 VideoDecoder,isConfigSupported,operation,(VideoDecoderConfig),VideoDecoderSupportPromise,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,reset,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
 VideoDecoder,state,attribute,,CodecState,,,,,third_party/blink/renderer/modules/webcodecs/video_decoder.idl,
-VideoEncoder,,interface,,,,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,11
+VideoEncoder,,interface,,,,,True,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,12
 VideoEncoder,close,operation,(),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,configure,operation,(VideoEncoderConfig),Void,,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
 VideoEncoder,encode,operation,"(VideoFrame,VideoEncoderEncodeOptions)",Void,,,,,third_party/blink/renderer/modules/webcodecs/video_encoder.idl,
