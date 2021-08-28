@@ -146,7 +146,7 @@ AppHistory,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_hist
 AppHistory,back,operation,(AppHistoryNavigationOptions),VoidPromise,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,canGoBack,attribute,,Boolean,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,canGoForward,attribute,,Boolean,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
-AppHistory,current,attribute,,AppHistoryEntry,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
+AppHistory,current,attribute,,AppHistoryEntryOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,entries,operation,(),AppHistoryEntrySequence,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,forward,operation,(AppHistoryNavigationOptions),VoidPromise,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,goTo,operation,"(String,AppHistoryNavigationOptions)",VoidPromise,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
@@ -2206,6 +2206,8 @@ FileWriterSync,write,operation,(Blob),Void,,,,,third_party/blink/renderer/module
 FocusEvent,,interface,,,,,,,third_party/blink/renderer/core/events/focus_event.idl,30
 FocusEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 FocusEvent,relatedTarget,attribute,,EventTargetOrNull,,,,,third_party/blink/renderer/core/events/focus_event.idl,
+FocusableMediaStreamTrack,,interface,,,,,,,third_party/blink/renderer/modules/mediastream/focusable_media_stream_track.idl,16
+FocusableMediaStreamTrack,focus,operation,(CaptureStartFocusBehavior),Void,,,,,third_party/blink/renderer/modules/mediastream/focusable_media_stream_track.idl,
 FontFace,,interface,,,,,,,third_party/blink/renderer/core/css/font_face.idl,43
 FontFace,ascentOverride,attribute,,String,,,,,third_party/blink/renderer/core/css/font_face.idl,
 FontFace,descentOverride,attribute,,String,,,,,third_party/blink/renderer/core/css/font_face.idl,
@@ -3800,6 +3802,7 @@ InternalRuntimeFlags,compositeRelativeKeyframesEnabled,attribute,,Boolean,,,,,th
 InternalRuntimeFlags,compositedSelectionUpdateEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,computePressureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,computedAccessibilityInfoEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,conditionalFocusEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,consolidatedMovementXYEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,contactsManagerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,contactsManagerExtraPropertiesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
