@@ -802,7 +802,7 @@ CanMakePaymentEvent,topOrigin,attribute,,USVString,,,,,third_party/blink/rendere
 CanvasCaptureMediaStreamTrack,,interface,,,,,,,third_party/blink/renderer/modules/mediacapturefromelement/canvas_capture_media_stream_track.idl,8
 CanvasCaptureMediaStreamTrack,canvas,attribute,,HTMLCanvasElement,,,,,third_party/blink/renderer/modules/mediacapturefromelement/canvas_capture_media_stream_track.idl,
 CanvasCaptureMediaStreamTrack,requestFrame,operation,(),Void,,,,,third_party/blink/renderer/modules/mediacapturefromelement/canvas_capture_media_stream_track.idl,
-CanvasFilter,,interface,,,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_filter.idl,7
+CanvasFilter,,interface,,,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_filter.idl,8
 CanvasFormattedText,,interface,,,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_formatted_text.idl,8
 CanvasFormattedText,appendRun,operation,(CanvasFormattedTextRun),CanvasFormattedTextRun,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_formatted_text.idl,
 CanvasFormattedText,deleteRun,operation,(UnsignedLong),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_formatted_text.idl,
