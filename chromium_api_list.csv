@@ -155,6 +155,7 @@ AppHistory,onnavigate,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink
 AppHistory,onnavigateerror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigatesuccess,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,reload,operation,(AppHistoryReloadOptions),VoidPromise,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
+AppHistory,transition,attribute,,AppHistoryTransitionOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,updateCurrent,operation,(AppHistoryUpdateCurrentOptions),Void,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistoryDestination,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history_destination.idl,9
 AppHistoryDestination,getState,operation,(),Any,,,,,third_party/blink/renderer/core/app_history/app_history_destination.idl,
@@ -181,6 +182,9 @@ AppHistoryNavigateEvent,navigationType,attribute,,AppHistoryNavigationType,,,,,t
 AppHistoryNavigateEvent,signal,attribute,,AbortSignal,,,,,third_party/blink/renderer/core/app_history/app_history_navigate_event.idl,
 AppHistoryNavigateEvent,transitionWhile,operation,(AnyPromise),Void,,,,,third_party/blink/renderer/core/app_history/app_history_navigate_event.idl,
 AppHistoryNavigateEvent,userInitiated,attribute,,Boolean,,,,,third_party/blink/renderer/core/app_history/app_history_navigate_event.idl,
+AppHistoryTransition,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history_transition.idl,3
+AppHistoryTransition,from,attribute,,AppHistoryEntry,,,,,third_party/blink/renderer/core/app_history/app_history_transition.idl,
+AppHistoryTransition,navigationType,attribute,,AppHistoryNavigationType,,,,,third_party/blink/renderer/core/app_history/app_history_transition.idl,
 ApplicationCache,,interface,,,,,True,,third_party/blink/renderer/core/loader/appcache/application_cache.idl,33
 ApplicationCache,CHECKING,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/loader/appcache/application_cache.idl,37
 ApplicationCache,DOWNLOADING,constant,,UnsignedShort,,,,,third_party/blink/renderer/core/loader/appcache/application_cache.idl,38
@@ -2913,7 +2917,7 @@ HTMLFormElement,method,attribute,,String,,,,,third_party/blink/renderer/core/htm
 HTMLFormElement,name,attribute,,String,,,,,third_party/blink/renderer/core/html/forms/html_form_element.idl,
 HTMLFormElement,noValidate,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/forms/html_form_element.idl,
 HTMLFormElement,reportValidity,operation,(),Boolean,,,,,third_party/blink/renderer/core/html/forms/html_form_element.idl,
-HTMLFormElement,requestSubmit,operation,(HTMLElement),Void,,,,,third_party/blink/renderer/core/html/forms/html_form_element.idl,
+HTMLFormElement,requestSubmit,operation,(HTMLElementOrNull),Void,,,,,third_party/blink/renderer/core/html/forms/html_form_element.idl,
 HTMLFormElement,reset,operation,(),Void,,,,,third_party/blink/renderer/core/html/forms/html_form_element.idl,
 HTMLFormElement,submit,operation,(),Void,,,,,third_party/blink/renderer/core/html/forms/html_form_element.idl,
 HTMLFormElement,target,attribute,,String,,,,,third_party/blink/renderer/core/html/forms/html_form_element.idl,
