@@ -2100,6 +2100,8 @@ FeaturePolicy,features,operation,(),StringSequence,,FeaturePolicyJSAPI,,Direct,t
 FeaturePolicy,getAllowlistForFeature,operation,(String),StringSequence,,FeaturePolicyJSAPI,,,third_party/blink/renderer/core/permissions_policy/feature_policy.idl,
 FederatedCredential,,interface,,,,,True,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,10
 FederatedCredential,iconURL,attribute,,USVString,,,,,third_party/blink/renderer/modules/credentialmanager/credential_user_data.idl,
+FederatedCredential,idToken,attribute,,USVString,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
+FederatedCredential,logout,operation,(USVStringSequence),VoidPromise,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
 FederatedCredential,name,attribute,,USVString,,,,,third_party/blink/renderer/modules/credentialmanager/credential_user_data.idl,
 FederatedCredential,protocol,attribute,,StringOrNull,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
 FederatedCredential,provider,attribute,,USVString,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
@@ -9915,7 +9917,7 @@ WebGLWebCodecsVideoFrame,importVideoFrame,operation,(VideoFrame),WebGLWebCodecsV
 WebGLWebCodecsVideoFrame,releaseVideoFrame,operation,(WebGLWebCodecsVideoFrameHandle),Boolean,,,,,third_party/blink/renderer/modules/webgl/webgl_webcodecs_video_frame.idl,
 WebId,,interface,,,,,True,,third_party/blink/renderer/modules/webid/web_id.idl,11
 WebId,get,operation,(WebIdRequestOptions),StringPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
-WebId,logout,operation,(USVStringSequence),VoidPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
+WebId,logout,operation,(WebIdLogoutRequestSequence),VoidPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
 WebId,provide,operation,(String),VoidPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
 WebSocket,,interface,,,,,,,third_party/blink/renderer/modules/websockets/websocket.idl,40
 WebSocket,CLOSED,constant,,UnsignedShort,,,,,third_party/blink/renderer/modules/websockets/websocket.idl,48
