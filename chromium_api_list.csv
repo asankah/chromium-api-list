@@ -3320,6 +3320,7 @@ HTMLScriptElement,integrity,attribute,,String,,,,,third_party/blink/renderer/cor
 HTMLScriptElement,noModule,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/html_script_element.idl,
 HTMLScriptElement,referrerPolicy,attribute,,StringOrNull,,,,,third_party/blink/renderer/core/html/html_script_element.idl,
 HTMLScriptElement,src,attribute,,USVString,,,,,third_party/blink/renderer/core/html/html_script_element.idl,
+HTMLScriptElement,supports,operation,(String),Boolean,,,,,third_party/blink/renderer/core/html/html_script_element.idl,
 HTMLScriptElement,text,attribute,,String,,,,,third_party/blink/renderer/core/html/html_script_element.idl,
 HTMLScriptElement,type,attribute,,String,,,,,third_party/blink/renderer/core/html/html_script_element.idl,
 HTMLSelectElement,,interface,,,,,,,third_party/blink/renderer/core/html/forms/html_select_element.idl,26
@@ -4117,6 +4118,7 @@ InternalRuntimeFlags,rtcUnifiedPlanByDefaultEnabled,attribute,,Boolean,,,,,third
 InternalRuntimeFlags,rtcUnifiedPlanEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sanitizerAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,schedulerCurrentTaskSignalEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,scriptElementSupportsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scriptedSpeechRecognitionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scriptedSpeechSynthesisEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,scrollCustomizationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
