@@ -5408,6 +5408,7 @@ Navigator,plugins,attribute,,PluginArray,,NavigatorPlugins,,(True),third_party/b
 Navigator,presentation,attribute,,Presentation,,,True,,third_party/blink/renderer/modules/presentation/navigator_presentation.idl,
 Navigator,product,attribute,,String,,,,,third_party/blink/renderer/core/frame/navigator_id.idl,
 Navigator,productSub,attribute,,String,,NavigatorProductSub,,Direct,third_party/blink/renderer/core/frame/navigator.idl,
+Navigator,queryHandwritingRecognizer,operation,(HandwritingModelConstraint),HandwritingRecognizerQueryResultOrNullPromise,,HandwritingRecognitionQueryRecognizer,,,third_party/blink/renderer/modules/handwriting/navigator_handwriting_recognition_service.idl,
 Navigator,queryHandwritingRecognizerSupport,operation,(HandwritingFeatureQuery),HandwritingFeatureQueryResultPromise,,HandwritingRecognitionQuerySupport,,,third_party/blink/renderer/modules/handwriting/navigator_handwriting_recognition_service.idl,
 Navigator,registerProtocolHandler,operation,"(String,USVString)",Void,,,True,,third_party/blink/renderer/modules/navigatorcontentutils/navigator_content_utils.idl,
 Navigator,requestMIDIAccess,operation,(MIDIOptions),MIDIAccessPromise,,RequestMIDIAccess_ObscuredByFootprinting,,,third_party/blink/renderer/modules/webmidi/navigator_web_midi.idl,
@@ -6497,8 +6498,8 @@ ReadableStream,pipeThrough,operation,"(ReadableWritablePair,StreamPipeOptions)",
 ReadableStream,pipeTo,operation,"(WritableStream,StreamPipeOptions)",AnyPromise,,ReadableStreamPipeTo,,,third_party/blink/renderer/core/streams/readable_stream.idl,
 ReadableStream,tee,operation,(),ReadableStreamSequence,,,,,third_party/blink/renderer/core/streams/readable_stream.idl,
 ReadableStreamBYOBReader,,interface,,,,,,,third_party/blink/renderer/core/streams/readable_stream_byob_reader.idl,8
-ReadableStreamBYOBReader,cancel,operation,(Any),VoidPromise,,,,,third_party/blink/renderer/core/streams/readable_stream_byob_reader.idl,
-ReadableStreamBYOBReader,closed,attribute,,VoidPromise,,,,,third_party/blink/renderer/core/streams/readable_stream_byob_reader.idl,
+ReadableStreamBYOBReader,cancel,operation,(Any),VoidPromise,,,,,third_party/blink/renderer/core/streams/readable_stream_generic_reader.idl,
+ReadableStreamBYOBReader,closed,attribute,,VoidPromise,,,,,third_party/blink/renderer/core/streams/readable_stream_generic_reader.idl,
 ReadableStreamBYOBReader,read,operation,(ArrayBufferView),ReadableStreamBYOBReadResultPromise,,,,,third_party/blink/renderer/core/streams/readable_stream_byob_reader.idl,
 ReadableStreamBYOBReader,releaseLock,operation,(),Void,,,,,third_party/blink/renderer/core/streams/readable_stream_byob_reader.idl,
 ReadableStreamBYOBRequest,,interface,,,,,,,third_party/blink/renderer/core/streams/readable_stream_byob_request.idl,8
@@ -6511,8 +6512,8 @@ ReadableStreamDefaultController,desiredSize,attribute,,DoubleOrNull,,,,,third_pa
 ReadableStreamDefaultController,enqueue,operation,(Any),Void,,,,,third_party/blink/renderer/core/streams/readable_stream_default_controller.idl,
 ReadableStreamDefaultController,error,operation,(Any),Void,,,,,third_party/blink/renderer/core/streams/readable_stream_default_controller.idl,
 ReadableStreamDefaultReader,,interface,,,,,,,third_party/blink/renderer/core/streams/readable_stream_default_reader.idl,9
-ReadableStreamDefaultReader,cancel,operation,(Any),VoidPromise,,,,,third_party/blink/renderer/core/streams/readable_stream_default_reader.idl,
-ReadableStreamDefaultReader,closed,attribute,,VoidPromise,,,,,third_party/blink/renderer/core/streams/readable_stream_default_reader.idl,
+ReadableStreamDefaultReader,cancel,operation,(Any),VoidPromise,,,,,third_party/blink/renderer/core/streams/readable_stream_generic_reader.idl,
+ReadableStreamDefaultReader,closed,attribute,,VoidPromise,,,,,third_party/blink/renderer/core/streams/readable_stream_generic_reader.idl,
 ReadableStreamDefaultReader,read,operation,(),VoidPromise,,,,,third_party/blink/renderer/core/streams/readable_stream_default_reader.idl,
 ReadableStreamDefaultReader,releaseLock,operation,(),Void,,,,,third_party/blink/renderer/core/streams/readable_stream_default_reader.idl,
 ReceiveStream,,interface,,,,,,,third_party/blink/renderer/modules/webtransport/receive_stream.idl,9
