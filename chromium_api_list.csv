@@ -169,6 +169,7 @@ AppHistoryEntry,getState,operation,(),Any,,,,,third_party/blink/renderer/core/ap
 AppHistoryEntry,id,attribute,,String,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryEntry,index,attribute,,LongLong,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryEntry,key,attribute,,String,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
+AppHistoryEntry,ondispose,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryEntry,sameDocument,attribute,,Boolean,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryEntry,url,attribute,,USVString,,,,,third_party/blink/renderer/core/app_history/app_history_entry.idl,
 AppHistoryNavigateEvent,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history_navigate_event.idl,9
@@ -2098,7 +2099,8 @@ FeaturePolicy,allowedFeatures,operation,(),StringSequence,,FeaturePolicyJSAPI,,,
 FeaturePolicy,allowsFeature,operation,"(String,String)",Boolean,,FeaturePolicyJSAPI,,,third_party/blink/renderer/core/permissions_policy/feature_policy.idl,
 FeaturePolicy,features,operation,(),StringSequence,,FeaturePolicyJSAPI,,Direct,third_party/blink/renderer/core/permissions_policy/feature_policy.idl,
 FeaturePolicy,getAllowlistForFeature,operation,(String),StringSequence,,FeaturePolicyJSAPI,,,third_party/blink/renderer/core/permissions_policy/feature_policy.idl,
-FederatedCredential,,interface,,,,,True,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,10
+FederatedCredential,,interface,,,,,True,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,15
+FederatedCredential,approvedBy,attribute,,FederatedCredentialApprover,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
 FederatedCredential,iconURL,attribute,,USVString,,,,,third_party/blink/renderer/modules/credentialmanager/credential_user_data.idl,
 FederatedCredential,idToken,attribute,,USVString,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
 FederatedCredential,logout,operation,(USVStringSequence),VoidPromise,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
@@ -2165,23 +2167,26 @@ FileSystemDirectoryHandle,values,operation,(),FileSystemDirectoryIterator,,,,,th
 FileSystemDirectoryIterator,,interface,,,,,,,third_party/blink/renderer/modules/file_system_access/file_system_directory_iterator.idl,12
 FileSystemDirectoryIterator,next,operation,(),AnyPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_directory_iterator.idl,
 FileSystemFileHandle,,interface,,,,,True,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,11
-FileSystemFileHandle,createSyncAccessHandle,operation,(),FileSystemSyncAccessHandlePromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
+FileSystemFileHandle,createSyncAccessHandle,operation,(),FileSystemSyncAccessHandlePromise,,V8FileSystemFileHandle_CreateSyncAccessHandle_Method,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
 FileSystemFileHandle,createWritable,operation,(FileSystemCreateWritableOptions),FileSystemWritableFileStreamPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
 FileSystemFileHandle,getFile,operation,(),FilePromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
 FileSystemHandle,,interface,,,,,True,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,17
 FileSystemHandle,isSameEntry,operation,(FileSystemHandle),BooleanPromise,,V8FileSystemHandle_IsSameEntry_Method,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
 FileSystemHandle,kind,attribute,,FileSystemHandleKind,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
+FileSystemHandle,move,operation,(FileSystemDirectoryHandle),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
+FileSystemHandle,move,operation,"(FileSystemDirectoryHandle,USVString)",VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
 FileSystemHandle,name,attribute,,USVString,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
 FileSystemHandle,queryPermission,operation,(FileSystemHandlePermissionDescriptor),PermissionStatePromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
 FileSystemHandle,remove,operation,(FileSystemRemoveOptions),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
+FileSystemHandle,rename,operation,(USVString),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
 FileSystemHandle,requestPermission,operation,(FileSystemHandlePermissionDescriptor),PermissionStatePromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
 FileSystemSyncAccessHandle,,interface,,,,,True,,third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.idl,12
-FileSystemSyncAccessHandle,close,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.idl,
-FileSystemSyncAccessHandle,flush,operation,(),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.idl,
-FileSystemSyncAccessHandle,getSize,operation,(),UnsignedLongLongPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.idl,
-FileSystemSyncAccessHandle,read,operation,"(ArrayBufferView,FileSystemReadWriteOptions)",UnsignedLongLong,,,,,third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.idl,
-FileSystemSyncAccessHandle,truncate,operation,(UnsignedLongLong),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.idl,
-FileSystemSyncAccessHandle,write,operation,"(ArrayBufferView,FileSystemReadWriteOptions)",UnsignedLongLong,,,,,third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.idl,
+FileSystemSyncAccessHandle,close,operation,(),VoidPromise,,V8FileSystemSyncAccessHandle_Close_Method,,,third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.idl,
+FileSystemSyncAccessHandle,flush,operation,(),VoidPromise,,V8FileSystemSyncAccessHandle_Flush_Method,,,third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.idl,
+FileSystemSyncAccessHandle,getSize,operation,(),UnsignedLongLongPromise,,V8FileSystemSyncAccessHandle_GetSize_Method,,,third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.idl,
+FileSystemSyncAccessHandle,read,operation,"(ArrayBufferView,FileSystemReadWriteOptions)",UnsignedLongLong,,V8FileSystemSyncAccessHandle_Read_Method,,,third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.idl,
+FileSystemSyncAccessHandle,truncate,operation,(UnsignedLongLong),VoidPromise,,V8FileSystemSyncAccessHandle_Truncate_Method,,,third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.idl,
+FileSystemSyncAccessHandle,write,operation,"(ArrayBufferView,FileSystemReadWriteOptions)",UnsignedLongLong,,V8FileSystemSyncAccessHandle_Write_Method,,,third_party/blink/renderer/modules/file_system_access/file_system_sync_access_handle.idl,
 FileSystemWritableFileStream,,interface,,,,,True,,third_party/blink/renderer/modules/file_system_access/file_system_writable_file_stream.idl,10
 FileSystemWritableFileStream,seek,operation,(UnsignedLongLong),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_writable_file_stream.idl,
 FileSystemWritableFileStream,truncate,operation,(UnsignedLongLong),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_writable_file_stream.idl,
@@ -2274,7 +2279,6 @@ GPU,requestAdapter,operation,(GPURequestAdapterOptions),GPUAdapterOrNullPromise,
 GPUAdapter,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,9
 GPUAdapter,features,attribute,,GPUSupportedFeatures,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,isFallbackAdapter,attribute,,Boolean,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
-GPUAdapter,isSoftware,attribute,,Boolean,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,limits,attribute,,GPUSupportedLimits,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,name,attribute,,String,,GPUAdapter_Name,,Direct,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
 GPUAdapter,requestDevice,operation,(GPUDeviceDescriptor),GPUDevicePromise,,,,,third_party/blink/renderer/modules/webgpu/gpu_adapter.idl,
@@ -2355,7 +2359,6 @@ GPUComputePipeline,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gp
 GPUComputePipeline,getBindGroupLayout,operation,(UnsignedLong),GPUBindGroupLayout,,,,,third_party/blink/renderer/modules/webgpu/gpu_pipeline_base.idl,
 GPUComputePipeline,label,attribute,,USVStringOrNull,,,,,third_party/blink/renderer/modules/webgpu/gpu_object_base.idl,
 GPUDevice,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,9
-GPUDevice,adapter,attribute,,GPUAdapter,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createBindGroup,operation,(GPUBindGroupDescriptor),GPUBindGroup,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createBindGroupLayout,operation,(GPUBindGroupLayoutDescriptor),GPUBindGroupLayout,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
 GPUDevice,createBuffer,operation,(GPUBufferDescriptor),GPUBuffer,,,,,third_party/blink/renderer/modules/webgpu/gpu_device.idl,
@@ -2437,7 +2440,6 @@ GPURenderPassEncoder,pushDebugGroup,operation,(USVString),Void,,,,,third_party/b
 GPURenderPassEncoder,setBindGroup,operation,"(UnsignedLong,GPUBindGroup)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_programmable_pass_encoder.idl,
 GPURenderPassEncoder,setBindGroup,operation,"(UnsignedLong,GPUBindGroup,UnsignedLongEnforceRangeSequence)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_programmable_pass_encoder.idl,
 GPURenderPassEncoder,setBindGroup,operation,"(UnsignedLong,GPUBindGroup,Uint32Array,UnsignedLongLong,UnsignedLong)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_programmable_pass_encoder.idl,
-GPURenderPassEncoder,setBlendColor,operation,(DoubleSequenceOrGPUColorDict),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_pass_encoder.idl,
 GPURenderPassEncoder,setBlendConstant,operation,(DoubleSequenceOrGPUColorDict),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_pass_encoder.idl,
 GPURenderPassEncoder,setIndexBuffer,operation,"(GPUBuffer,GPUIndexFormat,UnsignedLongLong,UnsignedLongLong)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_encoder_base.idl,
 GPURenderPassEncoder,setPipeline,operation,(GPURenderPipeline),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_render_encoder_base.idl,
@@ -2497,8 +2499,6 @@ GPUTextureUsage,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_t
 GPUTextureUsage,COPY_DST,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_texture_usage.idl,12
 GPUTextureUsage,COPY_SRC,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_texture_usage.idl,11
 GPUTextureUsage,RENDER_ATTACHMENT,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_texture_usage.idl,15
-GPUTextureUsage,SAMPLED,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_texture_usage.idl,
-GPUTextureUsage,STORAGE,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_texture_usage.idl,
 GPUTextureUsage,STORAGE_BINDING,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_texture_usage.idl,14
 GPUTextureUsage,TEXTURE_BINDING,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_texture_usage.idl,13
 GPUTextureView,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_texture_view.idl,9
@@ -3814,6 +3814,7 @@ InternalRuntimeFlags,conditionalFocusEnabled,attribute,,Boolean,,,,,third_party/
 InternalRuntimeFlags,consolidatedMovementXYEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,contactsManagerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,contactsManagerExtraPropertiesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,containIntrinsicSizeAutoEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,contentIndexEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,contextMenuEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,conversionMeasurementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3842,6 +3843,7 @@ InternalRuntimeFlags,cssContainerRelativeUnitsEnabled,attribute,,Boolean,,,,,thi
 InternalRuntimeFlags,cssContainerSkipStyleRecalcEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContentVisibilityEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssContentVisibilityHiddenMatchableEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssDelayedAnimationUpdatesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssDynamicRangeMediaQueriesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssEnumeratedCustomPropertiesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFocusVisibleEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3851,7 +3853,6 @@ InternalRuntimeFlags,cssFontFamilyMathEnabled,attribute,,Boolean,,,,,third_party
 InternalRuntimeFlags,cssFontSizeAdjustEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssHexAlphaColorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssIndependentTransformPropertiesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cssIsolatedAnimationUpdatesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssLayoutAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssLogicalEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssLogicalOverflowEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3977,6 +3978,7 @@ InternalRuntimeFlags,layoutNGEnabled,attribute,,Boolean,,,,,third_party/blink/re
 InternalRuntimeFlags,layoutNGFlexFragmentationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGFragmentTraversalEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGFullPositionForPointEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,layoutNGGridCachingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGGridEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGLayoutOverflowRecalcEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGPrintingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4182,6 +4184,7 @@ InternalRuntimeFlags,trustTokensEnabled,attribute,,Boolean,,,,,third_party/blink
 InternalRuntimeFlags,trustedDOMTypesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,trustedTypeBeforePolicyCreationEventEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,trustedTypesUseCodeLikeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,u2FSecurityKeyAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,unclosedFormControlIsInvalidEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,underlineOffsetThicknessEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,unrestrictedSharedArrayBufferEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
