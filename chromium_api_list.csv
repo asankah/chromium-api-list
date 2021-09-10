@@ -2103,7 +2103,7 @@ FederatedCredential,,interface,,,,,True,,third_party/blink/renderer/modules/cred
 FederatedCredential,approvedBy,attribute,,FederatedCredentialApprover,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
 FederatedCredential,iconURL,attribute,,USVString,,,,,third_party/blink/renderer/modules/credentialmanager/credential_user_data.idl,
 FederatedCredential,idToken,attribute,,USVString,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
-FederatedCredential,logout,operation,(USVStringSequence),VoidPromise,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
+FederatedCredential,logout,operation,(WebIdLogoutRequestSequence),VoidPromise,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
 FederatedCredential,name,attribute,,USVString,,,,,third_party/blink/renderer/modules/credentialmanager/credential_user_data.idl,
 FederatedCredential,protocol,attribute,,StringOrNull,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
 FederatedCredential,provider,attribute,,USVString,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
