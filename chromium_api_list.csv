@@ -708,7 +708,6 @@ CSSScrollTimelineRule,name,attribute,,String,,,,,third_party/blink/renderer/core
 CSSScrollTimelineRule,orientation,attribute,,String,,,,,third_party/blink/renderer/core/css/css_scroll_timeline_rule.idl,
 CSSScrollTimelineRule,source,attribute,,String,,,,,third_party/blink/renderer/core/css/css_scroll_timeline_rule.idl,
 CSSScrollTimelineRule,start,attribute,,String,,,,,third_party/blink/renderer/core/css/css_scroll_timeline_rule.idl,
-CSSScrollTimelineRule,timeRange,attribute,,String,,,,,third_party/blink/renderer/core/css/css_scroll_timeline_rule.idl,
 CSSSkew,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_skew.idl,10
 CSSSkew,ax,attribute,,CSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_skew.idl,
 CSSSkew,ay,attribute,,CSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_skew.idl,
@@ -2306,10 +2305,8 @@ GPUBufferUsage,VERTEX,constant,,UnsignedLong,,,,,third_party/blink/renderer/modu
 GPUCanvasContext,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,10
 GPUCanvasContext,canvas,attribute,,HTMLCanvasElementOrOffscreenCanvas,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
 GPUCanvasContext,configure,operation,(GPUCanvasConfiguration),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
-GPUCanvasContext,configureSwapChain,operation,(GPUCanvasConfiguration),GPUSwapChain,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
 GPUCanvasContext,getCurrentTexture,operation,(),GPUTexture,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
 GPUCanvasContext,getPreferredFormat,operation,(GPUAdapter),GPUTextureFormat,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
-GPUCanvasContext,getSwapChainPreferredFormat,operation,(GPUAdapter),GPUTextureFormat,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
 GPUCanvasContext,unconfigure,operation,(),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_canvas_context.idl,
 GPUColorWrite,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_color_write.idl,10
 GPUColorWrite,ALL,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_color_write.idl,15
@@ -2488,9 +2485,6 @@ GPUSupportedLimits,maxVertexBufferArrayStride,attribute,,UnsignedLong,,,,,third_
 GPUSupportedLimits,maxVertexBuffers,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_supported_limits.idl,
 GPUSupportedLimits,minStorageBufferOffsetAlignment,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_supported_limits.idl,
 GPUSupportedLimits,minUniformBufferOffsetAlignment,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgpu/gpu_supported_limits.idl,
-GPUSwapChain,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_swap_chain.idl,9
-GPUSwapChain,getCurrentTexture,operation,(),GPUTexture,,,,,third_party/blink/renderer/modules/webgpu/gpu_swap_chain.idl,
-GPUSwapChain,label,attribute,,USVStringOrNull,,,,,third_party/blink/renderer/modules/webgpu/gpu_object_base.idl,
 GPUTexture,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_texture.idl,9
 GPUTexture,createView,operation,(GPUTextureViewDescriptor),GPUTextureView,,,,,third_party/blink/renderer/modules/webgpu/gpu_texture.idl,
 GPUTexture,destroy,operation,(),Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_texture.idl,
