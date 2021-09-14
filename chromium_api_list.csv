@@ -795,13 +795,11 @@ CallbackFunctionTest,testNullableCallback,operation,"(TestCallbackOrNull,String,
 CallbackFunctionTest,testReceiverObjectCallback,operation,(TestReceiverObjectCallback),Void,,,,,third_party/blink/renderer/core/testing/callback_function_test.idl,
 CallbackFunctionTest,testSequenceCallback,operation,"(TestSequenceCallback,LongSequence)",StringSequence,,,,,third_party/blink/renderer/core/testing/callback_function_test.idl,
 CanMakePaymentEvent,,interface,,,,,,,third_party/blink/renderer/modules/payments/can_make_payment_event.idl,10
-CanMakePaymentEvent,currency,attribute,,String,,,,,third_party/blink/renderer/modules/payments/can_make_payment_event.idl,
 CanMakePaymentEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 CanMakePaymentEvent,methodData,attribute,,PaymentMethodDataArray,,,,,third_party/blink/renderer/modules/payments/can_make_payment_event.idl,
 CanMakePaymentEvent,modifiers,attribute,,PaymentDetailsModifierArray,,,,,third_party/blink/renderer/modules/payments/can_make_payment_event.idl,
 CanMakePaymentEvent,paymentRequestOrigin,attribute,,USVString,,,,,third_party/blink/renderer/modules/payments/can_make_payment_event.idl,
 CanMakePaymentEvent,respondWith,operation,(BooleanPromise),Void,,,,,third_party/blink/renderer/modules/payments/can_make_payment_event.idl,
-CanMakePaymentEvent,respondWithMinimalUI,operation,(CanMakePaymentResponsePromise),Void,,,,,third_party/blink/renderer/modules/payments/can_make_payment_event.idl,
 CanMakePaymentEvent,topOrigin,attribute,,USVString,,,,,third_party/blink/renderer/modules/payments/can_make_payment_event.idl,
 CanvasCaptureMediaStreamTrack,,interface,,,,,,,third_party/blink/renderer/modules/mediacapturefromelement/canvas_capture_media_stream_track.idl,8
 CanvasCaptureMediaStreamTrack,canvas,attribute,,HTMLCanvasElement,,,,,third_party/blink/renderer/modules/mediacapturefromelement/canvas_capture_media_stream_track.idl,
@@ -2090,7 +2088,7 @@ External,,interface,,,,,,,third_party/blink/renderer/core/frame/external.idl,6
 External,AddSearchProvider,operation,(),Void,,,,,third_party/blink/renderer/core/frame/external.idl,
 External,IsSearchProviderInstalled,operation,(),Void,,,,,third_party/blink/renderer/core/frame/external.idl,
 EyeDropper,,interface,,,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,8
-EyeDropper,open,operation,(),ColorSelectionResultPromise,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,
+EyeDropper,open,operation,(ColorSelectionOptions),ColorSelectionResultPromise,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,
 FaceDetector,,interface,,,,,True,,third_party/blink/renderer/modules/shapedetection/face_detector.idl,11
 FaceDetector,detect,operation,(HTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrBlobOrImageDataOrImageBitmapOrOffscreenCanvasOrVideoFrame),DetectedFaceSequencePromise,,FaceDetectorDetect,,,third_party/blink/renderer/modules/shapedetection/face_detector.idl,
 FeaturePolicy,,interface,,,,,,,third_party/blink/renderer/core/permissions_policy/feature_policy.idl,9
@@ -3793,7 +3791,6 @@ InternalRuntimeFlags,captureTimeInCsrcEnabled,attribute,,Boolean,,,,,third_party
 InternalRuntimeFlags,clickPointerEventEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clickRetargettingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clipboardCustomFormatsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,clipboardReadPngEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clipboardSvgEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clsScrollAnchoringEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,colrv1FontsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4062,7 +4059,6 @@ InternalRuntimeFlags,passwordRevealEnabled,attribute,,Boolean,,,,,third_party/bl
 InternalRuntimeFlags,paymentAppEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,paymentHandlerChangePaymentMethodEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,paymentHandlerHandlesShippingAndContactEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,paymentHandlerMinimalUIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,paymentMethodChangeEventEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,paymentRequestEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,paymentRequestMerchantValidationEventEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4195,6 +4191,7 @@ InternalRuntimeFlags,videoPlaybackQualityEnabled,attribute,,Boolean,,,,,third_pa
 InternalRuntimeFlags,videoRotateToFullscreenEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,videoWakeLockOptimisationHiddenMutedEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,viewportHeightClientHintHeaderEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,viewportSegmentsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,virtualKeyboardEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,visibilityCollapseColumnEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,visibilityStateEntryEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4254,7 +4251,6 @@ InternalRuntimeFlags,webgpuImportTextureEnabled,attribute,,Boolean,,,,,third_par
 InternalRuntimeFlags,websocketStreamEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,wheelEventRegionsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,windowPlacementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,windowSegmentsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,xsltEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalSettings,,interface,,,,,,,third_party/blink/renderer/core/testing/internal_settings.idl,26
 InternalSettings,setAccessibilityFontScaleFactor,operation,(Float),Void,,,,,third_party/blink/renderer/core/testing/internal_settings.idl,
@@ -8376,6 +8372,7 @@ VisualViewport,onscroll,attribute,,EventHandlerNonNullOrNull,,,,,third_party/bli
 VisualViewport,pageLeft,attribute,,Double,,V8VisualViewport_PageLeft_AttributeGetter,,Direct,third_party/blink/renderer/core/frame/visual_viewport.idl,
 VisualViewport,pageTop,attribute,,Double,,V8VisualViewport_PageTop_AttributeGetter,,Direct,third_party/blink/renderer/core/frame/visual_viewport.idl,
 VisualViewport,scale,attribute,,Double,,V8VisualViewport_Scale_AttributeGetter,,Direct,third_party/blink/renderer/core/frame/visual_viewport.idl,
+VisualViewport,segments,attribute,,DOMRectArrayOrNull,,,,,third_party/blink/renderer/core/frame/visual_viewport.idl,
 VisualViewport,width,attribute,,Double,,V8VisualViewport_Width_AttributeGetter,,Direct,third_party/blink/renderer/core/frame/visual_viewport.idl,
 WakeLock,,interface,,,,,True,,third_party/blink/renderer/modules/wake_lock/wake_lock.idl,14
 WakeLock,request,operation,(WakeLockType),WakeLockSentinelPromise,,,,,third_party/blink/renderer/modules/wake_lock/wake_lock.idl,
@@ -10018,7 +10015,6 @@ Window,getDigitalGoodsService,operation,(String),DigitalGoodsServiceOrNullPromis
 Window,getLockScreenData,operation,(),LockScreenDataPromise,,,,,third_party/blink/renderer/modules/lock_screen/dom_window_lock_screen.idl,
 Window,getScreens,operation,(),ScreensPromise,,V8Window_GetScreens_Method,,,third_party/blink/renderer/modules/screen_enumeration/window_screens.idl,
 Window,getSelection,operation,(),SelectionOrNull,,,,,third_party/blink/renderer/core/frame/window.idl,
-Window,getWindowSegments,operation,(),DOMRectArray,,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,history,attribute,,History,,,,,third_party/blink/renderer/core/frame/window.idl,
 Window,indexedDB,attribute,,IDBFactory,,,,,third_party/blink/renderer/modules/indexeddb/window_indexed_database.idl,
 Window,innerHeight,attribute,,Long,,WindowInnerHeight,,Direct,third_party/blink/renderer/core/frame/window.idl,
