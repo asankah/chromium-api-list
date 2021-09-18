@@ -961,6 +961,11 @@ CloseEvent,code,attribute,,UnsignedShort,,,,,third_party/blink/renderer/modules/
 CloseEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 CloseEvent,reason,attribute,,String,,,,,third_party/blink/renderer/modules/websockets/close_event.idl,
 CloseEvent,wasClean,attribute,,Boolean,,,,,third_party/blink/renderer/modules/websockets/close_event.idl,
+CloseWatcher,,interface,,,,,,,third_party/blink/renderer/modules/closewatcher/close_watcher.idl,9
+CloseWatcher,destroy,operation,(),Void,,,,,third_party/blink/renderer/modules/closewatcher/close_watcher.idl,
+CloseWatcher,oncancel,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/closewatcher/close_watcher.idl,
+CloseWatcher,onclose,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/closewatcher/close_watcher.idl,
+CloseWatcher,signalClosed,operation,(),Void,,,,,third_party/blink/renderer/modules/closewatcher/close_watcher.idl,
 ColorPagePopupController,,interface,,,,,,,third_party/blink/renderer/core/page/color_page_popup_controller.idl,11
 ColorPagePopupController,openEyeDropper,operation,(),Void,,,,,third_party/blink/renderer/core/page/color_page_popup_controller.idl,
 Comment,,interface,,,,,,,third_party/blink/renderer/core/dom/comment.idl,24
@@ -3778,6 +3783,7 @@ InternalRuntimeFlags,clickPointerEventEnabled,attribute,,Boolean,,,,,third_party
 InternalRuntimeFlags,clickRetargettingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clipboardCustomFormatsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clipboardSvgEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,closeWatcherEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,clsScrollAnchoringEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,colrv1FontsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,compositeAfterPaintEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4000,7 +4006,6 @@ InternalRuntimeFlags,mediaSourceStableEnabled,attribute,,Boolean,,,,,third_party
 InternalRuntimeFlags,mediaStreamInsertableStreamsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,middleClickAutoscrollEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,mobileLayoutThemeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,modalCloseWatcherEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,moduleServiceWorkerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,mojoJSEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,mojoJSTestEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5175,11 +5180,6 @@ MimeTypeArray,,interface,,,,,,,third_party/blink/renderer/modules/plugins/mime_t
 MimeTypeArray,item,operation,(UnsignedLong),MimeTypeOrNull,,,,,third_party/blink/renderer/modules/plugins/mime_type_array.idl,
 MimeTypeArray,length,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/plugins/mime_type_array.idl,
 MimeTypeArray,namedItem,operation,(String),MimeTypeOrNull,,,,,third_party/blink/renderer/modules/plugins/mime_type_array.idl,
-ModalCloseWatcher,,interface,,,,,,,third_party/blink/renderer/modules/modalclosewatcher/modal_close_watcher.idl,8
-ModalCloseWatcher,destroy,operation,(),Void,,,,,third_party/blink/renderer/modules/modalclosewatcher/modal_close_watcher.idl,
-ModalCloseWatcher,onbeforeclose,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/modalclosewatcher/modal_close_watcher.idl,
-ModalCloseWatcher,onclose,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/modalclosewatcher/modal_close_watcher.idl,
-ModalCloseWatcher,signalClosed,operation,(),Void,,,,,third_party/blink/renderer/modules/modalclosewatcher/modal_close_watcher.idl,
 Mojo,,interface,,,,,,,third_party/blink/renderer/core/mojo/mojo.idl,27
 Mojo,RESULT_ABORTED,constant,,UnsignedLong,,,,,third_party/blink/renderer/core/mojo/mojo.idl,38
 Mojo,RESULT_ALREADY_EXISTS,constant,,UnsignedLong,,,,,third_party/blink/renderer/core/mojo/mojo.idl,34
