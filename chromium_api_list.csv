@@ -2158,6 +2158,9 @@ FileSystemFileHandle,,interface,,,,,True,,third_party/blink/renderer/modules/fil
 FileSystemFileHandle,createSyncAccessHandle,operation,(),FileSystemSyncAccessHandlePromise,,V8FileSystemFileHandle_CreateSyncAccessHandle_Method,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
 FileSystemFileHandle,createWritable,operation,(FileSystemCreateWritableOptions),FileSystemWritableFileStreamPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
 FileSystemFileHandle,getFile,operation,(),FilePromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
+FileSystemFileHandle,move,operation,(FileSystemDirectoryHandle),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
+FileSystemFileHandle,move,operation,"(FileSystemDirectoryHandle,USVString)",VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
+FileSystemFileHandle,rename,operation,(USVString),VoidPromise,,,,,third_party/blink/renderer/modules/file_system_access/file_system_file_handle.idl,
 FileSystemHandle,,interface,,,,,True,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,17
 FileSystemHandle,isSameEntry,operation,(FileSystemHandle),BooleanPromise,,V8FileSystemHandle_IsSameEntry_Method,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
 FileSystemHandle,kind,attribute,,FileSystemHandleKind,,,,,third_party/blink/renderer/modules/file_system_access/file_system_handle.idl,
