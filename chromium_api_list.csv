@@ -478,7 +478,7 @@ BluetoothAdvertisingEvent,name,attribute,,StringOrNull,,BluetoothAdvertisingEven
 BluetoothAdvertisingEvent,rssi,attribute,,ByteOrNull,,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_advertising_event.idl,
 BluetoothAdvertisingEvent,serviceData,attribute,,BluetoothServiceDataMap,,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_advertising_event.idl,
 BluetoothAdvertisingEvent,txPower,attribute,,ByteOrNull,,BluetoothAdvertisingEventTxPower,,Direct,third_party/blink/renderer/modules/bluetooth/bluetooth_advertising_event.idl,
-BluetoothAdvertisingEvent,uuids,attribute,,StringOrUnsignedLongArray,,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_advertising_event.idl,
+BluetoothAdvertisingEvent,uuids,attribute,,StringArray,,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_advertising_event.idl,
 BluetoothCharacteristicProperties,,interface,,,,,True,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,11
 BluetoothCharacteristicProperties,authenticatedSignedWrites,attribute,,Boolean,,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
 BluetoothCharacteristicProperties,broadcast,attribute,,Boolean,,,,,third_party/blink/renderer/modules/bluetooth/bluetooth_characteristic_properties.idl,
@@ -814,14 +814,12 @@ CanvasGradient,addColorStop,operation,"(Double,String)",Void,,,,,third_party/bli
 CanvasPattern,,interface,,,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_pattern.idl,30
 CanvasPattern,setTransform,operation,(DOMMatrix2DInit),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_pattern.idl,
 CanvasRenderingContext2D,,interface,,,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,52
-CanvasRenderingContext2D,addHitRegion,operation,(HitRegionOptions),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,arc,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,Boolean)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 CanvasRenderingContext2D,arcTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 CanvasRenderingContext2D,beginLayer,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,beginPath,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,bezierCurveTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 CanvasRenderingContext2D,canvas,attribute,,HTMLCanvasElement,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
-CanvasRenderingContext2D,clearHitRegions,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,clearRect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,clip,operation,(CanvasFillRule),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,clip,operation,"(Path2D,CanvasFillRule)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
@@ -880,7 +878,6 @@ CanvasRenderingContext2D,putImageData,operation,"(ImageData,Long,Long)",Void,,,,
 CanvasRenderingContext2D,putImageData,operation,"(ImageData,Long,Long,Long,Long,Long,Long)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,quadraticCurveTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 CanvasRenderingContext2D,rect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
-CanvasRenderingContext2D,removeHitRegion,operation,(String),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,reset,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,resetTransform,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
 CanvasRenderingContext2D,restore,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_rendering_context_2d.idl,
@@ -1393,6 +1390,7 @@ DictionaryTest,set,operation,(InternalDictionary),Void,,,,,third_party/blink/ren
 DictionaryTest,setDerived,operation,(InternalDictionaryDerived),Void,,,,,third_party/blink/renderer/core/testing/dictionary_test.idl,
 DictionaryTest,setDerivedDerived,operation,(InternalDictionaryDerivedDerived),Void,,,,,third_party/blink/renderer/core/testing/dictionary_test.idl,
 DigitalGoodsService,,interface,,,,,True,,third_party/blink/renderer/modules/payments/goods/digital_goods_service.idl,9
+DigitalGoodsService,consume,operation,(String),VoidPromise,,DigitalGoodsConsume,,,third_party/blink/renderer/modules/payments/goods/digital_goods_service.idl,
 DigitalGoodsService,getDetails,operation,(StringSequence),ItemDetailsSequencePromise,,DigitalGoodsGetDetails,,,third_party/blink/renderer/modules/payments/goods/digital_goods_service.idl,
 DigitalGoodsService,listPurchases,operation,(),PurchaseDetailsSequencePromise,,DigitalGoodsListPurchases,,,third_party/blink/renderer/modules/payments/goods/digital_goods_service.idl,
 DirectoryEntry,,interface,,,,,,,third_party/blink/renderer/modules/filesystem/directory_entry.idl,34
@@ -2643,7 +2641,7 @@ HTMLAreaElement,search,attribute,,USVString,,,,,third_party/blink/renderer/core/
 HTMLAreaElement,shape,attribute,,String,,,,,third_party/blink/renderer/core/html/html_area_element.idl,
 HTMLAreaElement,target,attribute,,String,,,,,third_party/blink/renderer/core/html/html_area_element.idl,
 HTMLAreaElement,username,attribute,,USVString,,,,,third_party/blink/renderer/core/html/html_hyperlink_element_utils.idl,
-HTMLAudioElement,,interface,,,,,,,third_party/blink/renderer/core/html/media/html_audio_element.idl,34
+HTMLAudioElement,,interface,,,,,,,third_party/blink/renderer/core/html/media/html_audio_element.idl,33
 HTMLBRElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_br_element.idl,24
 HTMLBRElement,clear,attribute,,String,,,,,third_party/blink/renderer/core/html/html_br_element.idl,
 HTMLBaseElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_base_element.idl,24
@@ -2986,7 +2984,7 @@ HTMLIFrameElement,src,attribute,,USVString,,,,,third_party/blink/renderer/core/h
 HTMLIFrameElement,srcdoc,attribute,,String,,,,,third_party/blink/renderer/core/html/html_iframe_element.idl,
 HTMLIFrameElement,trustToken,attribute,,String,,TrustTokenIframe,True,,third_party/blink/renderer/core/html/html_iframe_element.idl,
 HTMLIFrameElement,width,attribute,,String,,,,,third_party/blink/renderer/core/html/html_iframe_element.idl,
-HTMLImageElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_image_element.idl,30
+HTMLImageElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_image_element.idl,29
 HTMLImageElement,align,attribute,,String,,,,,third_party/blink/renderer/core/html/html_image_element.idl,
 HTMLImageElement,alt,attribute,,String,,,,,third_party/blink/renderer/core/html/html_image_element.idl,
 HTMLImageElement,border,attribute,,String,,,,,third_party/blink/renderer/core/html/html_image_element.idl,
@@ -3234,7 +3232,7 @@ HTMLObjectElement,willValidate,attribute,,Boolean,,,,,third_party/blink/renderer
 HTMLOptGroupElement,,interface,,,,,,,third_party/blink/renderer/core/html/forms/html_opt_group_element.idl,24
 HTMLOptGroupElement,disabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/forms/html_opt_group_element.idl,
 HTMLOptGroupElement,label,attribute,,String,,,,,third_party/blink/renderer/core/html/forms/html_opt_group_element.idl,
-HTMLOptionElement,,interface,,,,,,,third_party/blink/renderer/core/html/forms/html_option_element.idl,34
+HTMLOptionElement,,interface,,,,,,,third_party/blink/renderer/core/html/forms/html_option_element.idl,33
 HTMLOptionElement,defaultSelected,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/forms/html_option_element.idl,
 HTMLOptionElement,disabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/forms/html_option_element.idl,
 HTMLOptionElement,form,attribute,,HTMLFormElementOrNull,,,,,third_party/blink/renderer/core/html/forms/html_option_element.idl,
@@ -3569,7 +3567,6 @@ IDBDatabase,onabort,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/r
 IDBDatabase,onclose,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/indexeddb/idb_database.idl,
 IDBDatabase,onerror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/indexeddb/idb_database.idl,
 IDBDatabase,onversionchange,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/indexeddb/idb_database.idl,
-IDBDatabase,transaction,operation,"(StringOrStringSequence,IDBTransactionMode)",IDBTransaction,,,,,third_party/blink/renderer/modules/indexeddb/idb_database.idl,
 IDBDatabase,transaction,operation,"(StringOrStringSequence,IDBTransactionMode,IDBTransactionOptions)",IDBTransaction,,,,,third_party/blink/renderer/modules/indexeddb/idb_database.idl,
 IDBDatabase,version,attribute,,UnsignedLongLong,,,,,third_party/blink/renderer/modules/indexeddb/idb_database.idl,
 IDBFactory,,interface,,,,,,,third_party/blink/renderer/modules/indexeddb/idb_factory.idl,30
@@ -3942,11 +3939,11 @@ InternalRuntimeFlags,gravitySensorEnabled,attribute,,Boolean,,,,,third_party/bli
 InternalRuntimeFlags,groupEffectEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,handwritingRecognitionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,highlightAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,highlightInheritanceEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,hrefTranslateEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,htmlPopupElementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,htmlSelectMenuElementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,idbPutAllEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,idbRelaxedDurabilityEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,idleDetectionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,implicitRootScrollerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,inertAttributeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3966,6 +3963,7 @@ InternalRuntimeFlags,layoutNGFragmentTraversalEnabled,attribute,,Boolean,,,,,thi
 InternalRuntimeFlags,layoutNGFullPositionForPointEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGGridCachingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGGridEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,layoutNGGridFragmentationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGLayoutOverflowRecalcEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGPrintingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGTableEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4054,6 +4052,7 @@ InternalRuntimeFlags,paymentAppEnabled,attribute,,Boolean,,,,,third_party/blink/
 InternalRuntimeFlags,paymentHandlerChangePaymentMethodEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,paymentHandlerHandlesShippingAndContactEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,paymentMethodChangeEventEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,paymentRequestBasicCardEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,paymentRequestEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,paymentRequestMerchantValidationEventEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,paymentRetryEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4131,7 +4130,6 @@ InternalRuntimeFlags,sharedAutofillEnabled,attribute,,Boolean,,,,,third_party/bl
 InternalRuntimeFlags,sharedStorageAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,sharedWorkerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,signatureBasedIntegrityEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,signedExchangePrefetchCacheForNavigationsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,signedExchangeSubresourcePrefetchEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,skipAdEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,skipTouchEventFilterEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4368,6 +4366,7 @@ InternalSettingsGenerated,setMockGestureTapHighlightsEnabled,operation,(Boolean)
 InternalSettingsGenerated,setMultiTargetTapNotificationEnabled,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setNavigateOnDragDrop,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setNavigatorPlatformOverride,operation,(String),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
+InternalSettingsGenerated,setNeedsMinPreferredLogicalWidth,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setNetworkQuietTimeout,operation,(Double),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setOfflineWebApplicationCacheEnabled,operation,(Boolean),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
 InternalSettingsGenerated,setPasswordEchoDurationInSeconds,operation,(Double),Void,,,,,third_party/blink/renderer/core/testing/internal_settings_generated.idl,
@@ -4465,7 +4464,6 @@ Internals,collectSample,operation,(),Void,,,,,third_party/blink/renderer/core/ti
 Internals,compareTreeScopePosition,operation,"(Node,Node)",UnsignedShort,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,computedStyleIncludingVisitedInfo,operation,(Node),CSSStyleDeclaration,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,countElementShadow,operation,(Node),UnsignedLong,,,,,third_party/blink/renderer/core/testing/internals.idl,
-Internals,countHitRegions,operation,(CanvasRenderingContext2D),UnsignedLong,,,,,third_party/blink/renderer/modules/canvas/canvas2d/testing/internals_canvas_rendering_context_2d.idl,
 Internals,counterValue,operation,(Element),String,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,crash,operation,(),Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,createReadableStream,operation,"(Long,String)",ReadableStream,,,,,third_party/blink/renderer/core/testing/internals.idl,
@@ -5872,7 +5870,7 @@ PaymentInstruments,get,operation,(String),AnyPromise,,,,,third_party/blink/rende
 PaymentInstruments,has,operation,(String),BooleanPromise,,,,,third_party/blink/renderer/modules/payments/payment_instruments.idl,
 PaymentInstruments,keys,operation,(),StringSequencePromise,,,,,third_party/blink/renderer/modules/payments/payment_instruments.idl,
 PaymentInstruments,set,operation,"(String,PaymentInstrument)",VoidPromise,,,,,third_party/blink/renderer/modules/payments/payment_instruments.idl,
-PaymentManager,,interface,,,,,,,third_party/blink/renderer/modules/payments/payment_manager.idl,18
+PaymentManager,,interface,,,,,,,third_party/blink/renderer/modules/payments/payment_manager.idl,17
 PaymentManager,enableDelegations,operation,(PaymentDelegationArray),VoidPromise,,,,,third_party/blink/renderer/modules/payments/payment_manager.idl,
 PaymentManager,instruments,attribute,,PaymentInstruments,,,,,third_party/blink/renderer/modules/payments/payment_manager.idl,
 PaymentManager,userHint,attribute,,String,,,,,third_party/blink/renderer/modules/payments/payment_manager.idl,
@@ -7481,7 +7479,6 @@ ScrollTimeline,,interface,,,,,,,third_party/blink/renderer/core/animation/scroll
 ScrollTimeline,orientation,attribute,,ScrollDirection,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 ScrollTimeline,scrollOffsets,attribute,,CSSNumericValueOrStringOrCSSKeywordValueOrScrollTimelineElementBasedOffsetArray,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 ScrollTimeline,scrollSource,attribute,,ElementOrNull,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
-ScrollTimeline,timeRange,attribute,,DoubleOrScrollTimelineAutoKeyword,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 SecurityPolicyViolationEvent,,interface,,,,,,,third_party/blink/renderer/core/events/security_policy_violation_event.idl,34
 SecurityPolicyViolationEvent,blockedURI,attribute,,String,,V8SecurityPolicyViolationEvent_BlockedURI_AttributeGetter,,,third_party/blink/renderer/core/events/security_policy_violation_event.idl,
 SecurityPolicyViolationEvent,columnNumber,attribute,,Long,,,,,third_party/blink/renderer/core/events/security_policy_violation_event.idl,
