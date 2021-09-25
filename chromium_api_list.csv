@@ -151,12 +151,17 @@ AppHistory,entries,operation,(),AppHistoryEntrySequence,,,,,third_party/blink/re
 AppHistory,forward,operation,(AppHistoryNavigationOptions),AppHistoryResult,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,goTo,operation,"(String,AppHistoryNavigationOptions)",AppHistoryResult,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,navigate,operation,"(USVString,AppHistoryNavigateOptions)",AppHistoryResult,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
+AppHistory,oncurrentchange,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigate,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigateerror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,onnavigatesuccess,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,reload,operation,(AppHistoryReloadOptions),AppHistoryResult,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,transition,attribute,,AppHistoryTransitionOrNull,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
 AppHistory,updateCurrent,operation,(AppHistoryUpdateCurrentOptions),Void,,,,,third_party/blink/renderer/core/app_history/app_history.idl,
+AppHistoryCurrentChangeEvent,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history_current_change_event.idl,9
+AppHistoryCurrentChangeEvent,from,attribute,,AppHistoryEntry,,,,,third_party/blink/renderer/core/app_history/app_history_current_change_event.idl,
+AppHistoryCurrentChangeEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
+AppHistoryCurrentChangeEvent,navigationType,attribute,,AppHistoryNavigationTypeOrNull,,,,,third_party/blink/renderer/core/app_history/app_history_current_change_event.idl,
 AppHistoryDestination,,interface,,,,,,,third_party/blink/renderer/core/app_history/app_history_destination.idl,9
 AppHistoryDestination,getState,operation,(),Any,,,,,third_party/blink/renderer/core/app_history/app_history_destination.idl,
 AppHistoryDestination,id,attribute,,StringOrNull,,,,,third_party/blink/renderer/core/app_history/app_history_destination.idl,
@@ -357,7 +362,6 @@ AudioWorkletProcessor,port,attribute,,MessagePort,,,,,third_party/blink/renderer
 AuthenticatorAssertionResponse,,interface,,,,,True,,third_party/blink/renderer/modules/credentialmanager/authenticator_assertion_response.idl,11
 AuthenticatorAssertionResponse,authenticatorData,attribute,,ArrayBuffer,,,,,third_party/blink/renderer/modules/credentialmanager/authenticator_assertion_response.idl,
 AuthenticatorAssertionResponse,signature,attribute,,ArrayBuffer,,,,,third_party/blink/renderer/modules/credentialmanager/authenticator_assertion_response.idl,
-AuthenticatorAssertionResponse,transport,attribute,,StringOrNull,,,,,third_party/blink/renderer/modules/credentialmanager/authenticator_assertion_response.idl,
 AuthenticatorAssertionResponse,userHandle,attribute,,ArrayBufferOrNull,,,,,third_party/blink/renderer/modules/credentialmanager/authenticator_assertion_response.idl,
 AuthenticatorAttestationResponse,,interface,,,,,True,,third_party/blink/renderer/modules/credentialmanager/authenticator_attestation_response.idl,11
 AuthenticatorAttestationResponse,attestationObject,attribute,,ArrayBuffer,,,,,third_party/blink/renderer/modules/credentialmanager/authenticator_attestation_response.idl,
@@ -4198,7 +4202,7 @@ InternalRuntimeFlags,webAppWindowControlsOverlayEnabled,attribute,,Boolean,,,,,t
 InternalRuntimeFlags,webAppsLockScreenEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAssemblyCSPEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAssemblyExceptionsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,webAuthAssertionTransportEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webAuthAuthenticatorAttachmentEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAuthEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAuthenticationConditionalUIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAuthenticationLargeBlobExtensionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -6175,6 +6179,7 @@ PromiseRejectionEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/rendere
 PromiseRejectionEvent,promise,attribute,,AnyPromise,,,,,third_party/blink/renderer/core/events/promise_rejection_event.idl,
 PromiseRejectionEvent,reason,attribute,,Any,,,,,third_party/blink/renderer/core/events/promise_rejection_event.idl,
 PublicKeyCredential,,interface,,,,,True,,third_party/blink/renderer/modules/credentialmanager/public_key_credential.idl,11
+PublicKeyCredential,authenticatorAttachment,attribute,,StringOrNull,,,,,third_party/blink/renderer/modules/credentialmanager/public_key_credential.idl,
 PublicKeyCredential,getClientExtensionResults,operation,(),AuthenticationExtensionsClientOutputs,,,,,third_party/blink/renderer/modules/credentialmanager/public_key_credential.idl,
 PublicKeyCredential,isUserVerifyingPlatformAuthenticatorAvailable,operation,(),BooleanPromise,,,,,third_party/blink/renderer/modules/credentialmanager/public_key_credential.idl,
 PublicKeyCredential,rawId,attribute,,ArrayBuffer,,,,,third_party/blink/renderer/modules/credentialmanager/public_key_credential.idl,
