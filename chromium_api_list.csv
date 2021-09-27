@@ -1758,6 +1758,7 @@ EXTsRGB,SRGB8_ALPHA8_EXT,constant,,UnsignedLong,,,,,third_party/blink/renderer/m
 EXTsRGB,SRGB_ALPHA_EXT,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgl/ext_srgb.idl,12
 EXTsRGB,SRGB_EXT,constant,,UnsignedLong,,,,,third_party/blink/renderer/modules/webgl/ext_srgb.idl,11
 EditContext,,interface,,,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,13
+EditContext,attachedElements,operation,(),ElementSequence,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,
 EditContext,enterKeyHint,attribute,,EditContextEnterKeyHint,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,
 EditContext,inputMode,attribute,,EditContextInputMode,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,
 EditContext,inputPanelPolicy,attribute,,EditContextInputPanelPolicy,,,,,third_party/blink/renderer/core/editing/ime/edit_context.idl,
