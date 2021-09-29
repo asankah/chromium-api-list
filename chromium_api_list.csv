@@ -2081,7 +2081,7 @@ ExtendableMessageEvent,source,attribute,,ClientOrServiceWorkerOrMessagePortOrNul
 External,,interface,,,,,,,third_party/blink/renderer/core/frame/external.idl,6
 External,AddSearchProvider,operation,(),Void,,,,,third_party/blink/renderer/core/frame/external.idl,
 External,IsSearchProviderInstalled,operation,(),Void,,,,,third_party/blink/renderer/core/frame/external.idl,
-EyeDropper,,interface,,,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,8
+EyeDropper,,interface,,,,,True,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,11
 EyeDropper,open,operation,(ColorSelectionOptions),ColorSelectionResultPromise,,,,,third_party/blink/renderer/modules/eyedropper/eye_dropper.idl,
 FaceDetector,,interface,,,,,True,,third_party/blink/renderer/modules/shapedetection/face_detector.idl,11
 FaceDetector,detect,operation,(HTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrBlobOrImageDataOrImageBitmapOrOffscreenCanvasOrVideoFrame),DetectedFaceSequencePromise,,FaceDetectorDetect,,,third_party/blink/renderer/modules/shapedetection/face_detector.idl,
@@ -3873,7 +3873,6 @@ InternalRuntimeFlags,cullRectUpdateEnabled,attribute,,Boolean,,,,,third_party/bl
 InternalRuntimeFlags,customElementDefaultStyleEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,customStatePseudoClassEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,databaseEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,declarativeShadowDOMEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,decodeJpeg420ImagesToYUVEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,decodeLossyWebPImagesToYUVEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,delegatedInkTrailsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
