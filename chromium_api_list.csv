@@ -3717,7 +3717,7 @@ InputEvent,inputType,attribute,,String,,,,,third_party/blink/renderer/core/event
 InputEvent,isComposing,attribute,,Boolean,,,,,third_party/blink/renderer/core/events/input_event.idl,
 InputEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 InspectorOverlayHost,,interface,,,,,,,third_party/blink/renderer/core/inspector/inspector_overlay_host.idl,33
-InspectorOverlayHost,send,operation,(String),Void,,,,,third_party/blink/renderer/core/inspector/inspector_overlay_host.idl,
+InspectorOverlayHost,send,operation,(Any),Void,,,,,third_party/blink/renderer/core/inspector/inspector_overlay_host.idl,
 InstallEvent,,interface,,,,,,,third_party/blink/renderer/modules/service_worker/install_event.idl,9
 InstallEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 InternalRuntimeFlags,,interface,,,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,11
@@ -3969,7 +3969,6 @@ InternalRuntimeFlags,layoutNGFullPositionForPointEnabled,attribute,,Boolean,,,,,
 InternalRuntimeFlags,layoutNGGridCachingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGGridEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGGridFragmentationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,layoutNGLayoutOverflowRecalcEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGPrintingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGTableEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,layoutNGTextCombineEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4157,7 +4156,6 @@ InternalRuntimeFlags,testFeatureDependentEnabled,attribute,,Boolean,,,,,third_pa
 InternalRuntimeFlags,testFeatureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,testFeatureImpliedEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,textDetectorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,textFragmentColorChangeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,textFragmentIdentifiersEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,textFragmentTapOpensContextMenuEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,thirdPartyOriginTrialsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -9945,6 +9943,7 @@ WebTransportBidirectionalStream,writable,attribute,,WritableStream,,,,,third_par
 WebTransportDatagramDuplexStream,,interface,,,,,,,third_party/blink/renderer/modules/webtransport/web_transport_datagram_duplex_stream.idl,10
 WebTransportDatagramDuplexStream,incomingHighWaterMark,attribute,,Long,,,,,third_party/blink/renderer/modules/webtransport/web_transport_datagram_duplex_stream.idl,
 WebTransportDatagramDuplexStream,incomingMaxAge,attribute,,DoubleOrNull,,,,,third_party/blink/renderer/modules/webtransport/web_transport_datagram_duplex_stream.idl,
+WebTransportDatagramDuplexStream,maxDatagramSize,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webtransport/web_transport_datagram_duplex_stream.idl,
 WebTransportDatagramDuplexStream,outgoingHighWaterMark,attribute,,Long,,,,,third_party/blink/renderer/modules/webtransport/web_transport_datagram_duplex_stream.idl,
 WebTransportDatagramDuplexStream,outgoingMaxAge,attribute,,DoubleOrNull,,,,,third_party/blink/renderer/modules/webtransport/web_transport_datagram_duplex_stream.idl,
 WebTransportDatagramDuplexStream,readable,attribute,,ReadableStream,,,,,third_party/blink/renderer/modules/webtransport/web_transport_datagram_duplex_stream.idl,
