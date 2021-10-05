@@ -1465,7 +1465,7 @@ Document,elementFromPoint,operation,"(Double,Double)",ElementOrNull,,V8Document_
 Document,elementsFromPoint,operation,"(Double,Double)",ElementSequence,,V8Document_ElementsFromPoint_Method,,,third_party/blink/renderer/core/dom/document_or_shadow_root.idl,
 Document,embeds,attribute,,HTMLCollection,,V8Document_Embeds_AttributeGetter,,,third_party/blink/renderer/core/dom/document.idl,
 Document,evaluate,operation,"(String,Node,XPathNSResolverOrNull,UnsignedShort,ObjectOrNull)",XPathResult,,DocumentXPathEvaluate,,,third_party/blink/renderer/core/xml/document_xpath_evaluator.idl,
-Document,execCommand,operation,"(String,Boolean,StringOrTrustedHTML)",Boolean,,,,,third_party/blink/renderer/core/dom/document.idl,
+Document,execCommand,operation,"(String,Boolean,String)",Boolean,,,,,third_party/blink/renderer/core/dom/document.idl,
 Document,exitFullscreen,operation,(),VoidPromise,,,,,third_party/blink/renderer/core/fullscreen/document_fullscreen.idl,
 Document,exitPictureInPicture,operation,(),VoidPromise,,V8Document_ExitPictureInPicture_Method,,,third_party/blink/renderer/modules/picture_in_picture/document_picture_in_picture.idl,
 Document,exitPointerLock,operation,(),Void,,DocumentExitPointerLock,,,third_party/blink/renderer/core/dom/document.idl,
