@@ -3793,7 +3793,6 @@ InternalRuntimeFlags,cssAccentColorEnabled,attribute,,Boolean,,,,,third_party/bl
 InternalRuntimeFlags,cssAtRuleCounterStyleImageSymbolsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssAtRuleCounterStyleInShadowDOMEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssAtRuleCounterStyleSpeakAsDescriptorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,cssCalcAsIntEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssCalcInfinityAndNaNEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssCascadeLayersEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssCaseSensitiveSelectorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -9902,7 +9901,7 @@ WebSocketStream,close,operation,(WebSocketCloseInfo),Void,,,,,third_party/blink/
 WebSocketStream,closed,attribute,,WebSocketCloseInfoPromise,,,,,third_party/blink/renderer/modules/websockets/websocket_stream.idl,
 WebSocketStream,connection,attribute,,WebSocketConnectionPromise,,,,,third_party/blink/renderer/modules/websockets/websocket_stream.idl,
 WebSocketStream,url,attribute,,USVString,,,,,third_party/blink/renderer/modules/websockets/websocket_stream.idl,
-WebTransport,,interface,,,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,10
+WebTransport,,interface,,,,,True,,third_party/blink/renderer/modules/webtransport/web_transport.idl,11
 WebTransport,close,operation,(WebTransportCloseInfo),Void,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,closed,attribute,,WebTransportCloseInfoPromise,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,createBidirectionalStream,operation,(),WebTransportBidirectionalStreamPromise,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
@@ -9911,10 +9910,10 @@ WebTransport,datagrams,attribute,,WebTransportDatagramDuplexStream,,,,,third_par
 WebTransport,incomingBidirectionalStreams,attribute,,ReadableStream,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,incomingUnidirectionalStreams,attribute,,ReadableStream,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
 WebTransport,ready,attribute,,VoidPromise,,,,,third_party/blink/renderer/modules/webtransport/web_transport.idl,
-WebTransportBidirectionalStream,,interface,,,,,,,third_party/blink/renderer/modules/webtransport/web_transport_bidirectional_stream.idl,10
+WebTransportBidirectionalStream,,interface,,,,,True,,third_party/blink/renderer/modules/webtransport/web_transport_bidirectional_stream.idl,11
 WebTransportBidirectionalStream,readable,attribute,,ReadableStream,,,,,third_party/blink/renderer/modules/webtransport/web_transport_bidirectional_stream.idl,
 WebTransportBidirectionalStream,writable,attribute,,WritableStream,,,,,third_party/blink/renderer/modules/webtransport/web_transport_bidirectional_stream.idl,
-WebTransportDatagramDuplexStream,,interface,,,,,,,third_party/blink/renderer/modules/webtransport/web_transport_datagram_duplex_stream.idl,10
+WebTransportDatagramDuplexStream,,interface,,,,,True,,third_party/blink/renderer/modules/webtransport/web_transport_datagram_duplex_stream.idl,11
 WebTransportDatagramDuplexStream,incomingHighWaterMark,attribute,,Long,,,,,third_party/blink/renderer/modules/webtransport/web_transport_datagram_duplex_stream.idl,
 WebTransportDatagramDuplexStream,incomingMaxAge,attribute,,DoubleOrNull,,,,,third_party/blink/renderer/modules/webtransport/web_transport_datagram_duplex_stream.idl,
 WebTransportDatagramDuplexStream,maxDatagramSize,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/webtransport/web_transport_datagram_duplex_stream.idl,
