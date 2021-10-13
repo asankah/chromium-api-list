@@ -528,6 +528,8 @@ BroadcastChannel,name,attribute,,String,,,,,third_party/blink/renderer/modules/b
 BroadcastChannel,onmessage,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/broadcastchannel/broadcast_channel.idl,
 BroadcastChannel,onmessageerror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/broadcastchannel/broadcast_channel.idl,
 BroadcastChannel,postMessage,operation,(Any),Void,,V8BroadcastChannel_PostMessage_Method,,,third_party/blink/renderer/modules/broadcastchannel/broadcast_channel.idl,
+BrowserCaptureMediaStreamTrack,,interface,,,,,,,third_party/blink/renderer/modules/mediastream/browser_capture_media_stream_track.idl,11
+BrowserCaptureMediaStreamTrack,cropTo,operation,(String),VoidPromise,,RegionCapture,,,third_party/blink/renderer/modules/mediastream/browser_capture_media_stream_track.idl,
 ByteLengthQueuingStrategy,,interface,,,,,,,third_party/blink/renderer/core/streams/byte_length_queuing_strategy.idl,9
 ByteLengthQueuingStrategy,highWaterMark,attribute,,UnrestrictedDouble,,,,,third_party/blink/renderer/core/streams/byte_length_queuing_strategy.idl,
 ByteLengthQueuingStrategy,size,attribute,,Any,,,,,third_party/blink/renderer/core/streams/byte_length_queuing_strategy.idl,
@@ -3506,8 +3508,9 @@ Headers,delete,operation,(ByteString),Void,,,,,third_party/blink/renderer/core/f
 Headers,get,operation,(ByteString),ByteStringOrNull,,,,,third_party/blink/renderer/core/fetch/headers.idl,
 Headers,has,operation,(ByteString),Boolean,,,,,third_party/blink/renderer/core/fetch/headers.idl,
 Headers,set,operation,"(ByteString,ByteString)",Void,,,,,third_party/blink/renderer/core/fetch/headers.idl,
-Highlight,,interface,,,,,,,third_party/blink/renderer/core/highlight/highlight.idl,8
+Highlight,,interface,,,,,,,third_party/blink/renderer/core/highlight/highlight.idl,14
 Highlight,priority,attribute,,Long,,,,,third_party/blink/renderer/core/highlight/highlight.idl,
+Highlight,type,attribute,,HighlightType,,,,,third_party/blink/renderer/core/highlight/highlight.idl,
 HighlightRegistry,,interface,,,,,,,third_party/blink/renderer/core/highlight/highlight_registry.idl,8
 History,,interface,,,,,,,third_party/blink/renderer/core/frame/history.idl,32
 History,back,operation,(),Void,,,,,third_party/blink/renderer/core/frame/history.idl,
@@ -6042,6 +6045,7 @@ PeriodicSyncManager,register,operation,"(String,BackgroundSyncOptions)",VoidProm
 PeriodicSyncManager,unregister,operation,(String),VoidPromise,,PeriodicBackgroundSyncUnregister,,,third_party/blink/renderer/modules/background_sync/periodic_sync_manager.idl,
 PeriodicWave,,interface,,,,,,,third_party/blink/renderer/modules/webaudio/periodic_wave.idl,30
 PermissionStatus,,interface,,,,,,,third_party/blink/renderer/modules/permissions/permission_status.idl,18
+PermissionStatus,name,attribute,,PermissionName,,,,,third_party/blink/renderer/modules/permissions/permission_status.idl,
 PermissionStatus,onchange,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/permissions/permission_status.idl,
 PermissionStatus,state,attribute,,PermissionState,,,,,third_party/blink/renderer/modules/permissions/permission_status.idl,
 Permissions,,interface,,,,,,,third_party/blink/renderer/modules/permissions/permissions.idl,11
