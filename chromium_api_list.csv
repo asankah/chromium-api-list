@@ -634,8 +634,8 @@ CSSNumericValue,type,operation,(),CSSNumericType,,,,,third_party/blink/renderer/
 CSSPageRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_page_rule.idl,30
 CSSPageRule,selectorText,attribute,,String,,,,,third_party/blink/renderer/core/css/css_page_rule.idl,
 CSSPageRule,style,attribute,,CSSStyleDeclaration,,,,,third_party/blink/renderer/core/css/css_page_rule.idl,
-CSSPerspective,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_perspective.idl,10
-CSSPerspective,length,attribute,,CSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_perspective.idl,
+CSSPerspective,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_perspective.idl,12
+CSSPerspective,length,attribute,,CSSNumericValueOrStringOrCSSKeywordValue,,,,,third_party/blink/renderer/core/css/cssom/css_perspective.idl,
 CSSPositionValue,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_position_value.idl,10
 CSSPositionValue,x,attribute,,CSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_position_value.idl,
 CSSPositionValue,y,attribute,,CSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_position_value.idl,
@@ -4143,7 +4143,6 @@ InternalRuntimeFlags,timeZoneChangeEventEnabled,attribute,,Boolean,,,,,third_par
 InternalRuntimeFlags,timerThrottlingForBackgroundTabsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,touchEventFeatureDetectionEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,transferableStreamsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
-InternalRuntimeFlags,transformInteropEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,translateServiceEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,trustTokensAlwaysAllowIssuanceEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,trustTokensEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
