@@ -133,9 +133,9 @@ AnimationEvent,elapsedTime,attribute,,Double,,,,,third_party/blink/renderer/core
 AnimationEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 AnimationEvent,pseudoElement,attribute,,String,,,,,third_party/blink/renderer/core/events/animation_event.idl,
 AnimationPlaybackEvent,,interface,,,,,,,third_party/blink/renderer/core/events/animation_playback_event.idl,10
-AnimationPlaybackEvent,currentTime,attribute,,DoubleOrNull,,,,,third_party/blink/renderer/core/events/animation_playback_event.idl,
+AnimationPlaybackEvent,currentTime,attribute,,DoubleOrCSSNumericValueOrNull,,,,,third_party/blink/renderer/core/events/animation_playback_event.idl,
 AnimationPlaybackEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
-AnimationPlaybackEvent,timelineTime,attribute,,DoubleOrNull,,,,,third_party/blink/renderer/core/events/animation_playback_event.idl,
+AnimationPlaybackEvent,timelineTime,attribute,,DoubleOrCSSNumericValueOrNull,,,,,third_party/blink/renderer/core/events/animation_playback_event.idl,
 AnimationTimeline,,interface,,,,,,,third_party/blink/renderer/core/animation/animation_timeline.idl,11
 AnimationTimeline,currentTime,attribute,,DoubleOrCSSNumericValueOrNull,,,,,third_party/blink/renderer/core/animation/animation_timeline.idl,
 AnimationTimeline,duration,attribute,,DoubleOrCSSNumericValueOrNull,,,,,third_party/blink/renderer/core/animation/animation_timeline.idl,
@@ -595,6 +595,8 @@ CSSKeyframesRule,findRule,operation,(String),CSSKeyframeRuleOrNull,,,,,third_par
 CSSKeyframesRule,name,attribute,,String,,,,,third_party/blink/renderer/core/css/css_keyframes_rule.idl,
 CSSKeywordValue,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_keyword_value.idl,12
 CSSKeywordValue,value,attribute,,String,,,,,third_party/blink/renderer/core/css/cssom/css_keyword_value.idl,
+CSSLayerBlockRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_layer_block_rule.idl,8
+CSSLayerStatementRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_layer_statement_rule.idl,8
 CSSMathInvert,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_math_invert.idl,9
 CSSMathInvert,value,attribute,,DoubleOrCSSNumericValue,,,,,third_party/blink/renderer/core/css/cssom/css_math_invert.idl,
 CSSMathMax,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_math_max.idl,9
@@ -1374,6 +1376,9 @@ DigitalGoodsService,,interface,,,,,True,,third_party/blink/renderer/modules/paym
 DigitalGoodsService,consume,operation,(String),VoidPromise,,DigitalGoodsConsume,,,third_party/blink/renderer/modules/payments/goods/digital_goods_service.idl,
 DigitalGoodsService,getDetails,operation,(StringSequence),ItemDetailsSequencePromise,,DigitalGoodsGetDetails,,,third_party/blink/renderer/modules/payments/goods/digital_goods_service.idl,
 DigitalGoodsService,listPurchases,operation,(),PurchaseDetailsSequencePromise,,DigitalGoodsListPurchases,,,third_party/blink/renderer/modules/payments/goods/digital_goods_service.idl,
+Directive,,interface,,,,,,,third_party/blink/renderer/core/frame/directive.idl,13
+Directive,toString,operation,(),String,,,,,third_party/blink/renderer/core/frame/directive.idl,
+Directive,type,attribute,,DirectiveType,,,,,third_party/blink/renderer/core/frame/directive.idl,
 DirectoryEntry,,interface,,,,,,,third_party/blink/renderer/modules/filesystem/directory_entry.idl,34
 DirectoryEntry,createReader,operation,(),DirectoryReader,,,,,third_party/blink/renderer/modules/filesystem/directory_entry.idl,
 DirectoryEntry,getDirectory,operation,"(StringOrNull,FileSystemFlags,EntryCallbackOrNull,ErrorCallbackOrNull)",Void,,,,,third_party/blink/renderer/modules/filesystem/directory_entry.idl,
@@ -1559,7 +1564,7 @@ Document,onresume,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/ren
 Document,onscroll,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Document,onscrollend,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Document,onsearch,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/document.idl,
-Document,onsecuritypolicyviolation,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/document.idl,
+Document,onsecuritypolicyviolation,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Document,onseeked,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Document,onseeking,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Document,onselect,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
@@ -2244,6 +2249,8 @@ FormDataEvent,,interface,,,,,,,third_party/blink/renderer/core/html/forms/form_d
 FormDataEvent,formData,attribute,,FormData,,,,,third_party/blink/renderer/core/html/forms/form_data_event.idl,
 FormDataEvent,isTrusted,attribute,,Boolean,,,,,third_party/blink/renderer/core/dom/events/event.idl,
 FragmentDirective,,interface,,,,,,,third_party/blink/renderer/core/frame/fragment_directive.idl,9
+FragmentDirective,createSelectorDirective,operation,(RangeOrSelection),SelectorDirectivePromise,,V8FragmentDirective_CreateSelectorDirective_Method,,,third_party/blink/renderer/core/frame/fragment_directive.idl,
+FragmentDirective,items,attribute,,DirectiveArray,,V8FragmentDirective_Items_AttributeGetter,,,third_party/blink/renderer/core/frame/fragment_directive.idl,
 GCObservation,,interface,,,,,,,third_party/blink/renderer/core/testing/gc_observation.idl,31
 GCObservation,wasCollected,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/gc_observation.idl,
 GPU,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu.idl,25
@@ -2808,6 +2815,7 @@ HTMLElement,onreset,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/r
 HTMLElement,onresize,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 HTMLElement,onscroll,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 HTMLElement,onscrollend,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
+HTMLElement,onsecuritypolicyviolation,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 HTMLElement,onseeked,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 HTMLElement,onseeking,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 HTMLElement,onselect,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
@@ -3320,7 +3328,10 @@ HTMLSelectElement,validity,attribute,,ValidityState,,,,,third_party/blink/render
 HTMLSelectElement,value,attribute,,String,,,,,third_party/blink/renderer/core/html/forms/html_select_element.idl,
 HTMLSelectElement,willValidate,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/forms/html_select_element.idl,
 HTMLSelectMenuElement,,interface,,,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,6
+HTMLSelectMenuElement,form,attribute,,HTMLFormElementOrNull,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
+HTMLSelectMenuElement,name,attribute,,String,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
 HTMLSelectMenuElement,open,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
+HTMLSelectMenuElement,type,attribute,,String,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
 HTMLSelectMenuElement,value,attribute,,String,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
 HTMLSlotElement,,interface,,,,,,,third_party/blink/renderer/core/html/html_slot_element.idl,31
 HTMLSlotElement,assign,operation,(ElementOrTextVariadic),Void,,,,,third_party/blink/renderer/core/html/html_slot_element.idl,
@@ -3816,6 +3827,7 @@ InternalRuntimeFlags,cssDynamicRangeMediaQueriesEnabled,attribute,,Boolean,,,,,t
 InternalRuntimeFlags,cssEnumeratedCustomPropertiesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFocusVisibleEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFoldablesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssFontFaceAutoVariableRangeEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFontFaceSizeAdjustEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFontFamilyMathEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssFontSizeAdjustEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4062,6 +4074,7 @@ InternalRuntimeFlags,prefersContrastEnabled,attribute,,Boolean,,,,,third_party/b
 InternalRuntimeFlags,prefersReducedDataEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,prefixedVideoFullscreenEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,prerender2Enabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,prerender2RelatedFeaturesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,presentationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,priorityHintsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,privateNetworkAccessNonSecureContextsAllowedEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4136,6 +4149,7 @@ InternalRuntimeFlags,testFeatureDependentEnabled,attribute,,Boolean,,,,,third_pa
 InternalRuntimeFlags,testFeatureEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,testFeatureImpliedEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,textDetectorEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,textFragmentAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,textFragmentIdentifiersEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,textFragmentTapOpensContextMenuEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,thirdPartyOriginTrialsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4175,9 +4189,11 @@ InternalRuntimeFlags,wakeLockEnabled,attribute,,Boolean,,,,,third_party/blink/re
 InternalRuntimeFlags,webAnimationsAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAnimationsSVGEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppLaunchHandlerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webAppLaunchQueueEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppLinkCapturingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppManifestIdEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppTabStripEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webAppTranslationsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppUrlHandlingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppWindowControlsOverlayEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webAppsLockScreenEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -4460,6 +4476,7 @@ Internals,deleteAllCookies,operation,(),VoidPromise,,,,,third_party/blink/render
 Internals,deserializeBuffer,operation,(ArrayBuffer),Any,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,dictionaryTest,operation,(),DictionaryTest,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,disableCompositedAnimation,operation,(Animation),Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
+Internals,disableReferencedFilePathsVerification,operation,(),Void,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,doesWindowHaveUrlFragment,operation,(Window),Boolean,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,draggableRegions,operation,(Document),DOMRectList,,,,,third_party/blink/renderer/core/testing/internals.idl,
 Internals,effectivePreload,operation,(HTMLMediaElement),String,,,,,third_party/blink/renderer/core/testing/internals.idl,
@@ -4929,6 +4946,7 @@ MathMLElement,onreset,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink
 MathMLElement,onresize,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 MathMLElement,onscroll,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 MathMLElement,onscrollend,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
+MathMLElement,onsecuritypolicyviolation,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 MathMLElement,onseeked,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 MathMLElement,onseeking,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 MathMLElement,onselect,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
@@ -6764,6 +6782,7 @@ SVGElement,onreset,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/re
 SVGElement,onresize,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 SVGElement,onscroll,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 SVGElement,onscrollend,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
+SVGElement,onsecuritypolicyviolation,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 SVGElement,onseeked,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 SVGElement,onseeking,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 SVGElement,onselect,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
@@ -7511,6 +7530,8 @@ Selection,selectAllChildren,operation,(Node),Void,,SelectionSelectAllChildren,,,
 Selection,setBaseAndExtent,operation,"(NodeOrNull,UnsignedLong,NodeOrNull,UnsignedLong)",Void,,SelectionSetBaseAndExtent,,,third_party/blink/renderer/core/editing/selection.idl,
 Selection,setPosition,operation,"(NodeOrNull,UnsignedLong)",Void,,SelectionSetPosition,,,third_party/blink/renderer/core/editing/selection.idl,
 Selection,type,attribute,,String,,SelectionType,,,third_party/blink/renderer/core/editing/selection.idl,
+SelectorDirective,,interface,,,,,,,third_party/blink/renderer/core/frame/selector_directive.idl,9
+SelectorDirective,getMatchingRange,operation,(),RangePromise,,,,,third_party/blink/renderer/core/frame/selector_directive.idl,
 Sensor,,interface,,,,,True,,third_party/blink/renderer/modules/sensor/sensor.idl,12
 Sensor,activated,attribute,,Boolean,,GenericSensorActivated,,,third_party/blink/renderer/modules/sensor/sensor.idl,
 Sensor,hasReading,attribute,,Boolean,,,,,third_party/blink/renderer/modules/sensor/sensor.idl,
@@ -7894,6 +7915,11 @@ TextDecoderStream,readable,attribute,,ReadableStream,,,,,third_party/blink/rende
 TextDecoderStream,writable,attribute,,WritableStream,,,,,third_party/blink/renderer/modules/encoding/text_decoder_stream.idl,
 TextDetector,,interface,,,,,True,,third_party/blink/renderer/modules/shapedetection/text_detector.idl,11
 TextDetector,detect,operation,(HTMLImageElementOrSVGImageElementOrHTMLVideoElementOrHTMLCanvasElementOrBlobOrImageDataOrImageBitmapOrOffscreenCanvasOrVideoFrame),DetectedTextSequencePromise,,TextDetectorDetect,,,third_party/blink/renderer/modules/shapedetection/text_detector.idl,
+TextDirective,,interface,,,,,,,third_party/blink/renderer/core/frame/text_directive.idl,10
+TextDirective,prefix,attribute,,String,,,,,third_party/blink/renderer/core/frame/text_directive.idl,
+TextDirective,suffix,attribute,,String,,,,,third_party/blink/renderer/core/frame/text_directive.idl,
+TextDirective,textEnd,attribute,,String,,,,,third_party/blink/renderer/core/frame/text_directive.idl,
+TextDirective,textStart,attribute,,String,,,,,third_party/blink/renderer/core/frame/text_directive.idl,
 TextEncoder,,interface,,,,,,,third_party/blink/renderer/modules/encoding/text_encoder.idl,33
 TextEncoder,encode,operation,(USVString),Uint8Array,,TextEncoderEncode,,,third_party/blink/renderer/modules/encoding/text_encoder.idl,
 TextEncoder,encodeInto,operation,"(USVString,Uint8Array)",TextEncoderEncodeIntoResult,,TextEncoderEncodeInto,,,third_party/blink/renderer/modules/encoding/text_encoder.idl,
@@ -10096,6 +10122,7 @@ Window,onresize,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/rende
 Window,onscroll,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Window,onscrollend,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Window,onsearch,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/frame/window.idl,
+Window,onsecuritypolicyviolation,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Window,onseeked,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Window,onseeking,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
 Window,onselect,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/core/dom/global_event_handlers.idl,
