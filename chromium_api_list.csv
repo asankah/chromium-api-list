@@ -7454,12 +7454,10 @@ Screen,removeEventListener,operation,"(String,EventListenerOrNull,EventListenerO
 Screen,width,attribute,,Long,,V8Screen_Width_AttributeGetter,,Direct,third_party/blink/renderer/core/frame/screen.idl,
 ScreenDetailed,,interface,,,,,True,,third_party/blink/renderer/modules/screen_enumeration/screen_detailed.idl,11
 ScreenDetailed,devicePixelRatio,attribute,,Float,,V8ScreenDetailed_DevicePixelRatio_AttributeGetter,,Direct,third_party/blink/renderer/modules/screen_enumeration/screen_detailed.idl,
-ScreenDetailed,id,attribute,,String,,V8ScreenDetailed_Id_AttributeGetter,,Direct,third_party/blink/renderer/modules/screen_enumeration/screen_detailed.idl,
 ScreenDetailed,isInternal,attribute,,Boolean,,V8ScreenDetailed_IsInternal_AttributeGetter,,Direct,third_party/blink/renderer/modules/screen_enumeration/screen_detailed.idl,
 ScreenDetailed,isPrimary,attribute,,Boolean,,V8ScreenDetailed_IsPrimary_AttributeGetter,,Direct,third_party/blink/renderer/modules/screen_enumeration/screen_detailed.idl,
 ScreenDetailed,label,attribute,,String,,V8ScreenDetailed_Label_AttributeGetter,,Direct,third_party/blink/renderer/modules/screen_enumeration/screen_detailed.idl,
 ScreenDetailed,left,attribute,,Long,,V8ScreenDetailed_Left_AttributeGetter,,Direct,third_party/blink/renderer/modules/screen_enumeration/screen_detailed.idl,
-ScreenDetailed,pointerTypes,attribute,,StringArray,,V8ScreenDetailed_PointerTypes_AttributeGetter,,(True),third_party/blink/renderer/modules/screen_enumeration/screen_detailed.idl,
 ScreenDetailed,top,attribute,,Long,,V8ScreenDetailed_Top_AttributeGetter,,Direct,third_party/blink/renderer/modules/screen_enumeration/screen_detailed.idl,
 ScreenDetails,,interface,,,,,True,,third_party/blink/renderer/modules/screen_enumeration/screen_details.idl,11
 ScreenDetails,currentScreen,attribute,,ScreenDetailed,,,,,third_party/blink/renderer/modules/screen_enumeration/screen_details.idl,
@@ -7493,7 +7491,7 @@ ScrollState,velocityY,attribute,,Double,,,,,third_party/blink/renderer/core/page
 ScrollTimeline,,interface,,,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,12
 ScrollTimeline,orientation,attribute,,ScrollDirection,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 ScrollTimeline,scrollOffsets,attribute,,CSSNumericValueOrStringOrCSSKeywordValueOrScrollTimelineElementBasedOffsetArray,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
-ScrollTimeline,scrollSource,attribute,,ElementOrNull,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
+ScrollTimeline,source,attribute,,ElementOrNull,,,,,third_party/blink/renderer/core/animation/scroll_timeline.idl,
 SecurityPolicyViolationEvent,,interface,,,,,,,third_party/blink/renderer/core/events/security_policy_violation_event.idl,34
 SecurityPolicyViolationEvent,blockedURI,attribute,,String,,V8SecurityPolicyViolationEvent_BlockedURI_AttributeGetter,,,third_party/blink/renderer/core/events/security_policy_violation_event.idl,
 SecurityPolicyViolationEvent,columnNumber,attribute,,Long,,,,,third_party/blink/renderer/core/events/security_policy_violation_event.idl,
