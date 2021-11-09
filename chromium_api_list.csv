@@ -5352,6 +5352,7 @@ NavigationPreloadManager,enable,operation,(),VoidPromise,,,,,third_party/blink/r
 NavigationPreloadManager,getState,operation,(),NavigationPreloadStatePromise,,,,,third_party/blink/renderer/modules/service_worker/navigation_preload_manager.idl,
 NavigationPreloadManager,setHeaderValue,operation,(ByteString),VoidPromise,,,,,third_party/blink/renderer/modules/service_worker/navigation_preload_manager.idl,
 Navigator,,interface,,,,,,,third_party/blink/renderer/core/frame/navigator.idl,24
+Navigator,adAuctionComponents,operation,(UnsignedShort),USVStringSequence,,V8Navigator_AdAuctionComponents_Method,,,third_party/blink/renderer/modules/ad_auction/navigator_auction.idl,
 Navigator,appCodeName,attribute,,String,,,,,third_party/blink/renderer/core/frame/navigator_id.idl,
 Navigator,appName,attribute,,String,,,,,third_party/blink/renderer/core/frame/navigator_id.idl,
 Navigator,appVersion,attribute,,String,,NavigatorAppVersion,,Direct,third_party/blink/renderer/core/frame/navigator_id.idl,
