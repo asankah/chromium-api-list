@@ -597,8 +597,10 @@ CSSKeyframesRule,findRule,operation,(String),CSSKeyframeRuleOrNull,,,,,third_par
 CSSKeyframesRule,name,attribute,,String,,,,,third_party/blink/renderer/core/css/css_keyframes_rule.idl,
 CSSKeywordValue,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_keyword_value.idl,12
 CSSKeywordValue,value,attribute,,String,,,,,third_party/blink/renderer/core/css/cssom/css_keyword_value.idl,
-CSSLayerBlockRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_layer_block_rule.idl,8
-CSSLayerStatementRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_layer_statement_rule.idl,8
+CSSLayerBlockRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_layer_block_rule.idl,9
+CSSLayerBlockRule,name,attribute,,String,,,,,third_party/blink/renderer/core/css/css_layer_block_rule.idl,
+CSSLayerStatementRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_layer_statement_rule.idl,9
+CSSLayerStatementRule,nameList,attribute,,StringArray,,,,,third_party/blink/renderer/core/css/css_layer_statement_rule.idl,
 CSSMathInvert,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_math_invert.idl,9
 CSSMathInvert,value,attribute,,CSSNumericValueOrDouble,,,,,third_party/blink/renderer/core/css/cssom/css_math_invert.idl,
 CSSMathMax,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_math_max.idl,9
@@ -2870,7 +2872,9 @@ HTMLEmbedElement,src,attribute,,USVString,,,,,third_party/blink/renderer/core/ht
 HTMLEmbedElement,type,attribute,,String,,,,,third_party/blink/renderer/core/html/html_embed_element.idl,
 HTMLEmbedElement,width,attribute,,String,,,,,third_party/blink/renderer/core/html/html_embed_element.idl,
 HTMLFencedFrameElement,,interface,,,,,,,third_party/blink/renderer/core/html/fenced_frame/html_fenced_frame_element.idl,8
+HTMLFencedFrameElement,height,attribute,,String,,,,,third_party/blink/renderer/core/html/fenced_frame/html_fenced_frame_element.idl,
 HTMLFencedFrameElement,src,attribute,,USVString,,,,,third_party/blink/renderer/core/html/fenced_frame/html_fenced_frame_element.idl,
+HTMLFencedFrameElement,width,attribute,,String,,,,,third_party/blink/renderer/core/html/fenced_frame/html_fenced_frame_element.idl,
 HTMLFieldSetElement,,interface,,,,,,,third_party/blink/renderer/core/html/forms/html_field_set_element.idl,24
 HTMLFieldSetElement,checkValidity,operation,(),Boolean,,,,,third_party/blink/renderer/core/html/forms/html_field_set_element.idl,
 HTMLFieldSetElement,disabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/forms/html_field_set_element.idl,
