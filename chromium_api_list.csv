@@ -583,6 +583,7 @@ CSSHSL,s,attribute,,CSSNumericValueOrDouble,,,,,third_party/blink/renderer/core/
 CSSImageValue,,interface,,,,,,,third_party/blink/renderer/core/css/cssom/css_image_value.idl,11
 CSSImportRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_import_rule.idl,25
 CSSImportRule,href,attribute,,String,,,,,third_party/blink/renderer/core/css/css_import_rule.idl,
+CSSImportRule,layerName,attribute,,StringOrNull,,,,,third_party/blink/renderer/core/css/css_import_rule.idl,
 CSSImportRule,media,attribute,,MediaList,,,,,third_party/blink/renderer/core/css/css_import_rule.idl,
 CSSImportRule,styleSheet,attribute,,CSSStyleSheet,,,,,third_party/blink/renderer/core/css/css_import_rule.idl,
 CSSKeyframeRule,,interface,,,,,,,third_party/blink/renderer/core/css/css_keyframe_rule.idl,33
@@ -2308,6 +2309,7 @@ GPUCommandBuffer,label,attribute,,USVStringOrNull,,,,,third_party/blink/renderer
 GPUCommandEncoder,,interface,,,,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,9
 GPUCommandEncoder,beginComputePass,operation,(GPUComputePassDescriptor),GPUComputePassEncoder,,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,
 GPUCommandEncoder,beginRenderPass,operation,(GPURenderPassDescriptor),GPURenderPassEncoder,,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,
+GPUCommandEncoder,clearBuffer,operation,"(GPUBuffer,UnsignedLongLong,UnsignedLongLong)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,
 GPUCommandEncoder,copyBufferToBuffer,operation,"(GPUBuffer,UnsignedLongLong,GPUBuffer,UnsignedLongLong,UnsignedLongLong)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,
 GPUCommandEncoder,copyBufferToTexture,operation,"(GPUImageCopyBuffer,GPUImageCopyTexture,GPUExtent3DDictOrUnsignedLongEnforceRangeSequence)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,
 GPUCommandEncoder,copyTextureToBuffer,operation,"(GPUImageCopyTexture,GPUImageCopyBuffer,GPUExtent3DDictOrUnsignedLongEnforceRangeSequence)",Void,,,,,third_party/blink/renderer/modules/webgpu/gpu_command_encoder.idl,
@@ -3778,6 +3780,8 @@ InternalRuntimeFlags,barcodeDetectorEnabled,attribute,,Boolean,,,,,third_party/b
 InternalRuntimeFlags,batterySavingsMetaEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,beforeMatchEventEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,bidiCaretAffinityEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,blinkExtensionChromeOSEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,blinkExtensionChromeOSWindowManagementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,blinkRuntimeCallStatsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,blockingFocusWithoutUserActivationEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,browserVerifiedUserActivationKeyboardEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -3922,6 +3926,7 @@ InternalRuntimeFlags,experimentalIsFramePendingEnabled,attribute,,Boolean,,,,,th
 InternalRuntimeFlags,experimentalIsInputPendingEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,experimentalJSProfilerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,experimentalPoliciesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,experimentalWebSnapshotsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,extendedTextMetricsEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,extraWebGLVideoTextureMetadataEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,eyeDropperAPIEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
