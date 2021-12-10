@@ -2490,10 +2490,6 @@ GamepadHapticActuator,,interface,,,,,,,third_party/blink/renderer/modules/gamepa
 GamepadHapticActuator,playEffect,operation,"(GamepadHapticEffectType,GamepadEffectParameters)",GamepadHapticsResultPromise,,,,,third_party/blink/renderer/modules/gamepad/gamepad_haptic_actuator.idl,
 GamepadHapticActuator,reset,operation,(),GamepadHapticsResultPromise,,,,,third_party/blink/renderer/modules/gamepad/gamepad_haptic_actuator.idl,
 GamepadHapticActuator,type,attribute,,GamepadHapticActuatorType,,,,,third_party/blink/renderer/modules/gamepad/gamepad_haptic_actuator.idl,
-GamepadList,,interface,,,,,,,third_party/blink/renderer/modules/gamepad/gamepad_list.idl,28
-GamepadList,,operation,(UnsignedLong),Gamepad,,,,,third_party/blink/renderer/modules/gamepad/gamepad_list.idl,
-GamepadList,item,operation,(UnsignedLong),Gamepad,,,,,third_party/blink/renderer/modules/gamepad/gamepad_list.idl,
-GamepadList,length,attribute,,UnsignedLong,,,,,third_party/blink/renderer/modules/gamepad/gamepad_list.idl,
 GarbageCollectedScriptWrappable,,interface,,,,,,,third_party/blink/renderer/core/testing/garbage_collected_script_wrappable.idl,5
 GarbageCollectedScriptWrappable,toString,operation,(),String,,,,,third_party/blink/renderer/core/testing/garbage_collected_script_wrappable.idl,
 Geolocation,,interface,,,,,,,third_party/blink/renderer/modules/geolocation/geolocation.idl,30
@@ -3856,6 +3852,7 @@ InternalRuntimeFlags,cssSystemColorComputeToSelfEnabled,attribute,,Boolean,,,,,t
 InternalRuntimeFlags,cssTargetTextPseudoElementEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssVariables2ImageValuesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,cssVariables2TransformValuesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,cssVideoDynamicRangeMediaQueriesEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,customElementDefaultStyleEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,customStatePseudoClassEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,databaseEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5366,7 +5363,7 @@ Navigator,finalizeAd,operation,"(Ads,AuctionAdConfig)",URLPromise,,V8Navigator_F
 Navigator,fonts,attribute,,FontManager,,,,,third_party/blink/renderer/modules/font_access/navigator_fonts.idl,
 Navigator,geolocation,attribute,,Geolocation,,,,,third_party/blink/renderer/modules/geolocation/navigator_geolocation.idl,
 Navigator,getBattery,operation,(),BatteryManagerPromise,,BatteryStatusGetBattery,,,third_party/blink/renderer/modules/battery/navigator_battery.idl,
-Navigator,getGamepads,operation,(),GamepadList,,GetGamepads,,,third_party/blink/renderer/modules/gamepad/navigator_gamepad.idl,
+Navigator,getGamepads,operation,(),GamepadOrNullSequence,,GetGamepads,,,third_party/blink/renderer/modules/gamepad/navigator_gamepad.idl,
 Navigator,getInstalledRelatedApps,operation,(),RelatedApplicationSequencePromise,,V8Navigator_GetInstalledRelatedApps_Method,True,,third_party/blink/renderer/modules/installedapp/navigator_installed_app.idl,
 Navigator,getUserMedia,operation,"(MediaStreamConstraints,NavigatorUserMediaSuccessCallback,NavigatorUserMediaErrorCallback)",Void,,GetUserMediaLegacy,True,(True),third_party/blink/renderer/modules/mediastream/navigator_media_stream.idl,
 Navigator,gpu,attribute,,GPU,,,,,third_party/blink/renderer/modules/webgpu/navigator_gpu.idl,
@@ -5758,6 +5755,7 @@ PaintRenderingContext2D,clearRect,operation,"(UnrestrictedDouble,UnrestrictedDou
 PaintRenderingContext2D,clip,operation,(CanvasFillRule),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,clip,operation,"(Path2D,CanvasFillRule)",Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,closePath,operation,(),Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
+PaintRenderingContext2D,createConicGradient,operation,"(Double,Double,Double)",CanvasGradient,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,createLinearGradient,operation,"(Double,Double,Double,Double)",CanvasGradient,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,createPattern,operation,"(CSSImageValueOrHTMLCanvasElementOrHTMLImageElementOrHTMLVideoElementOrImageBitmapOrOffscreenCanvasOrSVGImageElementOrVideoFrame,String)",CanvasPatternOrNull,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,createRadialGradient,operation,"(Double,Double,Double,Double,Double,Double)",CanvasGradient,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
@@ -5790,6 +5788,7 @@ PaintRenderingContext2D,miterLimit,attribute,,UnrestrictedDouble,,,,,third_party
 PaintRenderingContext2D,moveTo,operation,"(UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 PaintRenderingContext2D,quadraticCurveTo,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
 PaintRenderingContext2D,rect,operation,"(UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble,UnrestrictedDouble)",Void,,,,,third_party/blink/renderer/modules/canvas/canvas2d/canvas_path.idl,
+PaintRenderingContext2D,reset,operation,(),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,resetTransform,operation,(),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,restore,operation,(),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
 PaintRenderingContext2D,rotate,operation,(UnrestrictedDouble),Void,,,,,third_party/blink/renderer/modules/csspaint/paint_rendering_context_2d.idl,
