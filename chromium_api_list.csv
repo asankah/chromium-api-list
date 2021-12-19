@@ -2089,7 +2089,7 @@ FederatedCredential,,interface,,,,,True,,third_party/blink/renderer/modules/cred
 FederatedCredential,approvedBy,attribute,,FederatedCredentialApprover,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
 FederatedCredential,iconURL,attribute,,USVString,,,,,third_party/blink/renderer/modules/credentialmanager/credential_user_data.idl,
 FederatedCredential,idToken,attribute,,USVString,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
-FederatedCredential,logout,operation,(WebIdLogoutRequestSequence),VoidPromise,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
+FederatedCredential,logout,operation,(FederatedCredentialLogoutRequestSequence),VoidPromise,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
 FederatedCredential,name,attribute,,USVString,,,,,third_party/blink/renderer/modules/credentialmanager/credential_user_data.idl,
 FederatedCredential,protocol,attribute,,StringOrNull,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
 FederatedCredential,provider,attribute,,USVString,,,,,third_party/blink/renderer/modules/credentialmanager/federated_credential.idl,
@@ -3027,7 +3027,7 @@ HTMLInputElement,setCustomValidity,operation,(String),Void,,,,,third_party/blink
 HTMLInputElement,setRangeText,operation,(String),Void,,,,,third_party/blink/renderer/core/html/forms/html_input_element.idl,
 HTMLInputElement,setRangeText,operation,"(String,UnsignedLong,UnsignedLong,SelectionMode)",Void,,,,,third_party/blink/renderer/core/html/forms/html_input_element.idl,
 HTMLInputElement,setSelectionRange,operation,"(UnsignedLong,UnsignedLong,String)",Void,,,,,third_party/blink/renderer/core/html/forms/html_input_element.idl,
-HTMLInputElement,showPicker,operation,(),Void,,,,,third_party/blink/renderer/core/html/forms/html_input_element.idl,
+HTMLInputElement,showPicker,operation,(),Void,,V8HTMLInputElement_ShowPicker_Method,,,third_party/blink/renderer/core/html/forms/html_input_element.idl,
 HTMLInputElement,size,attribute,,UnsignedLong,,,,,third_party/blink/renderer/core/html/forms/html_input_element.idl,
 HTMLInputElement,src,attribute,,String,,,,,third_party/blink/renderer/core/html/forms/html_input_element.idl,
 HTMLInputElement,step,attribute,,String,,,,,third_party/blink/renderer/core/html/forms/html_input_element.idl,
@@ -3311,10 +3311,12 @@ HTMLSelectElement,willValidate,attribute,,Boolean,,,,,third_party/blink/renderer
 HTMLSelectMenuElement,,interface,,,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,6
 HTMLSelectMenuElement,checkValidity,operation,(),Boolean,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
 HTMLSelectMenuElement,form,attribute,,HTMLFormElementOrNull,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
+HTMLSelectMenuElement,labels,attribute,,NodeList,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
 HTMLSelectMenuElement,name,attribute,,String,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
 HTMLSelectMenuElement,open,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
 HTMLSelectMenuElement,reportValidity,operation,(),Boolean,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
 HTMLSelectMenuElement,required,attribute,,Boolean,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
+HTMLSelectMenuElement,selectedOption,attribute,,HTMLOptionElementOrNull,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
 HTMLSelectMenuElement,setCustomValidity,operation,(String),Void,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
 HTMLSelectMenuElement,type,attribute,,String,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
 HTMLSelectMenuElement,validationMessage,attribute,,String,,,,,third_party/blink/renderer/core/html/forms/html_select_menu_element.idl,
@@ -4215,6 +4217,7 @@ InternalRuntimeFlags,webCryptoCurve25519Enabled,attribute,,Boolean,,,,,third_par
 InternalRuntimeFlags,webHIDEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webIDEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webNFCEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
+InternalRuntimeFlags,webNFCMakeReadOnlyEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webOTPAssertionFeaturePolicyEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webOTPEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
 InternalRuntimeFlags,webSchedulerEnabled,attribute,,Boolean,,,,,third_party/blink/renderer/core/testing/internal_runtime_flags.idl,
@@ -5285,6 +5288,7 @@ MutationRecord,type,attribute,,String,,,,,third_party/blink/renderer/core/dom/mu
 NDEFMessage,,interface,,,,,True,,third_party/blink/renderer/modules/nfc/ndef_message.idl,11
 NDEFMessage,records,attribute,,NDEFRecordArray,,,,,third_party/blink/renderer/modules/nfc/ndef_message.idl,
 NDEFReader,,interface,,,,,True,,third_party/blink/renderer/modules/nfc/ndef_reader.idl,15
+NDEFReader,makeReadOnly,operation,(NDEFMakeReadOnlyOptions),VoidPromise,,,,,third_party/blink/renderer/modules/nfc/ndef_reader.idl,
 NDEFReader,onreading,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/nfc/ndef_reader.idl,
 NDEFReader,onreadingerror,attribute,,EventHandlerNonNullOrNull,,,,,third_party/blink/renderer/modules/nfc/ndef_reader.idl,
 NDEFReader,scan,operation,(NDEFScanOptions),VoidPromise,,WebNfcNdefReaderScan,,,third_party/blink/renderer/modules/nfc/ndef_reader.idl,
@@ -9910,7 +9914,6 @@ WebGLWebCodecsVideoFrame,,interface,,,,,,,third_party/blink/renderer/modules/web
 WebGLWebCodecsVideoFrame,importVideoFrame,operation,(VideoFrame),WebGLWebCodecsVideoFrameHandle,,,,,third_party/blink/renderer/modules/webgl/webgl_webcodecs_video_frame.idl,
 WebGLWebCodecsVideoFrame,releaseVideoFrame,operation,(WebGLWebCodecsVideoFrameHandle),Boolean,,,,,third_party/blink/renderer/modules/webgl/webgl_webcodecs_video_frame.idl,
 WebId,,interface,,,,,True,,third_party/blink/renderer/modules/webid/web_id.idl,11
-WebId,logout,operation,(WebIdLogoutRequestSequence),VoidPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
 WebId,provide,operation,(String),VoidPromise,,,,,third_party/blink/renderer/modules/webid/web_id.idl,
 WebSocket,,interface,,,,,,,third_party/blink/renderer/modules/websockets/websocket.idl,40
 WebSocket,CLOSED,constant,,UnsignedShort,,,,,third_party/blink/renderer/modules/websockets/websocket.idl,48
