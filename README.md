@@ -1,5 +1,13 @@
 # Chromium API List
 
+---
+NOTICE: This repository is no longer being updated.
+
+The contents of the scripts -- as far as I know -- is still valid. You should
+still be able to construct a recent snapshot of the Chromium/Blink API surface
+using the instructions below.
+---
+
 This repository contains a single file that will contain the list of Blink APIs
 that are shipped with Chromium. The list should be updated roughly every day.
 
